@@ -1,7 +1,7 @@
 ---
 title: Filter rows using OData
 description: Learn how to use OData to filter rows when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 01/06/2026
+ms.date: 10/26/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -29,7 +29,7 @@ The following table describes the operators and functions you can use in `$filte
 |**Grouping operators**|Use parentheses: `()`, to specify the precedence to evaluate a complex expression. |[Grouping operators](#grouping-operators)|
 |**OData query functions**|Evaluate string values by using `contains`, `endswith`, and `startswith` functions. |[Use OData query functions](#use-odata-query-functions)|
 |**Dataverse query functions**|Use more than 60 specialized functions designed for business applications. |[Dataverse query functions](#dataverse-query-functions)|
-|**Lambda expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-using-values-of-related-collections)|
+|**Lambda expressions**|Create expressions based on values of related collections. |[Filter using values of related collections](#filter-by-using-values-of-related-collections)|
 
 ## Comparison operators
 
@@ -130,7 +130,7 @@ The following table shows the URL encoded values for common special characters.
 
 ### Use wildcard characters
 
-When you compose filters by using strings, you can use the following wildcard characters:
+When you compose filters by using strings, use the following wildcard characters:
 
 |Characters  |Description  |T-SQL documentation and examples  |
 |---|---|---|
@@ -143,7 +143,7 @@ For more information, see [Use wildcard characters in conditions for string valu
 
 #### Leading wildcards aren't supported
 
-Don't use leading wild cards because they're not supported. Queries that use these anti-patterns introduce performance problems because the queries can't be optimized. Here are some examples of leading wildcards:
+Don't use leading wildcard characters because they're not supported. Queries that use these anti-patterns introduce performance problems because the queries can't be optimized. Here are some examples of leading wildcard characters:
 
 ```
 startswith(name,'%value')
@@ -298,15 +298,15 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 }
 ```
 
-### Filter using values of related collections
+### Filter by using values of related collections
 
-Use the *Lambda operators* `any` and `all` to evaluate values in a collection to filter the results.
+Use the *Lambda operators* `any` and `all` to evaluate values in a collection and filter the results.
 
-- `any`: Returns `true` if the expression applied is true for any member of the collection; otherwise, it returns false.
+- `any`: Returns `true` if the expression is true for any member of the collection. Otherwise, it returns `false`.
 
   - The `any` operator without an argument returns `true` if the collection isn't empty.
 
-- `all`: Returns true if the expression applied is true for all members of the collection; otherwise, it returns false.
+- `all`: Returns `true` if the expression is true for all members of the collection. Otherwise, it returns `false`.
 
 The syntax looks like this:
 
@@ -317,7 +317,7 @@ In the expression, use `o/<property or collection name>` to refer to a property 
 
 You can include conditions on multiple collection-valued navigation properties and nested collections. You can't include conditions on collection-valued navigation properties that are nested in a lookup navigation property. For example, `$filter=primarycontactid/new_contact_account/any(a:a/accountid eq '{GUID}')` isn't supported.
 
-More information: [Lambda Operators at odata.org](https://www.odata.org/getting-started/basic-tutorial/#lambda)
+For more information, see [Lambda Operators at odata.org](https://www.odata.org/getting-started/basic-tutorial/#lambda).
 
 #### Lambda operator examples
 
@@ -352,7 +352,7 @@ OData-MaxVersion: 4.0
 OData-Version: 4.0
 ```
 
-The following example creates a nested query using `any` and `all` operators:
+The following example creates a nested query by using `any` and `all` operators:
 
 ```http
 GET [Organization URI]/api/data/v9.2/accounts?$select=name
@@ -373,7 +373,7 @@ You can include up to 500 total conditions in a query. Otherwise, you see this e
 > Number: `-2147204340`<br />
 > Message: `Number of conditions in query exceeded maximum limit.`
 
-You need to reduce the number of conditions to execute the query. You might be able to reduce the number of conditions by using the [In](xref:Microsoft.Dynamics.CRM.In) or [NotIn](xref:Microsoft.Dynamics.CRM.NotIn) query functions that can be used with numbers, unique identifiers, and strings up to 850 characters.
+You need to reduce the number of conditions to execute the query. You might be able to reduce the number of conditions by using the [In](xref:Microsoft.Dynamics.CRM.In) or [NotIn](xref:Microsoft.Dynamics.CRM.NotIn) query functions that you can use with numbers, unique identifiers, and strings up to 850 characters.
 
 ## Next steps
 

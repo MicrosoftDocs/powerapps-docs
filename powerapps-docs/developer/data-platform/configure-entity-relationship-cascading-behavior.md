@@ -1,12 +1,12 @@
 ---
-title: Configure table relationship cascading behavior (Microsoft Dataverse) | Microsoft Docs
-description: Configure cascading behaviors for a one-to-many relationship in Microsoft Dataverse to preserve data integrity and automate business processes.
+title: Configure Table Relationship Cascading Behavior in Dataverse
+description: Learn how to configure cascading behaviors for one-to-many table relationships in Dataverse to preserve data integrity and automate business processes.
 suite: powerapps
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: how-to
-ms.date: 02/11/2026
+ms.date: 10/26/2026
 ms.subservice: dataverse-developer
 search.audienceType: 
   - developer
@@ -16,77 +16,93 @@ contributors:
 
 # Configure table relationship cascading behavior  
 
-You can configure cascading behaviors for a one-to-many relationship to preserve data integrity and automate business processes. Both Web API and SDK for .NET support configuring cascading behavior.
+Configure table relationship cascading behavior for a one-to-many relationship in Dataverse to preserve data integrity and automate business processes. 
 
 [!INCLUDE[cc-terminology](includes/cc-terminology.md)]
 
-## Use Web API to configure cascading behavior
+## Configure cascading behavior
 
-When working with Web API, you define a one-to-many relationship by using the [OneToManyRelationshipMetadata entity type](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata). This definition includes the name of the intersect table to create and how the relationship should appear in the application by using the [AssociatedMenuConfiguration complex type](xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration), [Label complex type](xref:Microsoft.Dynamics.CRM.Label), and [LocalizedLabel complex type](xref:Microsoft.Dynamics.CRM.LocalizedLabel). 
+You can configure cascading behavior by using either the Web API or the SDK for .NET.
+
+### [Web API](#tab/webapi)
+
+Define a one-to-many relationship by using the [OneToManyRelationshipMetadata entity type](xref:Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata). This definition includes the name of the intersect table to create and how the relationship should appear in the application by using the [AssociatedMenuConfiguration complex type](xref:Microsoft.Dynamics.CRM.AssociatedMenuConfiguration), [Label complex type](xref:Microsoft.Dynamics.CRM.Label), and [LocalizedLabel complex type](xref:Microsoft.Dynamics.CRM.LocalizedLabel). 
 
 For more information, see [Create a One-to-Many relationship using Web API](webapi/create-update-entity-relationships-using-web-api.md#create-a-one-to-many-relationship).
 
-## Use SDK for .NET to configure cascading behavior
+The [CascadeConfiguration complex type](xref:Microsoft.Dynamics.CRM.CascadeConfiguration) contains the properties representing actions that might be performed on the referenced table in the one-to-many relationship. Each property can be assigned one of the values of the [CascadeType enum type](xref:Microsoft.Dynamics.CRM.CascadeType).  
+
+### [SDK for .NET](#tab/sdk)
 
 When you use the <xref:Microsoft.Xrm.Sdk.Messages.CreateOneToManyRequest> or <xref:Microsoft.Xrm.Sdk.Messages.UpdateRelationshipRequest> classes, include an instance of the [OneToManyRelationshipMetadata class](xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata) in the body of the request. In the <xref:Microsoft.Xrm.Sdk.Metadata.OneToManyRelationshipMetadata.CascadeConfiguration> property of that class, use the <xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration> class.  
 
-The [CascadeConfiguration class](xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration) or [CascadeConfiguration complex type](xref:Microsoft.Dynamics.CRM.CascadeConfiguration) contains the properties representing actions that might be performed on the referenced table in the one-to-many relationship. Each property can be assigned one of the values of the [CascadeType enum type](xref:Microsoft.Dynamics.CRM.CascadeType).  
+The [CascadeConfiguration class](xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration) contains the properties representing actions that might be performed on the referenced table in the one-to-many relationship. Each property can be assigned one of the values of the [CascadeType enum](xref:Microsoft.Xrm.Sdk.Metadata.CascadeType).  
+
+---
 
 |Value|Application label|Description|  
 |-----------|-----------------------|-----------------|  
-|Active|Cascade Active|Perform the action on all active referencing table records associated with the referenced table record.|  
-|Cascade|Cascade All|Perform the action on all referencing table records associated with the referenced table record.|  
-|NoCascade|Cascade None|Do nothing.|  
-|RemoveLink|Remove Link|Remove the value of the referencing column for all referencing table records associated with the referenced table record.|  
-|Restrict|Restrict|Prevent the referenced table record from being deleted when referencing tables exist.|  
-|UserOwned|Cascade User Owned|Perform the action on all referencing table records owned by the same user as the referenced table record.|  
+|`Active`|**Cascade Active**|Perform the action on all active referencing table records associated with the referenced table record.|  
+|`Cascade`|**Cascade All**|Perform the action on all referencing table records associated with the referenced table record.|  
+|`NoCascade`|**Cascade None**|Do nothing.|  
+|`RemoveLink`|**Remove Link**|Remove the value of the referencing column for all referencing table records associated with the referenced table record.|  
+|`Restrict`|**Restrict**|Prevent the referenced table record from being deleted when referencing tables exist.|  
+|`UserOwned`|**Cascade User Owned**|Perform the action on all referencing table records owned by the same user as the referenced table record.|  
 
 **Active records considered for cascading action**
 
 Cascading actions on active records only include records that have a state code of **Active**. The following state codes for these tables are considered active for cascade actions. Different labels (other than **Active**) might be used for this state code in different tables. Any custom state or status code with values other than those in the following table isn't processed as an active record for cascading purposes.
 
-| Table Name                       |    State Code 0       |    State Code 1       |    State Code 2       |    State Code 3       | 
-| :--------------------------------| :----------------:    | :----------------:    | :----------------:    | :-----------------:    |
-|  Account                         |          x            |                         |                         |                         |
-|  BulkOperation                   |          x            |                         |                         |                         |
-|  BulkOperation                   |          x            |                         |                         |                         |
-|  CampaignResponse                |          x            |                         |                         |                         |
-|  Contact                          |          x            |                         |                         |                         |
-|  Email                            |          x            |                         |                         |                         |
-|  Fax                               |          x            |                         |                         |                         |
-|  Incident                          |          x            |                         |                         |                         |
-|  IncidentResolution              |          x            |                         |                         |                         |
-|  Invoice                          |          x            |                         |                         |                         |
-|  Lead                               |          x            |                         |                         |                         |
-|  Letter                            |          x            |                         |                         |                         |
-|  Opportunity                      |          x            |                         |                         |                         |
-|  OpportunityClose                 |          x            |                         |                         |                         |
-|  OrderClose                        |          x            |                         |                         |                         |
-|  PhoneCall                        |          x            |                         |                         |                         |
-|  SalesOrder                        |          x            |                         |                         |                         |
-|  Task                               |          x            |                         |                         |                         |
-|  All Custom Tables and Custom Activities |          x            |                         |                         |                         |
-|  Quotes                          |                       |          x            |                         |                        |
-|  Contract                        |                       |                       |          x            |                         |
-|  Appointment                     |                       |                         |                         |          x            |
-|  ServiceAppointment              |                       |                         |                         |          x            |
-|  RecurringAppointmentMaster      |                       |                         |                         |          x            |
+| Table Name                              | State Code 0 | State Code 1 | State Code 2 | State Code 3 |
+| :-------------------------------------- | :----------: | :----------: | :----------: | :----------: |
+| Account                                 |      x       |              |              |              |
+| BulkOperation                           |      x       |              |              |              |
+| BulkOperation                           |      x       |              |              |              |
+| CampaignResponse                        |      x       |              |              |              |
+| Contact                                 |      x       |              |              |              |
+| Email                                   |      x       |              |              |              |
+| Fax                                     |      x       |              |              |              |
+| Incident                                |      x       |              |              |              |
+| IncidentResolution                      |      x       |              |              |              |
+| Invoice                                 |      x       |              |              |              |
+| Lead                                    |      x       |              |              |              |
+| Letter                                  |      x       |              |              |              |
+| Opportunity                             |      x       |              |              |              |
+| OpportunityClose                        |      x       |              |              |              |
+| OrderClose                              |      x       |              |              |              |
+| PhoneCall                               |      x       |              |              |              |
+| SalesOrder                              |      x       |              |              |              |
+| Task                                    |      x       |              |              |              |
+| All Custom Tables and Custom Activities |      x       |              |              |              |
+| Quotes                                  |              |      x       |              |              |
+| Contract                                |              |              |      x       |              |
+| Appointment                             |              |              |              |      x       |
+| ServiceAppointment                      |              |              |              |      x       |
+| RecurringAppointmentMaster              |              |              |              |      x       |
 
 
 
-The SDK for .NET [CascadeConfiguration class](xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration) or Web API [CascadeConfiguration complex type](xref:Microsoft.Dynamics.CRM.CascadeConfiguration) contains the following properties representing actions that you can perform on the referenced table in the one-to-many relationship.  
+### [Web API](#tab/webapi)
+
+The [CascadeConfiguration complex type](xref:Microsoft.Dynamics.CRM.CascadeConfiguration) contains the following properties representing actions that you can perform on the referenced table in the one-to-many relationship.
+
+### [SDK for .NET](#tab/sdk)
+
+The [CascadeConfiguration class](xref:Microsoft.Xrm.Sdk.Metadata.CascadeConfiguration) contains the following properties representing actions that you can perform on the referenced table in the one-to-many relationship.
+
+---
   
 |Action|Description|Valid options|  
 |------------|-----------------|-------------------|  
-|Assign|Change the referenced table record owner and/or business unit.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
-|Delete|Delete the referenced table record. **Note:**  The options for this action are limited.|Cascade<br />RemoveLink<br />Restrict|  
-|Merge|Merge the record with another record. **Note:**  For referenced tables that can be merged, Cascade is the only valid option. In other cases, use NoCascade.|Cascade<br />NoCascade|  
-|Reparent|See [About the reparent action](#about-the-reparent-action) later.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
-|Share|When the referenced table record is shared with another user.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
-|Unshare|When sharing is removed for the referenced table record.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
+|`Assign`|Change the referenced table record owner and business unit.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
+|`Delete`|Delete the referenced table record. **Note:**  The options for this action are limited.|Cascade<br />RemoveLink<br />Restrict|  
+|`Merge`|Merge the record with another record. **Note:**  For referenced tables that can be merged, Cascade is the only valid option. In other cases, use NoCascade.|Cascade<br />NoCascade|  
+|`Reparent`|See [About the reparent action](#about-the-reparent-action) later.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
+|`Share`|When the referenced table record is shared with another user.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
+|`Unshare`|When sharing is removed for the referenced table record.|Active<br />Cascade<br />NoCascade<br />UserOwned|  
 
 > [!NOTE]
-> Assign, Delete, Merge, and Reparent actions won't execute in the following situations:
+> `Assign`, `Delete`, `Merge`, and `Reparent` actions won't execute in the following situations:
 > - If the original parent record and requested action contain the same values. Example: Attempting to trigger an Assign and 
 >   choosing a contact that is already the owner of the record
 > - Attempting to perform an action on a parent record that is already running a cascading action
@@ -101,9 +117,9 @@ The SDK for .NET [CascadeConfiguration class](xref:Microsoft.Xrm.Sdk.Metadata.Ca
 
 When you update the parent record, the assign action cascades updates to the owner, the owning business unit, or both the owner and business unit to all child records.
 
-#### Allowed record ownership across business units not enabled
+#### Matrix data access structure not enabled
 
-When the [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) isn't enabled, you can't explicitly update the owning business unit column when changing the record's owner. The following list shows the cascading behaviors when you update the parent's record owner.
+When the [matrix data access structure](/power-platform/admin/wp-security-cds#enable-the-matrix-data-access-structure) isn't enabled, you can't explicitly update the owning business unit column when changing the record's owner. The following list shows the cascading behaviors when you update the parent's record owner.
 
 If you update the owner:
 
@@ -118,14 +134,14 @@ If you update the owner:
   - Child records' owner doesn't update (no cascade)
   - Child records' business unit doesn't update (no cascade)
 
-#### Allowed record ownership across business units is enabled
+#### Matrix data access structure is enabled
 
-When [allow record ownership across business units](/power-platform/admin/wp-security-cds#to-enable-this-matrix-data-access-structure-preview) is enabled,
+When [matrix data access structure](/power-platform/admin/wp-security-cds#enable-the-matrix-data-access-structure) is enabled,
 you can explicitly update the owning business unit column when changing the record's owner. The following list shows the cascading behaviors when you update the parent's record owner and the business unit.
 
 Set **AlwaysMoveRecordToOwnerBusinessUnit** in [environment database settings](/power-platform/admin/environment-database-settings) or by using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/help/2691237/orgdborgsettings-tool-for-microsoft-dynamics-crm).
 
-1. If you update the owner:
+- If you update the owner:
 
    **AlwaysMoveRecordToOwnerBusinessUnit** = true (default)
 
@@ -140,7 +156,7 @@ Set **AlwaysMoveRecordToOwnerBusinessUnit** in [environment database settings](/
      - Child records' owner doesn't update (no cascade)
      - Child records' business unit doesn't update (no cascade)
 
-1. If you update the business unit:
+- If you update the business unit:
 
    **AlwaysMoveRecordToOwnerBusinessUnit** = true (default)
 
@@ -155,7 +171,7 @@ Set **AlwaysMoveRecordToOwnerBusinessUnit** in [environment database settings](/
       -   Child records' owner doesn't update 
       -   Child records' business unit doesn't update
 
-1. If you update the owner and business unit:
+- If you update the owner and business unit:
 
    **AlwaysMoveRecordToOwnerBusinessUnit** = true (default)
 
@@ -176,7 +192,7 @@ If you set **AlwaysMoveRecordToOwnerBusinessUnit** to false, the user owned reco
 
 Set **AlwaysMoveRecordToOwnerBusinessUnit** in [environment database settings](/power-platform/admin/environment-database-settings) or by using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](https://support.microsoft.com/help/2691237/orgdborgsettings-tool-for-microsoft-dynamics-crm).
 
-1. If you update the owner:
+- If you update the owner:
 
    **AlwaysMoveRecordToOwnerBusinessUnit** = false
 
@@ -191,7 +207,7 @@ Set **AlwaysMoveRecordToOwnerBusinessUnit** in [environment database settings](/
      - Don't update child records' owner
      - Don't update child records' business unit 
 
-1. If you update the business unit:
+- If you update the business unit:
 
    **AlwaysMoveRecordToOwnerBusinessUnit** = false
 
@@ -206,7 +222,7 @@ Set **AlwaysMoveRecordToOwnerBusinessUnit** in [environment database settings](/
      -   Child records' owner doesn't update 
      -   Child records' business unit doesn't update
 
-1. If you update the owner and business unit:
+- If you update the owner and business unit:
 
    **AlwaysMoveRecordToOwnerBusinessUnit** = false
 
@@ -265,7 +281,7 @@ The two notification messages are:
 
 Register the custom plug-in during the post-operation stage and set it to asynchronous mode. The following figure shows an example plug-in registration by using the Plug-in Registration tool.
 
-:::image type="content" source="media/plugin-cascade-notification.png" alt-text="Register a plug-in for cascade notification":::
+:::image type="content" source="media/plugin-cascade-notification.png" alt-text="Screenshot of the Plug-in Registration tool registering a plug-in for cascade notification.":::
 
 Here are some examples of the kind of notifications that your custom plug-in can provide:
 

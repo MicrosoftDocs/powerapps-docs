@@ -20,7 +20,7 @@ contributors:
 > - [Create a custom API using the plug-in registration tool](create-custom-api-prt.md)
 >
 > You should also understand how to create Microsoft Dataverse records, using either the Web API or SDK for .NET. For more information, see:
-> - [Create an entity record using the Web API](webapi/create-entity-web-api.md)
+> - [Create an entity record using the Web API](webapi/create-table-row.md)
 > - [Create entities using the SDK for .NET](org-service/entity-operations-create.md)
 
 Because custom API data is saved in tables, you can programmatically create new APIs using either the Web API or the SDK for .NET.
@@ -109,7 +109,7 @@ Guid customAPIId = ((CreateResponse)service.Execute(createReq)).id;
 
 #### [Web API](#tab/webapi)
 
-This example shows the creation of a custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-entity-web-api.md#create-related-table-rows-in-one-operation)
+This example shows the creation of a custom API action with one request parameter and one response property in a single operation. More information: [Create related table rows in one operation](webapi/create-table-row.md#create-related-table-rows-in-one-operation)
 
 This custom API is created as part of a solution with the uniquename `CustomAPIExample` and is associated with a plug-in type with ID = `00000000-0000-0000-0000-000000000001`.
 

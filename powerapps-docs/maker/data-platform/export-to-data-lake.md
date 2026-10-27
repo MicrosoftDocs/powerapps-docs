@@ -2,7 +2,7 @@
 title: "Azure Synapse Link for Dataverse"
 description: "Learn how to export table data to an Azure Synapse Analytics and Azure Data Lake in Microsoft Dataverse"
 ms.collection: get-started
-ms.date: 10/08/2026
+ms.date: 10/26/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -18,6 +18,7 @@ search.audienceType:
   - maker
 contributors:
   - sama-zaki
+  - anibakore-msft
 ---
 # What is Azure Synapse Link for Dataverse?
 
@@ -25,6 +26,10 @@ Azure Synapse Link for Dataverse enables you to get near real-time insights over
 
 > [!NOTE]
 > Azure Synapse Link branding will be retired soon. In Power Apps, open **Link data** to access this experience. The UX uses **Link to Data lake**, while the documentation continues to use Azure Synapse Link so existing customers can recognize the feature.
+>
+> For comma separated value (CSV) exports, connect your Synapse workspace to the data lake manually. For more information, see the [Synapse Link FAQ](export-data-lake-faq.yml).
+>
+>
 
 > [!NOTE]
 > Azure Synapse Link for Dataverse was formerly known as Export to data lake. The service was renamed May 2021 and continues to export data to Azure Data Lake as well as Azure Synapse Analytics.

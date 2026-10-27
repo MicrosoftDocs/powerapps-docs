@@ -96,8 +96,8 @@ If you don't include the `If-Match: *` request header, the `PATCH` request is tr
 
 If you include a `Prefer: return=representation` request header, the system returns a `201 Created` status for `Create`, and a `200 OK` status for `Update`. Adding this header adds an extra `Retrieve` operation, so it affects performance. If you use this option, make sure that the `$select` query option you add only includes the primary key value. For more information, see:
 
-- [Create with data returned](webapi/create-entity-web-api.md#create-with-data-returned)
-- [Update with data returned](webapi/update-delete-entities-using-web-api.md#update-with-data-returned)
+- [Create with data returned](webapi/create-table-row.md#create-with-data-returned)
+- [Update with data returned](webapi/update-delete-table-rows.md#update-with-data-returned)
 
 By using a `PATCH` request, you can also include the `If-None-Match: *` request header to block an `Update` if you only want to create records. For more information, see [Limit upsert operations](webapi/perform-conditional-operations-using-web-api.md#limit-upsert-operations).
 

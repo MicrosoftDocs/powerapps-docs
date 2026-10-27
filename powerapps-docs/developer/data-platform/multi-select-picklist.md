@@ -402,7 +402,7 @@ var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
 ### See also
 
 [Column definitions](entity-attribute-metadata.md)<br />
-[Create a table row using the Web API](webapi/create-entity-web-api.md)<br />
+[Create a table row using the Web API](webapi/create-table-row.md)<br />
 [Query Data using the Web API](webapi/query/overview.md)<br />
 [Work with column definitions](org-service/metadata-attributemetadata.md)<br />
 [Sample: Work with columns definitions](org-service/samples/work-with-attributes.md)<br />

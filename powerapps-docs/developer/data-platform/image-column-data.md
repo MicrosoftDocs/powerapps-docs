@@ -28,7 +28,7 @@ The following table introduces some of the differences between image and file co
 |**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record. More information: [Delete images](#delete-images)|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
 |**Set with Create**|When the image column is the *primary image*, you can set image data with other record data using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record was created.|
 |**Return with Retrieve**|You can retrieve thumb-nail sized images with other record data using retrieve.|The value returned is the file ID. More information: [Behavior when retrieving](file-column-data.md#behavior-when-retrieving)|
-|**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|There's no string column with a download URL, but you can compose a URL to download the file directly from the Web API. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)|
+|**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|There's no string column with a download URL, but you can compose a URL to download the file directly from the Web API. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-by-using-web-api)|
 
 ## Maximum image size
 
@@ -545,7 +545,7 @@ For more information about base 64 encoded strings, see:
 
 More information:
 - [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md)
-- [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md)
+- [Update and delete table rows using the Web API](webapi/update-delete-table-rows.md)
 
 ---
 
@@ -632,7 +632,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(<accountid>)
 ```
 
-For more information, see [Basic update](webapi/update-delete-entities-using-web-api.md#basic-update).
+For more information, see [Basic update](webapi/update-delete-table-rows.md#basic-update).
 
 ### Use PUT and set the image column value to null
 
@@ -657,7 +657,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-For more information, see [Update a single property value](webapi/update-delete-entities-using-web-api.md#update-a-single-property-value).
+For more information, see [Update a single property value](webapi/update-delete-table-rows.md#update-a-single-property-value).
 
 
 ### Use DELETE with the resource URL referencing the image column
@@ -679,7 +679,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-More information: [Delete a single property value](webapi/update-delete-entities-using-web-api.md#delete-a-single-property-value)
+More information: [Delete a single property value](webapi/update-delete-table-rows.md#delete-a-single-property-value)
 
 ---
 

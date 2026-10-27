@@ -1,7 +1,7 @@
 ---
 title: Filter rows using FetchXml
 description: Learn how to use FetchXml to filter rows when you retrieve data from Microsoft Dataverse. Explore operators, link-entity filters, and column comparisons.
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -17,13 +17,13 @@ contributors:
  - DonaldlaGithub
  - rappen
 ---
-# Filter rows using FetchXML
+# Filter rows by using FetchXML
 
-To set conditions on the rows of data to return, use the [filter element](reference/filter.md) within an [entity](reference/entity.md), [link-entity](reference/link-entity.md), or another `filter` element.
+Use the [filter element](reference/filter.md) within an [entity](reference/entity.md), [link-entity](reference/link-entity.md), or another `filter` element to set conditions on the rows of data to return.
 
-To set the conditions, add one or more [condition elements](reference/condition.md) to the filter. The containing `filter` `type` attribute determines whether *all* (`and`) or *any* (`or`) of the conditions must be met. The default is `and`. By nesting filter elements, you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
+Add one or more [condition elements](reference/condition.md) to the filter to set the conditions. The `type` attribute of the containing `filter` determines whether *all* (`and`) or *any* (`or`) of the conditions must be met. The default is `and`. By nesting filter elements, you can create complex filter criteria that combine criteria evaluated using `and` or `or`.
 
-Each `condition` has an `operator` attribute to evaluate a row column value. You can choose from many [condition operator values](reference/operators.md).
+Each `condition` has an `operator` attribute to evaluate a row column value. Choose from many [condition operator values](reference/operators.md).
 
 For example, the following query returns account records where `address1_city` equals "Redmond". It uses `<filter type='and'>` with the [eq operator](reference/operators.md#eq).
 

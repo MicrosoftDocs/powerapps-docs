@@ -1,7 +1,7 @@
 ---
 title: Use OData to query data
 description: Learn to compose a query using OData with Microsoft Dataverse Web API
-ms.date: 01/09/2026
+ms.date: 10/26/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -137,7 +137,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 After you select the table to start your query, refine the query to get the data you need. The following articles explain how to complete your query.
 
-|Article|Task|
+| Article | Task |
 |---------|---------|
 |[Select columns](select-columns.md)|Specify which columns of data to return.|
 |[Join tables](join-tables.md)|Specify which related tables to return in the results.|
@@ -150,7 +150,7 @@ After you select the table to start your query, refine the query to get the data
 
 ## OData query options
 
-Use these options to change the results returned from a collection. The following table describes the OData query options the Dataverse Web API supports.
+Use these options to change the results returned from a collection. The following table describes the OData query options that the Dataverse Web API supports.
 
 |Option|Use to|More information|
 |---------|---------|---------|
@@ -202,7 +202,7 @@ Alternatively, specify a number of records to return by using paging. Don't use 
 
 ## Limitations
 
-There are some things that you can do by using FetchXml that OData doesn't support.
+FetchXml supports some capabilities that OData doesn't support.
 
 - You can't [join tables without any relationship](../../fetchxml/join-tables.md#no-relationship). OData only allows using the `$expand` query option to join tables by using navigation properties that are part of the relationships in the data model.
 - [You can't use nested $expand with N:N relationships](join-tables.md#nested-expand-with-nn-relationships).

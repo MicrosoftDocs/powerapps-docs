@@ -42,7 +42,7 @@ On success, returns a promise object to the `successCallback` with the following
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete table rows using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating a table record.
+These examples use some of the same request objects as demonstrated in [Update and delete table rows using the Web API](../../../../data-platform/webapi/update-delete-table-rows.md) to define the data object for updating a table record.
 
 ### Basic update
 

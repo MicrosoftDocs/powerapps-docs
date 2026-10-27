@@ -385,7 +385,7 @@ By using Insomnia, you can define multiple requests that you can reuse. An easy 
 
    This URL contains the primary key field value for the created record, in this case the `accountid` property value.
 
-[Learn more about creating records](create-entity-web-api.md)
+[Learn more about creating records](create-table-row.md)
 
 ## Retrieve a record
 
@@ -470,7 +470,7 @@ After you create and retrieve a record by using the primary key value, you can d
 
    These details aren't useful in this context, because the issue is obvious. But these details might be useful in other scenarios. [Learn more about including more details with errors](compose-http-requests-handle-errors.md#include-more-details-with-errors).
 
-[Learn more about deleting records](update-delete-entities-using-web-api.md#basic-delete).
+[Learn more about deleting records](update-delete-table-rows.md#basic-delete).
 
 ## Next steps
 

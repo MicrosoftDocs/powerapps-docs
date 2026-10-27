@@ -128,7 +128,7 @@ OData-EntityId: [Organization URI]/api/data/v9.2/webresourceset(00aa00aa-bb11-cc
 
 ```
 
-More information: [Create a table row using the Web API](webapi/create-entity-web-api.md)
+More information: [Create a table row using the Web API](webapi/create-table-row.md)
 
 ---
 
@@ -353,7 +353,7 @@ static void DemonstrateBypassBusinessLogicExecution(IOrganizationService service
 
 #### [Web API](#tab/webapi)
 
-The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when [creating a new account record using the Dataverse Web API](webapi/create-entity-web-api.md). This request uses the `MSCRM.BypassBusinessLogicExecution` request header.
+The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when [creating a new account record using the Dataverse Web API](webapi/create-table-row.md). This request uses the `MSCRM.BypassBusinessLogicExecution` request header.
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1

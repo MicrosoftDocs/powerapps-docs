@@ -81,11 +81,11 @@
   - name: Use SQL to query data
     href: query/sql.md
   - name: Create a table row
-    href: create-entity-web-api.md
+    href: create-table-row.md
   - name: Retrieve a table row
     href: retrieve-entity-using-web-api.md
   - name: Update and delete table rows 
-    href: update-delete-entities-using-web-api.md
+    href: update-delete-table-rows.md
   - name: Associate and disassociate rows
     href: associate-disassociate-entities-using-web-api.md
   - name: Merge table rows
@@ -103,7 +103,7 @@
   - name: Detect duplicate data
     href: manage-duplicate-detection-create-update.md
   - name: Troubleshoot client errors
-    href: /troubleshoot/power-platform/power-apps/web-api-client-errors
+    href: /troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/web-api-client-errors
 - name: Work with table definitions (metadata)
   items:
   - name: Use the Web API with table definitions

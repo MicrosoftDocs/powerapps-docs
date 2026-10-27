@@ -183,7 +183,7 @@ The code uses the static `DownloadImageWithChunks` method, which demonstrates ho
 
 #### Download with Stream
 
-The code uses the static `DownloadImageWithStream` method, which demonstrates how to download images as described in [Download a file in a single request using Web API](../../file-column-data.md#download-a-file-in-a-single-request-using-web-api)
+The code uses the static `DownloadImageWithStream` method, which demonstrates how to download images as described in [Download a file in a single request using Web API](../../file-column-data.md#download-a-file-in-a-single-request-by-using-web-api)
 
 > [!NOTE]
 > These operations don't fail when there's no full-sized image to download, they simply return `204 No Content`.

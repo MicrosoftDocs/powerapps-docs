@@ -1,7 +1,7 @@
 ---
 title: "Authenticate to Microsoft Dataverse with the Web API"
 description: "Learn how to authenticate to Microsoft Dataverse with the Web API using OAuth, PowerShell, JavaScript web resources, and MSAL.js for single-page applications."
-ms.date: 03/12/2026
+ms.date: 10/26/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -21,7 +21,7 @@ The code you write to manage authentication when using the Web API depends on th
 
 You don't need to create your own app registration by using this method. You can use the Azure AD application to request an access token.
 
-Use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) command to launch an interactive browser sign-in or initiate a device code flow. `Connect-AzAccount` also supports certificate-based auth, but this requires a registered application.
+Use the [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount) command to launch an interactive browser sign-in or initiate a device code flow. `Connect-AzAccount` also supports certificate-based auth, but this method requires a registered application.
 
 After you sign in, use the Az PowerShell module [Get-AzAccessToken](/powershell/module/az.accounts/get-azaccesstoken) command to request an access token for your Dataverse organization URI resource.
 

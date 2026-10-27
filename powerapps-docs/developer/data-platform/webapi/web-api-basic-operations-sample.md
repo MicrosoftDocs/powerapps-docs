@@ -32,11 +32,11 @@ This sample is divided into the following sections. Each section contains Datave
   
 |Code section|Associated conceptual articles|  
 |------------------|----------------------------------|  
-|[Section 1: Basic create and update operations](#bkmk_section1)|[Basic create](create-entity-web-api.md#bkmk_basicCreate)<br /> [Basic update](update-delete-entities-using-web-api.md#bkmk_update)|  
-|[Section 2: Create with association](#bkmk_section2)|[Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create)|  
-|[Section 3: Create related table rows (deep insert)](#bkmk_section3)|[Create related table rows in one operation](create-entity-web-api.md#bkmk_CreateRelated)|  
+|[Section 1: Basic create and update operations](#bkmk_section1)|[Basic create](create-table-row.md#bkmk_basicCreate)<br /> [Basic update](update-delete-table-rows.md#bkmk_update)|  
+|[Section 2: Create with association](#bkmk_section2)|[Associate table rows on create](create-table-row.md#associate-table-rows-on-create)|  
+|[Section 3: Create related table rows (deep insert)](#bkmk_section3)|[Create related table rows in one operation](create-table-row.md#bkmk_CreateRelated)|  
 |[Section 4: Associate and disassociate existing table rows](#bkmk_section4)|[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)|  
-|[Section 5: Delete table rows (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-entities-using-web-api.md#bkmk_delete)|  
+|[Section 5: Delete table rows (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-table-rows.md#bkmk_delete)|  
   
 > [!NOTE]
 >  For brevity, the sample omits less pertinent HTTP headers. The URLs of the records vary with the base organization address and the ID of the row assigned by your Dataverse server.  
@@ -206,7 +206,7 @@ This section creates a single contact then performs a series of updates on that 
    ```  
     
    > [!IMPORTANT]
-   >  Only send changed properties in update requests. For more information, see [Basic update](update-delete-entities-using-web-api.md#bkmk_update).  
+   >  Only send changed properties in update requests. For more information, see [Basic update](update-delete-table-rows.md#bkmk_update).  
   
 1. Explicitly set a single property, the primary phone number. This example uses a `PUT` request and the JSON key named `value` when performing operations on individual properties.  
   
@@ -790,9 +790,9 @@ This section shows how to associate and disassociate existing table rows. To for
 ### See also  
 
 [Use the Dataverse Web API](overview.md)   
-[Create a table row using the Web API](create-entity-web-api.md)   
+[Create a table row using the Web API](create-table-row.md)   
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
-[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
+[Update and delete table rows using the Web API](update-delete-table-rows.md)   
 [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   
 [Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)   
 [Web API Basic Operations Sample (PowerShell)](samples/basic-operations-powershell.md)   

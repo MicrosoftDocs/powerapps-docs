@@ -2,7 +2,7 @@
 title: "Create an Azure Synapse Link for Dataverse with your Azure Synapse Workspace | MicrosoftDocs"
 description: "Learn how to export table data to Azure Synapse Analytics in Power Apps."
 ms.custom: ""
-ms.date: 10/08/2026
+ms.date: 10/26/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -33,7 +33,9 @@ You can use the Azure Synapse Link to connect your Microsoft Dataverse data to A
 > [!NOTE]
 > Azure Synapse Link branding will be retired soon. In Power Apps, open **Link data** to access this experience. The UX uses **Link to Data lake**, while this article continues to use Azure Synapse Link so existing customers can recognize the feature. Your existing links keep running with no migration or relink required.
 >
-> To create a new Azure Synapse Link, go to **Link data**, and then select **Create link to data lake**. You can no longer create an Azure Synapse Link from the **Tables** > **Analyze** menu.
+> For new comma separated value (CSV) exports, connect your Synapse workspace to the data lake manually instead of using the workspace-linking steps in this article. For more information, see the [Synapse Link FAQ](export-data-lake-faq.yml).
+>
+> To create a new CSV export to your data lake, go to **Link data**, and then select **Create link to data lake**. You can no longer create an Azure Synapse Link from the **Tables** > **Analyze** menu.
 
 ## Prerequisites
 

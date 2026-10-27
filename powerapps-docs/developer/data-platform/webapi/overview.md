@@ -1,7 +1,7 @@
 ---
 title: "Use the Microsoft Dataverse Web API (Dataverse)| Microsoft Docs"
 description: "The Microsoft Dataverse Web API implements the OData v4 protocol and provides a development experience that can be used across a wide variety of programming languages, platforms, and devices"
-ms.date: 01/09/2026
+ms.date: 10/26/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -16,9 +16,9 @@ contributors:
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-To work with data, as well as table and column definitions in Dataverse, you can use the Web API or [SDK for .NET](../org-service/overview.md).
+To work with data, as well as table and column definitions in Dataverse, use the Web API or [SDK for .NET](../org-service/overview.md).
 
-The Dataverse Web API provides a development experience that you can use across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [https://www.odata.org/](https://www.odata.org/). Details about this OASIS standard are available at [https://www.oasis-open.org/standards#odatav4.0](https://www.oasis-open.org/standards#odatav4.0). 
+The Dataverse Web API provides a development experience that you can use across a wide variety of programming languages, platforms, and devices. The Web API implements the OData (Open Data Protocol), version 4.0, an OASIS standard for building and consuming RESTful APIs over rich data sources. You can learn more about this protocol at [https://www.odata.org/](https://www.odata.org/). Details about this OASIS standard are available at [https://www.oasis-open.org/standards](https://www.oasis-open.org/standards). 
 
 
 Because the Web API is built on open standards, other than the [Python SDK](../sdk-python/index.yml), Microsoft doesn't provide assemblies or libraries for a specific developer experience. You can compose HTTP requests for specific operations or use third-party libraries to generate classes for whatever language or platform you want. You can find a list of libraries that support OData version 4.0 at [https://www.odata.org/libraries/](https://www.odata.org/libraries/).
@@ -79,7 +79,7 @@ To use Web API with C#, see these quick start articles:
 For more C# Web API samples, see [Web API Data operations Samples (C#)](web-api-samples-csharp.md).
 
 
-### Related Sections
+### Related sections
 
 [Work with data using code](../work-with-data.md)  
 [OData - the best way to REST](https://www.odata.org/)  

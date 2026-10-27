@@ -277,7 +277,7 @@ You can create catalogs and catalog assignment records using either the Web API 
 
 The following series of Web API operations will create a catalog hierarchy and a CatalogAssignment in a solution with the UniqueName: `ContosoCustomerManagement`. Note the use of the `MSCRM.SolutionUniqueName` request header to set the association to the solution when the record is created.
 
-See the [Create a record using the Web API](webapi/create-entity-web-api.md) sections: [Basic Create](webapi/create-entity-web-api.md#basic-create) and [Associate table rows on create](webapi/create-entity-web-api.md#associate-table-rows-on-create) for more information.
+See the [Create a record using the Web API](webapi/create-table-row.md) sections: [Basic Create](webapi/create-table-row.md#basic-create) and [Associate table rows on create](webapi/create-table-row.md#associate-table-rows-on-create) for more information.
 
 #### Create the root catalog
 
@@ -567,7 +567,7 @@ The `catalogassignment` element includes these elements:
 ### See also  
 
 [Microsoft Dataverse business events](business-events.md)<br />
-[Create an entity record using the Web API](webapi/create-entity-web-api.md)<br />
+[Create an entity record using the Web API](webapi/create-table-row.md)<br />
 [Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
 [Create entities using the SDK for .NET](org-service/entity-operations-create.md)<br />
 [Retrieve an entity using the SDK for .NET](org-service/entity-operations-retrieve.md)

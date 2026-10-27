@@ -5,7 +5,7 @@ suite: powerapps
 author: MsSQLGirl
 ms.author: jukoesma
 ms.topic: best-practice
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 ms.subservice: dataverse-developer
 ms.reviewer: jdaly
 search.audienceType: 
@@ -16,7 +16,7 @@ search.audienceType:
 
 This article describes best practices and guidance for developers writing code for Microsoft Dataverse. Dataverse provides an extensible framework that you can use to build highly customized and tailored experiences. When you customize, extend, or integrate with Dataverse, follow the established guidance and best practices to improve performance, security, and supportability.
 
-This section describes the issues Microsoft has identified, their impact, and guidance to resolve those issues. It explains the background about why things should be done in a certain way and how to avoid potential problems. This understanding can benefit the usability, supportability, and performance of your environment. The guidance documentation supports the existing information within the Developer and Administration guides.
+This section describes the issues Microsoft identified, their impact, and guidance to resolve those issues. It explains the background about why things should be done in a certain way and how to avoid potential problems. This understanding can benefit the usability, supportability, and performance of your environment. The guidance documentation supports the existing information within the Developer and Administration guides.
 
 ## Targeted customization types
 
