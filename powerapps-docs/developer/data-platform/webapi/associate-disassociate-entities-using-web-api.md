@@ -61,7 +61,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
-As described in [Associate table rows on create](create-entity-web-api.md#associate-table-rows-on-create), you can also associate new records with existing records in the same way.
+As described in [Associate table rows on create](create-table-row.md#associate-table-rows-on-create), you can also associate new records with existing records in the same way.
 
 ### Disassociate by using a single-valued navigation property
 
@@ -115,7 +115,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
-More information: [Basic update](update-delete-entities-using-web-api.md#basic-update)
+More information: [Basic update](update-delete-table-rows.md#basic-update)
 
 ### Other methods
 
@@ -310,9 +310,9 @@ OData-Version: 4.0
  [Perform operations using the Web API](perform-operations-web-api.md)<br />
  [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
  [Query Data using the Web API](query/overview.md)<br />
- [Create a table row using the Web API](create-entity-web-api.md)<br />
+ [Create a table row using the Web API](create-table-row.md)<br />
  [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
- [Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)<br />
+ [Update and delete table rows using the Web API](update-delete-table-rows.md)<br />
  [Use Web API functions](use-web-api-functions.md)<br />
  [Use Web API actions](use-web-api-actions.md)<br />
  [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />

@@ -308,7 +308,7 @@ When you set these query options and preference headers, the body of the respons
 
 Updating a record to set a polymorphic lookup column is exactly as described in [Associate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property). Use the correct single-valued navigation property name. These names are case sensitive.
 
-This example shows [updating a value](update-delete-entities-using-web-api.md#basic-update) using `PATCH`.
+This example shows [updating a value](update-delete-table-rows.md#basic-update) using `PATCH`.
 
 **Request**
 

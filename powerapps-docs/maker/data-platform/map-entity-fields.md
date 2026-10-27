@@ -105,7 +105,7 @@ You can't delete a mapping if the mapping is managed. To remove the mapping, you
 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)  
 [Developer Documentation: Customize table and column mappings](../../developer/data-platform/customize-entity-attribute-mappings.md)  
-[Developer Documentation: Create a record from another record using Web API](../../developer/data-platform/webapi/create-entity-web-api.md#create-a-record-from-another-record)  
+[Developer Documentation: Create a record from another record using Web API](../../developer/data-platform/webapi/create-table-row.md#create-a-record-from-another-record)  
 [Developer Documentation: Set default values from the primary table row](../../developer/data-platform/org-service/entity-operations-create.md#set-default-values-from-the-primary-table-row)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/update-delete-entities-using-web-api.md",
+      "redirect_url": "update-delete-table-rows",
+      "redirect_document_id": false
+    }, 
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/create-entity-web-api.md",
+      "redirect_url": "create-table-row",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/model-driven-apps/streamline-javascript-development-fiddler-autoresponder.md",
       "redirect_url": "debug-javascript-webresources",
       "redirect_document_id": false
@@ -7002,7 +7012,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/webapi/create-entity-web-api.md",
-      "redirect_url": "../../data-platform/webapi/create-entity-web-api",
+      "redirect_url": "../../data-platform/webapi/create-table-row",
       "redirect_document_id": false
     },
     {

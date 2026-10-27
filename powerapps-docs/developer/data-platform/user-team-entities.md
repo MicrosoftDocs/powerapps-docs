@@ -71,7 +71,7 @@ In Dataverse:
 > [!TIP]
 > There's an override where you can delete the user row in Dataverse without permanently deleting the user's Microsoft Entra ID record. Set the [OrgDbOrgSetting](reference/entities/organization.md#BKMK_OrgDbOrgSettings) `AuthorizationSkipAadUserStateValidation=true`. This setting removes the need to do step 2 in the preceding Azure procedure. To update this value, see [Environment database settings](/power-platform/admin/environment-database-settings).
 
-More information: [Delete users from environment](/power-platform/admin/delete-users), [Update and delete table rows using the Web API](webapi/update-delete-entities-using-web-api.md), [Update and delete table rows using the SDK for .NET](org-service/entity-operations-update-delete.md)
+More information: [Delete users from environment](/power-platform/admin/delete-users), [Update and delete table rows using the Web API](webapi/update-delete-table-rows.md), [Update and delete table rows using the SDK for .NET](org-service/entity-operations-update-delete.md)
 
 ## Community tools
 

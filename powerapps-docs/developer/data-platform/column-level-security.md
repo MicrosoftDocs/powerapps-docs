@@ -527,7 +527,7 @@ OData-Version: 4.0
 OData-EntityId: [ORGANIZATION URI]/api/data/v9.2/principalobjectattributeaccessset(784a01b1-cb61-f011-bec2-00224823101f)
 ```
 
-[Learn to create a table row using the Web API](webapi/create-entity-web-api.md)
+[Learn to create a table row using the Web API](webapi/create-table-row.md)
 
 ---
 
@@ -568,7 +568,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
-[Learn how to update a record using Web API](webapi/update-delete-entities-using-web-api.md#basic-update)
+[Learn how to update a record using Web API](webapi/update-delete-table-rows.md#basic-update)
 
 ---
 
@@ -604,7 +604,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
-[Learn to delete a record using Web API](webapi/update-delete-entities-using-web-api.md#basic-delete)
+[Learn to delete a record using Web API](webapi/update-delete-table-rows.md#basic-delete)
 
 ---
 

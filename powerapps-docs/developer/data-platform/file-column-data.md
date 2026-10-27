@@ -1,7 +1,7 @@
 ---
 title: "Use File Column Data in Microsoft Dataverse"
 description: "Learn about uploading, downloading, and deleting data in file columns."
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -15,7 +15,7 @@ contributors:
 ---
 # Use file column data in Microsoft Dataverse
 
-File columns in Microsoft Dataverse differ from other system columns that store binary data because you can't directly set the values in a create or update operation, or retrieve the file data with the record. To create, retrieve, update, or delete binary data for file columns, use the methods described in this article. Learn how to upload, download, and delete files using the SDK for .NET and the Web API, including support for chunked transfers of large files.
+File columns in Microsoft Dataverse differ from other system columns that store binary data because you can't directly set the values in a create or update operation, or retrieve the file data with the record. To create, retrieve, update, or delete binary data for file columns, use the methods described in this article. Learn how to upload, download, and delete files by using the SDK for .NET and the Web API, including support for chunked transfers of large files.
 
 You can work with file column data by using several different methods through Web API. All methods are supported equally, so choose the method that works best for you. Because binary files might be large, you often need to split the file into multiple chunks (or blocks) that you can send or receive sequentially or in parallel to improve performance.
 
@@ -34,7 +34,7 @@ You can use this relationship to return more data about the file column and any 
 
 ## Behavior when retrieving
 
-When you retrieve a record and include a file column, the value returned is a unique identifier for the file. You can use this value to delete the file by using the `DeleteFile` message. There's no other use for this ID other than to check whether the column has a value. For more information, see [Use the DeleteFile message](#use-the-deletefile-message).
+When you retrieve a record and include a file column, the value returned is a unique identifier for the file. Use this value to delete the file by using the `DeleteFile` message. There's no other use for this ID other than to check whether the column has a value. For more information, see [Use the DeleteFile message](#use-the-deletefile-message).
 
 The following examples show what you can expect when retrieving data from file columns, as you would with other columns.
 
@@ -105,7 +105,7 @@ More information: [Retrieve a table row using the Web API](webapi/retrieve-entit
 
 ### Retrieve extra information about files for a record
 
-You can use the relationship between the file column table and the `FileAttachment` table to return information about all file columns associated with that table row.
+Use the relationship between the file column table and the `FileAttachment` table to return information about all file columns associated with a table row.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -489,7 +489,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md).
 
 ### Upload a file in a single request by using Web API
 
-If the size of the file is less than 128 MB, you can upload the file in a single request by using the Web API.
+If the file size is less than 128 MB, you can upload the file in a single request by using the Web API.
 
 The following example uploads a text file named `4094kb.txt` to the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
@@ -881,7 +881,7 @@ More information:
 
 ## Download files
 
-You can use three different methods to download files from a file column:
+Use the following methods to download files from a file column:
 
 - Use Dataverse messages available to both the SDK and Web API
 - Download a file in a single request by using Web API
@@ -1074,7 +1074,7 @@ More information: [Use Web API actions](webapi/use-web-api-actions.md).
 ---
 
 
-### Download a file in a single request using Web API
+### Download a file in a single request by using Web API
 
 The following example downloads a text file named `4094kb.txt` from the file column named `sample_filecolumn` on the `account` table for a record with `accountid` equal to `<accountid>`.
 
@@ -1112,7 +1112,7 @@ Access-Control-Expose-Headers: x-ms-file-size; x-ms-file-name; mimetype
 ### Download the file in chunks by using Web API
 
 > [!NOTE]
-> The following example works when `IsChunkingSupported` is set to true. If it's false, use [Download a file in a single request using Web API](#download-a-file-in-a-single-request-using-web-api).
+> The following example works when `IsChunkingSupported` is set to true. If it's false, use [Download a file in a single request using Web API](#download-a-file-in-a-single-request-by-using-web-api).
 
 To download your file in chunks by using the Web API, use the following set of requests.
 
@@ -1240,7 +1240,7 @@ HTTP/1.1 204 NoContent
 OData-Version: 4.0
 ```
 
-More information: [Delete a single property value](webapi/update-delete-entities-using-web-api.md#delete-a-single-property-value)
+More information: [Delete a single property value](webapi/update-delete-table-rows.md#delete-a-single-property-value)
 
 
 ### See also

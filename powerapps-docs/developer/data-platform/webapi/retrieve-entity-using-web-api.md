@@ -153,7 +153,7 @@ OData-Version: 4.0
 Adventure Works (sample)
 ```
 
-Using the raw value isn't common unless you're working with file or image data. For more information, see [Download a file in a single request using the Web API](../file-column-data.md#download-a-file-in-a-single-request-using-web-api).
+Using the raw value isn't common unless you're working with file or image data. For more information, see [Download a file in a single request using the Web API](../file-column-data.md#download-a-file-in-a-single-request-by-using-web-api).
 
 <a name="bkmk_retrieveNavigationPropertyValues"></a>
 

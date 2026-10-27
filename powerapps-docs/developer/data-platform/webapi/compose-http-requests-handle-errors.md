@@ -131,7 +131,7 @@ Use the [Prefer](https://www.rfc-editor.org/rfc/rfc7240) header with the followi
 |`odata.maxpagesize`|Use this preference to specify how many pages you want to return in a query. More information: [Page results](query/page-results.md) |
 |`odata.track-changes`|The change tracking feature keeps the data synchronized in an efficient manner by detecting what data changed since the data was initially extracted or last synchronized. More information: [Use change tracking to synchronize data with external systems](../use-change-tracking-synchronize-data-external-systems.md)|
 |`respond-async`|Specifies that the request should be processed asynchronously. More information: [Background operations (preview)](../background-operations.md)|
-|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When you apply this preference to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference, both operations return status `204 No Content` to reflect that the response body contains no data. More information: [Create with data returned](create-entity-web-api.md#create-with-data-returned) & [Update with data returned](update-delete-entities-using-web-api.md#update-with-data-returned)|
+|`return=representation`|Use this preference to return data on create (`POST`) or update (`PATCH`) operations for entities. When you apply this preference to a `POST` request, a successful response has status `201 Created` . For a `PATCH` request, a successful response has a status `200 OK.` Without this preference, both operations return status `204 No Content` to reflect that the response body contains no data. More information: [Create with data returned](create-table-row.md#create-with-data-returned) & [Update with data returned](update-delete-table-rows.md#update-with-data-returned)|
 
 > [!NOTE]
 > You can specify multiple `Prefer` headers by using comma-separated values. For example:
@@ -174,7 +174,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Mic
 |`MSCRM.SessionToken`|Sesson token value| With elastic tables you can achieve session-level consistency by passing the current session token with your requests. If you don't include the session token, the data that you retrieve might not include data changes that you've just made. [Work with the session token](../use-elastic-tables.md#work-with-the-session-token)|
 | `MSCRM.SolutionUniqueName` | solution unique name | Use this header when you want to create a solution component and have it associated with an unmanaged solution. More information: [Create and update table definitions using the Web API](create-update-entity-definitions-using-web-api.md) and [Associate a solution component with a solution](../optional-parameters.md#associate-a-solution-component-with-a-solution). |
 |`MSCRM.SuppressCallbackRegistrationExpanderJob`|true|When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is large, it might cause performance issues for the system. If performance issues occur, you can choose to bypass triggering the flows by using this optional parameter. For more information see [Bypass Power Automate flows](../bypass-power-automate-flows.md) and [Bypass Power Automate Flows](../optional-parameters.md#bypass-power-automate-flows) |
-| `MSCRM.SuppressDuplicateDetection` | `false` | Use this header with the value `false` to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-entity-web-api.md#check-for-duplicate-records) and [Suppress duplicate detection](../optional-parameters.md#suppress-duplicate-detection). |
+| `MSCRM.SuppressDuplicateDetection` | `false` | Use this header with the value `false` to enable duplicate detection when creating or updating a record. More information: [Check for Duplicate records](create-table-row.md#check-for-duplicate-records) and [Suppress duplicate detection](../optional-parameters.md#suppress-duplicate-detection). |
 
 
 
@@ -317,9 +317,9 @@ You can set a string value that's available to plug-ins within the `ExecutionCon
 
 [Perform operations using the Web API](perform-operations-web-api.md)   
 [Query data using the Web API](query/overview.md)   
-[Create a table row using the Web API](create-entity-web-api.md)   
+[Create a table row using the Web API](create-table-row.md)   
 [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
-[Update and delete table rows using the Web API](update-delete-entities-using-web-api.md)   
+[Update and delete table rows using the Web API](update-delete-table-rows.md)   
 [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   
 [Use Web API functions](use-web-api-functions.md)   
 [Use Web API actions](use-web-api-actions.md)   

@@ -1,7 +1,7 @@
 ---
 title: "Execute Batch Operations Using the Web API"
 description: "Learn how to execute batch operations using the Web API to group multiple requests into a single HTTP call in Microsoft Dataverse. Get started with examples and code."
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -34,7 +34,7 @@ Batch requests provide two capabilities that you can use together:
    - Web API `$batch` requests by using change sets are equivalent to the `ExecuteTransaction` message available in the SDK for .NET. For more information, see [Execute messages in a single database transaction](../org-service/use-executetransaction.md).
    
    > [!NOTE]
-   > You can create associated entities in a single operation more easily than by using a batch request. For more information, see [Create related table rows in one operation](create-entity-web-api.md#create-related-table-rows-in-one-operation).
+   > You can create associated entities in a single operation more easily than by using a batch request. For more information, see [Create related table rows in one operation](create-table-row.md#create-related-table-rows-in-one-operation).
 
 
 People sometimes use batch requests to send `GET` requests when the length of the URL might exceed the [maximum allowed URL length](compose-http-requests-handle-errors.md#maximum-url-length). By using batch requests, you include the URL for the request in the body of the message where a URL up to 64 KB (65,536 characters) is allowed. Sending complex queries by using FetchXml can result in long URLs. For more information, see [Use FetchXML within a batch request](../fetchxml/retrieve-data.md#use-fetchxml-within-a-batch-request).
@@ -48,7 +48,7 @@ Compared to other operations that you can perform by using the Web API, batch re
 
 Use a `POST` request to submit a batch operation that contains multiple requests.
   
-The `POST` request containing the batch must have a [Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type) header with a value set to `multipart/mixed` with a `boundary` set to include the identifier of the batch by using this pattern:  
+The `POST` request containing the batch must have a [Content-Type](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Type) header with a value set to `multipart/mixed` and a `boundary` set to include the identifier of the batch by using this pattern:  
   
 ```
 POST [Organization Uri]/api/data/v9.2/$batch HTTP/1.1
@@ -829,7 +829,7 @@ When an error occurs for a request within a batch, the batch request returns the
 
 If you add the `Prefer: odata.continue-on-error` request header, you can specify that the server processes more requests when errors occur. The batch request returns `200 OK`, and individual response errors are included in the batch response body.
 
-More information: [OData Specification: 8.2.8.3 Preference odata.continue-on-error](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398236)
+For more information, see [OData Specification: 8.2.8.3 Preference odata.continue-on-error](https://docs.oasis-open.org/odata/odata/v4.0/errata02/os/complete/part1-protocol/odata-v4.0-errata02-os-part1-protocol-complete.html#_Toc406398236).
 
 <a name="bkmk_Example"></a>
 
@@ -1009,7 +1009,7 @@ OData-EntityId: [Organization Uri]/api/data/v9.2/tasks(11bb11bb-cc22-dd33-ee44-5
 The [WebAPIService class library (C#)](samples/webapiservice.md) is a sample helper class library project for Web API samples written in .NET. It demonstrates one way to reuse common patterns used with Web API.
 
 > [!NOTE]
-> This sample library is a helper that's used by all the Dataverse C# Web API samples, but it's not an SDK. It's tested only to confirm that the samples that use it run successfully. This sample code is provided "as-is" with no warranty for reuse.
+> This sample library is a helper that all the Dataverse C# Web API samples use, but it's not an SDK. The maintainers test it only to confirm that the samples that use it run successfully. This sample code is provided "as-is" with no warranty for reuse.
 
 This library includes classes for creating batch requests and processing responses. For example, variations on the following code were used to generate many of the HTTP request and response examples in this article.
 

@@ -1,7 +1,7 @@
 ---
 title: "Bypass custom Dataverse logic" 
 description: "Make data changes which bypass custom Dataverse logic." 
-ms.date: 02/11/2026
+ms.date: 10/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -59,16 +59,16 @@ Solutions shipped by Microsoft that use Dataverse such as Microsoft Dynamics 365
 
 The following table describes when to use the parameter values with `BypassBusinessLogicExecution`.
 
-|Parameter|Description |
+| Parameter | Description |
 |---------|---------|
-|`CustomSync` |Bypass only synchronous custom logic.<br />The compute time necessary for synchronous logic accrues to the total time required to perform each data operation. Use this option to reduce the amount of time required to complete operations in bulk.|
-|`CustomAsync`|Bypass only asynchronous custom logic, excluding Power Automate Flows.<br />Dataverse applies asynchronous logic after an operation completes. When a large number of operations trigger asynchronous logic, Dataverse requires more resources to process the custom logic and this resource consumption can affect performance. Use this option to avoid general performance issues that might occur when large numbers of operations trigger asynchronous logic.|
-|`CustomSync,CustomAsync`|Bypass both synchronous and asynchronous custom logic, excluding Power Automate Flows.|
+| `CustomSync` | Bypass only synchronous custom logic.<br />The compute time necessary for synchronous logic accrues to the total time required to perform each data operation. Use this option to reduce the amount of time required to complete operations in bulk.|
+| `CustomAsync` | Bypass only asynchronous custom logic, excluding Power Automate Flows.<br />Dataverse applies asynchronous logic after an operation completes. When a large number of operations trigger asynchronous logic, Dataverse requires more resources to process the custom logic and this resource consumption can affect performance. Use this option to avoid general performance issues that might occur when large numbers of operations trigger asynchronous logic.|
+| `CustomSync,CustomAsync` | Bypass both synchronous and asynchronous custom logic, excluding Power Automate Flows.|
 
 ### Requirements to use the `BypassBusinessLogicExecution` optional parameter
 
 - You must send the requests by using the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md).
-- The user sending the requests must have the `prvBypassCustomBusinessLogic` privilege. By default, only users with the system administrator security role have this privilege. [Learn how to add the the `prvBypassCustomBusinessLogic` privilege to another role](#add-the-required-privileges-to-another-role)
+- The user sending the requests must have the `prvBypassCustomBusinessLogic` privilege. By default, only users with the system administrator security role have this privilege. [Learn how to add the the `prvBypassCustomBusinessLogic` privilege to another role](#add-the-required-privileges-to-another-role).
 
 ### How do I use the `BypassBusinessLogicExecution` optional parameter?
 
@@ -95,7 +95,7 @@ static void DemonstrateBypassBusinessLogicExecution(IOrganizationService service
 
 #### [Web API](#tab/webapi)
 
-The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when [creating a new account record using the Dataverse Web API](webapi/create-entity-web-api.md). This request uses the `MSCRM.BypassBusinessLogicExecution` request header.
+The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when [creating a new account record using the Dataverse Web API](webapi/create-table-row.md). This request uses the `MSCRM.BypassBusinessLogicExecution` request header.
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -447,7 +447,7 @@ The following questions are frequently asked about using the optional parameters
 
 #### Do these optional parameters bypass plug-ins for data operations by Microsoft plug-ins?
 
- No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the logic for those operations isn't bypassed. Only those plugins or workflows that apply to the specific operation are bypassed.
+ No. If a plug-in or workflow in a Microsoft solution performs operations on other records, the logic for those operations isn't bypassed. Only those plug-ins or workflows that apply to the specific operation are bypassed.
 
 #### Can I use these optional parameters for data operations I perform within a plug-in?
 

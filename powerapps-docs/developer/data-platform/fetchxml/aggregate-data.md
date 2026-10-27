@@ -1,7 +1,7 @@
 ---
 title: Aggregate Data Using FetchXml
 description: Learn how to use FetchXml to aggregate data in Microsoft Dataverse with grouping, sum, average, min, max, and count functions. Start building aggregate queries today.
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -16,7 +16,7 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# Aggregate data using FetchXML
+# Aggregate data by using FetchXML
 
 Use FetchXML to aggregate data in Microsoft Dataverse by calculating sum, average, min, max, and count across multiple rows. FetchXML grouping and aggregation features let you summarize large datasets efficiently so you can build meaningful reports and analytics.
 

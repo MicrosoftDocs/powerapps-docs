@@ -405,5 +405,5 @@ For current limitations, including behavior for linked tables and Dataverse Sear
 
 - [Filtered record ownership](../../maker/data-platform/filtered-view-record-ownership.md)
 - [Use FetchXML to query data](fetchxml/overview.md)
-- [Create a table row using the Web API](webapi/create-entity-web-api.md)
+- [Create a table row using the Web API](webapi/create-table-row.md)
 - [Create records using the SDK for .NET](org-service/entity-operations-create.md)

@@ -1,10 +1,10 @@
 ---
-title: Migrate Data Between Dataverse Environments Using the OData Connector
-description: Learn how to migrate data between Microsoft Dataverse environments using the dataflows OData connector. Follow step-by-step instructions to set up and run your dataflow.
+title: Migrate Data Between Dataverse Environments with OData
+description: Learn how to migrate data between Microsoft Dataverse environments with the dataflows OData connector. Follow these steps to set up and run your dataflow.
 author: denise-msft
 ms.author: demora
 ms.reviewer: jdaly
-ms.date: 03/12/2026
+ms.date: 10/26/2026
 ms.topic: upgrade-and-migration-article
 ms.subservice: dataverse-developer
 contributors:
@@ -17,7 +17,7 @@ contributors:
 > Consider using the [Power Query Dataverse Connector](/power-query/connectors/dataverse) with dataflows rather than the OData connector. 
 > Dataflows are the recommended method to migrate data between Dataverse environments. For more information, see [What are dataflows?](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365)
 
-Dataverse [Web API](./webapi/overview.md) works with any technology that supports OData and OAuth. You can use many options to move data in and out of Dataverse. The OData connector is one of the dataflows. It's designed to support migration and synchronization of large datasets in Dataverse. 
+Migrate data between Dataverse environments by using the dataflows OData connector, which is designed to support migration and synchronization of large datasets. Dataverse [Web API](./webapi/overview.md) works with any technology that supports OData and OAuth, so you have many options to move data in and out of Dataverse. 
 
 In this article, you learn how to migrate data between Dataverse environments by using the dataflows OData connector. 
 
@@ -43,7 +43,7 @@ In this article, you learn how to migrate data between Dataverse environments by
 1. Importing relationships requires multiple dataflows.
 
    Tables with one (parent/independent) to many (children/dependent) relationships need separate dataflows. Configure the parent dataflow to run before any child tables, since the data in the parent needs to load first to correctly map to the columns in the corresponding child tables. 
-   Additionally, you must create an [alternate key](/powerapps/maker/data-platform/define-alternate-keys-reference-records?WT.mc_id=DX-MVP-5003800) in the parent table before you can set a lookup column on the child table. Without a key defined on a parent table, you can't populate lookup columns on any child tables.
+   You must also create an [alternate key](/powerapps/maker/data-platform/define-alternate-keys-reference-records) in the parent table before you can set a lookup column on the child table. Without a key defined on a parent table, you can't populate lookup columns on any child tables.
 
 ## Step 2: Get the OData endpoint for the source environment
 
@@ -70,7 +70,7 @@ In the **target** environment, create a new dataflow with the OData connector.
 1. Sign in to [Power Apps](https://make.powerapps.com).
 1. Select the required target environment from the upper-right corner.
 1. In the left navigation pane, expand the **Data** menu, and then select **Dataflows**.
-1. Select **New dataflow** to create a new dataflow. Provide a meaningful name for the dataflow. Select **Create**.
+1. Select **New dataflow** to create a new dataflow. Enter a name for the dataflow. Select **Create**.
 
    > [!div class="mx-imgBorder"]
    > :::image type="content" source="./media/enter-name-for-new-dataflow.png" alt-text="Screenshot of the new dataflow dialog prompting for a dataflow name.":::
@@ -80,17 +80,17 @@ In the **target** environment, create a new dataflow with the OData connector.
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="media/select-odata-data-source.png" alt-text="Screenshot of the data source selection page with the OData connector highlighted.":::
 
-1. In the **Connection settings** dialog box, type the column values:
+1. In the **Connection settings** dialog box, enter the following values:
 
     > [!div class="mx-imgBorder"]
     > :::image type="content" source="./media/enter-odata-connector-parameters.png" alt-text="Screenshot of the OData connection settings dialog with fields for URL, connection, and authentication.":::
 
     | Column| Description|
     |---|---|
-    | URL| Provide the Service Root URL in the URL column of the connection settings.|
+    | URL| Enter the Service Root URL in the URL field of the connection settings.|
     | Connection| Create new connection. This value is automatically chosen if you didn't previously make an OData connection in dataflows.|
     | Connection name| Optionally, rename the connection name, but a value is automatically populated.|
-    | On-premises data gateway | None. An on-premises data gateway isn't needed for connections to this cloud service.|
+    | On-premises data gateway | None. You don't need an on-premises data gateway for connections to this cloud service.|
     | Authentication kind| Organizational account. Select **Sign in** to open the sign-in dialog that authenticates the account associated with the connection. |
 
    > [!IMPORTANT]
@@ -114,9 +114,9 @@ First, select the tables that you want to transfer. You can browse all tables in
  
 1. In the **Power Query - Edit queries** window, you can transform the query before import.
 
-    - If you are only migrating data, there should not be a need to modify anything here. 
+    - If you're only migrating data, you don't need to modify anything here. 
 
-    - Reducing the number of unnecessary columns will improve the dataflow performance for larger data sets.
+    - Reducing the number of unnecessary columns improves the dataflow performance for larger data sets.
 
     > [!TIP]
     > You can go back to choose more tables in the **Get data** ribbon option for the same OData connector.
@@ -167,7 +167,7 @@ When you select **Create**, you start the initial dataflow load.
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="./media/initiate-dataflow-process.png" alt-text="Screenshot of the dataflows list showing the initial dataflow load in progress.":::
 
-You can manually start a dataflow by selecting **(...)** in the dataflows list. Make sure to run dependent dataflows after the parent flows finish.
+You can manually start a dataflow by selecting **(...)** in the dataflows list. Ensure to run dependent dataflows after the parent flows finish.
 
 > [!div class="mx-imgBorder"]
 > :::image type="content" source="./media/refresh-dataflow-manually.png" alt-text="Screenshot of the dataflows context menu with the refresh option to manually run a dataflow.":::

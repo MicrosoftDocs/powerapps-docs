@@ -84,7 +84,7 @@ Retrieves information about the current user by calling the [WhoAmI function](/p
 
 #### `Create(entitySetName, data)`
 
-Creates a new record in the specified entity set as described in [Create a table row using the Web API](create-entity-web-api.md).
+Creates a new record in the specified entity set as described in [Create a table row using the Web API](create-table-row.md).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set where the new entity will be created.
@@ -116,7 +116,7 @@ Refreshes the given record by fetching the latest data from the server using [co
 
 #### `CreateRetrieve(entitySetName, data, query, includeAnnotations = true)`
 
-Creates and retrieves a record from the specified entity set as described in [create with data returned](create-entity-web-api.md#create-with-data-returned).
+Creates and retrieves a record from the specified entity set as described in [create with data returned](create-table-row.md#create-with-data-returned).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -170,7 +170,7 @@ Asynchronously retrieves the count of items in a specified collection as describ
 
 #### `Update(entitySetName, id, data, etag = null)`
 
-Updates a record in the specified entity set by ID with the provided data as described in [basic update](update-delete-entities-using-web-api.md#basic-update).
+Updates a record in the specified entity set by ID with the provided data as described in [basic update](update-delete-table-rows.md#basic-update).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set where the record exists.
@@ -182,7 +182,7 @@ Updates a record in the specified entity set by ID with the provided data as des
 
 #### `Delete(entitySetName, id, etag = null)`
 
-Deletes an entity from the specified entity set by ID as described by [basic update](update-delete-entities-using-web-api.md#basic-delete)
+Deletes an entity from the specified entity set by ID as described by [basic update](update-delete-table-rows.md#basic-delete)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set from which to delete the entity.
@@ -193,7 +193,7 @@ Deletes an entity from the specified entity set by ID as described by [basic upd
 
 #### `SetValue(entitySetName, id, columnName, value)`
 
-Sets the value of a specified column for a given record as described in [update a single property value](update-delete-entities-using-web-api.md#update-a-single-property-value).
+Sets the value of a specified column for a given record as described in [update a single property value](update-delete-table-rows.md#update-a-single-property-value).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.

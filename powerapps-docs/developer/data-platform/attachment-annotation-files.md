@@ -327,7 +327,7 @@ Content-Type: text/plain
 
 For more information, see:
 
-- [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)
+- [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-by-using-web-api)
 - [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
 
 #### Download attachment files in chunks
@@ -798,7 +798,7 @@ Content-Type: text/plain
 
 For more information, see:
 
-- [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-using-web-api)
+- [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-by-using-web-api)
 - [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
 
 #### Download annotation files in chunks
@@ -1113,7 +1113,7 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/organizations(<organizationid>)
 ```
 
-More information: [Basic update](webapi/update-delete-entities-using-web-api.md#basic-update)
+More information: [Basic update](webapi/update-delete-table-rows.md#basic-update)
 
 ---
 

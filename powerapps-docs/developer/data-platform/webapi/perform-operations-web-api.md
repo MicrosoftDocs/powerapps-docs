@@ -1,7 +1,7 @@
 ---
 title: "Perform operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
 description: "Microsoft Dataverse Web API provides a RESTful web service interface that you can use to interact with data in Dataverse using a wide variety of programming languages. Read about the operations that can be performed using the Web API"
-ms.date: 03/09/2026
+ms.date: 10/26/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -25,11 +25,13 @@ The Web API provides a RESTful web service interface that you can use to interac
 |Article|Description|
 |---------|-------------|
 |[Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)|Learn how to set the appropriate HTTP headers and handle errors when interacting with the Web API.|
-|[Query data](query/overview.md)|Learn to compose queries using OData to retrieve data from entity collections in Dataverse.|
-|[Create a table row](create-entity-web-api.md)|Send a `POST` request to create table rows, including related rows in a single deep insert operation.|
+|[Use OData to query data](query/overview.md)|Learn to compose queries using OData to retrieve data from entity collections in Dataverse.|
+|[Use FetchXml to query data](../fetchxml/overview.md)|Compose XML-based queries to retrieve data from Dataverse, including filtering, joining, and paging results.|
+|[Use SQL to query data](query/sql.md)|Retrieve data by passing SQL `SELECT` commands through the Web API `sql` query option.|
+|[Create a table row](create-table-row.md)|Send a `POST` request to create table rows, including related rows in a single deep insert operation.|
 |[Retrieve a table row](retrieve-entity-using-web-api.md)|Use a `GET` request to retrieve a specific record by its unique identifier, including specific properties and related records.|
-|[Update and delete table rows](update-delete-entities-using-web-api.md)|Perform update, delete, and upsert operations on table rows, including operations on individual columns.|
-|[Associate and disassociate table rows](associate-disassociate-entities-using-web-api.md)|Create and remove relationships between records using the navigation properties defined in the table metadata.|
+|[Update and delete table rows](update-delete-table-rows.md)|Perform update, delete, and upsert operations on table rows, including operations on individual columns.|
+|[Associate and disassociate rows](associate-disassociate-entities-using-web-api.md)|Create and remove relationships between records using the navigation properties defined in the table metadata.|
 |[Merge table rows](merge-entity-using-web-api.md)|Combine two duplicate records into one using the `Merge` action for accounts, contacts, leads, and incidents.|
 |[Use functions](use-web-api-functions.md)|Use reusable functions with `GET` requests to retrieve data or evaluate values in queries without side effects.|
 |[Use actions](use-web-api-actions.md)|Use reusable operations with `POST` requests to perform actions that have side effects, including custom actions.|
@@ -37,7 +39,7 @@ The Web API provides a RESTful web service interface that you can use to interac
 |[Impersonate another user](impersonate-another-user-web-api.md)|Execute business logic on behalf of another user, applying that user's role and object-based security.|
 |[Perform conditional operations](perform-conditional-operations-using-web-api.md)|Use ETags to perform conditional retrievals, optimistic concurrency control, and limited upsert operations.|
 |[Detect duplicate data](manage-duplicate-detection-create-update.md)|Use the `MSCRM.SuppressDuplicateDetection` header to detect and prevent creation of duplicate records.|
-|[Troubleshoot Dataverse client errors](/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/web-api-client-errors)|Identify and resolve common client errors encountered when using the Dataverse Web API.|
+|[Troubleshoot client errors](/troubleshoot/power-platform/dataverse/dataverse-web-api-and-sdk/web-api-client-errors)|Identify and resolve common client errors encountered when using the Dataverse Web API.|
 
 ## Next steps
 

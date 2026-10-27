@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 10/08/2026
+  ms.date: 10/26/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -24,7 +24,7 @@ summary: |
   > Azure Synapse Link branding will be retired soon. In Power Apps, open **Link data** to access this experience. The UX uses **Link to Data lake**, while this article continues to use Azure Synapse Link so existing customers can recognize the feature.
 
   > [!IMPORTANT]
-  > The Delta Lake (Parquet), Synapse Parquet, or bring your own Synapse (BYOS) Parquet option is being retired. Beginning October 15, 2026, it won't be available to new customers. Eligibility is evaluated for each Dataverse organization ID, not at the tenant level. Eligible existing organizations can unlink and recreate the link for the same organization ID, but a new environment with a new organization ID isn't eligible. Existing customers must transition to CSV output or [Link to Microsoft Fabric](fabric-link-to-data-platform.md) by December 2027. More information: [Export Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md).
+  > The Delta Lake (Parquet), Synapse Parquet, or bring your own Synapse (BYOS) Parquet option is being retired. Beginning October 15, 2026, it won't be available to new customers. Eligibility is evaluated for each Dataverse organization ID, not at the tenant level. Eligible existing organizations can unlink and recreate the link for the same organization ID, but a new environment with a new organization ID isn't eligible. Existing customers must transition to comma separated value (CSV) output or [Link to Microsoft Fabric](fabric-link-to-data-platform.md) by December 2027. More information: [Export Dataverse data in Delta Lake format](azure-synapse-link-delta-lake.md).
 sections:
 - name: General
   questions:
@@ -44,6 +44,9 @@ sections:
         - Data storage in Azure Data Lake Storage Gen2: [Azure Storage Data Lake Gen2 Pricing | Microsoft Azure](https://azure.microsoft.com/pricing/details/storage/data-lake/)
         - Data consumption cost (such as Synapse Workspace): [Pricing - Azure Synapse Analytics | Microsoft Azure](https://azure.microsoft.com/pricing/details/synapse-analytics/)
         For comprehensive Microsoft Cost Management information, go to: [Plan to manage Azure costs - Microsoft Cost Management | Microsoft Learn](/azure/cost-management-billing/understand/plan-manage-costs)
+   - question: Can I link a Synapse workspace to my data lake for CSV exports?
+     answer: |
+        The **Link to Data lake** creation flow supports CSV exports to your own Azure Data Lake Storage Gen2 account, but no longer includes Synapse workspace linking. To analyze these exports in Synapse, manually connect your workspace to the data lake. For more information, see [Tutorial: Analyze data in a storage account](/azure/synapse-analytics/get-started-analyze-storage).
    - question: What happens when I add a column?
      answer: |
         When you add a new column to a table in the source, it's also added at the end of the file in the destination in the corresponding file partition. While the rows that existed before the addition of the column are't shown in the new column, new or updated rows show the newly added column.

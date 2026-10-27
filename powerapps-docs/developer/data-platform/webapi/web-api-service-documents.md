@@ -1,7 +1,7 @@
 ---
 title: Dataverse Web API Service Documents
-description: Learn how to use OData service documents to discover and understand Dataverse Web API capabilities in your environment.
-ms.date: 03/27/2026
+description: Learn how to use Dataverse Web API service documents and the CSDL $metadata document to discover entity sets, types, and operations in your environment.
+ms.date: 10/26/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -13,9 +13,9 @@ search.audienceType:
 contributors:
  - JimDaly
 ---
-# Web API service documents
+# Dataverse Web API service documents
 
-OData endpoints provide service documents that describe the capabilities of the service. Understanding these service documents helps you use the resources that are available in the environment you're working with.
+The Dataverse Web API provides OData service documents that describe the capabilities of the service. Use these service documents to discover the entity sets, tables, and operations available in your environment.
 
 ## Service document
 
@@ -23,19 +23,19 @@ Perform a `GET` request on the Web API endpoint to see the service document for 
 
 Your Web API endpoint looks something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2/`. This part: `yourorg.api.crm`, depends on your environment. See [View developer resources](../view-download-developer-resources.md) to learn how to find it.
 
-### [Using Insomnia](#tab/insomnia)
+### [Use Insomnia](#tab/insomnia)
 
 If you're using [Insomnia with the recommended environment settings](insomnia.md), just use the `_.webapiurl` environment variable.
 
 See the instructions to [View the CSDL $metadata document](insomnia.md#view-the-csdl-metadata-document). With Insomnia, you can use [XPath queries to filter the results of the large XML document](insomnia.md#find-definitions-of-types).
 
-### [Using PowerShell with Visual Studio Code](#tab/ps)
+### [Use PowerShell with Visual Studio Code](#tab/ps)
 
 If you installed the [Prerequisites](quick-start-ps.md#prerequisites) for [Quick Start Web API with PowerShell and Visual Studio Code](quick-start-ps.md), you can view the service document in Visual Studio Code.
 
 To download the CSDL $metadata document, see [these instructions](use-ps-and-vscode-web-api.md#download-the-dataverse-web-api-csdl-metadata-document).
 
-### [Using your browser](#tab/browser)
+### [Use your browser](#tab/browser)
 
 You can send `GET` requests by using your browser. Type the Web API endpoint URL in your browser address bar.
 
@@ -73,7 +73,7 @@ The service document provides a list of all the *EntitySets* available in your e
 Always use the [EntityMetadata.EntitySetName property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntitySetName) value rather than the logical collection name value. By default, the entity set name matches the table [EntityMetadata.LogicalCollectionName property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.LogicalCollectionName) value, but don't depend on this value.
 
 
-## Changing the entity set name
+## Change the entity set name
 
 If you have a custom table that you want to address by using a different entity set name, update the table [EntityMetadata.EntitySetName property](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.EntitySetName) value to use a different name. [Learn about table properties you can change](../customize-entity-metadata.md#editable-table-properties).
 

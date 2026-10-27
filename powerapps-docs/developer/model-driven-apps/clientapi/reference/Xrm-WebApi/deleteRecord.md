@@ -41,7 +41,7 @@ On success, returns a promise object to the `successCallback` with the following
 
 ## Examples
 
-These examples use some of the same request objects as demonstrated in [Update and delete tables using the Web API](../../../../data-platform/webapi/update-delete-entities-using-web-api.md) to define the data object for updating an entity record.
+These examples use some of the same request objects as demonstrated in [Update and delete tables using the Web API](../../../../data-platform/webapi/update-delete-table-rows.md) to define the data object for updating an entity record.
 
 Deletes an account with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
 

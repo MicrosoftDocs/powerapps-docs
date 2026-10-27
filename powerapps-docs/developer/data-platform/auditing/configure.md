@@ -167,7 +167,7 @@ HTTP/1.1 204 No content
 
 Learn more about:
 
-- [Update and delete table rows using the Web API](../webapi/update-delete-entities-using-web-api.md)
+- [Update and delete table rows using the Web API](../webapi/update-delete-table-rows.md)
 
 ##### [SDK for .NET](#tab/sdk)
 
