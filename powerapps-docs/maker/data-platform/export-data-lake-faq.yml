@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 10/26/2026
+  ms.date: 10/28/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -81,6 +81,15 @@ sections:
         Model.json keeps the database length for the column's size. Dataverse has a concept of database length for each column. If you create a column with a size of 200 and later reduce it to 100, Dataverse still allows your existing data to be present in Dataverse. It does that by keeping `DBLength` to 200 and `MaxLength` to 100. What you see in Model.json is `DBLength` and if you use that for downstream processes you'll never provision lesser space for your Dataverse columns. 
         > [!NOTE]
         > Memo fields are defined as `varchar(max)` with a default maximum length of 9999.
+   - question: Why does an exported finance and operations table have fewer columns than the physical SQL table?
+     answer: |
+        Azure Synapse Link exports columns from the logical finance and operations table. For tables that use inheritance, the physical SQL table can also contain columns that belong to derived tables. These columns aren't included when you export the base table.
+
+        For example, person-specific columns stored in the physical `DIRPARTYTABLE` are exposed through `DirPerson`, not `DirPartyTable`. Select `DirPerson` in Azure Synapse Link to access these columns.
+
+        For `HcmWorker`, differences in system columns between the export and the physical SQL table can also result in different column counts.
+
+        This difference in column counts is expected and doesn't, by itself, indicate a synchronization failure.
    - question: What date and time formats can be expected in exported Dataverse tables?
      answer: |
         There are three date and time formats that can be expected in the exported Dataverse tables.
