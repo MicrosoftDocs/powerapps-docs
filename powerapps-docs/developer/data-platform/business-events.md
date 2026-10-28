@@ -1,9 +1,9 @@
 ---
 title: Microsoft Dataverse business events| Microsoft Docs
 description: Learn about how to use business events to connect and integrate business applications.
-ms.date: 02/11/2026
-author: jaredha
-ms.author: jaredha
+ms.date: 10/27/2026
+author: MsSQLGirl
+ms.author: jukoesma
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: dataverse-developer
@@ -19,21 +19,23 @@ contributors:
 
 Events drive automation of business logic and integration with other systems. When something interesting happens in a business application, an event occurs and data describing the event becomes available for subscribers to respond to. Microsoft Dataverse provides capabilities to relay event data to subscribers by using the following applications and technologies:
 
-- Power Automate Flows
-- Azure Service Bus
-- Azure Event Hub
-- Webhooks
-- Dataverse plug-ins
+| Application or technology | Description |
+|---------|---------|
+| [Power Automate flows](/power-automate/overview-cloud) | Automate tasks and processes across applications and services in response to events. |
+| [Azure Service Bus](azure-integration.md) | Reliably deliver messages between applications through queues and publish-subscribe topics. |
+| [Azure Event Hubs](work-event-data-azure-event-hub-solution.md) | Ingest and stream large volumes of event data for processing and analytics. |
+| [Webhooks](use-webhooks.md) | Send Dataverse event data to external web applications through HTTP requests. |
+| [Dataverse plug-ins](plug-ins.md) | Run custom code in response to Dataverse events to extend business logic. |
 
 Dataverse has a robust event framework to capture system events *within* Dataverse. You can respond to events within the system by using the Dataverse Event Framework. This framework isn't changing. For more information, see [Event framework](event-framework.md).
 
-Dataverse Business events provides new ways to expose events and compose your business logic to respond to them asynchronously, such as the Power Automate Dataverse **When an action is performed** trigger.
+Dataverse Business events provides new ways to expose events and compose your business logic to respond to them asynchronously, such as the [Power Automate Dataverse **When an action is performed** trigger](/power-automate/dataverse/action-trigger).
 
 Here are some examples:
 
-- You have logic that you want to apply when a sharing operation is performed on a user-owned record. The only way to initiate logic on this `GrantAccess` message that occurs when a record is shared is via the Dataverse Event framework, typically through a plug-in. By using business events, you can *catalog* the table that exposes the `GrantAccess` message.
+- **Respond to record sharing.** You have logic that you want to apply when a sharing operation is performed on a user-owned record. The only way to initiate logic on this `GrantAccess` message that occurs when a record is shared is via the Dataverse Event framework, typically through a plug-in. By using business events, you can *catalog* the table that exposes the `GrantAccess` message.
 
-- A plug-in developer might have some logic in synchronous plug-in code that responds to a certain set of conditions. The developer passes these conditions into Shared Variables for another asynchronous plug-in to initiate some automation. By using a business event, instead of passing those details through the event pipeline shared variables, you can call a custom action containing the details of the event in the parameters. An asynchronous plug-in can then respond to the custom action, or you might choose to use Power Automate instead. You can add other logic to respond to that event. This pattern offers greater flexibility and an opportunity to simplify the logic in your plug-in code.
+- **Replace shared variables with a custom event.** A plug-in developer might have some logic in synchronous plug-in code that responds to a certain set of conditions. The developer passes these conditions into [Shared Variables](understand-the-data-context.md#shared-variables) for another asynchronous plug-in to initiate some automation. By using a business event, instead of passing those details through the event pipeline shared variables, you can call a custom action containing the details of the event in the parameters. An asynchronous plug-in can then respond to the custom action, or you might choose to use Power Automate instead. You can add other logic to respond to that event. This pattern offers greater flexibility and an opportunity to simplify the logic in your plug-in code.
 
 ## Catalogs and custom events
 
@@ -70,7 +72,7 @@ For example, the following structure represents a catalog for a solution called 
 
 This example uses **Tables** and **Customer Events** as categories, but you can use any category grouping that makes sense for your solution.
 
-If your solution consists of multiple dependent solutions, you can define the root catalog in the base solution, then add additional categories and assigned events to the dependent solutions.
+If your solution consists of multiple dependent solutions, you can define the root catalog in the base solution, then add extra categories and assigned events to the dependent solutions.
 
 ## Table events
 
