@@ -1,7 +1,7 @@
 ---
 title: "Work with data using code in Microsoft Dataverse (PowerApps) | Microsoft Docs" 
 description: "Microsoft Dataverse provides web services and APIs that you can use to interact with your data."
-ms.date: 03/30/2026
+ms.date: 10/28/2026
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
@@ -81,9 +81,9 @@ The [Power Query Dataverse connector](/power-query/connectors/dataverse) uses th
 
 ## Request and Response payload size limitations
 
-The maximum payload size for any request sent to Dataverse is 128 MB. Requests with payloads over this limit receive a [413 Payload Too Large](https://devdoc.net/web/developer.mozilla.org/docs/Web/HTTP/Status/413.html) HTTP status code in the response.
+The maximum request payload size for any request sent to Dataverse is 128 MB. Requests with request payloads over this limit receive a [413 Payload Too Large](https://devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Status/413.html) HTTP status code in the response.
 
-There's a 1-GB size limitation on the size of a response that Dataverse returns. Few APIs or queries are capable of returning this much data.  If you encounter this limit, you should consider what other options are available to get the data in multiple, smaller requests.
+There's a 1-GB size limitation on the size of a response payload that Dataverse returns. Requests with response payloads over this limit receive a [413 Payload Too Large](https://devdoc.net/web/developer.mozilla.org/en-US/docs/Web/HTTP/Status/413.html) HTTP status code with a `ResponsePayloadTooLarge` error code in the response. Few APIs or queries are capable of returning this much data.  If you encounter this limit, consider what other options are available to get the data in multiple, smaller requests.
 
 The deprecated SOAP endpoint payloads use serialized XML data that is much more verbose than the serialized JSON data payloads the Web API uses. You're less likely to encounter errors where the request or response payload is too large when you use the Web API. [Learn about the legacy SOAP endpoint](org-service/overview.md#about-the-legacy-soap-endpoint)
 

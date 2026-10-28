@@ -3,7 +3,7 @@ title: Page Results Using FetchXml
 description: Learn how to use FetchXml to page results when you retrieve data from Microsoft Dataverse. Explore simple paging and paging cookies for efficient data retrieval.
 author: MsSQLGirl
 ms.author: jukoesma
-ms.date: 03/12/2026
+ms.date: 10/27/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: dataverse-developer
@@ -17,11 +17,11 @@ contributors:
  - DonaldlaGithub
  - tdashworth
 ---
-# Page results using FetchXML
+# Page results by using FetchXML
 
-You can limit the number of rows retrieved for each request by setting a page size. By using paging, you can retrieve consecutive pages of data, so you efficiently get all the records that match the criteria of a query.
+You can limit the number of rows retrieved for each request by setting a page size. Use paging to retrieve consecutive pages of data so you efficiently get all the records that match the criteria of a query.
 
-The default and maximum page size is 5,000 for standard tables and 500 for elastic tables. If you don't set a page size, Dataverse returns either 5,000 or 500 rows of data at a time, depending on the type of table. To get more rows, you must send additional requests.
+The default and maximum page size is 5,000 for standard tables and 500 for elastic tables. Some standard tables might return fewer rows. If you don't set a page size, Dataverse generally returns either 5,000 or 500 rows of data at a time, depending on the type of table. To get more rows, you must send more requests.
 
 > [!NOTE]
 >
@@ -195,7 +195,7 @@ static void Main(string[] args)
 ```
 
 > [!NOTE]
-> This query returns all records that match the criteria. Make sure you include filter elements to limit the results.
+> This query returns all records that match the criteria. Ensure you include filter elements to limit the results.
 
 Read the following important information about using a connection string in application code.
 [!INCLUDE [cc-connection-string](../includes/cc-connection-string.md)]
@@ -237,13 +237,11 @@ The following series of FetchXML requests show the use of paging cookies. For br
 
 Send the first page with the `page` value set to `'1'`.
 
-Use this request header:
+To ensure the response includes the paging cookie and more records annotations, use this request header:
 
 ```
 Prefer: odata.include-annotations="Microsoft.Dynamics.CRM.fetchxmlpagingcookie,Microsoft.Dynamics.CRM.morerecords"
 ```
-
-To make sure the response includes the paging cookie and more records annotations.
 
 **Request:**
 
@@ -555,11 +553,13 @@ Console.WriteLine($"Success: {records.Count}");
 ```
 
 > [!IMPORTANT]
-> This query returns all records that match the criteria. Make sure you include filter elements to limit the results.
+> This query returns all records that match the criteria. Ensure you include filter elements to limit the results.
 >
 > The `entitySetName` parameter must be the [entity set name](../webapi/web-api-service-documents.md#entity-set-name) for the same table specified in the FetchXml [entity element](reference/entity.md) `name` attribute.
 
 ---
+
+<!-- cc-ordering-paging.md include has the Ordering and paging section -->
 
 [!INCLUDE [cc-ordering-paging](../includes/cc-ordering-paging.md)]
 
