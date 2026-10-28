@@ -1,7 +1,7 @@
 ---
 title: "Use Insomnia with Dataverse Web API"
 description: "Learn how to set up and configure Insomnia local Scratch Pad to authenticate and send Dataverse Web API requests. Get started without registering an app."
-ms.date: 03/13/2026
+ms.date: 10/27/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -15,23 +15,23 @@ contributors:
 
 # Use Insomnia with Dataverse Web API
 
-You can use many API client tools to authenticate to Microsoft Dataverse environments and compose and send Web API requests. These tools make it easier to learn, test, and perform ad-hoc queries by using the Dataverse Web API.
+You can use many API client tools to authenticate to Microsoft Dataverse environments and compose and send Web API requests. Tools like the [Insomnia API client](https://insomnia.rest/), [Bruno](https://www.usebruno.com/), and others make it easier to learn, test, and perform ad-hoc queries by using the Dataverse Web API.
 
 This article has two goals:
 
-1. Demonstrate a strategy to authenticate and connect to Dataverse by using the [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID provided by Microsoft that's pre-approved for all Dataverse environments. By using this strategy, you don't need to register an application to get started using the Dataverse Web API.
-1. Introduce you to some basic data operations you can perform by using the Dataverse Web API in the context of the Insomnia API client. By using this approach, you can use Insomnia to continue to experiment and learn about the Dataverse Web API.
+1. **Connect without registering an app.** Authenticate and connect to Dataverse by using the [Insomnia API client](https://insomnia.rest/) with a Microsoft Entra application (client) ID that Microsoft provides and pre-approves for all Dataverse environments. You don't need to register an application to get started using the Dataverse Web API.
+2. **Try basic data operations.** Perform basic Dataverse Web API operations in the Insomnia API client. Use these examples as a starting point to continue experimenting and learning about the Dataverse Web API.
 
 > [!NOTE]
 > The instructions in this article represent the experience provided by Insomnia when this article was written. The user experience probably changes over time and this article might not represent the current experience. The article updates only when changes occur that fundamentally break the steps described here. [Learn more in the Insomnia documentation](https://docs.insomnia.rest/insomnia/get-started).
 
-## Privacy
+## Privacy with Insomnia local Scratch Pad
 
 Requests you send by using client API tools contain information that could be sensitive. Many developers don't want to upload this information to a cloud service.
 
-The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad) doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. You can choose to create an account and use all the Insomnia features if you wish. If you want a version that has no options to create an account and is focused on privacy, see [Insomnium](https://github.com/ArchGPT/insomnium).
+The [Insomnia local Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad) doesn't require that you create an account and doesn't store information about requests you send. The instructions provided here describe how to use Insomnia local Scratch Pad only. You can choose to create an account and use all the Insomnia features if you wish.
 
-## Other options
+## Other options to authenticate with Dataverse Web API
 
 You can also use PowerShell with Visual Studio Code to authenticate with Dataverse Web API as an alternative. [Get started using Web API with PowerShell and Visual Studio Code](quick-start-ps.md).
 
@@ -48,9 +48,9 @@ See the [Insomnia documentation for steps to install Insomnia](https://docs.inso
 For Windows, the installer is an executable file that you download and run. When the installation finishes, you might see different options. These options shouldn't interfere with the instructions in this article, but they might change. When this article was written, the installer presents these options:
 
 - For the option to enable features to sync data with the cloud, choose **Keep storing locally in Local Vault**.
-- For the option to create an account, choose **Use the local Scratch Pad**. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad).
+- For the option not to create an account, choose **Use the local Scratch Pad**. [Learn more about Insomnia Scratch Pad](https://docs.insomnia.rest/insomnia/scratchpad).
 
-   :::image type="content" source="media/welcome-to-insomnia.png" alt-text="The welcome to insomnia dialog including the Use the local Scratch Pad option.":::
+   :::image type="content" source="media/welcome-to-insomnia.png" alt-text="Screenshot of the Welcome to Insomnia dialog with the Use the local Scratch Pad option.":::
 
 ## Configure the base environment
 
@@ -107,7 +107,7 @@ If you only ever need to connect to a single Dataverse environment, use the base
    > [!NOTE]
    > You only need to include the `url` property in the sub-environment. When you select the sub-environment, this value overrides the `url` value specified in the base environment. You can also include any of the five other properties if you wish, but the `url` property value is the only one that is different for each Dataverse environment.
 
-## Configure requests
+## Configure Dataverse Web API requests
 
 After you configure your base environment and any sub-environments, you're ready to configure a request.
 
@@ -203,7 +203,7 @@ The CSDL $metadata document is large. The Insomnia preview provides a response f
 
 ## Send a WhoAmI request
 
-Now that you're authenticated, modify your request to invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami). Because `WhoAmI` is a function, use a `GET` method. This function has no parameters, so it's easy to use. [Learn more about using Web API Functions](use-web-api-functions.md).
+Now that you're authenticated, modify your request to invoke the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami). Because `WhoAmI` is a function, use the `GET` method. This function has no parameters, so it's easy to use. [Learn more about using Web API Functions](use-web-api-functions.md).
 
 1. Edit the URL by appending `WhoAmI` after the `_.webapiurl` variable. The URL should be:
    
@@ -213,17 +213,18 @@ Now that you're authenticated, modify your request to invoke the [WhoAmI functio
 
    As described in [HTTP headers](compose-http-requests-handle-errors.md#http-headers), each Web API request should have a specific set of request headers. You might need to modify header values for different behaviors.
 
-   In the **Headers** tab, select the **Add** button to enter each of the following common headers:
+   1. In the **Headers** tab, select the **Bulk Edit** option at the bottom. 
+   1. Copy and paste the following to add all of the following common headers at once:
 
-   | Header | Value |
-   |---------|---------|
-   | `Accept` | `application/json` |
-   | `OData-MaxVersion` | `4.0` |
-   | `OData-Version` | `4.0` |
-   | `If-None-Match` | `null` |
-   | `Prefer` | `odata.include-annotations="*"` |
+      ```
+      Accept: application/json
+      OData-MaxVersion: 4.0
+      OData-Version: 4.0
+      If-None-Match: null
+      Prefer: odata.include-annotations="*"
+      ```
 
-   These headers don't change the behavior of the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami), but it's good to start adding them at the beginning.
+      These headers don't change the behavior of the [WhoAmI function](/power-apps/developer/data-platform/webapi/reference/whoami), but it's good to start adding them at the beginning.
 
 1. Select **Send**.
 
@@ -285,15 +286,15 @@ To use Insomnia to retrieve records, set the [entity set name](web-api-service-d
          "revenue@OData.Community.Display.V1.FormattedValue": "$100,000.00",
          "revenue": 100000.0,
          "address1_city": "Redmond",
-         "accountid": "01eaf28f-81e1-ee11-904d-000d3a3517c4",
+         "accountid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
          "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
          "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
          "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
-         "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+         "_transactioncurrencyid_value": "bbbbbbbb-1111-2222-3333-cccccccccccc",
          "address1_composite": "Redmond",
          "primarycontactid": {
          "fullname": "Scott Konersmann (sample)",
-         "contactid": "15eaf28f-81e1-ee11-904d-000d3a3517c4"
+         "contactid": "cccccccc-2222-3333-4444-dddddddddddd"
          }
       },
       {
@@ -302,15 +303,15 @@ To use Insomnia to retrieve records, set the [entity set name](web-api-service-d
          "revenue@OData.Community.Display.V1.FormattedValue": "$60,000.00",
          "revenue": 60000.0,
          "address1_city": "Redmond",
-         "accountid": "03eaf28f-81e1-ee11-904d-000d3a3517c4",
+         "accountid": "dddddddd-3333-4444-5555-eeeeeeeeeeee",
          "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
          "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
          "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
-         "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+         "_transactioncurrencyid_value": "bbbbbbbb-1111-2222-3333-cccccccccccc",
          "address1_composite": "Redmond",
          "primarycontactid": {
          "fullname": "Robert Lyon (sample)",
-         "contactid": "17eaf28f-81e1-ee11-904d-000d3a3517c4"
+         "contactid": "eeeeeeee-4444-5555-6666-ffffffffffff"
          }
       },
       {
@@ -319,15 +320,15 @@ To use Insomnia to retrieve records, set the [entity set name](web-api-service-d
          "revenue@OData.Community.Display.V1.FormattedValue": "$10,000.00",
          "revenue": 10000.0,
          "address1_city": "Redmond",
-         "accountid": "07eaf28f-81e1-ee11-904d-000d3a3517c4",
+         "accountid": "ffffffff-5555-6666-7777-aaaaaaaaaaaa",
          "_transactioncurrencyid_value@OData.Community.Display.V1.FormattedValue": "US Dollar",
          "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.associatednavigationproperty": "transactioncurrencyid",
          "_transactioncurrencyid_value@Microsoft.Dynamics.CRM.lookuplogicalname": "transactioncurrency",
-         "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+         "_transactioncurrencyid_value": "bbbbbbbb-1111-2222-3333-cccccccccccc",
          "address1_composite": "Redmond",
          "primarycontactid": {
          "fullname": "Rene Valdes (sample)",
-         "contactid": "1beaf28f-81e1-ee11-904d-000d3a3517c4"
+         "contactid": "aaaaaaaa-6666-7777-8888-bbbbbbbbbbbb"
          }
       }
    ]
@@ -380,7 +381,7 @@ By using Insomnia, you can define multiple requests that you can reuse. An easy 
    The URL to the created record is visible in the **Headers** list. Look for the `odata-entityid` response header. The value should look something like this:
 
    ```text
-   https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)
+   https://yourorg.api.crm.dynamics.com/api/data/v9.2/accounts(aaaaaaaa-0b0b-1c1c-2d2d-333333333333)
    ```
 
    This URL contains the primary key field value for the created record, in this case the `accountid` property value.
@@ -393,9 +394,9 @@ After you create an account record and get the primary key field value, use that
 
 1. Duplicate the **Retrieve Accounts** request.
 1. Name it **Retrieve account**.
-1. Edit the URL to append the `accountid` value in parentheses after the entity set name. If the `accountid` of the account you created in [Create a record](#create-a-record) was `5b4ced1c-88e1-ee11-904c-6045bd05e9d4`, edit the URL to be:
+1. Edit the URL to append the `accountid` value in parentheses after the entity set name. If the `accountid` of the account you created in [Create a record](#create-a-record) was `aaaaaaaa-0b0b-1c1c-2d2d-333333333333`, edit the URL to be:
    
-   `GET _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
+   `GET _.webapiurl accounts(aaaaaaaa-0b0b-1c1c-2d2d-333333333333)`
 
 1. In the **Parameters** tab, remove the `$top`, `$expand`, and `$filter` parameters, leaving only the `$select` parameter to limit the number of columns returned.
 1. In the **Headers** tab, select the checkbox next to the `Prefer` header to disable it so that no annotations are returned.
@@ -410,8 +411,8 @@ After you create an account record and get the primary key field value, use that
       "name": "An Example Account record (sample)",
       "revenue": 10000.0000000000,
       "address1_city": "Redmond",
-      "accountid": "5b4ced1c-88e1-ee11-904c-6045bd05e9d4",
-      "_transactioncurrencyid_value": "57f82f38-09c8-ee11-907a-00224803d046",
+      "accountid": "aaaaaaaa-0b0b-1c1c-2d2d-333333333333",
+      "_transactioncurrencyid_value": "bbbbbbbb-1111-2222-3333-cccccccccccc",
       "address1_composite": "Redmond"
    }
    ```
@@ -427,7 +428,7 @@ After you create and retrieve a record by using the primary key value, you can d
    
    The URL should still contain the data with the `accountid` of the record you created and retrieved before:
 
-   `DELETE _.webapiurl accounts(5b4ced1c-88e1-ee11-904c-6045bd05e9d4)`
+   `DELETE _.webapiurl accounts(aaaaaaaa-0b0b-1c1c-2d2d-333333333333)`
 
 1. In the **Parameters** tab, remove the `$select` parameter because it's meaningless for a delete operation.
 1. Select **Send**.
@@ -440,7 +441,7 @@ After you create and retrieve a record by using the primary key value, you can d
    {
       "error": {
          "code": "0x80040217",
-         "message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist"
+         "message": "Entity 'account' With Id = aaaaaaaa-0b0b-1c1c-2d2d-333333333333 Does Not Exist"
       }
    }
    ```
@@ -452,18 +453,18 @@ After you create and retrieve a record by using the primary key value, you can d
    {
       "error": {
          "code": "0x80040217",
-         "message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist",
+         "message": "Entity 'account' With Id = aaaaaaaa-0b0b-1c1c-2d2d-333333333333 Does Not Exist",
          "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionSourceKey": "Plugin/Microsoft.Crm.Common.ObjectModel.AccountService",
-         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiStepKey": "81cbbb1b-ea3e-db11-86a7-000a3a5473e8",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiStepKey": "bbbbbbbb-1c1c-2d2d-3e3e-444444444444",
          "@Microsoft.PowerApps.CDS.ErrorDetails.ApiDepthKey": "1",
-         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiActivityIdKey": "ef7da2d8-c3bc-40f3-b67f-9d2981341086",
+         "@Microsoft.PowerApps.CDS.ErrorDetails.ApiActivityIdKey": "cccccccc-2d2d-3e3e-4f4f-555555555555",
          "@Microsoft.PowerApps.CDS.ErrorDetails.ApiPluginSolutionNameKey": "System",
          "@Microsoft.PowerApps.CDS.ErrorDetails.ApiStepSolutionNameKey": "System",
          "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionCategory": "ClientError",
          "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionMessageName": "ObjectDoesNotExist",
          "@Microsoft.PowerApps.CDS.ErrorDetails.ApiExceptionHttpStatusCode": "404",
          "@Microsoft.PowerApps.CDS.HelpLink": "http://go.microsoft.com/fwlink/?LinkID=398563&error=Microsoft.Crm.CrmException%3a80040217&client=platform",
-         "@Microsoft.PowerApps.CDS.InnerError.Message": "Entity 'account' With Id = 5b4ced1c-88e1-ee11-904c-6045bd05e9d4 Does Not Exist"
+         "@Microsoft.PowerApps.CDS.InnerError.Message": "Entity 'account' With Id = aaaaaaaa-0b0b-1c1c-2d2d-333333333333 Does Not Exist"
       }
    }
    ```
