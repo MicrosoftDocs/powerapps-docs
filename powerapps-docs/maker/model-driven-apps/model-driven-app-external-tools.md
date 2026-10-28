@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools to build and edit model-d
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 09/17/2026
+ms.date: 10/28/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -25,6 +25,9 @@ The skill turns your requirements into an application plan that you can review b
 
 > [!NOTE]
 > The model app-builder skill is updated regularly. For the latest supported capabilities, prerequisites, and usage instructions, see the [model apps plugins README](https://github.com/microsoft/power-platform-skills/blob/main/plugins/model-apps/README.md#app-builder).
+
+> [!IMPORTANT]
+> For best results, use a general-purpose coding model or an advanced reasoning model. Lightweight models optimized primarily for speed, cost efficiency, or simple repetitive tasks aren't recommended because the skill performs multistep planning, tool use, code generation, and validation.
 
 ## Core capabilities
 
