@@ -1,7 +1,7 @@
 ---
-title: Configure auditing
+title: Configure Auditing for Organizations, Tables, and Columns
 description: Learn how to programmatically configure auditing settings for the organization, tables, and columns in Microsoft Dataverse.
-ms.date: 06/10/2025
+ms.date: 10/29/2026
 ms.topic: overview
 ms.subservice: dataverse-developer
 author: paulliew
@@ -78,7 +78,7 @@ HTTP/1.1 200 OK
 
 Learn more about:
 
-- [Retrieve a table row using the Web API](../webapi/retrieve-entity-using-web-api.md)
+- [Retrieve a table row using the Web API](../webapi/retrieve-table-row.md)
 - [organization EntityType](xref:Microsoft.Dynamics.CRM.organization)
 
 #### [SDK for .NET](#tab/sdk)
@@ -133,15 +133,15 @@ Change the column values in the organization table to change how auditing works 
 
 #### Change AuditSettings
 
-[Organization.AuditSettings](../reference/entities/organization.md#BKMK_AuditSettings) contains a json string to store settings to enable different capabilities. You can enable some capabilities by updating the `auditsettings` column of the organization record. The following table specifies what audit settings exist, what they're used for, and whether they can be changed.
+[Organization.AuditSettings](../reference/entities/organization.md#BKMK_AuditSettings) contains a JSON string to store settings to enable different capabilities. You can enable some capabilities by updating the `auditsettings` column of the organization record. The following table specifies what audit settings exist, what they're used for, and whether they can be changed.
 
 | Setting  | Description  | Updatable  |
 |-----------|-----------|-----------|
 | `StoreLabelNameforPicklistAudits`  | For audits of picklist values, audit both option value and option name. Otherwise only the option value. The original user selected label choice persists in the audit records. | Yes  |
-| `IsSqlAuditWriteDisabled`  | If NoSql audits are enabled, stop writing data to sql audit table  | No, throws an error.  |
-| `ApplyRetentionToExistingLogs`  | Apply new retention policy to existing audit records  | No, is ignored. |
+| `IsSqlAuditWriteDisabled`  | Indicates whether writes to the SQL audit table are disabled when non-SQL audit storage is enabled. | No, throws an error.  |
+| `ApplyRetentionToExistingLogs`  | Apply new retention policy to existing audit records.  | No, is ignored. |
 
-Use the following examples to set your organization settings. You'll need the `organizationid` value. See [Retrieve organization settings](#retrieve-organization-settings) for how to obtain it.
+Use the following examples to set your organization settings. You need the `organizationid` value. See [Retrieve organization settings](#retrieve-organization-settings) for how to obtain it.
 
 ##### [Web API](#tab/webapi)
 
@@ -195,7 +195,7 @@ Learn more about:
 
 ## Configure tables and columns
 
-When auditing is enabled for the organization, any tables that are enabled for auditing write audit data for all columns that are enabled for auditing. The primary control is at the organization and then the table level.
+When you enable auditing for the organization, tables that have auditing enabled write audit data for all columns that have auditing enabled. The primary control is at the organization and then the table level.
 
 Tables and columns each have a *managed property* named `IsAuditEnabled` that controls whether they're enabled for auditing.
 
@@ -217,14 +217,14 @@ A `BooleanManagedProperty` has two important properties:
 |`Value`|Determines whether the setting is enabled.|
 |`CanBeChanged` |Determines whether the `Value` setting can be changed after the table or column is included in a managed solution.|
 
-The publisher of a managed solution that adds a table may prevent people who install the solution from enabling auditing. Some Dataverse system tables can't be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. [Learn more about managed properties](/power-platform/alm/managed-properties-alm).
+The publisher of a managed solution that adds a table can prevent people who install the solution from enabling auditing. Some Dataverse system tables can't be enabled or disabled for auditing because the `CanBeChanged` property is set to `false`. [Learn more about managed properties](/power-platform/alm/managed-properties-alm).
 
 > [!NOTE]
-> The `IsAuditEnabled` property is exposed in the designer as a simple boolean property with the label **Audit changes to its data** for tables or **Enable auditing** for columns. The `CanBeChanged` property can only be read or set programmatically.
+> The `IsAuditEnabled` property is exposed in the designer as a simple boolean property with the label **Audit changes to its data** for tables or **Enable auditing** for columns. You can only read or set the `CanBeChanged` property programmatically.
 
 ### Detect which tables are enabled for auditing
 
-Query the table definitions and look at the `IsAuditEnabled` property to determine which tables support auditing and which ones can be changed.
+Query the table definitions and check the `IsAuditEnabled` property to see which tables support auditing and which ones you can change.
 
 #### [Web API](#tab/webapi)
 
@@ -340,7 +340,7 @@ Learn more about:
 
 ### Detect which columns are enabled for auditing
 
-Query the column definitions and look at the `IsAuditEnabled` property to determine which columns support auditing and which ones can be changed.
+Query the column definitions and check the `IsAuditEnabled` property to see which columns support auditing and which ones you can change.
 
 #### [Web API](#tab/webapi)
 
@@ -475,14 +475,14 @@ Learn more about: [Query schema definitions](../query-schema-definitions.md)
 
 To change which tables and columns support auditing, update their `IsAuditEnabled.Value` property.
 
-### Tables
+### Enable or disable auditing for tables
 
 |API|Property|More information|
 |---------|---------|---------|
 |Web API|<xref:Microsoft.Dynamics.CRM.EntityMetadata>.`IsAuditEnabled.Value`|[Update table definitions](../webapi/create-update-entity-definitions-using-web-api.md#update-table-definitions)|
 |SDK for .NET|[EntityMetadata.IsAuditEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsAuditEnabled).`Value`|[Retrieve and update a table](../org-service/metadata-retrieve-update-delete-entities.md#retrieve-and-update-a-table)|
 
-### Columns
+### Enable or disable auditing for columns
 
 |API|Property|More information|
 |---------|---------|---------|

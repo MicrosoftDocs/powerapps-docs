@@ -77,7 +77,7 @@ Each table has a unique identifier primary key column that you can specify when 
 
 Dataverse stores primary key data in telemetry to help maintain the service. If you specify customized primary key values, don't use sensitive information in those values.
 
-By using elastic tables, you can create records with duplicate primary key values and different `partitionid` values. However, this pattern isn't compatible with model-driven or canvas Power Apps. [Learn about setting the primary key value with elastic tables](../use-elastic-tables.md#setting-the-primary-key-value).
+By using elastic tables, you can create records with duplicate primary key values and different `partitionid` values. However, this pattern isn't compatible with model-driven or canvas Power Apps. [Learn about setting the primary key value with elastic tables](../use-elastic-tables.md#set-the-primary-key-value).
 
 <a name="bkmk_createWithDataReturned"></a>
 
@@ -380,13 +380,13 @@ If you create large numbers of records for elastic tables, create the entities i
 [Perform operations using the Web API](perform-operations-web-api.md)   
 [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)   
 [Query data using the Web API](query/overview.md)   
-[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
+[Retrieve a table row using the Web API](retrieve-table-row.md)   
 [Update and delete table rows using the Web API](update-delete-table-rows.md)   
-[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   
+[Associate and disassociate table rows using the Web API](associate-disassociate-table-rows.md)   
 [Use Web API functions](use-web-api-functions.md)   
 [Use Web API actions](use-web-api-actions.md)   
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)   
-[Impersonate another user using the Web API](impersonate-another-user-web-api.md)   
+[Impersonate another user using the Web API](../impersonate-another-user.md#impersonate-another-user-by-using-the-web-api)
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)   
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

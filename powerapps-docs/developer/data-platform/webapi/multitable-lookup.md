@@ -310,7 +310,7 @@ When you set these query options and preference headers, the body of the respons
 
 ## Set a multi-table lookup column
 
-Updating a record to set a polymorphic lookup column is exactly as described in [Associate with a single-valued navigation property](associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property). Use the correct single-valued navigation property name. These names are case sensitive.
+Updating a record to set a polymorphic lookup column is exactly as described in [Associate with a single-valued navigation property](associate-disassociate-table-rows.md). Use the correct single-valued navigation property name. These names are case sensitive.
 
 This example shows [updating a value](update-delete-table-rows.md#basic-update) by using `PATCH`.
 

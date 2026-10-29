@@ -1,9 +1,10 @@
 ---
-title: Choices columns
-description: "Learn about choices columns that allow storing multiple choices in a single column."
-ms.date: 08/11/2025
+title: Use Choices Columns to Store Multiple Selected Options
+description: "Learn how to define, set, and query choices columns that store multiple selected options in a single column using the Web API or SDK for .NET. Get started now."
+ms.date: 10/29/2026
 ms.reviewer: jdaly
 ms.topic: article
+ai-usage: ai-assisted
 author: MsSQLGirl
 ms.author: jukoesma
 ms.subservice: dataverse-developer
@@ -12,31 +13,26 @@ search.audienceType:
 contributors:
  - JimDaly
 ---
-# Choices columns
+# Use choices columns to store multiple options
 
-Customizers can define a column that allows selection of multiple options. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an [OptionSetMetadata.Options](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options) property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semi-colon separated string containing the labels of the selected options.
+Customizers can define a choices column that allows selection of multiple options. This article explains how to set, query, and create choices columns by using the Web API and the SDK for .NET. The <xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata> class defines a column type that inherits from the <xref:Microsoft.Xrm.Sdk.Metadata.EnumAttributeMetadata> class. Just like the <xref:Microsoft.Xrm.Sdk.Metadata.PicklistAttributeMetadata> class, this column includes an [OptionSetMetadata.Options](xref:Microsoft.Xrm.Sdk.Metadata.OptionSetMetadata.Options) property that contains the valid options for the column. The difference is that the values you get or set are an <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> type that contains an array of integers representing the selected options. Formatted values for this column are a semicolon-separated string containing the labels of the selected options.
 
-> [!NOTE]
-> Only the publisher of a managed solution can import changes that delete an option from a global option set. This behavior includes Microsoft published solutions such as the out of box global option sets. In order to make a change to the option sets, an upgrade must be made to the solution that added the option set. [Learn about upgrading or updating a solution](../../maker/data-platform/update-solutions.md). Users can manually delete an option in their environment if they're unable to modify the solution or contact the solution publisher, but this must be done on every environment manually.
+With the Web API, you define this column by using the [MultiSelectPicklistAttributeMetadata entity type](xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata).
 
-[!INCLUDE[cc-terminology](includes/cc-terminology.md)]
+Just like choices columns, there's technically no upper limit on the number of options that you can define. Apply usability considerations as the limiting factor. However, you can select only 150 options for a single column. Also, you can't set a default value.
 
-With the Web API, this column is defined using the [MultiSelectPicklistAttributeMetadata EntityType](xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata).
+## Set choices column values
 
-Just like choices columns, there's technically no upper limit on the number of options that can be defined. Usability considerations should be applied as the limiting factor. However only 150 options can be selected for a single column. Also, a default value can't be set.
-
-## Setting choices values
-
-The following examples show how to set choices values for a column named `sample_outdooractivities` added to the `contact` table.
+The following examples show how to set choices values for a column named `sample_outdooractivities` that you add to the `contact` table.
 
 ### [Web API](#tab/webapi)
 
-With the Web API, you set the values by passing a string containing comma separated number values:
+By using the Web API, set the values by passing a string containing comma-separated number values:
 
 **Request:**
 
 ```http
-POST [organization uri]/api/data/v9.0/contacts HTTP/1.1
+POST [organization uri]/api/data/v9.2/contacts HTTP/1.1
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -55,43 +51,33 @@ OData-Version: 4.0
 ```http
 HTTP/1.1 204 No Content
 OData-Version: 4.0
-OData-EntityId: [organization uri]/api/data/v9.0/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+OData-EntityId: [organization uri]/api/data/v9.2/contacts(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
 ### [SDK for .NET](#tab/sdk)
 
-With the SDK for .NET, use the <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> to set values for this column:
+By using the SDK for .NET, use the <xref:Microsoft.Xrm.Sdk.OptionSetValueCollection> to set values for this column:
 
 ```csharp
+public static Guid CreateContactWithChoicesColumnSetExample(IOrganizationService service) {
 
-string conn = $@"
-    Url = {url};
-    AuthType = OAuth;
-    UserName = {userName};
-    Password = {password};
-    AppId = 51f81489-12ee-4a9e-aaae-a2591f45987d;
-    RedirectUri = app://58145B91-0C36-4500-8554-080854F2AC97;
-    LoginPrompt=Auto;
-    RequireNewInstance = True";
+   OptionSetValueCollection activities = new OptionSetValueCollection();
+   activities.Add(new OptionSetValue(1)); //Swimming
+   activities.Add(new OptionSetValue(9)); //Camping
 
-var service = new CrmServiceClient(conn);
-// var service = new ServiceClient(conn);
+   Entity contact = new Entity("contact");
+   contact["firstname"] = "Wayne";
+   contact["lastname"] = "Yarborough";
+   contact["sample_outdooractivities"] = activities;
 
-OptionSetValueCollection activities = new OptionSetValueCollection();
-activities.Add(new OptionSetValue(1)); //Swimming
-activities.Add(new OptionSetValue(9)); //Camping
+   return service.Create(contact);
 
-Contact contact = new Contact();
-contact["firstname"] = "Wayne";
-contact["lastname"] = "Yarborough";
-contact["sample_outdooractivities"] = activities;
-
-service.Create(contact);
+}
 ```
 
 ---
 
-## Query data from choices
+## Query data from choices columns
 
 Two condition operators support querying values in choices:
 
@@ -131,9 +117,11 @@ The following examples show using the `ContainValues` and `DoesNotContainValues`
 |8|Skiing|
 |9|Camping|
 
+See [Create choices columns with code](#create-choices-columns-with-code) for sample code to create this column.
+
 ### Contact table values
 
-|`fullname`| 'sample_outdooractivities'|
+|`fullname`| `sample_outdooractivities`|
 |--------|-------------------|
 |Wayne Yarborough|1,9|
 |Monte Orton|2|
@@ -147,13 +135,13 @@ The following examples show using the `ContainValues` and `DoesNotContainValues`
 
 #### [Web API](#tab/webapi)
 
-This example shows the use of the <xref:Microsoft.Dynamics.CRM.ContainValues> query function to return all the contacts who like hiking. Notice how the text of the options is returned as annotations due to the `odata.include-annotations="OData.Community.Display.V1.FormattedValue"` preference applied.
+This example shows how to use the <xref:Microsoft.Dynamics.CRM.ContainValues> query function to return all the contacts who like hiking. The response includes the text of the options as annotations because of the `odata.include-annotations="OData.Community.Display.V1.FormattedValue"` preference applied.
 
 
 **Request:**
 
 ```http
-GET [organization uri]/api/data/v9.0/contacts?$select=fullname,sample_outdooractivities&$filter=Microsoft.Dynamics.CRM.ContainValues(PropertyName='sample_outdooractivities',PropertyValues=%5B'2'%5D) HTTP/1.1
+GET [organization uri]/api/data/v9.2/contacts?$select=fullname,sample_outdooractivities&$filter=Microsoft.Dynamics.CRM.ContainValues(PropertyName='sample_outdooractivities',PropertyValues=%5B'2'%5D) HTTP/1.1
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -171,7 +159,7 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 Content-Length: 1092
 
 {
-    "@odata.context": "[organization uri]/api/data/v9.0/$metadata#contacts(fullname,sample_outdooractivities)",
+    "@odata.context": "[organization uri]/api/data/v9.2/$metadata#contacts(fullname,sample_outdooractivities)",
     "value": [{
         "@odata.etag": "W/\"529811\"",
         "fullname": "Monte Orton",
@@ -200,38 +188,44 @@ Content-Length: 1092
 }
 ```
 
-#### [SDK for .NET](#tab/sdk)
+### [SDK for .NET](#tab/sdk)
+
+This example shows how to use the <xref:Microsoft.Xrm.Sdk.Query.ConditionOperator.ContainValues> member to return all the contacts who like hiking. The response includes the text of the options as formatted value.
 
 ```csharp
-//Retrieve contacts who like hiking
-//Using Query Expression
-int[] hikingValue = new int[] { 2 };
-ConditionExpression condition = 
-    new ConditionExpression(
-    "sample_outdooractivities", 
-    ConditionOperator.ContainValues, 
-    hikingValue);
-
-FilterExpression filter = new FilterExpression();
-filter.AddCondition(condition);
-
-QueryExpression likesHikingQuery = 
-    new QueryExpression("contact");
-likesHikingQuery.ColumnSet.AddColumns("fullname", "sample_outdooractivities");
-likesHikingQuery.Criteria.AddFilter(filter);
-
-EntityCollection hikers = service.RetrieveMultiple(likesHikingQuery);
-
-Console.WriteLine("\nContacts who like Hiking");
-Console.WriteLine("=========================");
-foreach (Contact contact in hikers.Entities)
+public static void WriteContactsWhoLikeHikingExample(IOrganizationService service)
 {
-    string values = (contact["sample_outdooractivities"] == null) ? 
-        "null" : 
-        contact.FormattedValues["sample_outdooractivities"];
-    Console.WriteLine("{0} {1}", contact.FullName, values);
-}
+    ArgumentNullException.ThrowIfNull(service);
 
+    var likesHikingQuery = new QueryExpression("contact")
+    {
+        ColumnSet = new ColumnSet("fullname", "sample_outdooractivities"),
+        Criteria = new FilterExpression
+        {
+            Conditions =
+            {
+                new ConditionExpression(
+                    "sample_outdooractivities",
+                    ConditionOperator.ContainValues,
+                    new int[] { 2 })
+            }
+        }
+    };
+
+    var hikers = service.RetrieveMultiple(likesHikingQuery);
+
+    Console.WriteLine("\nContacts who like Hiking");
+    Console.WriteLine("=========================");
+    foreach (var contact in hikers.Entities)
+    {
+        var fullname = contact.GetAttributeValue<string>("fullname") ?? "(no name)";
+        var values = contact.FormattedValues.TryGetValue("sample_outdooractivities", out var formattedValue)
+            ? formattedValue
+            : "null";
+
+        Console.WriteLine($"{fullname} {values}");
+    }
+}
     /*OUTPUT:
     Contacts who like Hiking
     =========================
@@ -249,7 +243,8 @@ foreach (Contact contact in hikers.Entities)
 The following code shows the use of FetchXml with Web API and SDK for .NET.
 
 #### [Web API](#tab/webapi)
-This example shows the use of the `not-contain-values` operator in the following `FetchXml` query using the Web API.
+
+This example shows the use of the `not-contain-values` operator in the following `FetchXml` query by using the Web API.
 
 ```xml
 <fetch>
@@ -268,7 +263,7 @@ This example shows the use of the `not-contain-values` operator in the following
 **Request:**
 
 ```http
-GET [organization uri]/api/data/v9.0/contacts?fetchXml=%253Cfetch%2520distinct%253D'false'%2520no-lock%253D'false'%2520mapping%253D'logical'%253E%253Centity%2520name%253D'contact'%253E%253Cattribute%2520name%253D'fullname'%2520%252F%253E%253Cattribute%2520name%253D'sample_outdooractivities'%2520%252F%253E%253Cfilter%2520type%253D'and'%253E%253Ccondition%2520attribute%253D'sample_outdooractivities'%2520operator%253D'not-contain-values'%253E%253Cvalue%253E2%253C%252Fvalue%253E%253C%252Fcondition%253E%253C%252Ffilter%253E%253C%252Fentity%253E%253C%252Ffetch%253E HTTP/1.1
+GET [organization uri]/api/data/v9.2/contacts?fetchXml=%253Cfetch%2520distinct%253D'false'%2520no-lock%253D'false'%2520mapping%253D'logical'%253E%253Centity%2520name%253D'contact'%253E%253Cattribute%2520name%253D'fullname'%2520%252F%253E%253Cattribute%2520name%253D'sample_outdooractivities'%2520%252F%253E%253Cfilter%2520type%253D'and'%253E%253Ccondition%2520attribute%253D'sample_outdooractivities'%2520operator%253D'not-contain-values'%253E%253Cvalue%253E2%253C%252Fvalue%253E%253C%252Fcondition%253E%253C%252Ffilter%253E%253C%252Fentity%253E%253C%252Ffetch%253E HTTP/1.1
 Accept: application/json
 Content-Type: application/json; charset=utf-8
 OData-MaxVersion: 4.0
@@ -285,7 +280,7 @@ OData-Version: 4.0
 Preference-Applied: odata.include-annotations="OData.Community.Display.V1.FormattedValue"
 
 {
-    "@odata.context": "[organization uri]/api/data/v9.0/$metadata#contacts(fullname,sample_outdooractivities,contactid)",
+    "@odata.context": "[organization uri]/api/data/v9.2/$metadata#contacts(fullname,sample_outdooractivities,contactid)",
     "value": [{
         "@odata.etag": "W/\"529806\"",
         "fullname": "Wayne Yarborough",
@@ -316,32 +311,41 @@ Preference-Applied: odata.include-annotations="OData.Community.Display.V1.Format
 
 #### [SDK for .NET](#tab/sdk)
 
-This sample shows the use of the `not-contain-values` using <xref:Microsoft.Dynamics.CRM.FetchExpression> using [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A).
+This sample shows the use of the `not-contain-values` operator by using <xref:Microsoft.Dynamics.CRM.FetchExpression> with [IOrganizationService.RetrieveMultiple](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A).
 
 ```csharp
-//Retrieving contacts who do not like hiking:
-//Using Fetch Expression
-string fetchXml = @"<fetch>
-                     <entity name='contact'>
-                      <attribute name='fullname' />
-                      <attribute name='sample_outdooractivities' />
-                       <filter type='and'>
-                        <condition attribute='sample_outdooractivities' operator='not-contain-values'>
-                         <value>2</value>
-                        </condition>
-                       </filter>
-                      </entity>
-                     </fetch>";
-FetchExpression doesNotLikeHiking = new FetchExpression(fetchXml);
-
-EntityCollection nonHikers = service.RetrieveMultiple(doesNotLikeHiking);
-
-Console.WriteLine("\nContacts who do not like Hiking");
-Console.WriteLine("===============================");
-foreach (Contact contact in nonHikers.Entities)
+public static void RetrieveContactsWhoDoNotLikeHikingExample(IOrganizationService service)
 {
-    string values = (contact["sample_outdooractivities"] == null) ? "null" : contact.FormattedValues["sample_outdooractivities"];
-    Console.WriteLine("{0} {1}", contact.FullName, values);
+    ArgumentNullException.ThrowIfNull(service);
+
+    var fetchXml = """
+        <fetch>
+            <entity name='contact'>
+                <attribute name='fullname' />
+                <attribute name='sample_outdooractivities' />
+                <filter type='and'>
+                    <condition attribute='sample_outdooractivities' operator='not-contain-values'>
+                        <value>2</value>
+                    </condition>
+                </filter>
+            </entity>
+        </fetch>
+        """;
+
+    var doesNotLikeHiking = new FetchExpression(fetchXml);
+    var nonHikers = service.RetrieveMultiple(doesNotLikeHiking);
+
+    Console.WriteLine("\nContacts who do not like Hiking");
+    Console.WriteLine("===============================");
+    foreach (var contact in nonHikers.Entities)
+    {
+        var fullname = contact.GetAttributeValue<string>("fullname") ?? "(no name)";
+        var values = contact.FormattedValues.TryGetValue("sample_outdooractivities", out var formattedValue)
+            ? formattedValue
+            : "null";
+
+        Console.WriteLine($"{fullname} {values}");
+    }
 }
 
     /* OUTPUT
@@ -356,48 +360,194 @@ foreach (Contact contact in nonHikers.Entities)
 
 ---
 
-## Create choices with code
+## Create choices columns with code
 
-The easiest way to create choices is to use the column editor in the customization tools. [Learn how to create and edit columns](../../maker/data-platform/create-edit-fields.md)
+The easiest way to create choices is to use the column editor in the customization tools. [Learn how to create and edit columns](../../maker/data-platform/create-edit-fields.md).
 
-If you need to automate creation of this kind of column, you can use the following C# code with the SDK for .NET that creates choices to allow choices of outdoor activities to the `contact` table. [Learn more about creating columns](org-service/metadata-attributemetadata.md#create-columns)
+If you need to automate creation of this kind of column, use the following examples with the Web API or SDK for .NET. Both examples create a choices column for outdoor activities in the `contact` table. [Learn more about creating columns](org-service/metadata-attributemetadata.md#create-columns).
+
+### [Web API](#tab/webapi)
+
+Sends a `POST` request with [MultiSelectPicklistAttributeMetadata entity type](xref:Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata) payload  to the `/Attributes` collection of the `contact` table to create a column as part of a solution with the unique name `mySampleSolutionUniqueName`. [Learn to associate a solution component with a solution](optional-parameters.md#associate-a-solution-component-with-a-solution)
+
+**Request:**
+
+```http
+POST [organization uri]/api/data/v9.2/EntityDefinitions(LogicalName='contact')/Attributes HTTP/1.1
+Accept: application/json
+MSCRM.SolutionUniqueName: mySampleSolutionUniqueName
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+{
+    "@odata.type": "Microsoft.Dynamics.CRM.MultiSelectPicklistAttributeMetadata",
+    "SchemaName": "sample_OutdoorActivities",
+    "DisplayName": {
+        "LocalizedLabels": [
+            {
+                "Label": "Outdoor activities",
+                "LanguageCode": 1033
+            }
+        ]
+    },
+    "RequiredLevel": {
+        "Value": "None"
+    },
+    "Description": {
+        "LocalizedLabels": [
+            {
+                "Label": "Outdoor activities that the contact likes.",
+                "LanguageCode": 1033
+            }
+        ]
+    },
+    "OptionSet": {
+        "IsGlobal": false,
+        "OptionSetType": "Picklist",
+        "Options": [
+            {
+                "Value": 1,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Swimming", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 2,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Hiking", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 3,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Mountain Climbing", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 4,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Fishing", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 5,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Hunting", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 6,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Running", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 7,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Boating", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 8,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Skiing", "LanguageCode": 1033 }
+                    ]
+                }
+            },
+            {
+                "Value": 9,
+                "Label": {
+                    "LocalizedLabels": [
+                        { "Label": "Camping", "LanguageCode": 1033 }
+                    ]
+                }
+            }
+        ]
+    }
+}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+OData-EntityId: [organization uri]/api/data/v9.2/EntityDefinitions(LogicalName='contact')/Attributes(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
+```
+
+### [SDK for .NET](#tab/sdk)
+
+Uses [CreateAttributeRequest](xref:Microsoft.Xrm.Sdk.Messages.CreateAttributeRequest) to create a [MultiSelectPicklistAttributeMetadata](xref:Microsoft.Xrm.Sdk.Metadata.MultiSelectPicklistAttributeMetadata) column on the contact table as part of a solution with the unique name `mySampleSolutionUniqueName`. [Learn to associate a solution component with a solution](optional-parameters.md#associate-a-solution-component-with-a-solution)
+
 
 ```csharp
-private const int _languageCode = 1033; //English
-
-MultiSelectPicklistAttributeMetadata outDoorActivitiesAttribute = new MultiSelectPicklistAttributeMetadata()
+public static Guid CreateOutdoorActivitiesOptionSetExample(IOrganizationService service)
 {
-SchemaName = "sample_OutdoorActivities",
-LogicalName = "sample_outdooractivities",
-DisplayName = new Label("Outdoor activities", _languageCode),
-RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
-Description = new Label("Outdoor activities that the contact likes.", _languageCode),
-OptionSet = new OptionSetMetadata()
+    ArgumentNullException.ThrowIfNull(service);
+
+    const int languageCode = 1033; // English
+
+    static OptionMetadata CreateOption(string label, int value, int localeId) =>
+        new(new Label(label, localeId), value);
+
+    var outdoorActivitiesAttribute = new MultiSelectPicklistAttributeMetadata
     {
-        IsGlobal = false,
-        OptionSetType = OptionSetType.Picklist,
-        Options = {
-            new OptionMetadata(new Label("Swimming",_languageCode),1),
-            new OptionMetadata(new Label("Hiking",_languageCode),2),
-            new OptionMetadata(new Label("Mountain Climbing",_languageCode),3),
-            new OptionMetadata(new Label("Fishing",_languageCode),4),
-            new OptionMetadata(new Label("Hunting",_languageCode),5),
-            new OptionMetadata(new Label("Running",_languageCode),6),
-            new OptionMetadata(new Label("Boating",_languageCode),7),
-            new OptionMetadata(new Label("Skiing",_languageCode),8),
-            new OptionMetadata(new Label("Camping",_languageCode),9)}
-    }
-};
+        SchemaName = "sample_OutdoorActivities",
+        LogicalName = "sample_outdooractivities",
+        DisplayName = new Label("Outdoor activities", languageCode),
+        RequiredLevel = new AttributeRequiredLevelManagedProperty(AttributeRequiredLevel.None),
+        Description = new Label("Outdoor activities that the contact likes.", languageCode),
+        OptionSet = new OptionSetMetadata
+        {
+            IsGlobal = false,
+            OptionSetType = OptionSetType.Picklist,
+            Options =
+            {
+                CreateOption("Swimming", 1, languageCode),
+                CreateOption("Hiking", 2, languageCode),
+                CreateOption("Mountain Climbing", 3, languageCode),
+                CreateOption("Fishing", 4, languageCode),
+                CreateOption("Hunting", 5, languageCode),
+                CreateOption("Running", 6, languageCode),
+                CreateOption("Boating", 7, languageCode),
+                CreateOption("Skiing", 8, languageCode),
+                CreateOption("Camping", 9, languageCode)
+            }
+        }
+    };
 
-CreateAttributeRequest createAttributeRequest = new CreateAttributeRequest
-{
-    EntityName = "contact",
-    Attribute = outDoorActivitiesAttribute
-};
+    var createAttributeRequest = new CreateAttributeRequest
+    {
+        EntityName = "contact",
+        Attribute = outdoorActivitiesAttribute,
+        SolutionUniqueName = "mySampleSolutionUniqueName"
+    };
 
-var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
+    var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
+    return response.AttributeId;
+}
 
 ```
+
+---
+
+
 
 ### See also
 
@@ -405,8 +555,7 @@ var response = (CreateAttributeResponse)service.Execute(createAttributeRequest);
 [Create a table row using the Web API](webapi/create-table-row.md)<br />
 [Query Data using the Web API](webapi/query/overview.md)<br />
 [Work with column definitions](org-service/metadata-attributemetadata.md)<br />
-[Sample: Work with columns definitions](org-service/samples/work-with-attributes.md)<br />
-[Late-bound and early-bound programming using the SDK for .NET](org-service/early-bound-programming.md)
+[Sample: Work with columns definitions](org-service/samples/work-with-attributes.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

@@ -417,7 +417,7 @@ After you create an account record and get the primary key field value, use that
    }
    ```
 
-[Learn more about retrieving records](retrieve-entity-using-web-api.md)
+[Learn more about retrieving records](retrieve-table-row.md)
 
 ## Delete a record
 

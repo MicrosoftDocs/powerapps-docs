@@ -110,7 +110,7 @@ By default this sample deletes all the records created in it. If you want to vie
 [Use PowerShell and Visual Studio Code with the Dataverse Web API](../use-ps-and-vscode-web-api.md)   
 [Create a table row using the Web API](../create-table-row.md)   
 [Update and delete table rows using the Web API](../update-delete-table-rows.md)   
-[Retrieve an table row using the Web API](../retrieve-entity-using-web-api.md)   
+[Retrieve an table row using the Web API](../retrieve-table-row.md)   
 [Web API Samples](../web-api-samples.md)   
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)   
 

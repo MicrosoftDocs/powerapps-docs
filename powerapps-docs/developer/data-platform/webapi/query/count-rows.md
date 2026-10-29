@@ -1,7 +1,7 @@
 ---
-title: "Count rows by using OData"
-description: "Learn how to use OData $count query option to count rows from Microsoft Dataverse tables using the Web API. Includes examples and best practices for counting entities."
-ms.date: 03/27/2026
+title: "Count Table Rows by Using the OData $count Query Option"
+description: "Count rows in Dataverse tables with the OData $count query option and Web API. See examples, row limits, and how to get total record counts."
+ms.date: 10/29/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -15,7 +15,7 @@ contributors:
 ---
 # Count rows by using OData
 
-Use the `$count=true` query option to include a count of entities that match the filter criteria, up to 5,000 for standard tables, and 500 for elastic tables.
+Count rows in Dataverse tables by using the OData `$count=true` query option with the Web API. This option includes a count of rows that match the filter criteria, up to 5,000 for standard tables and 500 for elastic tables, so you can quickly determine how many records a query returns.
 
 **Request:**
 

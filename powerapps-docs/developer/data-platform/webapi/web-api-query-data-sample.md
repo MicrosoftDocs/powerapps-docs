@@ -28,7 +28,7 @@ This sample is divided into the following principal sections, containing Web API
 
 |Topic section|Associated topics|
 |-------------------|---------------------------|
-|[Section 1: Select specific properties](#section-1-select-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query/select-columns.md#include-formatted-values-in-results)|
+|[Section 1: Select specific properties](#section-1-select-specific-properties)|[Retrieve specific properties](retrieve-table-row.md)<br /> [Formatted values](query/select-columns.md#include-formatted-values-in-results)|
 |[Section 2: Use query functions](#section-2-use-query-functions)|[Filter rows](query/filter-rows.md)<br />[Use OData query functions](query/filter-rows.md#use-odata-query-functions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
 |[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order rows](query/order-rows.md)<br /> [Filter rows](query/filter-rows.md)<br />|
 |[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Limit the number of rows](query/overview.md#limit-the-number-of-rows)<br />[Count number of rows](query/count-rows.md)|

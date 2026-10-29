@@ -87,12 +87,12 @@ The following table connects related areas for the Organization Data Service and
 |---------|---------|
 |[Query Microsoft Dynamics CRM 2015 data using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg334767(v=crm.7))<br />[OData system query options using the OData endpoint](/previous-versions/dynamicscrm-2015/developers-guide/gg309461(v=crm.7))|[Query data ](../../../data-platform/webapi/query/overview.md)<br />[Web API properties](../../../data-platform/webapi/web-api-properties.md)|
 |[Creating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#creating-records)|[Create a table row](../../../data-platform/webapi/create-table-row.md)|
-|[Retrieving records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#retrieving-records)|[Retrieve a table row](../../../data-platform/webapi/retrieve-entity-using-web-api.md)|
+|[Retrieving records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#retrieving-records)|[Retrieve a table row](../../../data-platform/webapi/retrieve-table-row.md)|
 |[Updating records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#updating-records)|[Basic update](../../../data-platform/webapi/update-delete-table-rows.md#basic-update)|
 |[Deleting records](/previous-versions/dynamicscrm-2015/developers-guide/gg328090(v=crm.7)#deleting-records)|[Basic delete](../../../data-platform/webapi/update-delete-table-rows.md#basic-delete)|
 |[Using Deep insert](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#using-deep-insert)|[Create related table rows in one operation](../../../data-platform/webapi/create-table-row.md#create-related-table-rows-in-one-operation)|
 |[Updating individual properties](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#updating-individual-properties)|[Update a single property value](../../../data-platform/webapi/update-delete-table-rows.md#update-a-single-property-value)|
-|[Associating and disassociating records](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#associating-and-disassociating-records)|[Associate and disassociate table rows](../../../data-platform/webapi/associate-disassociate-entities-using-web-api.md)|
+|[Associating and disassociating records](/previous-versions/dynamicscrm-2015/developers-guide/gg309638(v=crm.7)#associating-and-disassociating-records)|[Associate and disassociate table rows](../../../data-platform/webapi/associate-disassociate-table-rows.md)|
 |[OData endpoint HTTP status codes](/previous-versions/dynamicscrm-2015/developers-guide/gg334391(v=crm.7))|[Identify status codes](../../../data-platform/webapi/compose-http-requests-handle-errors.md#identify-status-codes)|
 
 ## Examples

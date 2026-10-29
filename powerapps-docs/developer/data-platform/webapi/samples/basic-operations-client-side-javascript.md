@@ -53,7 +53,7 @@ The following is the `BasicOperationsSample` class that contains the code for th
 
 [Use the Dataverse Web API](../overview.md)   
 [Create a table row using the Web API](../create-table-row.md)   
-[Retrieve a table row using the Web API](../retrieve-entity-using-web-api.md)   
+[Retrieve a table row using the Web API](../retrieve-table-row.md)   
 [Update and delete table rows using the Web API](../update-delete-table-rows.md)   
 [Web API Samples](../web-api-samples.md)   
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)   

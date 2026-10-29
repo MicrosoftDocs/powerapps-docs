@@ -99,7 +99,7 @@ HTTP/1.1 200 OK
 }
 ```
 
-More information: [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md).
+More information: [Retrieve a table row using the Web API](webapi/retrieve-table-row.md).
 
 ---
 

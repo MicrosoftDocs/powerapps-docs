@@ -328,7 +328,7 @@ Content-Type: text/plain
 For more information, see:
 
 - [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-by-using-web-api)
-- [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
+- [Retrieve the raw value of a property](webapi/retrieve-table-row.md)
 
 ### Download attachment files in chunks
 
@@ -799,7 +799,7 @@ Content-Type: text/plain
 For more information, see:
 
 - [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-by-using-web-api)
-- [Retrieve the raw value of a property](webapi/retrieve-entity-using-web-api.md#retrieve-the-raw-value-of-a-property)
+- [Retrieve the raw value of a property](webapi/retrieve-table-row.md)
 
 ### Download annotation files in chunks
 
