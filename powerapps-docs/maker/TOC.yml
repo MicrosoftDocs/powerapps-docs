@@ -65,7 +65,7 @@
         href: ../user/ai-in-apps.md
       - name: Use Business Applications in Work IQ (preview)
         href: ../user/use-business-apps-work-iq.md
-      - name: Use Microsoft 365 Copilot
+      - name: Use Microsoft Copilot
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
       - name: Supervise agents using agent feed (preview)
         href: ../user/supervise-agents-with-agent-feed.md
@@ -2535,7 +2535,7 @@
     items:
     - name: Business Applications in Work IQ overview
       href: ./data-platform/business-applications-work-iq.md
-    - name: Dataverse data in Microsoft 365 Copilot
+    - name: Dataverse data in Microsoft Copilot
       href: ./data-platform/data-platform-data-copilot.md
     - name: Business skills
       items:
