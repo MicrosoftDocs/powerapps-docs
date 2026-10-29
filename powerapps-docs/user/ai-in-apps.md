@@ -11,7 +11,7 @@ contributors:
 ms.service: powerapps
 search.audienceType: 
   - enduser
- ms.collection: bap-ai-copilot
+ms.collection: bap-ai-copilot
 ---
 
 # AI features overview
@@ -54,8 +54,8 @@ Built-in skills help you enter, explore, and summarize data faster and better.
 **Copilot in apps**
 
 - [Use business apps in Work IQ (preview)](use-business-apps-work-iq.md)
-- [Microsoft 365 Copilot in model-driven apps](use-microsoft-365-copilot-model-driven-apps.md)
-- [Customize Microsoft 365 Copilot in model-driven apps](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
+- [Microsoft Copilot in model-driven apps](use-microsoft-365-copilot-model-driven-apps.md)
+- [Customize Microsoft Copilot in model-driven apps](../maker/model-driven-apps/customize-microsoft-365-copilot-chat.md)
 - [Chat with Copilot](use-copilot-model-driven-apps.md)
 - [Customize Copilot chat](../maker/model-driven-apps/customize-copilot-chat.md)
 
