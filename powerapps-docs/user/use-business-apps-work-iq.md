@@ -69,4 +69,4 @@ For example, ask Work IQ to list records from an app view, show the details of a
 ## Related information
 
 - [Work IQ overview](/microsoft-365/copilot/extensibility/work-iq/)
-- [Use Microsoft 365 Copilot in model-driven apps](use-microsoft-365-copilot-model-driven-apps.md)
+- [Use Microsoft Copilot in model-driven apps](use-microsoft-365-copilot-model-driven-apps.md)

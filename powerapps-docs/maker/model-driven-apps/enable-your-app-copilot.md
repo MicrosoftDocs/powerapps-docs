@@ -1,7 +1,7 @@
 ---
 title: Enable your app and custom tools in Microsoft Copilot
 description: Learn how to enable your app in Microsoft Copilot to create app skills and custom tools with Power Apps.
-#customer intent: As a Power Apps maker, I want to enable my model-driven app in Microsoft 365 Copilot so that users can interact with app data through Copilot.
+#customer intent: As a Power Apps maker, I want to enable my model-driven app in Microsoft Copilot so that users can interact with app data through Copilot.
 author: Mattp123
 ms.author: hemantg
 ms.reviewer: matp
