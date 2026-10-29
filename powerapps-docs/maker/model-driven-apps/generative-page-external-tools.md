@@ -4,7 +4,7 @@ description: Learn how to use AI code generation tools like GitHub Copilot CLI t
 author: jasongre
 ms.author: jasongre
 ms.reviewer: matp
-ms.date: 09/25/2026
+ms.date: 10/28/2026
 ms.topic: how-to
 ms.service: powerapps
 ms.subservice: mda-maker
@@ -21,9 +21,12 @@ applies_to:
 This article describes how to use AI code generation tools, such as GitHub Copilot CLI, to create and edit generative pages for model-driven apps in Power Apps. By using this approach, you can integrate advanced code generation capabilities directly into your development workflow to create new generative pages or iterate on existing ones by using natural language instructions. Pages can use Microsoft Dataverse tables, Power Platform connectors (preview), and Dataverse custom APIs (preview).
 
 > [!TIP]
-> This approach is the recommended path for building generative pages. It gives you access to the latest frontier AI models, works worldwide on public clouds, and lets you build multiple pages with supporting Dataverse tables, Power Platform connector data sources (preview), or Dataverse custom APIs (preview) in a single run.
+> This approach is the recommended path for building generative pages. It works worldwide on public clouds and lets you build multiple pages with supporting Dataverse tables, Power Platform connector data sources (preview), or Dataverse custom APIs (preview) in a single run.
 
-Using AI code generation tools with generative pages complements the UI-based experience in Power Apps ([make.powerapps.com](https://make.powerapps.com)). This code-first approach fits any maker or developer who wants access to the newest AI models or prefers working with local development tools and CLI-based workflows.
+> [!IMPORTANT]
+> For best results, use a general-purpose coding model or an advanced reasoning model. Lightweight models optimized primarily for speed, cost efficiency, or simple repetitive tasks aren't recommended because the skill performs multistep planning, tool use, code generation, and validation.
+
+Using AI code generation tools with generative pages complements the UI-based experience in Power Apps ([make.powerapps.com](https://make.powerapps.com)). This code-first approach fits any maker or developer who prefers working with local development tools and CLI-based workflows.
 
 > [!NOTE]
 > To plan, build, or edit an entire model-driven app instead of individual generative pages, use the model app-builder skill. For more information, see [Build and edit model-driven apps with AI code generation tools](model-driven-app-external-tools.md).
