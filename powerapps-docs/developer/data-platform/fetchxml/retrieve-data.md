@@ -1,7 +1,7 @@
 ---
-title: "Use FetchXML to retrieve data from Dataverse"
+title: "Use FetchXML to Retrieve Data from Dataverse"
 description: "Learn how to retrieve data from Dataverse using FetchXML with the SDK for .NET or Web API. Includes code examples and best practices."
-ms.date: 03/26/2026
+ms.date: 10/28/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -16,9 +16,9 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# Use FetchXML to retrieve data
+# Use FetchXML to retrieve data from Dataverse
 
-You can use FetchXml to retrieve data from Dataverse by using either the SDK for .NET or Web API. By using Power Automate, you can retrieve data through the Web API by using the [Fetch Xml Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query). By using PAC CLI, use the [pac env fetch](/power-platform/developer/cli/reference/env#pac-env-fetch) command.
+You can use FetchXML to retrieve data from Dataverse by using either the SDK for .NET or Web API. By using Power Automate, you can retrieve data through the Web API by using the [Fetch XML Query parameter of the List Rows command](/power-automate/dataverse/list-rows#fetch-xml-query). By using PAC CLI, use the [pac env fetch](/power-platform/developer/cli/reference/env#pac-env-fetch) command.
 
 You might also want to use [Community tools](overview.md#community-tools), like [
 FetchXML Studio](https://www.powerplatformtoolbox.com/tools/e64db554-5dc9-4cc5-a712-832307d00777) in the [Power Platform ToolBox](https://www.powerplatformtoolbox.com/) for [FetchXML Builder](https://fetchxmlbuilder.com/) in the [XrmToolBox](../community-tools.md#xrmtoolbox).
@@ -27,7 +27,7 @@ How you retrieve data depends on whether you're using the [SDK for .NET](../org-
 
 ## [SDK for .NET](#tab/sdk)
 
-Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold the FetchXml query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a method parameter or class property.
+Use the [FetchExpression class](xref:Microsoft.Xrm.Sdk.Query.FetchExpression) to hold the FetchXML query as a string. `FetchExpression` is derived from the common [QueryBase class](xref:Microsoft.Xrm.Sdk.Query.QueryBase) type, so you can use it when that type is a method parameter or class property.
 
 Use the [IOrganizationService.RetrieveMultiple method](xref:Microsoft.Xrm.Sdk.IOrganizationService.RetrieveMultiple%2A) for most cases.
 
@@ -59,10 +59,10 @@ static EntityCollection RetrieveMultipleRequestExample(IOrganizationService serv
 
 ## [Web API](#tab/webapi)
 
-Pass your FetchXml query as a URL-encoded string value to the entity set collection by using the `fetchXml` query parameter.
+Pass your FetchXML query as a URL-encoded string value to the entity set collection by using the `fetchXml` query parameter.
 
 > [!NOTE]
-> Unlike queries that use the OData syntax, FetchXML queries sent using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-arent-returned)
+> Unlike queries that use the OData syntax, FetchXML queries sent by using Web API don't return properties with null values. [Learn more about this behavior](#null-column-values-arent-returned).
 
 For example, if you want to retrieve data from the [account entity set](xref:Microsoft.Dynamics.CRM.account), compose a fetchXml query that sets the [entity element](reference/entity.md) `name` parameter to `account`.
 

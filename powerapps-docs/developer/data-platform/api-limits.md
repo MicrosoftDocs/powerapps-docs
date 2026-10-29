@@ -285,7 +285,7 @@ Work with the ETL application vendor to learn which settings to apply. Make sure
 
 No. Dataverse native search uses a different API (`api/search` rather than `api/data`) and has different rules. When you use the Dataverse search API, there's a throttling limit of one request per second for each user.
 
-[Learn about Dataverse Search Service Protection Limits](search/overview.md#service-protection-limits).
+[Learn about service protection limits for Dataverse search](search/overview.md#service-protection-limits-for-dataverse-search).
 
 ### How do these limits apply to how many requests a user is entitled to each day?
 

@@ -253,7 +253,7 @@ As a performance best practice, request only the data you need. If you previousl
 
 ## Retrieve formatted values
 
-Request [formatted values](query/select-columns.md#formatted-values) for individual record retrievals the same way you query entity sets.
+Request [formatted values](query/select-columns.md#include-formatted-values-in-results) for individual record retrievals the same way you query entity sets.
 
 ### See also
 

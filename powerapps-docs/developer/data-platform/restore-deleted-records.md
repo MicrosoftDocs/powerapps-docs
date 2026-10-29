@@ -1,7 +1,7 @@
 ---
-title: Restore deleted records with code
-description: Learn how to configure tables so that you can restore records deleted within a specified time period. 
-ms.date: 01/30/2026
+title: Restore Deleted Records with Code
+description: Learn how to retrieve and restore deleted records with code by using the SDK for .NET or Web API, and configure deleted record keeping. Get started now.
+ms.date: 10/28/2026
 author: rijoshi1
 ms.author: rijoshi
 ms.reviewer: jdaly
@@ -17,20 +17,18 @@ ms.custom: bap-template
 ---
 # Restore deleted records with code
 
-[This article is prerelease documentation and is subject to change.]
+Learn how to restore deleted records with code when people delete records that they shouldn't. Administrators can enable deleted record keeping so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records).
 
-Sometimes people delete records that they shouldn't. Administrators can enable deleted record keeping so that they can restore deleted records within a specified period of time. [Learn how administrators can restore deleted records](/power-platform/admin/restore-deleted-table-records).
+[When deleted record keeping is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted records before the specified period of time. The period of time can be up to 30 days.
 
-[When deleted record keeping is enabled](/power-platform/admin/restore-deleted-table-records#enable-restore-table-records), developers can use the `Restore` message to restore deleted record before the specified period of time. The period of time can be up to 30 days.
+## Retrieve deleted records that you can restore
 
-## Retrieve deleted records that can be restored
-
-To retrieve deleted records that can be restored, set the datasource of the query to '`bin`'.
+To retrieve deleted records that you can restore, set the datasource of the query to '`bin`'.
 The following examples return up to three deleted account records.
 
  ### [SDK for .NET](#tab/sdk)
 
-When using the SDK, you can retrieve data using [FetchXml](fetchxml/overview.md) or [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).  
+When using the SDK, you can retrieve data by using [FetchXml](fetchxml/overview.md) or [QueryExpression](/dotnet/api/microsoft.xrm.sdk.query.queryexpression).  
 
 When you retrieve data by using FetchXml, set the [fetch element](fetchxml/reference/fetch.md) `datasource` attribute to '`bin`' when you retrieve records.
 
@@ -300,7 +298,7 @@ Avoid the following issues when restoring records:
 - [Don't specify primary key values when creating records](#dont-specify-primary-key-values-when-creating-records)
 - [Records with matching alternate key values block restore](#records-with-matching-alternate-key-values-block-restore)
 - [Records using removed Choice options aren't restored](#records-using-removed-choice-options-arent-restored)
-- [Primary Key Violation on Delete](#primary-key-violation-on-delete)
+- [Primary key violation on delete](#primary-key-violation-on-delete)
 
 
 #### Restore related records before restoring primary record
@@ -341,7 +339,7 @@ If you delete an optionset option, and that option was used in a deleted record,
 > Message: `Picklist value not valid, please add the invalid value back to the picklist before restoring record`
 
 
-#### Primary Key Violation on Delete
+#### Primary key violation on delete
 
 If the record with the same primary key already exists, nothing happens. To enforce that all deleted items are recorded, set the `DoNotEnforcePrimaryKeyOrgSettingRecycleBin` setting by using the [OrgDBOrgSettings tool for Microsoft Dynamics CRM](/power-platform/admin/environment-database-settings). 
 
@@ -356,9 +354,9 @@ After enabling this setting, you might receive the following error:
 
 Before you enable this feature, the [Deleted Record Keeping Configuration (RecycleBinConfig) table](reference/entities/recyclebinconfig.md) has no rows.
 
-Over time, most tables will support deleted record keeping. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) aren't supported for deleted record keeping. Some tables that aren't currently enabled might be enabled later (for example, tables with more than 600 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-deleted-record-keeping).
+Over time, most tables support deleted record keeping. [Solution components](/power-platform/alm/solution-concepts-alm#solution-components), [virtual tables](../../maker/data-platform/create-edit-virtual-entities.md), and [elastic tables](../../maker/data-platform/create-edit-elastic-tables.md) don't support deleted record keeping. Some tables that aren't currently enabled might be enabled later (for example, tables with more than 600 columns). For a list of tables that don't support this feature, see [Tables not currently supported](#tables-not-currently-supported-for-deleted-record-keeping).
 
-You can also [disable deleted record keeping for the environment](#disable-deleted-record-keeping-for-the-environment). If deleted record keeping isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-can-be-restored). You can query Dataverse to find out whether deleted record keeping is enabled for a table or not.
+You can also [disable deleted record keeping for the environment](#disable-deleted-record-keeping-for-the-environment). If deleted record keeping isn't enabled for a table, you won't [find any records eligible to be restored](#retrieve-deleted-records-that-you-can-restore). You can query Dataverse to find out whether deleted record keeping is enabled for a table or not.
 
 Tables that are enabled for deleted record keeping have a row in the `RecycleBinConfig` table where the `statecode` is active and `isreadyforrecyclebin` is true. The `RecycleBinConfig` table doesn't contain the name of the table, but refers to a row in the [Entity table](reference/entities/entity.md) where the `logicalname` column contains the [LogicalName](/dotnet/api/microsoft.xrm.sdk.metadata.entitymetadata.logicalname) of the table.
 
@@ -422,7 +420,7 @@ To know which tables aren't enabled for deleted record keeping, use the followin
 
 [Learn to query data using FetchXml](fetchxml/overview.md)
 
-The results of this query as of May 2024 when this feature began are in [Tables not currently supported for deleted record keeping](#tables-not-currently-supported-for-deleted-record-keeping).
+The results of this query as of October 2026 are in [Tables that the deleted records setting doesn't support](/power-platform/admin/restore-deleted-table-records#tables-that-the-deleted-records-setting-doesnt-support).
 
 
 ## Retrieve and set the automatic cleanup time period configuration for deleted record keeping
@@ -566,7 +564,7 @@ If you have this kind of custom business logic, Dataverse doesn't know about it 
 
 ## Tables not currently supported for deleted record keeping
 
-The query described in [Detect which tables aren't enabled](#detect-which-tables-arent-enabled-for-deleted-record-keeping) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-not-currently-supported-for-the-deleted-records-feature) in August 2024.
+The query described in [Detect which tables aren't enabled](#detect-which-tables-arent-enabled-for-deleted-record-keeping) was used to generate [this list](/power-platform/admin/restore-deleted-table-records#tables-that-the-deleted-records-setting-doesnt-support) in October 2026.
 
 
 

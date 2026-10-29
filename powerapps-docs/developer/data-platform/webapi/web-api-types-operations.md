@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Dataverse Web API Types and Operations"
 description: "Learn how to find information from Dataverse Web API service and metadata documents, including system entity types, functions, and actions for developers."
-ms.date: 03/27/2026
+ms.date: 10/28/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -10,21 +10,21 @@ search.audienceType:
 contributors: 
   - JimDaly
 ---
-# Web API types and operations
+# Dataverse Web API types and operations
 
-The articles in this section help you understand the Dataverse Web API by introducing important concepts and showing you ways to get the information you need by understanding the service documents.
+The articles in this section help you understand Dataverse Web API types and operations. They introduce important concepts and show you how to find the information you need in the Web API service documents.
 
 Like the [Microsoft Graph API](/graph/use-the-api), Dataverse Web API is an OData RESTful service. Unlike the Microsoft Graph API, each environment has a different organization URL and includes custom tables and operations that can be unique to each environment. Each environment is different because of the unique set of customizations or solutions installed.
 
-## First steps
+## First steps with the Dataverse Web API
 
-The first thing you should do is look at the service documents for a Dataverse environment you can access. For this step, you need to know the URL for your environment. Then, set up some ways to manage authenticating to the service to view service documents.
+Look at the service documents for a Dataverse environment you can access. For this step, you need to know the URL for your environment. Then, set up some ways to manage authenticating to the service to view service documents.
 
 ### Find the Web API endpoint URL
 
 Use the instructions in [View developer resources](../view-download-developer-resources.md) to identify a Web API endpoint for an environment you can access. It should look something like this: `https://yourorg.api.crm.dynamics.com/api/data/v9.2`.
 
-## Authenticate to the service
+## Authenticate to the Dataverse Web API
 
 Several ways exist to authenticate to interact with the service. Insomnia is a popular choice with wide adoption. You can also use PowerShell with Visual Studio Code.
 

@@ -1,7 +1,7 @@
 ---
-title: Select Columns Using OData
+title: Select Columns Using OData to Optimize Queries
 description: Learn how to use OData to select columns when you retrieve data from Microsoft Dataverse Web API. Optimize query performance by selecting only the columns you need.
-ms.date: 03/13/2026
+ms.date: 10/28/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -56,7 +56,7 @@ The primary key property is always returned, so you don't need to include it in 
 
 You might see other property values included in the response. In this case, the `_transactioncurrencyid_value` [lookup property](../web-api-properties.md#lookup-properties) for the related [Currency (TransactionCurrency)  table/entity reference](../../reference/entities/transactioncurrency.md) is included because `revenue` is a currency property.
 
-## Which properties are available?
+## Find available properties to select
 
 You can find all the available properties for an entity in the [$metadata service document](../web-api-service-documents.md#csdl-metadata-document). For more information, see [Web API Properties](../web-api-properties.md).
 
@@ -66,7 +66,7 @@ You can find all the available properties for an entity in the [$metadata servic
 
 The <xref:Microsoft.Dynamics.CRM.EntityTypeIndex> describes the entity types included with Dataverse.
 
-## Formatted values
+## Include formatted values in results
 
 The server generates formatted values as string values that you can use in your application. Formatted values include:
 

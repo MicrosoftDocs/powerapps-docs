@@ -1,7 +1,7 @@
 ---
-title: Use Web API Actions
+title: Use Dataverse Web API Actions to Modify Data and Run Business Logic
 description: "Learn how to use Web API actions in Microsoft Dataverse, including bound, unbound, and custom actions with POST requests."
-ms.date: 03/13/2026
+ms.date: 10/28/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -114,7 +114,7 @@ The following example shows the definition of the <xref:Microsoft.Dynamics.CRM.A
 
 This entity bound action is equivalent to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest> used by the SDK for .NET. In the Web API, this action is bound to the <xref:Microsoft.Dynamics.CRM.queue> entity type that represents the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest>.<xref:Microsoft.Crm.Sdk.Messages.AddToQueueRequest.DestinationQueueId> property. 
 
-This action accepts several more parameters and returns a <xref:Microsoft.Dynamics.CRM.AddToQueueResponse> complex type corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> returned by the SDK for .NET. When an action returns a complex type, the definition of the complex type appears directly above the action in the CSDL.
+This action accepts several more parameters and returns a <xref:Microsoft.Dynamics.CRM.AddToQueueResponse> complex type corresponding to the <xref:Microsoft.Crm.Sdk.Messages.AddToQueueResponse> class returned by the SDK for .NET. When an action returns a complex type, the definition of the complex type appears directly above the action in the CSDL.
 
 You must invoke an action bound to an entity by using a URI to set the first parameter value. You can't set it as a named parameter value.
 

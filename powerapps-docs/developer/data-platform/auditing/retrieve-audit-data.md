@@ -417,7 +417,7 @@ Use this message to retrieve the audit details for a single audit record.
 
 # [Web API](#tab/webapi)
 
-<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table. Include the `Prefer: odata.include-annotations="*"` request header to get [formatted values](../webapi/query/select-columns.md#formatted-values).
+<xref:Microsoft.Dynamics.CRM.RetrieveAuditDetails> is a function bound to the audit table. Include the `Prefer: odata.include-annotations="*"` request header to get [formatted values](../webapi/query/select-columns.md#include-formatted-values-in-results).
 
 The following example shows the [AttributeAuditDetail ComplexType](xref:Microsoft.Dynamics.CRM.AttributeAuditDetail) returned when the `parentaccountid` is set on an `account` record.
 
