@@ -1,7 +1,7 @@
 ---
 title: "Microsoft Dataverse Web API Versions"
 description: "Learn how Microsoft Dataverse Web API versioning works, including version-specific differences and breaking changes starting with v9.0 release."
-ms.date: 03/27/2026
+ms.date: 10/28/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -12,11 +12,11 @@ contributors:
 ---
 # Microsoft Dataverse Web API versions
 
-Starting with the v9.0 release of Dynamics 365, the Web API supports version-specific differences in the same environment.  
+Microsoft Dataverse Web API versions determine how the service behaves for your code. Starting with the v9.0 release of Dynamics 365, the Dataverse Web API supports version-specific differences in the same environment, so you can understand breaking changes and choose the right version for your application.  
   
-This support differs from the behavior in the v8.*x* releases. In the previous releases, new capabilities were available to any version of the service depending on the update applied to the environment. After an upgrade to v8.2, the v8.0, and v8.1 services were all identical. This was possible because all the changes were additive. Nothing was removed or introduced breaking changes. As a result, the specific version referenced in the service URL for the v8.*x* wasn't actually important.    
+This support differs from the behavior in the v8.*x* releases. In the previous releases, new capabilities were available to any version of the service depending on the update applied to the environment. After an upgrade to v8.2, the v8.0, and v8.1 services were all identical. This approach worked because all the changes were additive. Nothing was removed or introduced breaking changes. As a result, the specific version referenced in the service URL for the v8.*x* wasn't actually important.    
   
-Going forward, the capabilities of the service can change, including potentially breaking changes such as removing specific operations. This change allows for improvements to be applied on an on-going basis. This topic records any version-specific differences and any limitations where the Web API hasn't yet achieved parity with the SDK for .NET.  
+Going forward, the capabilities of the service can change, including potentially breaking changes such as removing specific operations. This change allows for improvements to be applied on an ongoing basis. This article records any version-specific differences and any limitations where the Web API hasn't yet achieved parity with the SDK for .NET.  
 
 > [!NOTE]
 > While the v9.x releases can support specific differences, the v9.0, v9.1, and v9.2 releases don't include any breaking changes. Each of these releases has identical Web API behaviors.
@@ -41,7 +41,7 @@ If the name of a table (entity) and one of its columns (attributes) is the same,
 
 For v9.*x* instances, the system doesn't append anything to the attribute name.
 
-## New operations added  
+## New operations added in Web API v9.x  
 
 The following operations are added to the Web API for the v9.x release.  
   

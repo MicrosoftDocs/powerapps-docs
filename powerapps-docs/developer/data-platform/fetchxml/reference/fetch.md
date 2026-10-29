@@ -4,7 +4,7 @@ description: Use this element as the root element in the query.
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
-ms.date: 02/29/2024
+ms.date: 10/28/2026
 ms.topic: reference
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -38,7 +38,7 @@ contributors:
 |`aggregate`|No|Boolean value to specify that the query returns aggregate values. [Learn about aggregating data](../aggregate-data.md)|
 |`aggregatelimit`|No|Set a limit below the standard 50,000  record aggregate limit. [Learn about aggregate limits](../aggregate-data.md#aggregate-query-record-limit-error)|
 |`count`|No|Positive integer value to specify the number of records to return in a page. [Learn about paging results](../page-results.md) |
-|`datasource`|No|When using Dataverse long term data retention, set `datasource` to `'retained'` to indicate the query is for retained rows only. [Learn more about Dataverse long term data retention](../../../../maker/data-platform/data-retention-overview.md)|
+|`datasource`|No|When using Dataverse long term data retention, set `datasource` to `'retained'` to indicate the query is for retained rows only. [Learn more about Dataverse long term data retention](../../../../maker/data-platform/data-retention-overview.md).<br />Set `datasource` to `'bin'` to indicate the query is for deleted rows only. [Learn how to restore deleted records with code](../../restore-deleted-records.md)|
 |`distinct`|No|Boolean value to specify that duplicate rows not be included in the results. [Learn more about returning distinct results](../overview.md#return-distinct-results)|
 |`latematerialize`|No|Boolean value to direct the query to be broken up into smaller parts and reassemble the results before returning them. Using `latematerialize` might improve performance for some long-running queries. [Learn more about using Late Materialize query](../optimize-performance.md#late-materialize-query). |
 |`no-lock`|No|Legacy setting to prevent shared locks on records. [No longer necessary](../optimize-performance.md#no-lock). |

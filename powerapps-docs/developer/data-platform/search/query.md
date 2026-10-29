@@ -1,7 +1,7 @@
 ---
-title: "Search Dataverse records with query API"
+title: "Search Dataverse Records with the Query API"
 description: "Learn how to use the Dataverse search query API to retrieve search results across multiple tables with filters, facets, and sorting options."
-ms.date: 03/26/2026
+ms.date: 10/28/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: JasonHQX
@@ -15,9 +15,9 @@ contributors:
  - JimDaly
  - jeromeblouinms
 ---
-# Dataverse search query
+# Search Dataverse records with the query API
 
-The query operation returns search results based on a search term.
+Use the Dataverse search query API to return search results across multiple tables based on a search term. You can refine results with filters, facets, sorting, and paging.
 
 In addition to a search term, you can influence the results by passing values for the following parameters:
 
@@ -27,7 +27,7 @@ In addition to a search term, you can influence the results by passing values fo
 |`search`|string|**Required**. The text to search with. |[search parameter](#search-parameter)|
 |`count`|bool|Whether to return the total record count.|[`count` parameter](#count-parameter) |
 |`entities`|string|Limits the scope of search to a subset of tables. |[entities parameter](#entities-parameter)|
-|`facets`|string|Facets support the ability to drill down into data results after they've been retrieved. | [facets parameter](#facets-parameter)|
+|`facets`|string|Facets support the ability to drill down into data results after they're retrieved. | [facets parameter](#facets-parameter)|
 |`filter`|string|Limits the scope of the search results returned. |[filter parameter](#filter-parameter)|
 |`options`|string|Options are settings configured to search a search term.|[`options` parameter](#options-parameter)|
 |`orderby`|string|Specifies how to order the results in order of precedence. |[orderby parameter](#orderby-parameter)|
@@ -45,7 +45,7 @@ This section includes details about the parameters introduced in the preceding t
 
 The search parameter contains the text to search. It's the only required parameter. The search term must be at least one character long and has a 100 character limit.
 
-#### Simple Search syntax
+#### Simple search syntax
 
 By default, the search parameter supports simple search syntax as described in the following table:
 
@@ -61,7 +61,7 @@ By default, the search parameter supports simple search syntax as described in t
 
 For example, an escaped phone number might look like this: `\+1\(800\)555\-1234`.
 
-By using the [`options` parameter](#options-parameter), you can enable [Lucerne Query Syntax](#lucerne-query-syntax) that enables different operators.
+By using the [`options` parameter](#options-parameter), you can enable [Lucene Query Syntax](#lucene-query-syntax) that enables different operators.
 
 ### `count` parameter
 
@@ -128,7 +128,7 @@ To use this data, escape the string and pass it as the value of the `entities` p
 **Type**: string<br />
 **Optional**: true
 
-The facet parameter is optional.  The string might contain parameters to customize the faceting, expressed as comma-separated name-value pairs. Use facets to group your search results.
+The `facets` parameter is optional. The string might contain parameters to customize the faceting, expressed as comma-separated name-value pairs. Use facets to group your search results.
 
 
 #### Facet definition
@@ -213,12 +213,12 @@ The following table lists the options:
 
 |Option|Description  |
 |---------|---------|
-|`querytype`| Values can be `simple` or `lucene` [Lucerne Query Syntax](#lucerne-query-syntax)|
+|`querytype`| Values can be `simple` or `lucene` [Lucene Query Syntax](#lucene-query-syntax)|
 |`besteffortsearchenabled`|Enables intelligent query workflow to return probable set of results if no good matches are found for the search request terms.|
-|`groupranking`|Enable ranking of results in the response optimized for display in search results pages where results are grouped by table.|
+|`grouprankingenabled`|Enable ranking of results in the response optimized for display in search results pages where results are grouped by table.|
 |`searchmode`|When specified as `all` the search terms must be matched in order to consider the document as a match. Setting its value to `any` defaults to matching any word in the search term.|
 
-#### Lucerne Query Syntax
+#### Lucene query syntax
 
 The Lucene query syntax supports the following functionality:
 
@@ -264,7 +264,7 @@ The unescaped response contains JSON that uses the following properties.
 
 |Name|Type|Description|
 |---------|---------|---------|
-|`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive search.|
+|`Error`|[ErrorDetail](#errordetail)|Provides error information from Azure Cognitive Search.|
 |`Value`|[`QueryResult`](#queryresult)`[]`|A collection of matching records.|
 |`Facets`|`Dictionary<string,` [FacetResult](#facetresult)`[]>`|If the query requests facets, a dictionary of facet values.|
 |`QueryContext` |[QueryContext](#querycontext)|This property is used for backend search. It's included for future feature releases and isn't currently used.|
@@ -324,7 +324,7 @@ The query context returned as part of response. This property is used for backen
 
 ## Examples
 
-The following examples show how to use the query operation. These examples perform a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022 and orders the top seven results by the `createdon` field, descending.
+The following examples show how to use the query operation. These examples perform a search operation on the account and contact tables `name` and `fullname` columns respectively, for records created later than August 15, 2022, and order the top seven results by the `createdon` field in descending order.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -677,7 +677,7 @@ public sealed class QueryContext
 
 ### [Web API](#tab/webapi)
 
-Use the [searchquery action](xref:Microsoft.Dynamics.CRM.searchquery) to receive a [searchqueryResponse complex type](xref:Microsoft.Dynamics.CRM.searchqueryResponse).
+Use the [searchquery action](xref:Microsoft.Dynamics.CRM.searchquery) to get a [searchqueryResponse complex type](xref:Microsoft.Dynamics.CRM.searchqueryResponse).
 
 This example is from the [Web API search operations sample](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/Search) on GitHub.
 

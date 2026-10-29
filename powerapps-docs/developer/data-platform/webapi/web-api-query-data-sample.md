@@ -28,7 +28,7 @@ This sample is divided into the following principal sections, containing Web API
 
 |Topic section|Associated topics|
 |-------------------|---------------------------|
-|[Section 1: Select specific properties](#section-1-select-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query/select-columns.md#formatted-values)|
+|[Section 1: Select specific properties](#section-1-select-specific-properties)|[Retrieve specific properties](retrieve-entity-using-web-api.md#bkmk_requestProperties)<br /> [Formatted values](query/select-columns.md#include-formatted-values-in-results)|
 |[Section 2: Use query functions](#section-2-use-query-functions)|[Filter rows](query/filter-rows.md)<br />[Use OData query functions](query/filter-rows.md#use-odata-query-functions)<br />[Compose a query with functions](use-web-api-functions.md#bkmk_composeQueryWithFunctions)<br /> <xref:Microsoft.Dynamics.CRM.QueryFunctionIndex>|
 |[Section 3: Ordering and aliases](#section-3-ordering-and-aliases)|[Order rows](query/order-rows.md)<br /> [Filter rows](query/filter-rows.md)<br />|
 |[Section 4: Limit and count results](#section-4-limit-and-count-results)|[Limit the number of rows](query/overview.md#limit-the-number-of-rows)<br />[Count number of rows](query/count-rows.md)|
@@ -287,7 +287,7 @@ The code adds the data by using *deep insert* in a single `POST` request. The da
 
 Always include the `$select` query option in your queries. If you don't, the server returns all properties of each table row, which reduces performance. [Learn how to select columns](query/select-columns.md).
 
-This example shows how to construct a basic query by selecting three properties of a [contact EntityType](xref:Microsoft.Dynamics.CRM.contact). The properties are `fullname`, `jobtitle`, and `annualincome`. The section also illustrates the differences between [formatted](query/select-columns.md#formatted-values) and unformatted values as seen in the results of the contact's `annualincome` property.
+This example shows how to construct a basic query by selecting three properties of a [contact EntityType](xref:Microsoft.Dynamics.CRM.contact). The properties are `fullname`, `jobtitle`, and `annualincome`. The section also illustrates the differences between [formatted](query/select-columns.md#include-formatted-values-in-results) and unformatted values as seen in the results of the contact's `annualincome` property.
   
 In this example, you request a specific contact. In this case, it's the primary contact of the account, `Yvonne McKay (sample)`.  
   

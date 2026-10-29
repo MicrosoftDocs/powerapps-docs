@@ -1,8 +1,8 @@
 ---
 title: "Quickstart: Web API with PowerShell and Visual Studio Code"
-description: "Learn how to authenticate and use the Dataverse Web API from PowerShell with Visual Studio Code. Get started with interactive authentication and compose Web API requests."
+description: "Learn how to authenticate and call the Dataverse Web API by using PowerShell in Visual Studio Code. Get started and send your first Web API request."
 ms.topic: quickstart
-ms.date: 03/27/2026
+ms.date: 10/28/2026
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -11,7 +11,7 @@ search.audienceType:
 ---
 # Quickstart: Web API with PowerShell and Visual Studio Code
 
-Learn to use PowerShell with the Dataverse Web API in Visual Studio Code. PowerShell is a powerful scripting language that can automate repetitive tasks and streamline workflows, making it an ideal tool for integrating with Dataverse. This quickstart helps you get started using PowerShell with the Dataverse Web API in Visual Studio Code. Visual Studio Code with PowerShell provides an alternative to using API clients like Postman or [Insomnia](insomnia.md).
+Learn how to use PowerShell with the Dataverse Web API in Visual Studio Code to authenticate and send Web API requests. PowerShell is a powerful scripting language that automates repetitive tasks and streamlines workflows, making it an ideal tool for integrating with Dataverse. Visual Studio Code with PowerShell provides an alternative to API clients like Postman or [Insomnia](insomnia.md).
 
 In this quickstart, you learn how to:
 
@@ -185,7 +185,7 @@ If you see this error after running the script:
       | No such host is known.
    ```
 
-Check that the `$environmentUrl` represents an environment you have access to. Make sure you changed it from the default value (`https://yourorg.crm.dynamics.com/`).
+Check that the `$environmentUrl` represents an environment you have access to. Ensure you changed it from the default value (`https://yourorg.crm.dynamics.com/`).
 
 ### The user is not a member of the organization
 
@@ -199,7 +199,7 @@ If you see this error after running the script:
       |  {   "error": {     "code": "0x80072560",     "message": "The user is not a member of the organization."   } }
    ```
 
-Make sure that the account you select in the browser window is the account that has access to the Dataverse environment specified by the `$environmentUrl` parameter.
+Ensure that the account you select in the browser window is the account that has access to the Dataverse environment specified by the `$environmentUrl` parameter.
 
 If you're using a different set of credentials than you used before, use the [Disconnect-AzAccount](/powershell/module/az.accounts/disconnect-azaccount) command in the terminal window.
 
@@ -223,7 +223,7 @@ Learn more advanced capabilities to be more productive using PowerShell and Visu
 - [Create reusable functions](use-ps-and-vscode-web-api.md#create-reusable-functions)
 - [Handle exceptions](use-ps-and-vscode-web-api.md#handle-exceptions)
 - [Manage Dataverse service protection limits](use-ps-and-vscode-web-api.md#manage-dataverse-service-protection-limits)
-- [Debug using Fiddler](use-ps-and-vscode-web-api.md#debug-by-using-fiddler)
+- [Debug by using Fiddler](use-ps-and-vscode-web-api.md#debug-by-using-fiddler)
 - [Download the Dataverse Web API CSDL $metadata document](use-ps-and-vscode-web-api.md#download-the-dataverse-web-api-csdl-metadata-document)
 
 > [!div class="nextstepaction"]

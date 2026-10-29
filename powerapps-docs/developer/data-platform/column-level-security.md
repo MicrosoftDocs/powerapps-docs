@@ -1,7 +1,7 @@
 ---
-title: Column-level security with code
-description: "Learn how developers use code to secure data for specific columns or fields in a table so that only specified users and teams can view or set the values."
-ms.date: 02/11/2026
+title: Configure Column-Level Security by Using Code
+description: "Learn how to use code to apply column-level security in Dataverse so only specified users and teams can view or set values in sensitive columns."
+ms.date: 10/28/2026
 ms.reviewer: jdaly
 ms.topic: article
 author: paulliew
@@ -154,7 +154,7 @@ OData-MaxVersion: 4.0
 
 **Response**:
 
-The results in this example were edited for brevity to show only one example column ([Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals)).
+The results in this following example were edited for brevity to show only one example column ([Account.OpenDeals column](/dynamics365/developer/reference/entities/account#BKMK_OpenDeals)).
 
 ```http
 HTTP/1.1 200 OK
@@ -387,7 +387,7 @@ https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid -->
     FieldSecurityProfile }o--o{ Team : "teamprofiles_association" 
 ```   -->
 
-:::image type="content" source="media/fieldsecurityprofile-erd.png" alt-text="entity relationship diagram for the fieldsecurityprofile table and related tables":::
+:::image type="content" source="media/fieldsecurityprofile-erd.png" alt-text="Screenshot of the entity relationship diagram for the FieldSecurityProfile table and related tables.":::
 
 You can associate system users and teams to your field security profile using the [systemuserprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_systemuserprofiles_association) and [teamprofiles_association](/power-apps/developer/data-platform/reference/entities/fieldsecurityprofile#BKMK_teamprofiles_association) many-to-many relationships respectively.
 
@@ -434,7 +434,7 @@ The `PrincipalObjectAttributeAccess` table has these columns:
 |`UpdateAccess`|Bool|Whether to grant update access to the field data|
 
 
-#### Getting column AttributeId
+#### Get column AttributeId
 
 The `PrincipalObjectAttributeAccess.AttributeId` column uses the [AttributeMetadata.MetadataId](/dotnet/api/microsoft.xrm.sdk.metadata.metadatabase.metadataid) rather than the column logical name. You need to retrieve this value from the metadata. If your application has a metadata cache, you can include this data and access it as needed.
 
@@ -608,11 +608,11 @@ OData-Version: 4.0
 
 ---
 
-## Display Masked data
+## Display masked data
 
 The default API behavior when returning a value for a secured column is to return no data. The calling application can't distinguish between a value that is secured and a value that is null.
 
-[There's now a preview feature](/power-platform/admin/create-manage-masking-rules) you can use to specify that a string value is returned when data exists. This string might totally obfuscate the value or show portions of the data depending on masking rules you define. In this way, the application can better manage sensitive data.
+[Create and manage masking rules](/power-platform/admin/create-manage-masking-rules) describes how to specify that a string value is returned when data exists. This string might totally obfuscate the value or show portions of the data depending on masking rules you define. In this way, the application can better manage sensitive data.
 
 With this feature, you can configure [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) records to create field security profiles that enable applications to send requests to retrieve records with the masking removed so that the data can be shown under controlled circumstances. [Learn more about retrieving unmasked data](#retrieve-unmasked-data)
 
@@ -624,7 +624,7 @@ Create [Secured Masking Column (AttributeMaskingRule)](reference/entities/attrib
 
 The following diagram describes these tables:
 
-:::image type="content" source="media/maskingrule-attributemaskingrule-erd.png" alt-text="Diagram showing columns and relationships between the MaskingRule and AttributeMaskingRule tables":::
+:::image type="content" source="media/maskingrule-attributemaskingrule-erd.png" alt-text="Screenshot of the diagram showing columns and relationships between the MaskingRule and AttributeMaskingRule tables.":::
 
 <!-- 
 Mermaid markdown used to generate ERD after installing:
@@ -689,7 +689,7 @@ The [Secured Masking Column (AttributeMaskingRule)](reference/entities/attribute
 |`IsCustomizable`|BooleanManagedProperty|Information that specifies whether this component can be customized. [Learn more about managed properties](/power-platform/alm/managed-properties-alm)|
 
 
-### Retrieve unmasked data
+## Retrieve unmasked data
 
 When a [Field Permission (FieldPermission)](reference/entities/fieldpermission.md) record `CanRead` column is **Allowed**, you can set the `CanReadUnmasked` choice column if the column has an associated [Secured Masking Column (AttributeMaskingRule)](reference/entities/attributemaskingrule.md) record.
 
@@ -702,11 +702,11 @@ The `CanReadUnmasked` column supports the following options defined by the `fiel
 |3|**All Records**|Unmasked data can be returned by using `Retrieve` and `RetrieveMultiple` operations.|
 
 
-#### Retrieve unmasked data example
+### Retrieve unmasked data example
 
 The following examples show how to use the [`UnMaskedData` optional parameter](optional-parameters.md#return-unmasked-data) to request that the unmasked value is returned when the configuration of the field permission allows it.
 
-### [SDK for .NET](#tab/sdk)
+#### [SDK for .NET](#tab/sdk)
 
 The `GetUnmaskedExampleRows` example returns unmasked values for any of the requested columns where the field permission `CanReadUnmasked` column value is set to **All Records** because the optional `UnMaskedData` parameter is added to the `RetrieveMultiple` request.
 
@@ -714,7 +714,7 @@ This method queries the `sample_example` table and retrieves specific columns, i
 
 :::code language="csharp" source="~/../PowerApps-Samples/dataverse/orgsvc/CSharp-NETCore/ColumnLevelSecurity/Examples.cs" id="GetUnmaskedExampleRows":::
 
-### [Web API](#tab/webapi)
+#### [Web API](#tab/webapi)
 
 **Request:**
 
@@ -776,6 +776,8 @@ Preference-Applied: odata.include-annotations="*"
 
 ### Related articles
 
+[Admin guide: Column-level security to control access](/power-platform/admin/field-level-security)
+[Admin guide: Create and manage masking rules](/power-platform/admin/create-manage-masking-rules)   
 [Security and data access](security-model.md)   
 [Sharing and assigning](security-sharing-assigning.md)   
 [Sample: Column-level security using Dataverse SDK for .NET](org-service/samples/column-level-security.md)   

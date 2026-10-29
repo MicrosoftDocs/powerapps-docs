@@ -97,7 +97,7 @@ This example also demonstrates:
 - Limiting the columns returned by using `$select`. [Learn more about selecting columns](select-columns.md).
 - Ordering results by using `$orderby`. [Learn more about ordering columns](order-rows.md).
 - Limiting the rows returned by using `$top`. [Learn about limiting the number of rows](#limit-the-number-of-rows).
-- Showing formatted values by using the request header: `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"`. [Learn about formatted values](select-columns.md#formatted-values).
+- Showing formatted values by using the request header: `Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue"`. [Learn about formatted values](select-columns.md#include-formatted-values-in-results).
 
 **Request:**
 
@@ -204,7 +204,7 @@ Alternatively, specify a number of records to return by using paging. Don't use 
 
 FetchXml supports some capabilities that OData doesn't support.
 
-- You can't [join tables without any relationship](../../fetchxml/join-tables.md#no-relationship). OData only allows using the `$expand` query option to join tables by using navigation properties that are part of the relationships in the data model.
+- You can't [join tables without a relationship](../../fetchxml/join-tables.md#join-tables-without-a-relationship). OData only allows using the `$expand` query option to join tables by using navigation properties that are part of the relationships in the data model.
 - [You can't use nested $expand with N:N relationships](join-tables.md#nested-expand-with-nn-relationships).
 - [Aggregation limitations](aggregate-data.md#odata-aggregation-limitations) lists the following limitations for aggregations by using OData:
 
