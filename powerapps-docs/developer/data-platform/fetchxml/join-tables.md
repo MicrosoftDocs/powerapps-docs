@@ -1,7 +1,7 @@
 ---
 title: Join Tables Using FetchXml Queries
-description: Learn how to use FetchXml to join tables when you retrieve data from Microsoft Dataverse. Explore relationship types, link-entity options, and advanced join techniques.
-ms.date: 03/13/2026
+description: Learn how to use FetchXML to join tables in Microsoft Dataverse queries. Explore relationship types, link-entity options, and advanced join techniques.
+ms.date: 10/28/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -16,9 +16,9 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# Join tables using FetchXML
+# Join tables by using FetchXML
 
-As described in [Query data using FetchXml](overview.md), start your query by selecting a table using the [entity element](reference/entity.md).
+To join tables by using FetchXML, start your query by selecting a table with the [entity element](reference/entity.md), as described in [Query data using FetchXml](overview.md).
 
 Use the [link-entity element](reference/link-entity.md) to describe the data from related tables that you want to return with your query. Use the following attributes:
 
@@ -32,7 +32,7 @@ Use the [link-entity element](reference/link-entity.md) to describe the data fro
 | `alias` | Represents the name of the related table in the results. |
 | `intersect` | Indicates that the `link-entity` is used to join tables and doesn't return any columns.|
 
-## Basic example
+## Basic join example
 
 The following query returns up to five records from the [account](../reference/entities/account.md) and [contact](../reference/entities/contact.md) tables based on the [PrimaryContactId lookup column](../reference/entities/account.md#BKMK_PrimaryContactId) in the account record:
 
@@ -69,7 +69,7 @@ The results look like this:
  -----------------------------------------------------------------
 ```
 
-## Limitations
+## Link-entity limitations
 
 You can add up to 15 `link-entity` elements to a query. Each `link-entity` adds a JOIN to the query and increases the time it takes to execute the query. This limit protects performance. If you add more than 15 `link-entity` elements to a query, you get this error message:
 
@@ -77,7 +77,7 @@ You can add up to 15 `link-entity` elements to a query. Each `link-entity` adds 
 > Number: `-2147204339`  
 > Message: `Number of link entities in query exceeded maximum limit.`  
 
-## Child elements
+## Link-entity child elements
 
 Within the `link-entity` element, you can add child elements just like on the parent element to:
 
@@ -87,7 +87,7 @@ Within the `link-entity` element, you can add child elements just like on the pa
 
 ## Many-to-one relationships
 
-The [basic example](#basic-example) shows a many-to-one relationship where many account records can refer to one contact record. You define this information in the [Account account_primary_contact many-to-one relationship](../reference/entities/account.md#BKMK_account_primary_contact), which has the following values:
+The [Basic join example](#basic-join-example) shows a many-to-one relationship where many account records can refer to one contact record. You define this information in the [Account account_primary_contact many-to-one relationship](../reference/entities/account.md#BKMK_account_primary_contact), which has the following values:
 
 
 |Property|Value|Comment|
@@ -101,7 +101,7 @@ The [basic example](#basic-example) shows a many-to-one relationship where many 
 
 ### Retrieve relationship information
 
-If you use tools like [XrmToolBox](../community-tools.md#xrmtoolbox) [FetchXML Builder](https://fetchxmlbuilder.com/) or [Power Platform ToolBox](https://www.powerplatformtoolbox.com/) [FetchXML Studio](https://www.powerplatformtoolbox.com/tools/e64db554-5dc9-4cc5-a712-832307d00777), you can see how these tools allow you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
+If you use tools like [XrmToolBox](../community-tools.md#xrmtoolbox), [FetchXML Builder](https://fetchxmlbuilder.com/), or [Power Platform ToolBox](https://www.powerplatformtoolbox.com/) [FetchXML Studio](https://www.powerplatformtoolbox.com/tools/e64db554-5dc9-4cc5-a712-832307d00777), you can see how these tools allow you to select the relationship to set the appropriate `name`, `from`, and `to` attribute values.
 
 You can also use other tools and APIs to look up relationship data for the appropriate `name`, `from`, and `to` attribute values. To learn how to retrieve this data, see:
 
@@ -202,7 +202,7 @@ The results look like:
  --------------------------------------
 ```
 
-## No relationship
+## Join tables without a relationship
 
 You can specify `from` and `to` attributes by using columns that aren't part of a defined relationship.
 
@@ -224,7 +224,7 @@ For example, this query finds pairs of records where the [Name column](../refere
 ```
 
 > [!NOTE]
-> Make sure the columns you specify in the `from` and `to` attributes are the same type, even if they're not involved in a relationship. If you use columns of different types, the query needs a type conversion, which can affect performance and might fail for some column values.
+> Ensure the columns you specify in the `from` and `to` attributes are the same type, even if they're not involved in a relationship. If you use columns of different types, the query needs a type conversion, which can affect performance and might fail for some column values.
 
 You can't use the following [column types](../../../maker/data-platform/types-of-fields.md) in `from` and `to` attributes:
 
@@ -243,7 +243,7 @@ You can use these column types in `from` and `to` attributes, but they might res
 
 
 
-## Find records not in a set
+## Find records not in a set by using an outer join
 
 You can use FetchXML to create a query that returns records that aren't in a set by using a *left outer join*. A left outer join returns each row that satisfies the join of the first input with the second input. It also returns any rows from the first input that have no matching rows in the second input. The non-matching rows in the second input are returned as null values.
 
@@ -368,7 +368,7 @@ By using these link types, Dataverse might only need to find the first matching 
 
 ### Use `matchfirstrowusingcrossapply` link type
 
-This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#using-apply) operator with a subquery using `top 1` following this pattern:
+This link type produces a [CROSS APPLY](/sql/t-sql/queries/from-transact-sql#using-apply) operator with a subquery that uses `top 1` and follows this pattern:
 
 #### [FetchXml](#tab/fetchxml)
 
@@ -406,20 +406,20 @@ cross apply (
 
 ---
 
-The `matchfirstrowusingcrossapply` link type is equivalent to the `inner` type except it only returns the parent row at most once. The parent row is returned only if there are matching rows in the linked entity but, unlike `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity. Use this type when only a single example of a matching row from the linked entity is sufficient and results don't need multiple copies of the parent row.
+The `matchfirstrowusingcrossapply` link type is equivalent to the `inner` type, except it returns the parent row at most once. The parent row is returned only if there are matching rows in the linked entity. Unlike the `in` and `exists` types, it **does** return column values from one of the matching rows in the linked entity. Use this type when only a single example of a matching row from the linked entity is sufficient and results don't need multiple copies of the parent row.
 
 #### Related table property and attribute names are inconsistent
 
 When you use the `matchfirstrowusingcrossapply` link type, the names of the properties returned by using Web API or the SDK [Entity.Attributes collection](/dotnet/api/microsoft.xrm.sdk.entity.attributes) `Keys` values for the related table columns differ from other types of joins. Usually, these names follow the `<tablealias>.<logicalname>` format. However, for the `matchfirstrowusingcrossapply` link type, the [SchemaName](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.schemaname) values are used without the table alias prefix.
 
-By using the previous query example with any other link type, you can expect the properties or keys to have these names:
+If you use the previous query example with any other link type, you can expect the properties or keys to have these names:
 
 - `fullname`
 - `contactid`
 - `account1.accountid`
 - `account1.name`
 
-But by using the `matchfirstrowusingcrossapply` link type, the properties or keys have these names:
+By using the `matchfirstrowusingcrossapply` link type, the properties or keys have these names:
 
 - `fullname`
 - `contactid`

@@ -1,10 +1,10 @@
 ---
-title: condition operator values
-description: Use these values in a condition element operator attribute to specify how to evaluate the condition.
+title: FetchXML Condition Operator Values Reference
+description: Learn how to use FetchXML condition operator values to filter Dataverse rows by string, number, datetime, choice, and hierarchical data. Explore the full list.
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
-ms.date: 03/08/2024
+ms.date: 10/28/2026
 ms.topic: reference
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -16,9 +16,9 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# condition operator values
+# FetchXML condition operator values
 
-To learn how to use these values, see [Filter rows using FetchXml](../filter-rows.md).
+Use FetchXML condition operator values in the `operator` attribute of a condition element to specify how to evaluate a condition when you filter rows. This reference lists each operator, the data types it supports, and examples. To learn how to use these values, see [Filter rows using FetchXml](../filter-rows.md).
 
 |Operator|Description|Data Types|
 |---|---|---|
@@ -108,9 +108,9 @@ To learn how to use these values, see [Filter rows using FetchXml](../filter-row
 
 [Back to top](#)
 
-## By Data type
+## Operators by data type
 
-This section groups operators by the type of data they can be used with.
+This section groups operators by the type of data they work with.
 
 - [Choice data](#choice-data)
 - [Datetime data](#datetime-data)
@@ -122,7 +122,7 @@ This section groups operators by the type of data they can be used with.
 
 ### Choice data
 
-Use the following operators in [conditions](condition.md) using choice values.
+Use the following operators in [conditions](condition.md) that use choice values.
 
 |Operator|Description|
 |---|---|
@@ -137,12 +137,12 @@ Use the following operators in [conditions](condition.md) using choice values.
 
 ### Datetime data
 
- Use the following operators in [conditions](condition.md) using date and time values.
+ Use the following operators in [conditions](condition.md) with date and time values.
 
 > [!NOTE]
-> When a column is configured with `DateOnly` behavior you cannot use the operators that apply to hours and minutes. [Learn more about the behavior of date and time columns](../../behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column).
+> When you configure a column with `DateOnly` behavior, you can't use the operators that apply to hours and minutes. [Learn more about the behavior of date and time columns](../../behavior-format-date-time-attribute.md#specify-the-behavior-of-a-date-and-time-column).
 > 
-> The behavior of some operators depend on the fiscal year settings for the environment. [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
+> The behavior of some operators depends on the fiscal year settings for the environment. [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
  |Operator|Description|
  |---|---|
@@ -207,7 +207,7 @@ Use the following operators in [conditions](condition.md) using choice values.
 
 ### Hierarchical data
 
-Use the following operators in [conditions](condition.md) using hierarchical data. [Learn more about querying hierarchical data](../../query-hierarchical-data.md).
+Use the following operators in [conditions](condition.md) with hierarchical data. [Learn more about querying hierarchical data](../../query-hierarchical-data.md).
 
 |Operator|Description|
 |---|---|
@@ -221,7 +221,7 @@ Use the following operators in [conditions](condition.md) using hierarchical dat
 
 ### Number data
 
-Use the following operators in [conditions](condition.md) using numeric values.
+Use the following operators in [conditions](condition.md) with numeric values.
 
 |Operator|Description|
 |---|---|
@@ -241,7 +241,7 @@ Use the following operators in [conditions](condition.md) using numeric values.
 
 ### Owner data
 
-Use the following operators in [conditions](condition.md) using owner values.
+Use the following operators in [conditions](condition.md) with owner values.
 
 |Operator|Description|
 |---|---|
@@ -253,11 +253,11 @@ Use the following operators in [conditions](condition.md) using owner values.
 
 ### String data
 
-Use the following operators in [conditions](condition.md) using string values.
+Use the following operators in [conditions](condition.md) with string values.
 
 All filter conditions for string values are case insensitive.
 
-You can use wildcard characters for the following operators: [like](#like), [not-like](#not-like), [begins-with](#begins-with), [not-begin-with](#not-begin-with), [ends-with](#ends-with), and [not-end-with](#not-end-with). [Learn more about using wildcard characters in conditions for string values](../../wildcard-characters.md)
+Use wildcard characters with the following operators: [like](#like), [not-like](#not-like), [begins-with](#begins-with), [not-begin-with](#not-begin-with), [ends-with](#ends-with), and [not-end-with](#not-end-with). [Learn more about using wildcard characters in conditions for string values](../../wildcard-characters.md).
 
 |Operator|Description|
 |---|---|
@@ -278,9 +278,9 @@ You can use wildcard characters for the following operators: [like](#like), [not
 |[null](#null)|[!INCLUDE [operator-null-description](includes/operator-null-description.md)]|
 
 
-### Unique Identifier data
+### Unique identifier data
 
-Use the following operators in [conditions](condition.md) using unique identifier (GUID) values.
+Use the following operators in [conditions](condition.md) with unique identifier (GUID) values.
 
 |Operator|Description|
 |---|---|
@@ -296,9 +296,9 @@ Use the following operators in [conditions](condition.md) using unique identifie
 
 [Back to top](#)
 
-## Details
+## Operator details
 
-This section includes details about each of the FetchXml condition operators.
+This section includes details about each of the FetchXML condition operators.
 
 <!-- We can put examples here as needed.-->
 
@@ -331,7 +331,7 @@ This operator requires two values.
 </condition>
 ```
 
-Data Types: 
+Data types: 
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
@@ -354,7 +354,7 @@ Data Type: [String](#string-data)
  
 [!INCLUDE [operator-eq-description](includes/operator-eq-description.md)]
 
- Data Types:
+ Data types:
 
 - [Choice](#choice-data)
 - [Datetime](#datetime-data)
@@ -368,7 +368,7 @@ Data Type: [String](#string-data)
 
 [!INCLUDE [operator-eq-businessid-description](includes/operator-eq-businessid-description.md)]
 
-Data Type: [Unique Identifier](#unique-identifier-data)
+Data type: [Unique Identifier](#unique-identifier-data)
 
 ### eq-or-above
  
@@ -390,19 +390,19 @@ Data Type: [Hierarchical](#hierarchical-data)
  
 [!INCLUDE [operator-eq-userid-description](includes/operator-eq-userid-description.md)]
 
-No value is required for this operator.
+This operator doesn't require a value.
 
 ```xml
 <condition attribute='ownerid' operator='eq-userid' />
 ```
 
-Data Type: [Unique Identifier](#unique-identifier-data)
+Data type: [Unique Identifier](#unique-identifier-data)
 
 ### eq-userlanguage
  
 [!INCLUDE [operator-eq-userlanguage-description](includes/operator-eq-userlanguage-description.md)]
 
-When a column uses the Power Apps *Language* type, it is an integer value that stores the [Microsoft Locale ID Value](https://go.microsoft.com/fwlink/?LinkId=122128) for the language. The value is compared to the [UserSettings.UILanguageId](../../reference/entities/usersettings.md) that represents the calling user's preferred language. These columns have  [AttributeMetadata.AttributeTypeName.Value](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetypename) equal to [IntegerType](/dotnet/api/microsoft.xrm.sdk.metadata.attributetypedisplayname.integertype) and a [Format](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata.format) value of [IntegerFormat.Language](/dotnet/api/microsoft.xrm.sdk.metadata.integerformat).
+When a column uses the Power Apps *Language* type, it stores an integer value that represents the [Microsoft Locale ID Value](https://go.microsoft.com/fwlink/?LinkId=122128) for the language. The value is compared to the [UserSettings.UILanguageId](../../reference/entities/usersettings.md) that represents the calling user's preferred language. These columns have  [AttributeMetadata.AttributeTypeName.Value](/dotnet/api/microsoft.xrm.sdk.metadata.attributemetadata.attributetypename) equal to [IntegerType](/dotnet/api/microsoft.xrm.sdk.metadata.attributetypedisplayname.integertype) and a [Format](/dotnet/api/microsoft.xrm.sdk.metadata.integerattributemetadata.format) value of [IntegerFormat.Language](/dotnet/api/microsoft.xrm.sdk.metadata.integerformat).
 
 Data Type: [Number](#number-data)
 
@@ -438,7 +438,7 @@ Data Type: [Owner](#owner-data)
  
 [!INCLUDE [operator-ge-description](includes/operator-ge-description.md)]
 
-Data Types: 
+Data types: 
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
@@ -448,7 +448,7 @@ Data Types:
  
 [!INCLUDE [operator-gt-description](includes/operator-gt-description.md)]
 
-Data Types: 
+Data types: 
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
@@ -458,7 +458,7 @@ Data Types:
  
 [!INCLUDE [operator-in-description](includes/operator-in-description.md)]
 
-Data Types:
+Data types:
 
 - [Choice](#choice-data)
 - [Number](#number-data)
@@ -472,7 +472,7 @@ Data Types:
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-The following example shows a FetchXML query that finds all orders fulfilled in period three of any fiscal year, according to the organization's fiscal year settings. The fiscal period value is specified in the value column of the condition element. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out of range.
+The following example shows a FetchXML query that finds all orders fulfilled in period three of any fiscal year, according to the organization's fiscal year settings. Specify the fiscal period value in the value column of the condition element. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, the query returns no results because there are only two semesters and the value you provided is out of range.
 
 ```xml
 <fetch>
@@ -487,7 +487,7 @@ The following example shows a FetchXML query that finds all orders fulfilled in 
 </fetch>
 ```
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### in-fiscal-period-and-year
  
@@ -495,7 +495,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-The following example shows a FetchXML expression that finds all orders fulfilled in period three of fiscal year 2023, according to the organization's fiscal year settings. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, no results are returned; there are only two semesters, and the value supplied is therefore out-of-range
+The following example shows a FetchXML expression that finds all orders fulfilled in period three of fiscal year 2023, according to the organization's fiscal year settings. If the organization uses fiscal months, the query returns results from month three. If the organization uses fiscal quarters, the query returns results from quarter three. If the organization uses fiscal semesters, the query returns no results because there are only two semesters and the value you provided is out of range.
 
 ```xml
 <fetch>
@@ -512,7 +512,7 @@ The following example shows a FetchXML expression that finds all orders fulfille
 </fetch>
 ```
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### in-fiscal-year
  
@@ -535,7 +535,7 @@ The following example shows a FetchXML expression that finds all accounts create
 </fetch>
 ```
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### in-or-after-fiscal-period-and-year
  
@@ -543,7 +543,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### in-or-before-fiscal-period-and-year
  
@@ -551,7 +551,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-fiscal-period
  
@@ -559,7 +559,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-The following example shows a FetchXML expression that finds all orders fulfilled in the last fiscal period, according to the organization's fiscal year settings. For example, if the organization uses fiscal months, the query returns orders fulfilled in the last fiscal month. If the organization uses fiscal quarters, the query returns orders fulfilled in the last fiscal quarter. If the organization uses fiscal semesters, orders fulfilled in the last fiscal semester are returned.
+The following example shows a FetchXML expression that finds all orders fulfilled in the last fiscal period, according to the organization's fiscal year settings. For example, if the organization uses fiscal months, the query returns orders fulfilled in the last fiscal month. If the organization uses fiscal quarters, the query returns orders fulfilled in the last fiscal quarter. If the organization uses fiscal semesters, the query returns orders fulfilled in the last fiscal semester.
 
 ```xml
 <fetch>
@@ -573,7 +573,7 @@ The following example shows a FetchXML expression that finds all orders fulfille
 </fetch>
 ```
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-fiscal-year
  
@@ -581,31 +581,31 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-month
  
 [!INCLUDE [operator-last-month-description](includes/operator-last-month-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-seven-days
  
 [!INCLUDE [operator-last-seven-days-description](includes/operator-last-seven-days-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-week
  
 [!INCLUDE [operator-last-week-description](includes/operator-last-week-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-x-days
  
 [!INCLUDE [operator-last-x-days-description](includes/operator-last-x-days-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-x-fiscal-periods
  
@@ -613,7 +613,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-x-fiscal-years
  
@@ -621,7 +621,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-x-hours
  
@@ -630,37 +630,37 @@ Data Type: [Datetime](#datetime-data)
 [!INCLUDE [operator-invalid-dateonly](includes/operator-invalid-dateonly.md)]
 
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-x-months
  
 [!INCLUDE [operator-last-x-months-description](includes/operator-last-x-months-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-x-weeks
  
 [!INCLUDE [operator-last-x-weeks-description](includes/operator-last-x-weeks-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-x-years
  
 [!INCLUDE [operator-last-x-years-description](includes/operator-last-x-years-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### last-year
  
 [!INCLUDE [operator-last-year-description](includes/operator-last-year-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### le
  
 [!INCLUDE [operator-le-description](includes/operator-le-description.md)]
 
-Data Types:
+Data types:
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
@@ -678,7 +678,7 @@ Data Type: [String](#string-data)
  
 [!INCLUDE [operator-lt-description](includes/operator-lt-description.md)]
 
-Data Types:
+Data types:
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
@@ -688,7 +688,7 @@ Data Types:
  
 [!INCLUDE [operator-ne-description](includes/operator-ne-description.md)]
 
- Data Types:
+ Data types:
 
 - [Choice](#choice-data)
 - [Datetime](#datetime-data)
@@ -702,13 +702,13 @@ Data Types:
  
 [!INCLUDE [operator-ne-businessid-description](includes/operator-ne-businessid-description.md)]
 
-Data Type: [Unique Identifier](#unique-identifier-data)
+Data type: [Unique Identifier](#unique-identifier-data)
 
 ### ne-userid
  
 [!INCLUDE [operator-ne-userid-description](includes/operator-ne-userid-description.md)]
 
-Data Type: [Unique Identifier](#unique-identifier-data)
+Data type: [Unique Identifier](#unique-identifier-data)
 
 ### neq
  
@@ -720,7 +720,7 @@ Data Type: [Unique Identifier](#unique-identifier-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-fiscal-year
  
@@ -728,31 +728,31 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-month
  
 [!INCLUDE [operator-next-month-description](includes/operator-next-month-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-seven-days
  
 [!INCLUDE [operator-next-seven-days-description](includes/operator-next-seven-days-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-week
  
 [!INCLUDE [operator-next-week-description](includes/operator-next-week-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-x-days
  
 [!INCLUDE [operator-next-x-days-description](includes/operator-next-x-days-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-x-fiscal-periods
  
@@ -760,7 +760,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-x-fiscal-years
  
@@ -768,7 +768,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-The following example shows a FetchXML expression that finds all opportunities with an estimated close date in the next three fiscal years, based on the organization's fiscal year settings. The value for `x` is specified in the value column of the condition element.
+The following example shows a FetchXML expression that finds all opportunities with an estimated close date in the next three fiscal years, based on the organization's fiscal year settings. You specify the value for `x` in the value column of the condition element.
 
 ```xml
 <fetch>
@@ -784,7 +784,7 @@ The following example shows a FetchXML expression that finds all opportunities w
 ```
 
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-x-hours
  
@@ -792,31 +792,31 @@ Data Type: [Datetime](#datetime-data)
 
 [!INCLUDE [operator-invalid-dateonly](includes/operator-invalid-dateonly.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-x-months
  
 [!INCLUDE [operator-next-x-months-description](includes/operator-next-x-months-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-x-weeks
  
 [!INCLUDE [operator-next-x-weeks-description](includes/operator-next-x-weeks-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-x-years
  
 [!INCLUDE [operator-next-x-years-description](includes/operator-next-x-years-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### next-year
  
 [!INCLUDE [operator-next-year-description](includes/operator-next-year-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### not-begin-with
  
@@ -830,7 +830,7 @@ Data Type: [String](#string-data)
  
 [!INCLUDE [operator-not-between-description](includes/operator-not-between-description.md)]
 
- Data Types: 
+ Data types: 
 
 - [Number](#number-data)
 - [Datetime](#datetime-data)
@@ -867,7 +867,7 @@ Data Type: [String](#string-data)
  
 [!INCLUDE [operator-not-null-description](includes/operator-not-null-description.md)]
 
- Data Types:
+ Data types:
 
 - [Choice](#choice-data)
 - [Datetime](#datetime-data)
@@ -889,7 +889,7 @@ Data Type: [Hierarchical](#hierarchical-data)
  
 [!INCLUDE [operator-null-description](includes/operator-null-description.md)]
 
- Data Types:
+ Data types:
 
 - [Choice](#choice-data)
 - [Datetime](#datetime-data)
@@ -903,7 +903,7 @@ Data Type: [Hierarchical](#hierarchical-data)
  
 [!INCLUDE [operator-olderthan-x-days-description](includes/operator-olderthan-x-days-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### olderthan-x-hours
  
@@ -911,7 +911,7 @@ Data Type: [Datetime](#datetime-data)
 
 [!INCLUDE [operator-invalid-dateonly](includes/operator-invalid-dateonly.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### olderthan-x-minutes
  
@@ -937,43 +937,43 @@ The following example shows a FetchXML query that returns incidents that are old
 </fetch>
 ```
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### olderthan-x-months
  
 [!INCLUDE [operator-olderthan-x-months-description](includes/operator-olderthan-x-months-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### olderthan-x-weeks
  
 [!INCLUDE [operator-olderthan-x-weeks-description](includes/operator-olderthan-x-weeks-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### olderthan-x-years
  
 [!INCLUDE [operator-olderthan-x-years-description](includes/operator-olderthan-x-years-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### on
  
 [!INCLUDE [operator-on-description](includes/operator-on-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### on-or-after
  
 [!INCLUDE [operator-on-or-after-description](includes/operator-on-or-after-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### on-or-before
  
 [!INCLUDE [operator-on-or-before-description](includes/operator-on-or-before-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### this-fiscal-period
  
@@ -981,7 +981,7 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### this-fiscal-year
  
@@ -989,37 +989,37 @@ Data Type: [Datetime](#datetime-data)
 
 [Learn more about fiscal year settings](/power-platform/admin/work-fiscal-year-settings)
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### this-month
  
 [!INCLUDE [operator-this-month-description](includes/operator-this-month-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### this-week
  
 [!INCLUDE [operator-this-week-description](includes/operator-this-week-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### this-year
  
 [!INCLUDE [operator-this-year-description](includes/operator-this-year-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### today
  
 [!INCLUDE [operator-today-description](includes/operator-today-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### tomorrow
  
 [!INCLUDE [operator-tomorrow-description](includes/operator-tomorrow-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 ### under
  
@@ -1033,7 +1033,7 @@ Data Type: [Hierarchical](#hierarchical-data)
  
 [!INCLUDE [operator-yesterday-description](includes/operator-yesterday-description.md)]
 
-Data Type: [Datetime](#datetime-data)
+Data type: [Datetime](#datetime-data)
 
 
 

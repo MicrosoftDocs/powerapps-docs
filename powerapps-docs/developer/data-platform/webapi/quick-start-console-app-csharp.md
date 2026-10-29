@@ -1,8 +1,8 @@
 ---
-title: "Quick Start: Web API sample (C#) (Microsoft Dataverse)| Microsoft Docs"
-description: "Walks you through creating a program to authenticate with the Microsoft Dataverse Server and then call a Web API function."
+title: "Quickstart: Call the Dataverse Web API with C# and .NET"
+description: "Learn how to create a C# console app that authenticates with Microsoft Dataverse and calls the Web API WhoAmI function. Follow this quickstart to get started."
 ms.topic: quickstart
-ms.date: 03/13/2026
+ms.date: 10/28/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -11,11 +11,11 @@ search.audienceType:
 contributors:
   - JimDaly
 ---
-# Quick start: Web API sample (C#)
+# Quickstart: Dataverse Web API sample (C#)
 
-In this quick start, you create a console application that connects to your Microsoft Dataverse environment and invokes a simple function. Once you understand the basic functionality described here, you can explore other Web API operations such as creating, retrieving, updating, and deleting Dataverse table rows.
+In this quickstart, you create a C# console application that connects to your Microsoft Dataverse environment and uses the Dataverse Web API to invoke a simple function. Once you understand the basic functionality described here, you can explore other Web API operations such as creating, retrieving, updating, and deleting Dataverse table rows.
 
-This program authenticates and uses an <xref:System.Net.Http.HttpClient> to send a `GET` request to the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the signed-in Dataverse user. The response is a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The program display the `UserId` property value obtained from the response.
+This program authenticates and uses an <xref:System.Net.Http.HttpClient> to send a `GET` request to the [WhoAmI Function](xref:Microsoft.Dynamics.CRM.WhoAmI). This function retrieves information about the signed-in Dataverse user. The response is a [WhoAmIResponse ComplexType](xref:Microsoft.Dynamics.CRM.WhoAmIResponse). The program displays the `UserId` property value obtained from the response.
 
 You can find the complete Visual Studio solution for this .NET 10 project in the [PowerApps-Samples](https://github.com/microsoft/PowerApps-Samples) repo under `dataverse/webapi/`[C#-NETx/QuickStart](https://github.com/microsoft/PowerApps-Samples/tree/master/dataverse/webapi/CSharp-NETx/QuickStart).
 
@@ -24,35 +24,35 @@ You can find the complete Visual Studio solution for this .NET 10 project in the
 - Visual Studio 2026 or later
 - Internet connection
 - Valid user account for a Dataverse environment
-- Url to the Dataverse environment you want to connect with
+- URL to the Dataverse environment you want to connect with
 - Basic understanding of the C# language
 
 > [!NOTE]
-> To authenticate, you must have an app registered in Microsoft Entra ID. This quick start example provides an app registration `clientid` value you can use for running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. More information: [Walkthrough: Register an app with Microsoft Entra ID](../walkthrough-register-app-azure-active-directory.md)
+> To authenticate, you must have an app registered in Microsoft Entra ID. This quickstart example provides an app registration `clientid` value you can use for running sample code published by Microsoft. However, for your own custom applications you must register your apps with AD. For more information, see [Walkthrough: Register an app with Microsoft Entra ID](../walkthrough-register-app-azure-active-directory.md).
 
 ## Create Visual Studio project
 
 1. Launch Visual Studio 2026 and select **Create a new project**.
 
-   :::image type="content" source="media/quickstart-vs-new-project.png" alt-text="Create a new project":::
+   :::image type="content" source="media/quickstart-vs-new-project.png" alt-text="Screenshot of the Visual Studio start window with the Create a new project option.":::
 
 1. Create a new **Console App** project.
 
-   :::image type="content" source="media/quickstart-vs-new-console-app-project.png" alt-text="New console app project":::
+   :::image type="content" source="media/quickstart-vs-new-console-app-project.png" alt-text="Screenshot of selecting the Console App project template in Visual Studio.":::
 
 1. Configure the project by setting a **Location** and **Project name**.
 
-   :::image type="content" source="media/quickstart-configure-.net-10-project.png" alt-text="Configure the project":::
+   :::image type="content" source="media/quickstart-configure-.net-10-project.png" alt-text="Screenshot of setting the project location and name for the .NET 10 console app.":::
 
 1. Configure the project by selecting **.NET 10.0 (Long Term Support)** and **Do not use top-level statements**. Then select **Create**.
 
-   :::image type="content" source="media/quickstart-configure-.net-10-project-additional-information.png" alt-text="Additional Information dialog.":::
+   :::image type="content" source="media/quickstart-configure-.net-10-project-additional-information.png" alt-text="Screenshot of the Additional information dialog with .NET 10.0 selected for the console app.":::
 
 1. In **Solution Explorer**, right-click the project you created and select **Manage NuGet Packages...** in the context menu. [NuGet](https://www.nuget.org/) allows you to bring required assemblies into your project.
 
 1. Browse for the Microsoft Authentication Library (MSAL) NuGet package named `Microsoft.Identity.Client`, select it, and then choose **Install**.
 
-   :::image type="content" source="media/quickstart-nuget-package-install-light-theme.png" alt-text="Install the (MSAL) authentication package" lightbox="media/quickstart-nuget-package-install-light-theme.png":::
+   :::image type="content" source="media/quickstart-nuget-package-install-light-theme.png" alt-text="Screenshot of installing the Microsoft.Identity.Client MSAL NuGet package in Visual Studio." lightbox="media/quickstart-nuget-package-install-light-theme.png":::
 
    > [!NOTE]
    > You're prompted to accept the license terms before installing. Select **I Accept** in the **License Acceptance** dialog.
@@ -175,7 +175,7 @@ Follow these next steps to add code for the main program.
    }
    ```
 
-2. Right below the TODO comment in the preceding code, replace the `resource` variable value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
+1. Right after the `// TODO Specify the Dataverse environment name to connect with.` comment in the preceding code, replace the `resource` variable value with the actual URL of your Dataverse test environment. To find the URL value for your test environment, follow these steps:
 
    1. Go to [Power Apps](https://make.powerapps.com).
    1. Select the environments icon (to the right of the search field), and choose a test environment.
@@ -190,7 +190,7 @@ Follow these next steps to add code for the main program.
 
    A browser window opens and prompts you to pick an account. Choose the account that you use to access your Dataverse environment. If that account doesn't appear in the list, select **Use another account**.
 
-   Once you select the account, enter your password and select **Sign in**.
+   When you select the account, enter your password and select **Sign in**.
 
 1. Look at the console application window. The output should look something like this:
 

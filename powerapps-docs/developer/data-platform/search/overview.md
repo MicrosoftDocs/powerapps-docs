@@ -1,7 +1,7 @@
 ---
-title: "Search for Dataverse records"
+title: "Search for Dataverse Records Using Search APIs"
 description: "Learn how to use Dataverse search APIs to return fast search results across multiple tables and provide suggestions and autocompletion in your apps." 
-ms.date: 03/26/2026
+ms.date: 10/28/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: JasonHQX
@@ -22,12 +22,12 @@ Dataverse search delivers fast and comprehensive search results across multiple 
 > [!NOTE]
 > This documentation for developers describes how to programmatically interact with the Dataverse Search APIs.
 > 
-> For information about the user experience and how to configure Dataverse Search for your environment, see the following topics:
+> For information about the user experience and how to configure Dataverse Search for your environment, see the following articles:
 > 
 > - [What is Dataverse search?](../../../user/relevance-search-benefits.md)
 > - [Configure Dataverse search for your environment](/power-platform/admin/configure-relevance-search-organization)
 
-## How to use
+## How to use Dataverse search APIs
 
 Developers can use the search APIs in three different ways:
 
@@ -37,7 +37,7 @@ Developers can use the search APIs in three different ways:
 
 ### [SDK for .NET](#tab/sdk)
 
-Search operations are defined as Dataverse messages using [Custom APIs](../custom-api.md). For .NET projects, use the SDK for .NET.
+Search operations are defined as Dataverse messages by using [Custom APIs](../custom-api.md). For .NET projects, use the SDK for .NET.
 
 Currently, the SDK doesn't include classes to use these operations. For .NET Framework projects, use the Power Platform CLI [pac modelbuilder build](/power-platform/developer/cli/reference/modelbuilder#pac-modelbuilder-build) to generate `*Request` and `*Response` classes for these messages, just as you would for any custom action.
 
@@ -61,12 +61,12 @@ For more information, see:
 
 The native search 2.0 endpoint isn't an OData service and has no service document. The native search 2.0 endpoint accepts the same parameters and returns the same responses as the corresponding Web API Actions and functions.
 
-The [Dataverse legacy search](legacy.md) using `/api/search/v1.0/` isn't deprecated and continues to be supported.
+The [Dataverse legacy search](legacy.md) that uses `/api/search/v1.0/` isn't deprecated and continues to be supported.
 
 ---
 
 
-## Search operations
+## Dataverse search operations
 
 Search provides three operations to support a user interface that enables searching for data.
 
@@ -295,14 +295,14 @@ For more information, see:
 
 ### Enable columns
 
-The columns that are searchable for the table depend on whether they're included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery) table](../reference/entities/savedquery.md) and update it programmatically.
+The searchable columns for the table depend on whether they're included in the Quick Find view for each table. You can query the definition of the view in the [View (SavedQuery) table](../reference/entities/savedquery.md) and update it programmatically.
 
 For more information, see:
 
 - [Select searchable fields and filters for each table](/power-platform/admin/configure-relevance-search-organization#select-searchable-fields-and-filters-for-each-table)
 - [Customize views](../../model-driven-apps/customize-entity-views.md)
 
-## Service protection limits
+## Service protection limits for Dataverse search
 
 Dataverse search enforces lower limits, so you don't reach the common Dataverse [Service protection API limits](../api-limits.md). You manage these limits in the same way.
 

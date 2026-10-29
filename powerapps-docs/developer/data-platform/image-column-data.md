@@ -1,7 +1,7 @@
 ---
-title: "Use image column data in Microsoft Dataverse"
+title: "Use Image Column Data in Microsoft Dataverse"
 description: "Learn how to upload, download, and delete image data in Microsoft Dataverse image columns with code examples and API guidance." 
-ms.date: 10/14/2026
+ms.date: 10/28/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -15,19 +15,19 @@ contributors:
 ---
 # Use image column data in Microsoft Dataverse
 
-You can store image data in Microsoft Dataverse using image columns or file columns. Image columns in Dataverse have special behaviors and limitations designed to support displaying images within applications, and you can use many of the same APIs for file columns with image columns.
+You can store image data in Microsoft Dataverse by using image columns or file columns. Image columns in Dataverse have special behaviors and limitations that support displaying images within applications. You can use many of the same APIs for file columns with image columns.
 
 The following table introduces some of the differences between image and file columns.
 
 
 ||Image  |File  |
 |---------|---------|---------|
-|**File Size**|Limited to 30 MB.|Up to 10 GB. While the API can handle files up to 10 GB in size, Power Apps client controls currently only support files up to 128 MB. Exceeding the 128 MB value when using these controls will result in errors uploading or downloading files.|
+|**File Size**|Limited to 30 MB.|Up to 10 GB. While the API can handle files up to 10 GB in size, Power Apps client controls currently only support files up to 128 MB. Exceeding the 128 MB value when using these controls results in errors uploading or downloading files.|
 |**File Types**|Only [Image file types](#image-file-types)|All file types allowed by the [Organization.BlockedAttachments value](reference/entities/organization.md#BKMK_BlockedAttachments). More information: [Block certain types of files](files-images-overview.md#block-certain-types-of-files) |
-|**Set with Update**|You can set image column data with other record data using update.|You can only upload files individually to file column properties.|
-|**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then update the record. More information: [Delete images](#delete-images)|You can only delete file column data using the `DeleteFile` message or sending a `DELETE` request to the specific column using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
-|**Set with Create**|When the image column is the *primary image*, you can set image data with other record data using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record was created.|
-|**Return with Retrieve**|You can retrieve thumb-nail sized images with other record data using retrieve.|The value returned is the file ID. More information: [Behavior when retrieving](file-column-data.md#behavior-when-retrieving)|
+|**Set with Update**|You can set image column data with other record data by using update.|You can only upload files individually to file column properties.|
+|**Delete with Update**|You can delete image column data by setting the attribute or property to `null` and then updating the record. More information: [Delete images](#delete-images)|You can only delete file column data by using the `DeleteFile` message or sending a `DELETE` request to the specific column by using Web API. More information: [Delete Files](file-column-data.md#delete-files)|
+|**Set with Create**|When the image column is the *primary image*, you can set image data with other record data by using create. More information: [Primary Images](#primary-images)|You can only upload files individually to file column properties after the record is created.|
+|**Return with Retrieve**|You can retrieve thumbnail-sized images with other record data by using retrieve.|The value returned is the file ID. More information: [Behavior when retrieving](file-column-data.md#behavior-when-retrieving)|
 |**Download URL**|Each image column has a string column that contains a relative URL you can include in an application that allows downloading the image file. More information: [Download URL](#download-url)|There's no string column with a download URL, but you can compose a URL to download the file directly from the Web API. More information: [Download a file in a single request using Web API](file-column-data.md#download-a-file-in-a-single-request-by-using-web-api)|
 
 ## Maximum image size
@@ -144,7 +144,7 @@ If you try to save a file that isn't one of these types, you get the following e
 > Name: `ProcessImageFailure`<br />
 > Code: `0x80072553`<br />
 > Number: `-2147015341`<br />
-> Message: `Error occured when processing image. Reason: Update image properties failed for objectid: <id of record>, logicalName: <logical name of table>, attribute: <logical name of image column`
+> Message: `Error occurred when processing image. Reason: Update image properties failed for objectid: <id of record>, logicalName: <logical name of table>, attribute: <logical name of image column`
 
 ## Full-size and thumbnail-sized images
 
@@ -154,10 +154,10 @@ If you configure the image column to store a full-sized image, you can save and 
 
 ### Detect which image columns support full-sized images
 
-Use the `RetrieveMetadataChanges` message to query schema definitions and retrieve all image columns. Then inspect the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) to identify the columns that support full-sized images. For more information, see [Query schema definitions](query-schema-definitions.md).
+Use the `RetrieveMetadataChanges` message to query schema definitions and retrieve all image columns. Then check the [ImageAttributeMetadata.CanStoreFullImage property](xref:Microsoft.Xrm.Sdk.Metadata.ImageAttributeMetadata.CanStoreFullImage) to identify the columns that support full-sized images. For more information, see [Query schema definitions](query-schema-definitions.md).
 
 > [!NOTE]
-> The `RetrieveMetadataChanges` message doesn't support filtering on the `ImageAttributeMetadata.CanStoreFullImage` property. Filter on `AttributeMetadata.AttributeTypeName` to return all image columns, and then test the `CanStoreFullImage` property in the results.
+> The `RetrieveMetadataChanges` message doesn't support filtering on the `ImageAttributeMetadata.CanStoreFullImage` property. Filter on `AttributeMetadata.AttributeTypeName` to return all image columns, and then check the `CanStoreFullImage` property in the results.
 
 # [SDK for .NET](#tab/sdk)
 
@@ -305,7 +305,7 @@ OData-Version: 4.0
 > [!NOTE]
 > The response includes all image columns. To create a list of columns that support full-sized images, loop through the `Attributes` collections in `EntityMetadata` and select the attributes where `CanStoreFullImage` is `true`.
 > 
-> The `RetrieveMetadataChangesResponse` returns all properties. Null properties are removed from the example above for brevity.
+> The `RetrieveMetadataChangesResponse` returns all properties. Null properties are removed from the preceding example for brevity.
 
 ---
 
@@ -320,8 +320,8 @@ The following table shows two examples.
   
 |Before|After|  
 |------------|-----------|  
-|:::image type="content" source="media/crm-itpro-cust-imagebeforeresize.png" alt-text="Image before resize":::<br /><br /> 300x428|:::image type="content" source="media/crm-itpro-cust-imageafterresize.jpg" alt-text="image after resize":::<br /><br /> 144x144|  
-|:::image type="content" source="media/crm-itpro-cust-imagebeforeresizeexample2.png" alt-text="smaller image resize before":::<br /><br /> 91x130|:::image type="content" source="media/crm-itpro-cust-imageafterresizeexample2.jpg" alt-text="smaller image resize after":::<br /><br /> 91x91|
+|:::image type="content" source="media/crm-itpro-cust-imagebeforeresize.png" alt-text="Screenshot of a 300x428 pixel image before Dataverse resizes it to a thumbnail.":::<br /><br /> 300x428|:::image type="content" source="media/crm-itpro-cust-imageafterresize.jpg" alt-text="image after resize":::<br /><br /> 144x144|  
+|:::image type="content" source="media/crm-itpro-cust-imagebeforeresizeexample2.png" alt-text="Screenshot of a smaller 91x130 pixel image before Dataverse crops it to a square.":::<br /><br /> 91x130|:::image type="content" source="media/crm-itpro-cust-imageafterresizeexample2.jpg" alt-text="smaller image resize after":::<br /><br /> 91x91|
 
 ## Primary images
 
@@ -408,7 +408,7 @@ Each image column has the following companion columns, but none of them appear w
 |Column |Type|Naming convention |Description |
 |---------|---------|---------|---------|
 |Image ID|Unique identifier|`<image column name>Id`|A unique identifier for the image.|
-|Time Stamp|BigInt|`<image column name>_Timestamp`|Represents when the image was last updated. This value helps make sure the latest version of the image is downloaded rather than the client using a cached version that was retrieved before.|
+|Time Stamp|BigInt|`<image column name>_Timestamp`|Represents when the image was last updated. This value helps ensure the latest version of the image is downloaded rather than the client using a cached version that was retrieved before.|
 |URL|string|`<image column name>_URL`|A relative URL to download a thumbnail-sized version of the image|
 
 The image ID and time stamp column values don't have any use cases except that they're used to within the URL string column value.
@@ -480,7 +480,7 @@ More information:
 
 # [Web API](#tab/webapi)
 
-By using Web API, you work with property values as base 64 encoded string values that represent the `byte[]` data.
+When you use Web API, you work with property values as base-64-encoded string values that represent the `byte[]` data.
 
 This request returns an image column named `sample_imagecolumn` with an account record:
 
@@ -536,9 +536,9 @@ OData-Version: 4.0
 OData-EntityId: [Organization Uri]/api/data/v9.2/accounts(<accountid>)
 ```
 
-Some libraries you use to serialize and deserialize JSON, such as [JSON.NET](https://www.newtonsoft.com/json), automatically convert these encoded string values to `byte[]`. You might not even notice that the transport protocol is using base 64 strings.
+Some libraries you use to serialize and deserialize JSON, such as [JSON.NET](https://www.newtonsoft.com/json), automatically convert these encoded string values to `byte[]`. You might not even notice that the transport protocol uses base-64 strings.
 
-For more information about base 64 encoded strings, see:
+For more information about base-64-encoded strings, see:
  - [Base64 - MDN Web Docs Glossary](https://developer.mozilla.org/docs/Glossary/Base64)
  - [Base64 to Image Converter](https://codebeautify.org/base64-to-image-converter)
  - [Image to Base64 Converter](https://codebeautify.org/image-to-base64-converter)
@@ -573,7 +573,7 @@ To upload images, use the same APIs you use to upload files. For more informatio
 
 To download images, use the same APIs you use to download files. Be aware of the following differences.
 
-### Using Dataverse messages
+### Use Dataverse messages to download images
 
 If you use the `InitializeFileBlocksDownload` and `DownloadBlock` messages, you always download the full-sized image if the image column supports it. You can't download the thumbnail-sized image by using this method. For more information, see [Use Dataverse messages to download a file](file-column-data.md#use-dataverse-messages-to-download-a-file).
 
@@ -584,7 +584,7 @@ If the image column doesn't support full-sized images, or if the [ImageAttribute
 > Number: `-2147220969`<br />
 > Message: `No FileAttachment records found for imagedescriptorId: <guid> for image attribute: <image column logical name> of <entity logical name> record with id <guid>.`
 
-### Using Web API
+### Use the Web API to download images
 
 When you download images by using the Web API without using the Dataverse messages, you download the thumbnail-sized image by default. To download the full-sized image, append this parameter to the URL: `?size=full`.
 

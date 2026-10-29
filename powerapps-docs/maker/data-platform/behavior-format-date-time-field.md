@@ -62,7 +62,7 @@ Use **Date only** when information about the time of the day and the time zone i
 
 ### Display values
 
-Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in the time zone UTC-8 see these in the model-driven app or with a [Web API request for the formatted value](../../developer/data-platform/webapi/query/select-columns.md#formatted-values):
+Dataverse stores `2023-10-15T07:30:00Z` (or `2023-10-15` for **Date only** behavior). Users in the time zone UTC-8 see these in the model-driven app or with a [Web API request for the formatted value](../../developer/data-platform/webapi/query/select-columns.md#include-formatted-values-in-results):
 
 | Behavior | Format | Display value |
 | -------- | ------ | ------------- |

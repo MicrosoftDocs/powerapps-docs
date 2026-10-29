@@ -1,7 +1,7 @@
 ---
 title: Microsoft Dataverse Auditing Overview for Developers
-description: Learn how to programmatically use Microsoft Dataverse auditing to record and retrieve data changes. Configure audit settings, access audit history, and manage audit data for compliance and reporting.
-ms.date: 03/27/2026
+description: Learn how to use Microsoft Dataverse auditing APIs to configure audit settings, retrieve audit history, and delete audit data.
+ms.date: 10/28/2026
 ms.topic: overview
 ms.subservice: dataverse-developer
 author: paulliew
@@ -13,9 +13,10 @@ contributors:
  - JimDaly
  - phecke
 ms.custom: bap-template
+ai-usage: ai-assisted
 ---
 
-# Auditing overview
+# Dataverse auditing overview for developers
 
 Microsoft Dataverse provides capabilities to meet the external and internal auditing, compliance, security, and governance policies that are common to many enterprises. Dataverse logs both user access and changes that are made to records. You can use the auditing tables and APIs to create client applications or programmatically interact with auditing data.
 
@@ -30,26 +31,26 @@ Use Dataverse tables and APIs to:
 - Retrieve a history of audited data changes.
 - Delete audit data.
 
-## Organization settings
+## Organization settings for auditing
 
 Properties of the [Organization table](../reference/entities/organization.md) control how auditing is enabled for an environment. Retrieve column values to determine:
 
-- Whether auditing is enabled for the environment.
-- The number of days to retain audit log records.
-- Whether user access logging is enabled.
-- How often user access is logged.
+| Column | Description |
+|---------|---------|
+| [IsAuditEnabled](../reference/entities/organization.md#BKMK_IsAuditEnabled) | Whether auditing is enabled for the environment. |
+| [AuditRetentionPeriodV2](../reference/entities/organization.md#BKMK_AuditRetentionPeriodV2) | The number of days to retain audit log records. |
+| [IsUserAccessAuditEnabled](../reference/entities/organization.md#BKMK_IsUserAccessAuditEnabled) | Whether user access logging is enabled. |
+| [UserAccessAuditingInterval](../reference/entities/organization.md#BKMK_UserAccessAuditingInterval) | How often user access is logged. |
 
 If you have the System Administrator or System Customizer role, you can configure organization settings to change the auditing behavior.
 
 **More information:** [Configure organization settings](configure.md#configure-organization-settings)
 
-## Table and column settings
+## Table and column auditing settings
 
-When you enable auditing for the organization, the system records audit data in the tables that you enable for auditing whenever data changes.
+Tables and columns each have an `IsAuditEnabled` Boolean managed property that controls whether auditing is enabled for the respective table or column. Auditing must also be enabled for the organization to record changes.
 
-When you enable auditing for a table, include the columns that you enable for auditing in the audit data.
-
-Use Dataverse APIs to query table and column definitions to determine which tables and columns are enabled for auditing.
+Use Dataverse APIs to query table and column definitions and check this property to determine which tables and columns are enabled for auditing.
 
 If you have the System Administrator or System Customizer role, you can configure tables and columns to change the auditing behavior.
 
