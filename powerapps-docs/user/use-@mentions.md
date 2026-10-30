@@ -4,9 +4,9 @@ description: Learn how to use @mention to collaborate with your team using Notes
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: overview
-ms.date: 03/20/2025
+ms.date: 10/30/2026
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: srihas
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 

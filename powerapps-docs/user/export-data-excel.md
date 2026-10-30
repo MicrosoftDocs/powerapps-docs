@@ -2,12 +2,11 @@
 title: "Export data to Excel in Power Apps | MicrosoftDocs"
 description: How to export data from your model-driven app to Excel
 author: shwetamurkute
-
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 08/05/2025
+ms.date: 10/30/2026
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: aorth
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -29,10 +28,10 @@ Export data from your model-driven app to Excel. The allowed data export size de
 
    > [!div class="mx-imgBorder"] 
    > ![Export to Excel.](media/export_to_excel.png "Select Export to Excel")
-3. When the download is complete, navigate to the location of the downloaded file.
+3. When the download is complete, go to the location of the downloaded file.
   
    > [!NOTE]
-   > When you download a worksheet, it should automatically save to your computer. However, if it doesn't then make sure that you save it before you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
+   > When you download a worksheet, it should automatically save to your computer. However, if it doesn't, ensure that you save it before you open and edit it. Otherwise, you might get this error message: **Excel cannot open or save any more documents because there is not enough available memory or disk space.**  
    > 
    > Follow these steps to fix the issue:  
    > 
@@ -64,13 +63,13 @@ The data is exported in the same format that you see in your app. Text remains a
   
 ## Export options
 
-There are other export options such as Excel Online, Static Worksheet, Dynamics Worksheet, or Dynamics PivotTable.
+Other export options include Excel Online, Static Worksheet, Dynamics Worksheet, and Dynamics PivotTable.
 
 > [!div class="mx-imgBorder"] 
 > ![Export to Excel options.](media/export_to_excel_options.png "Select Export to Excel options")
 
 
-The following table summarizes the different options. Pick the one that works best for you.
+The following table summarizes the different options. Choose the option that works best for you.
   
 |                                                                                                               Task                                                                                                                |                                              Learn more                                               |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -84,12 +83,12 @@ The following table summarizes the different options. Pick the one that works be
 
 Exporting to Excel doesn't support virtual tables.
 
-- If Export to Excel times out, try these options:  
+- If **Export to Excel** times out, try these options:  
   - Export smaller batches by adjusting the filter criteria.  
   - Reduce lookup fields that increase query complexity when retrieving data from related tables.  
   - Reduce the number of columns.  
 
-- You can export your app data to Excel (.xlsx format), use the file as a template to add more data, and import it back into your app. If you add or modify columns in the Excel file and import it back into your app, the import fails because the added or modified columns don’t map to tables in your app. When you import an Excel file into your app, make sure that columns and tables are mapped correctly to avoid import failures. For more information on mapping, see [Review mapping](import-data.md#review-mapping).
+- You can export your app data to Excel (.xlsx format), use the file as a template to add more data, and import it back into your app. If you add or modify columns in the Excel file and import it back into your app, the import fails because the added or modified columns don’t map to tables in your app. When you import an Excel file into your app, ensure that columns and tables are mapped correctly to avoid import failures. For more information on mapping, see [Review mapping](import-data.md#review-mapping).
   
 - If you’re using Excel 2010, you might get this error message when you export data from the Accounts area: `The file is corrupt and cannot be opened.`  
   The error message occurs due to a setting in Excel. To fix the issue:  
