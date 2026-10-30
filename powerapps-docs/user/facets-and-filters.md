@@ -2,12 +2,11 @@
 title: "Filter rows with facets| MicrosoftDocs"
 description: How to filter rows by using facets.
 author: shwetamurkute
-
 ms.component: pa-user
 ms.topic: how-to
 ms.date: 2/8/2021
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: jasongre
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -22,7 +21,7 @@ With Microsoft Dataverse, you can refine your search results by using facets and
 In the **Set Personal Options** dialog box, you can personalize the facets for a table.
 
 > [!NOTE]
-> Your admin can use the quick find view to define which fields appear as default facets when you use Dataverse search. The first four view columns that include data types other than **Single line of text** or **Multiple lines of text** are displayed as default facets in the result. You can override this setting in your [personalization settings](set-personal-options.md#to-set-personal-options). At any time, you can select up to four fields as facets.
+> Your admin can use the quick find view to define which fields appear as default facets when you use Dataverse search. The first four view columns that include data types other than **Single line of text** or **Multiple lines of text** appear as default facets in the result. You can override this setting in your [personalization settings](set-personal-options.md#set-personal-options-in-model-driven-apps). You can select up to four fields as facets.
   
 1. In the upper-right corner, select **Settings**, and then select **Personalization Settings**.  
   
