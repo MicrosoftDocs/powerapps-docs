@@ -4,9 +4,9 @@ description: FAQ about Dataverse search
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: faq
-ms.date: 01/13/2026
+ms.date: 10/30/2026
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: jasonhuang
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -35,7 +35,7 @@ Dataverse search is the foundation that enables Copilot and in-app search experi
 
 ## What is the scope of content searched by Dataverse search using Global Search?
 
-Any file or Dataverse knowledge added to Agents or model-driven apps defines the scope of content that's searched.
+The scope of content searched includes any file or Dataverse knowledge added to Agents or model-driven apps.
 
 ![An example of search results on the Contacts tab.](media/search-faq-1.png "An example of search results on the Contacts tab") 
 
@@ -45,11 +45,11 @@ The **Find Columns** on a **Quick Find View** define the searchable fields in th
 
 ## Why don't I see Global Search results from a table that I enabled for Dataverse search?
 
-If a table isn't part of the model-driven app, it isn't included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Make sure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if you remove it, you need to select the Quick Find View you want and set as the default for your table. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
+If a table isn't part of the model-driven app, it isn't included in search results. Use the Power Apps app designer to verify that the table is included in that app's components. Ensure that the table has a default Quick Find View created and defined. A default Quick Find View is created with a table, but if you remove it, you need to select the Quick Find View you want and set as the default for your table. For more information, see [Add or edit model-driven app components](../maker/model-driven-apps/add-edit-app-components.md#add-a-component). 
 
 ## Can I configure quick actions to show or hide certain commands?
 Yes, you can configure quick actions by using version 9.2.21034.00126 or later. Quick actions are a subset of a table's grid-level command set. You can configure them by using ribbon rules.
-For more information on how to configure quick actions, see [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
+For more information about how to configure quick actions, see [Configure Dataverse search to improve search results and performance](/power-platform/admin/configure-relevance-search-organization#configure-quick-actions).
 
 ## Why are results that appear in suggestions sometimes not seen on the results page?
 
@@ -75,7 +75,7 @@ Dataverse search doesn't return HTML formatting for memo types to optimize the U
 
 ## Why aren't columns enabled for Dataverse search after adding them to a quick find view, to use them in Global Search?
 
-Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information on how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
+Columns are enabled for Dataverse search only if a quick find view is set as the default view. For more information about how to set a default view, see [Specify a default view for a table](../maker/model-driven-apps/specify-default-views.md#specify-a-default-view-for-a-table).
 
 ## Why doesn't search on the OwnerID attribute work when I enable search on it?
 
@@ -129,7 +129,7 @@ See [Developer's guide: Search for Dataverse records using the API](../developer
 
 ## Does Dataverse search support US Government clouds?
 
-Dataverse search strives to maintain functional parity between our commercially available services and those available through our US Government clouds. It's available in US Government Community Cloud (GCC), US GCC High, and Department of Defense (DoD).
+Dataverse search strives to maintain functional parity between the commercially available services and the services available through US Government clouds. It's available in US Government Community Cloud (GCC), US GCC High, and Department of Defense (DoD).
 
 ## How is Dataverse search reported?
 

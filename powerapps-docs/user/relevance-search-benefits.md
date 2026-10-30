@@ -4,9 +4,9 @@ description: Dataverse search for model-driven apps helps you quickly find what 
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: article
-ms.date: 10/08/2026
+ms.date: 10/30/2026
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: jasonhuang
 ms.custom: 
 ms.reviewer: smurkute
 ms.assetid: 

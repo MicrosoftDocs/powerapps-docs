@@ -4,10 +4,10 @@ description: Learn how to use Microsoft Copilot to gain insights about the data 
 author: devkeydet
 ms.component: pa-user
 ms.topic: overview
-ms.date: 06/12/2026
+ms.date: 10/29/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
-ms.author: marcsc
+ms.author: mijosh
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 

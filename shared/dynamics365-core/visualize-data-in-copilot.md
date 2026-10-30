@@ -8,7 +8,7 @@ Chart visualization helps you visualize the data in the view as a chart. This vi
 
 ## Visualize data in a view
 
-When you navigate to a grid page, you can see the **Visualize** option on top of the page.
+When you go to a grid page, you see the **Visualize** option at the top of the page.
 
 :::image type="content" source="/power-apps/user/media/visualize-data/visualize-data-button.png" alt-text="Screenshot that shows Visualize button on the page." lightbox="/power-apps/user/media/visualize-data/visualize-data-button.png":::
 
@@ -38,11 +38,11 @@ To manage a personal chart, select the chart in the chart switcher, and then sel
 Hover over the charts to examine data points or select chart elements to drill into the data. The grid filters rows automatically to match the selected area of the chart. Selecting the same area of the chart again toggles the selection and removes the filter.
 
 > [!NOTE]
-> Charts created by using the legacy chart designer use the same styling as AI-generated charts. To learn how to turn off the styling update for charts created by using the legacy chart designer, see [Manage feature settings](/power-platform/admin/settings-features).
+> Charts that you create by using the legacy chart designer use the same styling as AI-generated charts. To learn how to turn off the styling update for charts that you create by using the legacy chart designer, see [Manage feature settings](/power-platform/admin/settings-features).
 
 ## Visualize data in a view with natural language
 
-Use natural language prompts in the search bar on the grid page to visualize data in the view. Here are example prompts to help you understand the types of requests supported.
+Use natural language prompts in the search bar on the grid page to visualize data in the view. The following example prompts help you understand the types of requests supported.
 
 - *Visualize data as a bar chart.*  
 - *Customers by location. Use the prompt [table name] by [column] generically depending on the table you're visualizing.*  
@@ -73,7 +73,7 @@ To provide feedback about the feature, select the thumbs up or down button on th
 
 ## Licensing requirements
 
-The visualize data in a view requires specific user licenses based on the product. If the user doesn't have the license, the feature is hidden. This license enforcement will gradually rollout following the feature's general availability.
+The visualize data in a view feature requires specific user licenses based on the product. If the user doesn't have the license, the feature is hidden. This license enforcement will gradually roll out following the feature's general availability.
 
 - **Power Apps model-driven app**: The user must have a Power Apps premium license. For details, see the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 - **Dynamics 365 model-driven app**: The user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
@@ -82,6 +82,6 @@ Usage might be subject to service limits or throttling. Microsoft reserves the r
 
 ## Admin control
 
-The primary admin control for visualize data in a view is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data exploration** > **Chart Visualization**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+The primary admin control for visualizing data in a view is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data exploration** > **Chart Visualization**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This change is gradually rolling out.
  
-**Allow AI to generate charts to visualize the data in a view** app setting (`NLChartDataVisualizationSetting`) previously available in [Power Platform admin center](/power-platform/admin/settings-features#natural-language-grid-and-view-search) **Environment** > **Settings** > **Product** > **Features** page is moving and you can configure this setting at the app level either by using [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) or [Updating a setting definition](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+The **Allow AI to generate charts to visualize the data in a view** app setting (`NLChartDataVisualizationSetting`) was previously available in [Power Platform admin center](/power-platform/admin/settings-features#natural-language-grid-and-view-search) **Environment** > **Settings** > **Product** > **Features**. You can now configure this setting at the app level by using either [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) or [Updating a setting definition](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).

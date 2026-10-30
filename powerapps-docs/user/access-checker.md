@@ -4,7 +4,7 @@ description: Learn how to view user access to a row.
 author: paulliew
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 01/08/2026
+ms.date: 10/29/2026
 ms.subservice: end-user
 ms.author: paulliew
 ms.custom: ""
@@ -16,7 +16,7 @@ search.audienceType:
 
 # Check user access to a row
 
-To perform an action on a row, a user needs to have the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
+To perform an action on a row, a user needs the required privilege assigned through a security role or the user must be a member of a team that has a security role with assigned privileges.
 
 To perform actions on a row, the system checks your privileges and if the privilege check passes, then the system performs an access check. The access check verifies that you have the required rights to perform actions on a row such as read, write, create, delete, append, append to, share, and assign.
 
@@ -60,18 +60,18 @@ The admin, owner of the record, or users who have access to a row can share the 
 
 To see who has access to a row and their respective access level, complete the following steps.
 
-> [!Note]
-> There are two database settings for each environment that enable the **Who has access** feature. System adminstrators can [Install the **OrganizationSettingsEditor** tool](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) and set the following options to true:
+> [!NOTE]
+> There are two database settings for each environment that enable the **Who has access** feature. System administrators can [Install the **OrganizationSettingsEditor** tool](/power-platform/admin/environment-database-settings#install-the-organizationsettingseditor-tool) and set the following options to true:
 > 
-> - **IsAccessCheckerAllUsersEnabled**: This allows the admin to see who has access to the row.
-> - **IsAccessCheckerNonAdminAllUsersEnabled**: This allows the admin, owner of the record, and users who have access to the row to see who has access.
+> - **IsAccessCheckerAllUsersEnabled**: This setting allows the admin to see who has access to the row.
+> - **IsAccessCheckerNonAdminAllUsersEnabled**: This setting allows the admin, owner of the record, and users who have access to the row to see who has access.
 
 1. Select a row.
 1. Select **Check Access** on the command bar.
 1. In the **Check Access** window, select **Who has access**.
 
     > [!NOTE]
-    > The manager list from [heirarchy and position security](/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) is not shown under **Who has access** as this list can be long.
+    > The manager list from [hierarchy and position security](/power-platform/admin/hierarchy-security#manager-hierarchy-and-position-hierarchy-security-models) doesn't appear under **Who has access** because the list can be long.
     > 
     > If you select a user who doesn't have access to the record, the page returns with a blank screen.
 

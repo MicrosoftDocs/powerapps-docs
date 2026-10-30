@@ -1,10 +1,10 @@
-Form fill assistance suggests AI-generated content for fields, making it easier and faster to enter data in forms. The suggestions are entirely optional and aren't saved until the user explicitly reviews and accepts them.
+Form fill assistance suggests AI-generated content for fields, so it's easier and faster to enter data in forms. The user can choose whether to use the suggestions. The user must explicitly review and accept the suggestions before saving them.
 
 ## Prerequisites
 
 - Form fill assistance is available for all apps on the web where the [modern, refreshed look](/power-apps/user/modern-fluent-design) is turned on.
-- Requires at least one of the [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance) environment feature settings enabled.
-- The **Allow form fill assistance** column property is enabled for the column where form fill assistance occurs. For more information, see [Create and edit columns in Dataverse using Power Apps](/power-apps/maker/data-platform/create-edit-field-portal#view-columns).
+- At least one of the [AI form fill assistance](/power-platform/admin/settings-features#ai-form-fill-assistance) environment feature settings enabled.
+- The **Allow form fill assistance** column property enabled for the column where form fill assistance occurs. For more information, see [Create and edit columns in Dataverse using Power Apps](/power-apps/maker/data-platform/create-edit-field-portal#view-columns).
 
 ## Limitations
 
@@ -67,7 +67,7 @@ You can continue to paste directly, without smart paste (preview), into a specif
 
 ### Use toolbar and files
 
-Files is a capability that can reason over the form and the file you provide to suggest what text could fill specific fields. It provides suggestions inline in the form. Supported file types are .txt, .docx, .csv, .pdf, .png, .jpg, .jpeg, and .bmp. Files classified with sensitivity labels aren't supported.
+The **Files** capability can analyze the form and the file you provide to suggest what text could fill specific fields. It provides suggestions inline in the form. Supported file types are .txt, .docx, .csv, .pdf, .png, .jpg, .jpeg, and .bmp. Files classified with sensitivity labels aren't supported.
 
 The form fill assist toolbar 
 1. Show or hide the form fill assist toolbar by using the show/hide button.
@@ -86,7 +86,7 @@ To use files:
 
 ### Licensing requirements
 
-The form fill assistance requires specific user licenses based on the product. If the user doesn't have the license, the feature is hidden. This license enforcement will gradually rollout following the feature's general availability.
+The form fill assistance requires specific user licenses based on the product. If the user doesn't have the license, the feature is hidden. This license enforcement gradually rolls out following the feature's general availability.
 
 - **Power Apps model-driven app**: The user must have a Power Apps premium license. For details, see the [Power Platform License Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 - **Dynamics 365 model-driven app**: The user must have a Dynamics 365 enterprise or premium license as outlined in [Dynamics 365 License Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
@@ -95,15 +95,15 @@ Usage might be subject to service limits or throttling. Microsoft reserves the r
 
 ### Admin control
 
-The primary admin control for form fill assistance is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data entry**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This is gradually rolling out over the next coming weeks.
+The primary admin control for form fill assistance is moving to the Power Platform admin center under **Copilot** > **Settings** > **Power Apps** > **Data entry**. Learn more in [Copilot hub](/power-platform/admin/copilot/copilot-hub). This change is gradually rolling out.
  
-**Smart paste** (`FormPredictSmartPasteEnabled`) or **form fill assist toolbar** (`FormFileUploadEnabled`) app settings previously available in [Power Platform admin center](/power-platform/admin/settings-features#ai-form-fill-assistance) **Environment** > **Settings** > **Product** > **Features** page is moving and you can configure this setting at the app level either by using [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) or [Updating a setting definition](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
+You can previously find **Smart paste** (`FormPredictSmartPasteEnabled`) and **form fill assist toolbar** (`FormFileUploadEnabled`) app settings in [Power Platform admin center](/power-platform/admin/settings-features#ai-form-fill-assistance) under **Environment** > **Settings** > **Product** > **Features**. You can now configure these settings at the app level by using either [Manage model-driven app settings in the app designer](/power-apps/maker/model-driven-apps/app-properties) or [Updating a setting definition](/power-apps/maker/data-platform/create-edit-configure-settings#updating-a-setting-definition).
 
 ## Use form fill assistance with agents in Microsoft Copilot (preview)
 
 [!INCLUDE [preview-banner-section](~/../shared-content/shared/preview-includes/preview-banner-section.md)]
 
-With Microsoft Copilot, you have ability to bring app-based experiences to agents. The app experience can leverage the form fill assistance right in the chat.  
+With Microsoft Copilot, you can bring app-based experiences to agents. The app experience can leverage the form fill assistance right in the chat.  
 
 :::image type="content" source="/power-apps/user/media/formfill-in-microsoft365.png" alt-text="Screenshot that shows form fill assistance inside Microsoft Copilot.":::
 
