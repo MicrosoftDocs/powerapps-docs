@@ -3,7 +3,7 @@ title: Appearance settings for model-driven apps (preview)
 description: Learn how to customize the display density of a model-driven app to fit your workflow.
 author: jasongre
 ms.topic: how-to
-ms.date: 09/10/2026
+ms.date: 10/30/2026
 ms.author: jasongre
 ms.custom: bap-template
 ms.reviewer: smurkute
@@ -35,7 +35,7 @@ Display density controls how compact or spacious the model-driven app appears. I
 
 ### Density levels
 
-Three density levels are available:
+The following density levels are available:
 
 | Level | Description |
 |------|-------------|
@@ -47,7 +47,7 @@ Density adjusts only the spacing between elements. It doesn't reduce the size of
 
 ### Set your personal density
 
-Any user can set their own density preference. This preference applies to every model-driven app that has the header and navigation refresh (wave 2) enabled.
+You can set your own density preference. This preference applies to every model-driven app that has the header and navigation refresh (wave 2) enabled.
 
 1. In a model-driven app, open the **Settings** menu on the app header.
 1. Select **Personal settings**.
@@ -83,5 +83,6 @@ Density is applied to controls that use Fluent spacing tokens. During the rollou
 
 ## Related information
 
+- [Set personal options in model-driven apps](set-personal-options.md)
 - [Modern, refreshed look for model-driven apps](modern-fluent-design.md)
 - [Header and navigation refresh (wave 2)](modern-fluent-design.md#wave-2-header-and-navigation-refresh)
