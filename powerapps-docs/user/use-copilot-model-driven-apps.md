@@ -4,7 +4,7 @@ description: Learn how to use Copilot chat to gain insights about the data in yo
 author: srihas
 ms.component: pa-user
 ms.topic: overview
-ms.date: 01/08/2026
+ms.date: 10/29/2026
 ms.update-cycle: 180-days
 ms.subservice: end-user
 ms.author: srihas
@@ -25,7 +25,7 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 >
 > - This feature is generally available in Dynamics 365 apps, but remains a preview feature in Power Apps.
 >
-> - Preview features aren't meant for production use and might have restricted functionality These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
+> - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520), and are available before an official release so that customers can get early access and provide feedback.
 
 
 > [!NOTE]
@@ -34,11 +34,11 @@ Copilot chat for model-driven apps in Power Apps is a next-generation AI assista
 
 ## Prerequisites
 
-An administrator must enable Copilot chat in your application before it becomes visible in your app. More information: [Add Copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md).
+An administrator must enable Copilot chat in your application before it becomes visible in your app. For more information, see [Add Copilot for app users in model-driven apps](../maker/model-driven-apps/add-ai-copilot.md).
 
 ## Copilot pane
 
-After Copilot chat is enabled, you can access it through the Copilot icon near the upper-right corner of the page or through the Copilot icon at the right side of the command bar. You can expand or collapse the Copilot pane as you want. By default, the pane is expanded after Copilot chat is enabled.
+After an administrator enables Copilot chat, you can access it through the Copilot icon near the upper-right corner of the page or through the Copilot icon at the right side of the command bar. You can expand or collapse the Copilot pane as you want. By default, the pane is expanded after Copilot chat is enabled.
 
 :::image type="content" source="media/copilot-icons.png" alt-text="Screenshot that shows the Copilot icons on a page.":::
 
@@ -58,11 +58,11 @@ To view more suggested questions, select **View prompts** in the Copilot pane. M
 
 ## Use the record picker
 
-When you ask a question, you can use the record picker to select the object of your question. The record picker helps Copilot chat understand the context of your question and provide a more accurate response.
+When you ask a question, use the record picker to select the object of your question. The record picker helps Copilot chat understand the context of your question and provide a more accurate response.
 
 Enter a slash (**/**) to open the record picker, and then enter the name of the record. Select the record that you want, and complete the question to make it meaningful. Finally, submit the question to Copilot to view the response.
 
-For example, you ask Copilot "What are the details for Contoso?" Many accounts might have "Contoso" in their name, such as Contoso, Inc., Contoso Co., and Contoso NW. What you really want are the details for Contoso, Inc. The record picker helps Copilot scope the question to the right record for a more relevant and accurate response.
+For example, you ask Copilot "What are the details for Contoso?" Many accounts might have "Contoso" in their name, such as Contoso, Inc., Contoso Co., and Contoso NW. You really want the details for Contoso, Inc. The record picker helps Copilot scope the question to the right record for a more relevant and accurate response.
 
 :::image type="content" source="media/record-picker.png" alt-text="Screenshot that shows the record picker being used to select the object of a question." lightbox="media/record-picker.png":::
 
@@ -70,9 +70,9 @@ The record picker is available in Dynamics 365 Sales and Power Apps model-driven
 
 > [!NOTE]
 >
-> - By using the record picker, you increase the likelihood that Copilot chat can understand your question and therefore respond with an accurate answer.
+> - By using the record picker, you increase the likelihood that Copilot chat can understand your question and respond with an accurate answer.
 > - The record picker requires that [Dataverse search is enabled and configured](/power-platform/admin/configure-relevance-search-organization) for the type-ahead search capability.
 
 ## Provide feedback
 
-Unless your admin turned off the feedback feature, every Copilot response includes a **Like** button ("thumbs up" icon) and a **Dislike** button ("thumbs down" icon). For each response, you can select one of these icons to provide feedback that helps us improve Copilot chat. Select the "thumbs up" or "thumbs down" icon as appropriate. Optionally, provide feedback in your own words about what you liked or didn't like about the response. When you're done, select **Submit**.
+Unless your admin turned off the feedback feature, every Copilot response includes a **Like** button ("thumbs up" icon) and a **Dislike** button ("thumbs down" icon). For each response, select one of these icons to provide feedback that helps us improve Copilot chat. Select the "thumbs up" or "thumbs down" icon as appropriate. Optionally, provide feedback in your own words about what you liked or didn't like about the response. When you're done, select **Submit**.

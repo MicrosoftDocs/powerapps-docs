@@ -5,9 +5,9 @@ author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 01/16/2025
+ms.date: 10/30/2026
 ms.subservice: end-user
-ms.author: smurkute
+ms.author: aorth
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
@@ -31,11 +31,9 @@ Dashboards are available for all row types. Charts are available on the Dashboar
 > [!div class="mx-imgBorder"]
 > ![Dashboard.](media/dashboard_sample.png "Sample Dashboard") 
 
-
 ## View dashboards
 
 There are two types of dashboards, **System Dashboards** and **My Dashboards**.
-
 
 ![Choose between personal or system dashboard.](media/select_dashboard.png "Choose between personal or system dashboard") 
 
@@ -46,7 +44,7 @@ Legend:
 
 > [!NOTE]
 > -  When a personal dashboard is shared, the owner of the personal dashboard needs to explicitly share any contained, personal charts or personal views because they have separate permissions.
-> -  When a user sets a dashboard as default (via the **Set as default** action in the command bar), all page navigation to dashboards will take the user to the default dashboard, which may be a different dashboard than the named dashboard the user selected.   
+> -  When a user sets a dashboard as default (via the **Set as default** action in the command bar), all page navigation to dashboards takes the user to the default dashboard, which might be a different dashboard than the named dashboard the user selected.   
 
 ## Expand, refresh, and view rows
 
@@ -55,14 +53,14 @@ Legend:
 Legend:
 
 1. **Refresh**: Refreshes the rows in the chart.
-2. **View Records**: See the chart and the underlying rows together. This opens the chart for the corresponding rows.
+2. **View Records**: See the chart and the underlying rows together. This option opens the chart for the corresponding rows.
 3. **Expand Chart**: Shows the chart in full screen mode. The chart is still interactive in expanded mode.  
 4. **Tool tips**: Hover your mouse over the chart to see a tooltip that provides quick information about that area of the chart.      
 
 
 ## Create a dashboard with charts
 
-1. Go to **Dashboards** and then on the command bar select **New** > **Dynamics 365 Dashboard**. 
+1. Go to **Dashboards**. On the command bar, select **New** > **Dynamics 365 Dashboard**. 
 
    > [!div class="mx-imgBorder"]
    > ![Add a new dashboard.](media/add_new_dashboard.png "Add a new dashboard")
@@ -114,7 +112,7 @@ Legend:
 
 ## Edit the properties of a chart
 
-When you add a chart on a dashboard, you can edit the chart properties and modify the chart view and display options. The following screenshot shows how a chart will display based on the chart properties that you selected.
+When you add a chart on a dashboard, you can edit the chart properties and modify the chart view and display options. The following screenshot shows how a chart displays based on the chart properties that you selected.
 
    > [!div class="mx-imgBorder"]
    > ![Select a view.](media/all_chart_views.png "Select a view on a chart")
@@ -126,7 +124,7 @@ Legend:
  
  
  
- 3. Only **View Selector** is turned on. You can toggle to a different view and the chart will render based on the underlying data for the selected view.
+ 3. Only **View Selector** is turned on. You can toggle to a different view and the chart renders based on the underlying data for the selected view.
  4. Both **View Selector** and **Display Chart Selection** is turned on. You can toggle to a different view and chart for the table.
 
 
@@ -159,7 +157,7 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
    > ![Select view selector.](media/charts_select_views.png "Select view selector")
 
 
-5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the table and see  different visualizations of the data. If the box is unchecked, then you only see the chart title.
+5. Select the **Display Chart Selection** check box to show the chart selector. When chart selector is enabled, you can toggle to a different chart for the table and see different visualizations of the data. If the box is unchecked, then you only see the chart title.
 
    > [!div class="mx-imgBorder"]
    > ![Display chart selection.](media/chart_options_1.png "Display chart selection")
@@ -167,13 +165,13 @@ To edit the chart properties, you need to edit the dashboard that the chart is i
 6. When you're done, select **OK**.
 
 
-## Drill-down in a chart
+## Drill down in a chart
 
 You can drill down into a segment on a chart and filter the data for that segment. For example, you can drill down on one segment of a chart and change the chart type as you drill down.
 
 The chart drill-down feature is only available on the browser. It isn't available on the mobile app for phones or tablets.
 
-In the following example, let's further drill-down into the chart.
+In the following example, let's drill down further into the chart.
 
 1. Select a data point on the chart to open the **Drill down by** dialog box.
 
@@ -196,22 +194,22 @@ In the following example, let's further drill-down into the chart.
    > ![Drill-down chart showing breadcrumbs.](media/chart_drilldown_3.png "Drill-down chart showing breadcrumbs")
 
 
-You can continue drilling further into the chart data. As you drill down deeper, the breadcrumbs will expand and you can go back to the previous screen or select the Home button to go back to the Home screen.
+You can continue drilling further into the chart data. As you drill down deeper, the breadcrumbs expand. You can go back to the previous screen or select the **Home** button to go back to the **Home** screen.
 
    ![Drill down further.](media/chart_drilldown_4.png "Drill-down further")
 
 ## Known issues  
 
 
-- In the chart designer, adding an order on certain calculated columns isn't supported and will cause an error. The calculated columns causing this are using other calculated columns, a related table column, or a local column on the table.
+- In the chart designer, adding an order on certain calculated columns isn't supported and causes an error. These calculated columns use other calculated columns, a related table column, or a local column on the table.
 
-- Chart displays zero values when there's no data. With Unified Interface for model-driven apps you can still select a chart with zero value and drill down in to the data. More information: [Chart displays zero values when there's no data](https://support.microsoft.com/topic/chart-displays-zero-values-when-there-is-no-data-56f9e224-cb71-40eb-4dc1-bbcda7e28b12) 
+- Chart displays zero values when there's no data. With Unified Interface for model-driven apps, you can still select a chart with zero value and drill down into the data. For more information, see [Chart displays zero values when there's no data](https://support.microsoft.com/topic/chart-displays-zero-values-when-there-is-no-data-56f9e224-cb71-40eb-4dc1-bbcda7e28b12) . 
 
 - By design, charts in rollup column can't be displayed because rollup columns contain an aggregate value computed over the rows related to a specified row.
 
 - Chart drill-down functionality isn't available on charts in a subgrid or an associated grid.
 
-- When you add a list control to a dashboard and switch the control to the **Power Apps Read-Only grid** control, you'll see a blank tile on the dashboard because the **Power Apps Read-Only grid** control isn't supported on dashboards. We recommend that you use **Power Apps grid** control.
+- When you add a list control to a dashboard and switch the control to the **Power Apps Read-Only grid** control, you see a blank tile on the dashboard because the **Power Apps Read-Only grid** control isn't supported on dashboards. Use the **Power Apps grid** control.
 
 
 
