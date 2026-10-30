@@ -1,11 +1,11 @@
 ---
-title: "Set personal options| MicrosoftDocs"
-description: How to set personal options in Power Apps
+title: Set personal options in model-driven apps
+description: Learn how to manage personal settings in model-driven apps.
 author: shwetamurkute
 
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 11/27/2023
+ms.date: 10/30/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.custom: ""
@@ -16,39 +16,40 @@ search.audienceType:
 contributors:
 - adrianorth
 ---
-# Set personal options
+# Set personal options in model-driven apps
 
+Use **Personal settings** to change model-driven app preferences such as language, currency, time zone, and display options.
 
+> [!IMPORTANT]
+> The modern **Personal settings** experience is the default for model-driven apps. The classic **Set Personal Options** experience is deprecated and will be removed in a future release.
 
+## Open personal settings
 
-Change your display settings in an app to suit your preferences. For example, you can choose the page that you want to see as soon as you sign in to the app. You can also personalize many other options such as language, currency, and time zone. 
+1. In the upper-right corner of a model-driven app, select **Settings** ![Options button for Power Apps.](media/user-profile-settings-button.png "Options button for Power Apps") > **Personal settings**.
+1. Select a settings category and update your preferences.
 
 > [!NOTE]
-> You may need to refresh your app twice for some changed settings to take effect.
-    
-## To set personal options  
-  
-1. In the upper-right corner of the screen, select **Settings** ![Options button for Power Apps.](media/user-profile-settings-button.png "Options button for Power Apps") > **Personalization Settings**.  
-  
-2. Fill in the information, as required.
-  
-3. When you’re done, select **OK**.  
+> You might need to refresh your app twice for some changed settings to take effect.
+>
+> If you encounter an issue in modern personal settings, select **Switch to classic** as a temporary workaround and report the modern-experience issue to [Microsoft Support](/power-platform/admin/get-help-support).
 
+Personal settings are organized into tabs. The following sections describe the options available in each tab.
 
+## Appearance tab options
+
+Use the **Appearance** tab to customize how model-driven apps look, including display density when the header and navigation refresh is enabled. For more information, see [Appearance settings for model-driven apps](appearance-settings.md).
 
 ## General tab options
   
 |                               Options                               |                                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                                            |
 |---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    **Select your home page and settings for Get Started panes**     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                            Default Pane                             | Select the default home pane (page) that you want to see when you sign in. By default, the **Default based on user role** option is selected, which shows the default pane based on the app you are using. This option does not apply when you sign in using the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). <br /><br />  |
+|                            Default Pane                             | Select the default home pane (page) that you want to see when you sign in. By default, the **Default based on user role** option is selected, which shows the default pane based on the app you are using. This option doesn't apply when you sign in by using the [Power Apps mobile app](../mobile/run-powerapps-on-mobile.md). <br /><br />  |
 |                             Default Tab                             |                                                                                                                                                                                                                          Select the default tab that you want to see for the selected default pane. For example, select the **Accounts** tab for the **Service** pane.                                                                                                                                                                                                                          |
 | **Set the number of rows shown per page in any list of rows** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                          Rows Per Page                           |                                                                                                                                                                                                                                          Select the maximum number of rows you want to see in a list on a page. You can set a value from 25 to 250. A smaller number of rows per page is recommended, as it will help maximize grid performance. Selecting a larger number of rows per page can negatively impact grid performance.                                                                                                                                                                                                                                               |
+|                          Rows Per Page                           |                                                                                                                                                                                                                                          Select the maximum number of rows you want to see in a list on a page. You can set a value from 25 to 250. A smaller number of rows per page is recommended, as it helps maximize grid performance. Selecting a larger number of rows per page can negatively impact grid performance.                                                                                                                                                                                                                                               |
 |            **Select the default mode in Advanced Find**             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                         Advanced Find Mode                          |                                                                                                                                  By default, every time you open the **Advanced Find Mode** dialog box, the query details are hidden. To see the query details every time, select **Detailed**.                                                                                                                                  |
-|            **Select the default search experience**             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | 
-|                         Default Search Experience                          |                                                                                                                                  Select your default search experience. For more information, see [Compare search options](./search.md) 
 |                  **Set the time zone you are in**                   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                              Time Zone                              |                                                                                                                                             Select the time zone that you want to display for your region.                                                                                                                                          |
 |                    **Select a default currency**                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -60,37 +61,34 @@ Change your display settings in an app to suit your preferences. For example, yo
 |                     Country/Region Code Prefix                      |                                                                                                                                                                                                                                         Enter the value of your region’s calling code in the text box. For example, enter **+1** for the United States.                                                                                                                                                                                                                                          |
 |                     View your user information                      |                                                                                                                                                Select this link to view details about you. These details are displayed to your entire organization and include your contact information and security role. For more information, [View your user profile](view-your-user-profile.md).                                                                                                                                                 |
   
-## Synchronization tab options  
-  
-|                                                                                                   Options                                                                                                   |                                                                                                                                                                                                                                                                                                                                                           Description                                                                                                                                                                                                                                                                                                                                                            |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Synchronize Dynamics 365 items with Outlook or Exchange** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                                                   filters                                                                                                   |                                                                                                        Choose the rows to synchronize between Dynamics 365 and Dynamics 365 for Outlook or Exchange (using server-side synchronization).                                                                                                     |
-|                                                                                             synchronized columns                                                                                             | View the columns that are synchronized between Dynamics 365 and Dynamics 365 for Outlook so you can see where the data is coming from.|
-|                                       **Manage your offline filters and take your information offline in Dynamics 365 for Outlook**                                        |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                                               offline filters                                                                                               |                                                                                                                                                                                                                                                      Choose a subset of Dynamics 365 data that you want to work with when you go offline with Dynamics 365 for Outlook.                                                                                                                                                                                                                                                      |
-  
+## Synchronization tab options
+
+| Option | Description |
+|---|---|
+| **User filters** | View, create, or change filters that specify the appointments, contacts, and tasks in Dynamics 365 that are synchronized to Outlook or Exchange. You can also view synchronized fields and the synchronization direction for each entity type. |
+| **System filters** | View filters that specify the appointments, contacts, and tasks in Dynamics 365 that are synchronized to Outlook or Exchange. You can also view synchronized fields and the synchronization direction for each entity type. |
+| **Synchronization fields** | View the synchronization direction between mapped Outlook or Exchange fields and Dynamics 365 fields. |
+
 ## Activities tab options  
   
-|Options|Description|  
+| Options | Description |  
 |-------------|-----------------|  
 |**Default view**||  
 |Default Calendar|Select the default view for your calendar.|   
 |Start your default work hours|Select your default start and end time for your work hours.|
-## Formats tab options  
-  
-|Options|Description|  
-|-------------|-----------------|  
-|**Current Formats**||  
-|Customize|Choose this option to add a new region and formats.|  
-|Format preview|Shows the current region and its formats for **Number**, **Currency**, **Time**, and **Date**.|  
-  
+## Formats tab options
+
+| Option | Description |
+|---|---|
+| **Format preview** | Shows the current region and formats for **Number**, **Currency**, **Time**, and **Date**. |
+| **Customize** | Choose this option to change the region and formats. |
+
 ## Email Templates tab options  
   
 |                    Options                     |                                                                                                                                                                                        Description                                                                                                                                                                                        |
 |------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Create and modify personal email templates** |                                                                                                                                                                                                                                                                                                                                                                                           |
-|                      New                       | Create an email template with custom values (such as a date or signature), so you don’t have to enter the same information, repeatedly, when you send an email.<br /><br /> On the command bar, select **New** and enter values for the template.|
+|                      New                       | Create an email template with custom values (such as a date or signature), so you don’t have to enter the same information repeatedly when you send an email.<br /><br /> On the command bar, select **New** and enter values for the template.|
   
 ## Email Signatures tab options  
   
@@ -116,7 +114,7 @@ Change your display settings in an app to suit your preferences. For example, yo
 ## Privacy tab options  
   
 > [!NOTE]
-> This tab isn’t available if your system administrator has selected the privacy preference for the entire organization in System Settings. Talk to your administrator. 
+> This tab isn't available if your system administrator selects the privacy preference for the entire organization in System Settings. Talk to your administrator. 
   
 |                                                                                                                                            Options                                                                                                                                             |                                                                                                                                                                                                                                                                Description                                                                                                                                                                                                                                                                 |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -130,7 +128,7 @@ Change your display settings in an app to suit your preferences. For example, yo
 | **Select the language you prefer to see Dynamics 365 displayed in** |                                                                                                                                                                                                                                                                                                                                                                       |
 |                                                   Base Language                                                    |                                                                                              Shows the base language. The base language is set during the Dynamics 365 installation process. You can’t edit this option.                                                                                               |
 |                                              User Interface Language                                               |                                                                                                        Select the language that you want to see for labels and dialog boxes in the Dynamics 365 user interface.                                                                                                        |
-|                                                   Help Language                                                    | Select the language for Help. To add an additional language other than the base language, your admin must install the required language packs and enable them.  Talk to your administrator.|
+|                                                   Help Language                                                    | Select the language for Help. To add an extra language other than the base language, your admin must install the required language packs and enable them.  Talk to your administrator.|
 
 
 
