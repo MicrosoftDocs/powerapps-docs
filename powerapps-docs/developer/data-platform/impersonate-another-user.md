@@ -1,7 +1,8 @@
 ---
 title: "Impersonate another user (Microsoft Dataverse) | Microsoft Docs"
 description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user." 
-ms.date: 08/20/2026
+ms.date: 10/29/2026
+ai-usage: ai-assisted
 ms.reviewer: pehecke
 ms.topic: article
 author: MsSQLGirl
@@ -24,6 +25,9 @@ Impersonation involves two different user accounts:
 |Impersonator|Impersonated user|
 |--|--|
 |User account used when executing code|User account that the task is being performed on behalf of.|
+
+<a name="bkmk_Requirementsforimpersonation"></a>
+<a name="requirements-for-impersonation"></a>
 
 ## Required privileges
 
@@ -48,10 +52,92 @@ More information: [Build web applications using Server-to-Server (S2S) authentic
 
 ## Impersonate another user by using the Web API
 
-To impersonate a user, add a request header named `CallerObjectId` with a GUID value equal to the impersonated user's Microsoft Entra ID object identifier before sending the request to the web service. The user's Microsoft Entra ID object identifier is included in the [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
+You can impersonate a user by passing a request header with the corresponding user ID before sending the request to the web service.
 
-More information: [Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md).
+<a name="bkmk_Howtoimpersonateauser"></a>
 
+### How to impersonate a user
+
+Use one of these headers:
+
+1. **Preferred:** Set `CallerObjectId` to the impersonated user's Microsoft Entra ID object ID. This value is stored in [SystemUser.AzureActiveDirectoryObjectId](reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId).
+2. **Legacy:** Set `MSCRMCallerID` to the impersonated user's [SystemUser.SystemUserId](reference/entities/systemuser.md#BKMK_SystemUserId) GUID value.
+
+The following example creates an account row on behalf of the user with the Microsoft Entra ID object ID `aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb`.
+
+**Request:**
+
+```http
+POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
+CallerObjectId: aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb
+Accept: application/json
+Content-Type: application/json; charset=utf-8
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+
+{"name":"Sample Account created using impersonation"}
+```
+
+**Response:**
+
+```http
+HTTP/1.1 204 No Content
+OData-Version: 4.0
+OData-EntityId: [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000003)
+```
+
+<a name="bkmk_Determinetheactualuser"></a>
+
+### Determine the actual user
+
+When you create a row by using impersonation, query the `createdonbehalfby` single-valued navigation property to find the user who actually performed the operation. For updates, use the corresponding `modifiedonbehalfby` single-valued navigation property.
+
+The following example retrieves the account created in the previous example. The `createdby` and `owninguser` properties identify the impersonated user, while `createdonbehalfby` identifies the actual user.
+
+**Request:**
+
+```http
+GET [Organization URI]/api/data/v9.2/accounts(00000000-0000-0000-0000-000000000003)?$select=name&$expand=createdby($select=fullname,azureactivedirectoryobjectid),createdonbehalfby($select=fullname,azureactivedirectoryobjectid),owninguser($select=fullname,azureactivedirectoryobjectid) HTTP/1.1
+Accept: application/json
+OData-MaxVersion: 4.0
+OData-Version: 4.0
+```
+
+**Response:**
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json; odata.metadata=minimal
+ETag: W/"2751197"
+
+{
+  "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#accounts(name,createdby(fullname,azureactivedirectoryobjectid),createdonbehalfby(fullname,azureactivedirectoryobjectid),owninguser(fullname,azureactivedirectoryobjectid))/$entity",
+  "@odata.etag": "W/\"2751197\"",
+  "name": "Sample Account created using impersonation",
+  "accountid": "00000000-0000-0000-0000-000000000003",
+  "createdby": {
+    "@odata.etag": "W/\"2632435\"",
+    "fullname": "Impersonated User",
+    "azureactivedirectoryobjectid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
+    "systemuserid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+    "ownerid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
+  },
+  "createdonbehalfby": {
+    "@odata.etag": "W/\"2632445\"",
+    "fullname": "Actual User",
+    "azureactivedirectoryobjectid": "bbbbbbbb-1111-2222-3333-cccccccccccc",
+    "systemuserid": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
+    "ownerid": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
+  },
+  "owninguser": {
+    "@odata.etag": "W/\"2632435\"",
+    "fullname": "Impersonated User",
+    "azureactivedirectoryobjectid": "aaaaaaaa-0000-1111-2222-bbbbbbbbbbbb",
+    "systemuserid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
+    "ownerid": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee"
+  }
+}
+```
 
 ## Impersonate another user by using the SDK for .NET
 
@@ -67,10 +153,10 @@ You can register a plug-in containing code to specify the user that the operatio
 More information: [Impersonate a user](impersonate-a-user.md).
 
 
-### See also
+## See also
 
 [Build web applications using Server-to-Server (S2S) authentication](build-web-applications-server-server-s2s-authentication.md)<br />
-[Impersonate another user using the Web API](webapi/impersonate-another-user-web-api.md)<br />
+[Perform operations using the Web API](webapi/perform-operations-web-api.md)<br />
 [Write a plug-in](write-plug-in.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

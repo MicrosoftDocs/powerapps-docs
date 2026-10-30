@@ -1,7 +1,7 @@
 ---
-title: "Perform conditional operations using the Web API (Microsoft Dataverse)| Microsoft Docs"
-description: "Read how to create conditions that decide whether and how to perform certain operations using the Web API"
-ms.date: 04/06/2022
+title: "Perform Conditional Operations Using the Dataverse Web API"
+description: "Learn how to use ETags with the Dataverse Web API to perform conditional retrievals, limit upsert operations, and apply optimistic concurrency."
+ms.date: 10/29/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -11,36 +11,36 @@ contributors:
   - JimDaly
 ---
 
-# Perform conditional operations using the Web API
+# Perform conditional operations by using the Web API
 
 [!INCLUDE[cc-terminology](../includes/cc-terminology.md)]
 
-Microsoft Dataverse provides support for a set of conditional operations that rely upon the standard HTTP resource versioning mechanism known as *ETags*.  
+Microsoft Dataverse supports conditional operations that use the standard HTTP resource versioning mechanism known as *ETags*. Use conditional operations by using the Web API to optimize record retrievals, limit upsert operations, and apply optimistic concurrency to prevent overwriting changes made by others.  
   
 <a name="bkmk_ETags"></a>
   
-## ETags
+## ETags and resource versioning
 
-The HTTP protocol defines an *entity tag*, or [ETag](/openspecs/windows_protocols/ms-odata/c4d715eb-10f6-47fa-9ccc-2ebf926558a6) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values are implementation dependent. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, are identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.
+The HTTP protocol defines an *entity tag*, or [ETag](/openspecs/windows_protocols/ms-odata/c4d715eb-10f6-47fa-9ccc-2ebf926558a6) for short, for identifying specific versions of a resource. ETags are opaque identifiers whose exact values depend on the implementation. ETag values occur in two varieties: strong and weak validation. Strong validation indicates that a unique resource, identified by a specific URI, is identical on the binary level if its corresponding ETag value is unchanged. Weak validation only guarantees that the resource representation is semantically equivalent for the same ETag value.
   
-Dataverse generates a weakly validating `@odata.etag` property for every entity instance, and this property is automatically returned with each retrieved entity record. For more information, see [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md).
+Dataverse generates a weakly validating `@odata.etag` property for every entity instance, and it automatically returns this property with each retrieved entity record. For more information, see [Retrieve a table row using the Web API](retrieve-table-row.md).
   
 <a name="bkmk_ifMatchHeaders"></a>
  
 ## If-Match and If-None-Match headers
 
-Use [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2) headers with ETag values to check whether the current version of a resource matches the one last retrieved, matches any previous version, or matches no version. These comparisons form the basis of conditional operation support. Dataverse provides ETags to support conditional retrievals, optimistic concurrency, and limited upsert operations.
+Use the [If-Match](https://www.rfc-editor.org/rfc/rfc7232.html#section-3.1) and [If-None-Match](https://www.rfc-editor.org/rfc/rfc7232.html#section-3.2) headers with ETag values to check whether the current version of a resource matches the one you last retrieved, matches any previous version, or matches no version. These comparisons form the basis of conditional operation support. Dataverse provides ETags to support conditional retrievals, optimistic concurrency, and limited upsert operations.
   
 > [!WARNING]
-> Client code should not give any meaning to the specific value of an ETag, nor to any apparent relationship between ETags beyond equality or inequality. For example, an ETag value for a more recent version of a resource is not guaranteed to be greater than the ETag value for an earlier version. Also, the algorithm used to generate new ETag values may change without notice between releases of a service.  
+> Client code shouldn't give any meaning to the specific value of an ETag, nor to any apparent relationship between ETags beyond equality or inequality. For example, an ETag value for a more recent version of a resource isn't guaranteed to be greater than the ETag value for an earlier version. Also, the algorithm used to generate new ETag values might change without notice between releases of a service.  
   
 <a name="bkmk_DetectIfChanged"></a>
 
 ## Conditional retrievals
 
-Etags enable you to optimize record retrievals whenever you access the same record multiple times. If you previously retrieved a record, you can pass the ETag value with the `If-None-Match` header to request data to be retrieved only if it changed since the last time it was retrieved. If the data changed, the request returns an HTTP status of `200 OK` with the latest data in the body of the request. If the data is unchanged, the HTTP status code `304 Not Modified` is returned to indicate that the record hasn't been modified.
+Etags help you optimize record retrievals when you access the same record multiple times. If you previously retrieved a record, pass the ETag value with the `If-None-Match` header to request data only if it changed since the last time you retrieved it. If the data changed, the request returns an HTTP status of `200 OK` with the latest data in the body of the request. If the data is unchanged, the request returns the HTTP status code `304 Not Modified` to indicate that the record isn't modified.
 
-The following example message pair returns data for an account record with the `accountid` equal to `00000000-0000-0000-0000-000000000001` when the data hasn't changed since it was last retrieved when the Etag value was `W/"468026"`
+The following example message pair returns data for an account record with the `accountid` equal to `00000000-0000-0000-0000-000000000001` when the data hasn't changed since you last retrieved it and the Etag value was `W/"468026"`.
 
  **Request:**
 
@@ -64,19 +64,44 @@ The following sections describe limitations to using conditional retrievals.
 
 ### Table must have optimistic concurrency enabled
 
-Check if an table has optimistic concurrency enabled using the following Web API request. Tables that have optimistic concurrency enabled have [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) property set to `true`.
+Check if a table has optimistic concurrency enabled by using the following Web API request. Tables that have optimistic concurrency enabled have the [EntityMetadata.IsOptimisticConcurrencyEnabled](xref:Microsoft.Xrm.Sdk.Metadata.EntityMetadata.IsOptimisticConcurrencyEnabled) property set to `true`. Use this URL to retrieve the value:
 
 ```http
 GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='<Entity Logical Name>')?$select=IsOptimisticConcurrencyEnabled
 ```
 
+This example retrieves the value from the contact table:
+
+ **Request:**
+
+```http  
+GET [Organization URI]/api/data/v9.2/EntityDefinitions(LogicalName='contact')?$select=IsOptimisticConcurrencyEnabled  HTTP/1.1  
+Accept: application/json  
+OData-MaxVersion: 4.0  
+OData-Version: 4.0  
+```  
+  
+ **Response:**
+
+```http  
+HTTP/1.1 200 OK  
+Content-Type: application/json; odata.metadata=minimal  
+OData-Version: 4.0
+
+{
+   "@odata.context": "[Organization URI]/api/data/v9.2/$metadata#EntityDefinitions(IsOptimisticConcurrencyEnabled)/$entity",
+   "MetadataId": "608861bc-50a4-4c5f-a02c-21fe1943e2cf",
+   "IsOptimisticConcurrencyEnabled": true
+}
+```  
+
 ### Query must not include $expand
 
-The Etag can only detect if the single record that is being retrieved changed. When you use `$expand` in your query, more records might be returned and it isn't possible to detect whether or not any of those records changed. If the query includes `$expand`, `304 Not Modified` is never returned.
+The Etag can only detect if the single record that you're retrieving changed. When you use `$expand` in your query, you might return more records, and it isn't possible to detect whether any of those records changed. If the query includes `$expand`, the request never returns `304 Not Modified`.
 
 ### Query must not include annotations
 
-When the `Prefer: odata.include-annotations` header is included with a `GET` request, `304 Not Modified` is never returned. The values of annotations can refer to values from related records. These records might have changed and this change couldn't be detected, so it would be incorrect to indicate that nothing changed.
+When you include the `Prefer: odata.include-annotations` header in a `GET` request, the server never returns `304 Not Modified`. The values of annotations can refer to values from related records. These records might have changed, and the server can't detect this change, so it would be incorrect to indicate that nothing changed.
 
 
   
@@ -84,13 +109,13 @@ When the `Prefer: odata.include-annotations` header is included with a `GET` req
   
 ## Limit upsert operations
 
-An upsert ordinarily operates by creating a record if it doesn't exist; otherwise, it updates an existing record. However, ETags can be used to further constrain upserts to either prevent creates or to prevent updates.  
+An upsert operation creates a record if it doesn't exist; otherwise, it updates an existing record. However, you can use ETags to further constrain upserts to either prevent creates or prevent updates.  
   
 <a name="bkmk_preventCreateOnUpsert"></a>
  
 ### Prevent create in upsert
 
-If you're updating data and there's some possibility that the record was deleted intentionally, you won't want to re-create the record. To prevent this, add an `If-Match` header to the request with a value of `*`.
+If you're updating data and there's a possibility that the record was deleted intentionally, you might not want to re-create the record. To prevent this condition, add an `If-Match` header to the request with a value of `*`.
   
  **Request:**
 
@@ -113,7 +138,7 @@ If-Match: *
   
  **Response:**
 
- If the record is found, you get a normal response with status `204 No Content`. When the record isn't found, you get the following response with status `404 Not Found`.  
+ If the server finds the record, you get a normal response with status `204 No Content`. If the server doesn't find the record, you get the following response with status `404 Not Found`.  
   
 ```http  
 HTTP/1.1 404 Not Found  
@@ -132,7 +157,7 @@ Content-Type: application/json; odata.metadata=minimal
   
 ### Prevent update in upsert
 
-If you're inserting data, there's some possibility that a record with the same `id` value already exists in the system and you might not want to update it. To prevent this, add an `If-None-Match` header to the request with a value of "*".
+If you're inserting data, a record with the same `id` value might already exist in the system. You might not want to update this existing record. To prevent updating the record, add an `If-None-Match` header to the request with a value of "*".
   
  **Request:**
 
@@ -154,7 +179,7 @@ If-None-Match: *
 ```  
   
  **Response:**  
- If the record isn't found, you'll get a normal response with status `204 No Content`. When the record is found, you get the following response with status `412 Precondition Failed`.  
+ If the record isn't found, you receive a normal response with status `204 No Content`. If the record is found, you receive the following response with status `412 Precondition Failed`.  
   
 ```http  
 HTTP/1.1 412 Precondition Failed  
@@ -173,13 +198,13 @@ Content-Type: application/json; odata.metadata=minimal
 
 ## Apply optimistic concurrency
 
-You can use optimistic concurrency to detect whether a record was modified since it was last retrieved. If the record you intend to update or delete has changed on the server since you retrieved it, you might not want to complete the update or delete operation. By applying the pattern shown here you can detect this situation, retrieve the most recent version of the record, and apply any necessary criteria to reevaluate whether to try the operation again.  
+Use optimistic concurrency to detect whether a record was modified since you last retrieved it. If the record you intend to update or delete changed on the server since you retrieved it, you might not want to complete the update or delete operation. By using the following pattern, you can detect this situation, retrieve the most recent version of the record, and apply any necessary criteria to reevaluate whether to try the operation again.  
   
 <a name="bkmk_Applyoptimisticconcurrencyondelete"></a>
 
 ### Apply optimistic concurrency on delete
 
-The following delete request for an account with `accountid` of`00000000-0000-0000-0000-000000000001` fails because the ETag value sent with the `If-Match` header is different from the current value. If the value matched, a `204 No Content` status is expected.
+The following delete request for an account with `accountid` of `00000000-0000-0000-0000-000000000001` fails because the ETag value sent with the `If-Match` header is different from the current value. If the value matched, you receive a `204 No Content` status.
   
  **Request:**
 
@@ -209,7 +234,7 @@ OData-Version: 4.0
 
 ### Apply optimistic concurrency on update
 
-The following update request for an account with `accountid` of `00000000-0000-0000-0000-000000000001` fails because the ETag value sent with the `If-Match` header is different from the current value. If the value matched, a `204 No Content` status is expected.  
+The following update request for an account with `accountid` of `00000000-0000-0000-0000-000000000001` fails because the ETag value sent with the `If-Match` header is different from the current value. If the value matched, you receive a `204 No Content` status.  
   
  **Request:**
 
@@ -239,18 +264,10 @@ OData-Version: 4.0
   
 ### See also
 
+[Web API Conditional Operations Sample (PowerShell)](samples/conditional-operations-powershell.md)<br />
 [Web API Conditional Operations Sample (C#)](samples/webapiservice-conditional-operations.md)<br />
 [Web API Conditional Operations Sample (Client-side JavaScript)](samples/conditional-operations-client-side-javascript.md)<br />
 [Perform operations using the Web API](perform-operations-web-api.md)<br />
-[Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
-[Query Data using the Web API](query/overview.md)<br />
-[Create a table row using the Web API](create-table-row.md)<br />
-[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
-[Update and delete table rows using the Web API](update-delete-table-rows.md)<br />
-[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
-[Use Web API functions](use-web-api-functions.md)<br />
-[Use Web API actions](use-web-api-actions.md)<br />
-[Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
-[Impersonate another user using the Web API](impersonate-another-user-web-api.md)
+[Compose Http requests and handle errors](compose-http-requests-handle-errors.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

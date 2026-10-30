@@ -1,7 +1,7 @@
 ---
-title: "Page results using OData from Microsoft Dataverse Web API"
-description: "Learn how to use OData paging to control and retrieve data results from Microsoft Dataverse Web API efficiently. Follow step-by-step examples to implement pagination."
-ms.date: 03/27/2026
+title: "Page Results Using OData From Microsoft Dataverse Web API"
+description: "Learn how to use OData paging to control and retrieve results from Microsoft Dataverse Web API efficiently. Follow step-by-step examples to implement pagination."
+ms.date: 10/29/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -13,7 +13,7 @@ contributors:
   - JimDaly
   - JosinaJoy
 ---
-# Page results using OData
+# Page results by using OData
 
 Use OData paging with the `Prefer: odata.maxpagesize` request header to control the number of records returned from Microsoft Dataverse Web API. If you don't specify a number, each request might return up to 5,000 table rows. For both standard and elastic tables, you can specify a max page size up to 5,000. The service ignores max page size requests larger than 5,000 for both standard and elastic tables.
 
@@ -110,10 +110,78 @@ The following example returns just the first three account rows:
 GET [Organization URI]/api/data/v9.2/accounts?$select=name,revenue&$top=3
 ```
 
-<!-- 
-TODO: Add a PowerShell RetrieveAll example similar to the FetchXml example here:
-https://learn.microsoft.com/power-apps/developer/data-platform/fetchxml/page-results?tabs=webapi#web-api-paging-example 
--->
+## PowerShell RetrieveAll example
+
+This example `Get-AllRecords` PowerShell function  demonstrates how to retrieve all the records in a table limited only by the filter conditions. 
+
+This function depends on the [`Get-Records`](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#get-records-function) and [`Get-NextLink`](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md#get-nextlink-function) functions described in [Dataverse Web API PowerShell Helper functions](https://github.com/microsoft/PowerApps-Samples/blob/master/dataverse/webapi/PS/README.md).
+
+```powershell
+<#
+.SYNOPSIS
+Retrieves all records matching an OData query.
+
+.DESCRIPTION
+Uses Get-Records for the first page and Get-NextLink for subsequent pages.
+Follows each @odata.nextLink unchanged, using the same maximum page size.
+Returns the combined records only after all requests succeed.
+
+.PARAMETER setName
+The entity set name, such as contacts.
+
+.PARAMETER query
+The OData query string, beginning with ?, or a related collection path as accepted
+by Get-Records. Do not use the top-level $top or $skip query options with paging.
+Include a deterministic $orderby, preferably including the primary key.
+Use single quotes to prevent PowerShell from expanding OData option names.
+
+.PARAMETER maxPageSize
+Maximum records per page, from 1 to 5000. Defaults to 5000.
+
+.EXAMPLE
+$contacts = @(Get-AllRecords -setName 'contacts' `
+   -query '?$select=fullname,jobtitle&$orderby=fullname,contactid' -maxPageSize 1000)
+
+.OUTPUTS
+The records themselves, not a Web API response envelope. Use @() to collect an
+array even when zero or one record matches. Errors propagate to the caller.
+#>
+function Get-AllRecords {
+   param (
+      [Parameter(Mandatory)]
+      [String]
+      $setName,
+      [Parameter(Mandatory)]
+      [String]
+      $query,
+      [ValidateRange(1, 5000)]
+      [int]
+      $maxPageSize = 5000
+   )
+
+   if ($query -match '(?i)[?&](?:\$|%24)(top|skip)=') {
+      throw 'The top-level $top and $skip query options cannot be used with paging.'
+   }
+
+   $records = [System.Collections.Generic.List[object]]::new()
+   $response = Get-Records -setName $setName -query $query -maxPageSize $maxPageSize
+
+   while ($true) {
+      foreach ($record in $response.value) {
+         $records.Add($record)
+      }
+
+      $nextLink = $response.'@odata.nextLink'
+      if ([string]::IsNullOrWhiteSpace($nextLink)) {
+         break
+      }
+      $response = Get-NextLink -nextLink $nextLink -maxPageSize $maxPageSize
+   }
+
+   return $records.ToArray()
+}
+```
+
 
 [!INCLUDE [cc-ordering-paging](../../includes/cc-ordering-paging.md)]
 

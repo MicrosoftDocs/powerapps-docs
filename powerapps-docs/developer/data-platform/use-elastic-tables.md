@@ -1,8 +1,8 @@
 ---
-title: Use elastic tables using code
-description: Learn how to perform data operations on Dataverse elastic tables using code.
+title: Perform Data Operations on Elastic Tables Using Code
+description: Learn how to create, retrieve, update, upsert, delete, and query Dataverse elastic tables using code with the SDK for .NET and Web API.
 ms.topic: how-to
-ms.date: 09/23/2025
+ms.date: 10/29/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -14,15 +14,15 @@ contributors:
  - bhavana95
 ---
 
-# Use elastic tables using code
+# Perform data operations on elastic tables using code
 
-This article describes how to use code to perform data operations on elastic tables.
+This article describes how to use code to perform data operations on Dataverse elastic tables. Learn how to create, retrieve, update, upsert, delete, query, and associate elastic table records, and how to use session tokens, partition ID values, and bulk operations with the SDK for .NET or Web API.
 
 ## Work with the session token
 
-As was mentioned in [Consistency level](elastic-tables.md#consistency-level), you can achieve session-level consistency by passing the current session token with your requests. If you don't include the session token, the data that you retrieve might not include data changes that you've just made.
+As mentioned in [Consistency level](elastic-tables.md#consistency-level), you can achieve session-level consistency by passing the current session token with your requests. If you don't include the session token, the data that you retrieve might not include data changes that you just made.
 
-### Getting the session token
+### Get the session token
 
 The session token is available in the response of all write operations. Look for the `x-ms-session-token` value.
 
@@ -31,7 +31,7 @@ The session token is available in the response of all write operations. Look for
 For any [OrganizationResponse](xref:Microsoft.Xrm.Sdk.OrganizationResponse) that performs a write operation, you can capture the `x-ms-session-token` value in the [Results](xref:Microsoft.Xrm.Sdk.OrganizationResponse.Results) collection.
 
 > [!NOTE]
-> [DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse) doesn't currently return the `x-ms-session-token` value. For more information, go to [Known issue: No x-ms-session-token value is returned for delete operations](elastic-tables.md#no-x-ms-session-token-value-is-returned-for-delete-operations).
+> [DeleteResponse](xref:Microsoft.Xrm.Sdk.Messages.DeleteResponse) doesn't currently return the `x-ms-session-token` value. For more information, see [Known issue: No x-ms-session-token value is returned for delete operations](elastic-tables.md#no-x-ms-session-token-value-is-returned-for-delete-operations).
 
 ```csharp
 string sessionToken = response.Results["x-ms-session-token"].ToString();
@@ -42,7 +42,7 @@ string sessionToken = response.Results["x-ms-session-token"].ToString();
 The session token value is returned as the `x-ms-session-token` response header.
 
 > [!NOTE]
-> Delete operations don't currently return the `x-ms-session-token` value. For more information, go to [Known issue: No x-ms-session-token value is returned for delete operations](elastic-tables.md#no-x-ms-session-token-value-is-returned-for-delete-operations).
+> Delete operations don't currently return the `x-ms-session-token` value. For more information, see [Known issue: No x-ms-session-token value is returned for delete operations](elastic-tables.md#no-x-ms-session-token-value-is-returned-for-delete-operations).
 
 ```http
 x-ms-session-token: 240:8#144100870#7=-1
@@ -50,9 +50,9 @@ x-ms-session-token: 240:8#144100870#7=-1
 
 ---
 
-### Sending the session token
+### Send the session token
 
-The way that you send the session token in a read operation depends on whether you're using the SDK or Web API.
+The method for sending the session token in a read operation depends on whether you're using the SDK or Web API.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -82,10 +82,10 @@ MSCRM.SessionToken: 240:8#144100870#7=-1
 
 ## Specify PartitionId
 
-As was mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use if you choose to apply a partitioning strategy for the table. Otherwise, don't set a value for the `partitionid` column.
+As mentioned in [Partitioning and horizontal scaling](elastic-tables.md#partitioning-and-horizontal-scaling), each elastic table has a `partitionid` column that you must use if you choose to apply a partitioning strategy for the table. Otherwise, don't set a value for the `partitionid` column.
 
 > [!IMPORTANT]
-> If you choose to use a partitioning strategy for your elastic table, all operations on that table or referring to records in that table **MUST** specify the `partitionid` column value to uniquely identify the record. There is no error thrown if `partitionid` is not specified in the lookup value of referencing table, but the lookup will fail to locate the record when you use it. You must document and enforce this requirement via code reviews to ensure that your data is consistent and `partitionid` is used appropriately for all the operations.
+> If you choose to use a partitioning strategy for your elastic table, all operations on that table or referring to records in that table **MUST** specify the `partitionid` column value to uniquely identify the record. There's no error if you don't specify `partitionid` in the lookup value of referencing table, but the lookup fails to locate the record when you use it. You must document and enforce this requirement through code reviews to ensure that your data is consistent and `partitionid` is used appropriately for all operations.
 
 After you specify a non-null value for the `partitionid` column when you create a row, you must specify it when you perform any other data operation on that row. You can't change the value later.
 
@@ -96,11 +96,11 @@ If you don't set a `partitionid` value for a record when you create it, the `par
 
 You can set the `partitionid` value in following ways when you perform various data operations.
 
-### Using the alternate key
+### Use the alternate key
 
-As was mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key that is named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
+As mentioned in [Alternate keys](create-elastic-tables.md#alternate-keys), every elastic table has an alternate key named `KeyForNoSqlEntityWithPKPartitionId`. This alternate key combines the primary key of the table with the `partitionid` column.
 
-If you are using a partitioning strategy, you must specify an alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations, or when you set a lookup column for another table that refers to an elastic table record.
+If you use a partitioning strategy, you must specify an alternate key to specify the `partitionid` value when you use `Retrieve`, `Update`, or `Delete` operations, or when you set a lookup column for another table that refers to an elastic table record.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -122,7 +122,7 @@ This example shows how you can use the special syntax in Web API to refer to rec
 `<entity set name>(<primary key name>=<primary key value>,partitionid='<partitionid value>')`
 
 > [!NOTE]
-> Because the primary key value is a globally unique identifier (GUID), no single quotation marks are needed around it. However, because the `partitionid` value is a string, single quotation marks are needed.
+> Because the primary key value is a globally unique identifier (GUID), you don't need to enclose it in single quotation marks. However, because the `partitionid` value is a string, you need to enclose it in single quotation marks.
 
 Here's an example:
 
@@ -132,14 +132,14 @@ Here's an example:
 
 ---
 
-### Using the partitionId parameter
+### Use the partitionId parameter
 
-Currently, you can use a `partitionId` parameter to specify the value of the `partitionid` column only for `Retrieve` and `Delete` operations. For more information, go to [Known issue: The partitionId optional parameter isn't available for all messages](elastic-tables.md#the-partitionid-optional-parameter-isnt-available-for-all-messages).
+Currently, you can use a `partitionId` parameter to specify the value of the `partitionid` column only for `Retrieve` and `Delete` operations. For more information, see [Known issue: The partitionId optional parameter isn't available for all messages](elastic-tables.md#the-partitionid-optional-parameter-isnt-available-for-all-messages).
 
 #### [SDK for .NET](#tab/sdk)
 
 > [!NOTE]
-> The `partitionId` parameter doesn't work with `Create`, `Update`, or `Upsert` messages, and it is ignored if it's sent.
+> The `partitionId` parameter doesn't work with `Create`, `Update`, or `Upsert` messages, and the service ignores it if you send it.
 
 ```csharp
 request["partitionId"] = "device-001"
@@ -148,7 +148,7 @@ request["partitionId"] = "device-001"
 #### [Web API](#tab/webapi)
 
 > [!NOTE]
-> The `partitionId` parameter doesn't work with `POST` or `PATCH` requests, and it is ignored if it's sent.
+> The `partitionId` parameter doesn't work with `POST` or `PATCH` requests, and the service ignores it if you send it.
 
 Here's an example:
 
@@ -158,7 +158,7 @@ Here's an example:
 
 ---
 
-### Using the partitionid column directly
+### Use the partitionid column directly
 
 For `Create`, `Upsert`, or `Update` operations, you can directly specify the value of the `partitionid` column.
 
@@ -189,7 +189,7 @@ This example shows how you can directly specify the value of the `partitionid` c
 
 ## Create a record in an elastic table
 
-This example creates a row in the `contoso_SensorData` table, where `partitionid` is set to `deviceid`. It also sets the `ttlinseconds` column to ensure that the row expires after one day (86,400 seconds) and is automatically deleted from Dataverse.
+This example creates a row in the `contoso_SensorData` table, where you set `partitionid` to `deviceid`. It also sets the `ttlinseconds` column to ensure that the row expires after one day (86,400 seconds) and is automatically deleted from Dataverse.
 
 This example also captures the `x-ms-session-token` value that you can use when you retrieve the created record.
 
@@ -234,10 +234,10 @@ public static Guid CreateExample(
 }
 ```
 
-Use the `x-ms-session-token` value that is returned to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#sending-the-session-token).
+Use the returned `x-ms-session-token` value to set the `SessionToken` optional parameter when you retrieve the record that you created. [Learn more about sending the session token](#send-the-session-token).
 
 > [!NOTE]
-> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation)
+> Elastic tables don't support *deep insert*. You need to create each related record independently. [Only standard tables support deep insert](org-service/entity-operations-create.md#create-related-entities-in-one-operation).
 
 #### [Web API](#tab/webapi)
 
@@ -269,14 +269,14 @@ x-ms-session-token: 240:8#144035050#7=-1
 OData-EntityId: [Organization URI]/api/data/v9.2/sensordata(00aa00aa-bb11-cc22-dd33-44ee44ee44ee)
 ```
 
-Use the `x-ms-session-token` value that is returned with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#sending-the-session-token).
+Use the returned `x-ms-session-token` value with the `MSCRM.SessionToken` request header to retrieve the latest version of a record. [Learn more about sending the session token](#send-the-session-token).
 
 > [!NOTE]
-> *Deep insert* is not supported with elastic tables. Each related record needs to be created independently. [Only standard tables support deep insert](webapi/create-table-row.md#create-related-table-rows-in-one-operation).
+> Elastic tables don't support *deep insert*. You need to create each related record independently. [Only standard tables support deep insert](webapi/create-table-row.md#create-related-table-rows-in-one-operation).
 
 ---
 
-### Setting the primary key value
+### Set the primary key value
 
 If you don't specify a primary key value, Dataverse sets a primary key value for the record when you create it. Letting Dataverse set this value is the normal practice. You can specify the primary key value if you need to. For elastic tables, there's no performance benefit in letting Dataverse set the primary key value.
 
@@ -288,7 +288,7 @@ Elastic tables don't return an error when you create a record with a primary key
 
 This example updates the `contoso_value` and `contoso_timestamp` values of an existing row in the `contoso_SensorData` table by using the `contoso_sensordataid` primary key and `partitionid` = `'device-001'`.
 
-If you're using a partitioning strategy, the primary key and `partitionid` columns must uniquely identify an existing elastic table row. The `partitionid` value of an existing row can't be updated and is used only to uniquely identify the row to update.
+If you're using a partitioning strategy, the primary key and `partitionid` columns must uniquely identify an existing elastic table row. You can't update the `partitionid` value of an existing row. Use it only to uniquely identify the row to update.
 
 This example uses the `KeyForNoSqlEntityWithPKPartitionId` alternate key to uniquely identify the record by using both the primary key and `partitionid` values. [Learn more about alternate keys](create-elastic-tables.md#alternate-keys).
 
@@ -369,15 +369,15 @@ x-ms-session-token: 240:8#144035978#7=-1
 
 ## Retrieve a record in an elastic table
 
-If the `partitionid` value was set when an elastic table record was created, you must use it together with the primary key value to uniquely identify a record.
+If you set the `partitionid` value when you create an elastic table record, use it together with the primary key value to uniquely identify a record.
 
-If the `partitionid` wasn't set, you can retrieve the record in the usual way, by using only the primary key value.
+If you don't set the `partitionid` value, retrieve the record by using only the primary key value.
 
 #### [SDK for .NET](#tab/sdk)
 
-There are two different ways to compose a request to retrieve a record by using the `partitionid` value.
+To retrieve a record by using the `partitionid` value, compose your request in one of the following ways.
 
-This example uses the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). The `Target` property is set to an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) that is created by using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. [Learn more about using the EntityReference class with alternate keys](use-alternate-key-reference-record.md#using-the-entityreference-class).
+This example uses the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). Set the `Target` property to an [EntityReference](xref:Microsoft.Xrm.Sdk.EntityReference) that you create by using the constructor that accepts a [KeyAttributeCollection](xref:Microsoft.Xrm.Sdk.KeyAttributeCollection) to use the `KeyForNoSqlEntityWithPKPartitionId` alternate key. [Learn more about using the EntityReference class with alternate keys](use-alternate-key-reference-record.md#using-the-entityreference-class).
 
 ```csharp
 public static void RetrieveExampleAlternateKey(IOrganizationService service, Guid sensorDataId, string deviceId) {
@@ -400,7 +400,7 @@ public static void RetrieveExampleAlternateKey(IOrganizationService service, Gui
 }
 ```
 
-This example uses an optional parameter that is named `partitionId` on the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). [Learn more about using optional parameters](optional-parameters.md).
+This example uses an optional parameter named `partitionId` on the [RetrieveRequest class](xref:Microsoft.Xrm.Sdk.Messages.RetrieveRequest). [Learn more about using optional parameters](optional-parameters.md).
 
 ```csharp
 public static void RetrieveExampleOptionalParameter(IOrganizationService service, Guid sensorDataId, string deviceId)
@@ -544,18 +544,18 @@ OData-Version: 4.0
 
 ### Return related rows in a query
 
-Elastic tables don't currently support returning related rows when a query is run. If you try to return related rows, Dataverse throws an error with code `0x80048d0b` and the following message:
+Elastic tables don't currently support returning related rows when you run a query. If you try to return related rows, Dataverse throws an error with code `0x80048d0b` and the following message:
 
 > `Link entities are not supported`.
 
-However, elastic tables do support returning related rows when a single row is retrieved.
+However, elastic tables do support returning related rows when you retrieve a single row.
 
 ## Upsert a record in an elastic table
 
 > [!IMPORTANT]
-> Upsert operations with elastic tables differ from upsert operations with standard tables. Upsert operations are expected to contain the full payload and will overwrite any existing record data. They don't call the `Create` or `Update` messages. [Learn more about elastic table upsert](use-upsert-insert-update-record.md#elastic-table-upsert).
+> Upsert operations with elastic tables differ from upsert operations with standard tables. Upsert operations are expected to contain the full payload and overwrite any existing record data. They don't call the `Create` or `Update` messages. [Learn more about elastic table upsert](use-upsert-insert-update-record.md#elastic-table-upsert).
 
-With elastic tables, if a record that has a given ID and `partitionid` doesn't exist, it's created. If it already exists, it's replaced.
+With elastic tables, if a record with a given ID and `partitionid` doesn't exist, it's created. If it already exists, it's replaced.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -693,7 +693,7 @@ You can also use the `partitionId` parameter:
 
 ## Associate elastic table records
 
-When a table record refers to an elastic table record where the `partitionid` column value is null, you can associate a record in that table to a elastic table record just like standard records. Refer [SDK for .NET](org-service/entity-operations-associate-disassociate.md), or [the Web API](webapi/associate-disassociate-entities-using-web-api.md).
+When a table record refers to an elastic table record where the `partitionid` column value is null, you can associate a record in that table to an elastic table record just like standard records. Refer [SDK for .NET](org-service/entity-operations-associate-disassociate.md), or [the Web API](webapi/associate-disassociate-table-rows.md).
 
 When a table record refers to an elastic table record which has `partitionid` column value set, you must include the `partitionid` column value of the elastic table record when you set the lookup column of the referencing table. You can do this by including the value as an alternate key.
 
@@ -704,7 +704,7 @@ You can set both the lookup and the string column values with their respective v
 - Using an alternate key reference to set only the lookup
 - Setting the two column values together in one update
 
-How you do this depends on whether you are using the SDK for .NET or Web API
+How you do this depends on whether you are using the SDK for .NET or Web API.
 
 #### [SDK for .NET](#tab/sdk)
 
@@ -1103,7 +1103,7 @@ You can use the `DeleteMultiple` message with either the SDK for .NET or Web API
 
 #### [SDK for .NET](#tab/sdk)
 
-The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table. The alternate key is used to include the `partitionid` value to uniquely identify the rows.
+The following `DeleteMultipleExample` static method uses the `DeleteMultiple` message with the [OrganizationRequest class](xref:Microsoft.Xrm.Sdk.OrganizationRequest) to delete multiple rows from the `contoso_SensorData` elastic table. The alternate key includes the `partitionid` value to uniquely identify the rows.
 
 > [!NOTE]
 > The [DeleteMultipleRequest Class](/dotnet/api/microsoft.xrm.sdk.messages.deletemultiplerequest) is now available to use.
@@ -1142,7 +1142,7 @@ public static void DeleteMultipleExample(IOrganizationService service)
 
 #### [Web API](#tab/webapi)
 
-This example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from `contoso_SensorData` elastic table. The `partitionid` value is included to uniquely identify the rows.
+This example shows how to use the [DeleteMultiple action](xref:Microsoft.Dynamics.CRM.DeleteMultiple) to delete multiple rows from the `contoso_SensorData` elastic table. The `partitionid` value uniquely identifies the rows.
 
 **Request:**
 

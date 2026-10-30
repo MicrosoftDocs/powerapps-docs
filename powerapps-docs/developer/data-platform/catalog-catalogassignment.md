@@ -568,7 +568,7 @@ The `catalogassignment` element includes these elements:
 
 [Microsoft Dataverse business events](business-events.md)<br />
 [Create an entity record using the Web API](webapi/create-table-row.md)<br />
-[Retrieve an entity record using the Web API](webapi/retrieve-entity-using-web-api.md)<br />
+[Retrieve an entity record using the Web API](webapi/retrieve-table-row.md)<br />
 [Create entities using the SDK for .NET](org-service/entity-operations-create.md)<br />
 [Retrieve an entity using the SDK for .NET](org-service/entity-operations-retrieve.md)
  

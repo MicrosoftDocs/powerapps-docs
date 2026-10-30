@@ -50,7 +50,7 @@ Be aware of the following conditions and possible exceptions when using alternat
 
   [!INCLUDE [cc-filter-workaround-alternate-key](includes/cc-filter-workaround-alternate-key.md)]
 
-More information: [Retrieve record using an alternate key](webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)
+More information: [Retrieve record using an alternate key](webapi/retrieve-table-row.md)
 
 # [SDK for .NET](#tab/sdk)
 

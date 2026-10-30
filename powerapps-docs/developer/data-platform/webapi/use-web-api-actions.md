@@ -73,7 +73,7 @@ HTTP/1.1 204 No Content
 OData-Version: 4.0
 ```
 
-For more information, see [Merge table rows using the Web API](merge-entity-using-web-api.md).
+For more information, see [Merge table rows using the Web API](merge-table-rows.md).
 
 <a name="bkmk_boundActions"></a>
 
@@ -361,12 +361,12 @@ If you don't specify the type of entity in this situation, you can get the follo
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query/overview.md)<br />
 [Create a table row using the Web API](create-table-row.md)<br />
-[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-table-row.md)<br />
 [Update and delete table rows using the Web API](update-delete-table-rows.md)<br />
-[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-table-rows.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
-[Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
+[Impersonate another user using the Web API](../impersonate-another-user.md#impersonate-another-user-by-using-the-web-api)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

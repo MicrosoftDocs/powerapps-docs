@@ -105,7 +105,7 @@ By default this sample deletes all the records created in it. If you want to vie
 [WebAPIService class library (C#)](webapiservice.md)<br />
 [Create a table row using the Web API](../create-table-row.md)<br />
 [Update and delete table rows using the Web API](../update-delete-table-rows.md)<br />
-[Retrieve an table row using the Web API](../retrieve-entity-using-web-api.md)<br />
+[Retrieve an table row using the Web API](../retrieve-table-row.md)<br />
 [Web API Samples](../web-api-samples.md)<br />
 [Web API Basic Operations Sample](../web-api-basic-operations-sample.md)<br />
 [Web API Query Data sample (C#)](webapiservice-query-data.md)<br />

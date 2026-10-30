@@ -1,7 +1,7 @@
 ---
 title: "Send Parallel Requests to Dataverse"
 description: "Learn how to send parallel requests to Dataverse to achieve higher throughput using multiple threads when your application needs to handle large numbers of requests."
-ms.date: 03/26/2026
+ms.date: 10/29/2026
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
@@ -13,7 +13,7 @@ contributors:
   - phecke
 ---
 
-# Send parallel requests
+# Send parallel requests to Dataverse
 
 When your application needs to send a large number of requests to Dataverse, you can achieve much higher total throughput by sending requests in parallel by using multiple threads. Dataverse is designed to support multiple concurrent users, so sending requests in parallel leverages this strength.
 
@@ -149,7 +149,7 @@ The Nagle algorithm reduces network traffic by buffering small packets of data a
 
 For more information, see <xref:System.Net.ServicePointManager.UseNagleAlgorithm?displayProperty=fullName>.
 
-## Examples
+## Parallel request examples with the Task Parallel Library
 
 The following .NET examples show how to use the [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) with Dataverse.
 
@@ -161,7 +161,7 @@ These examples also show setting the [EnableAffinityCookie](xref:Microsoft.Power
 
 In the following examples, add the ID values of the responses to a [ConcurrentBag](xref:System.Collections.Concurrent.ConcurrentBag`1) of GUIDs. `ConcurrentBag` provides a thread-safe unordered collection of objects when ordering doesn't matter. You can't expect the order of the GUIDs returned by this method to match the order of the items sent in the `entityList` parameter.
 
-### Using ServiceClient with .NET 6 or higher
+### Use ServiceClient with .NET 6 or higher
 
 By using .NET 6 or higher, you can use the [Parallel.ForEachAsync](xref:System.Threading.Tasks.Parallel.ForEachAsync%2A) method with the asynchronous methods included with [ServiceClient](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient), such as [CreateAsync](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.CreateAsync%2A).
 
@@ -197,7 +197,7 @@ static async Task<Guid[]> CreateRecordsInParallel(
 }
 ```
 
-### Using CrmServiceClient with .NET Framework
+### Use CrmServiceClient with .NET Framework
 
 When you use .NET Framework, the [Clone](xref:Microsoft.PowerPlatform.Dataverse.Client.ServiceClient.Clone%2A) method available in [CrmServiceClient](xref:Microsoft.Xrm.Tooling.Connector.CrmServiceClient) duplicates an existing connection to Dataverse so that you can use the [Parallel.ForEach](xref:System.Threading.Tasks.Parallel.ForEach%2A) method.
 

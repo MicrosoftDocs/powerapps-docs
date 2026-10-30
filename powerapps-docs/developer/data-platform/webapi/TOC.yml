@@ -83,13 +83,13 @@
   - name: Create a table row
     href: create-table-row.md
   - name: Retrieve a table row
-    href: retrieve-entity-using-web-api.md
+    href: retrieve-table-row.md
   - name: Update and delete table rows 
     href: update-delete-table-rows.md
   - name: Associate and disassociate rows
-    href: associate-disassociate-entities-using-web-api.md
+    href: associate-disassociate-table-rows.md
   - name: Merge table rows
-    href: merge-entity-using-web-api.md
+    href: merge-table-rows.md
   - name: Use functions
     href: use-web-api-functions.md
   - name: Use actions
@@ -97,7 +97,7 @@
   - name: Execute batch operations 
     href: execute-batch-operations-using-web-api.md
   - name: Impersonate another user
-    href: impersonate-another-user-web-api.md
+    href: ../impersonate-another-user.md#impersonate-another-user-by-using-the-web-api
   - name: Perform conditional operations
     href: perform-conditional-operations-using-web-api.md
   - name: Detect duplicate data

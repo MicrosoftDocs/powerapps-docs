@@ -7067,7 +7067,7 @@
     },
     {
       "source_path": "powerapps-docs/developer/common-data-service/webapi/impersonate-another-user-web-api.md",
-      "redirect_url": "../../data-platform/webapi/impersonate-another-user-web-api",
+      "redirect_url": "/power-apps/developer/data-platform/impersonate-another-user",
       "redirect_document_id": false
     },
     {
@@ -10219,7 +10219,26 @@
       "source_path": "powerapps-docs/maker/canvas-apps/add-microsoft-365-copilot.md",
       "redirect_url": "/power-apps/maker/canvas-apps/microsoft-365-copilot-canvas-app",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/associate-disassociate-entities-using-web-api.md",
+      "redirect_url": "associate-disassociate-table-rows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/retrieve-entity-using-web-api.md",
+      "redirect_url": "/power-apps/developer/data-platform/webapi/retrieve-table-row",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/merge-entity-using-web-api.md",
+      "redirect_url": "/power-apps/developer/data-platform/webapi/merge-table-rows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "powerapps-docs/developer/data-platform/webapi/impersonate-another-user-web-api.md",
+      "redirect_url": "/power-apps/developer/data-platform/impersonate-another-user",
+      "redirect_document_id": false
     }
   ]
 }
-

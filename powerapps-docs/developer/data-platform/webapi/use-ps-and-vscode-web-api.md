@@ -1,7 +1,7 @@
 ---
 title: "Use PowerShell and Visual Studio Code with the Dataverse Web API"
-description: Learn how to use PowerShell and Visual Studio Code to create reusable functions for testing the Dataverse Web API interactively.
-ms.date: 03/27/2026
+description: Learn how to use PowerShell and Visual Studio Code to build reusable functions, handle errors, and manage service protection limits with the Dataverse Web API.
+ms.date: 10/29/2026
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -11,7 +11,7 @@ search.audienceType:
 
 # Use PowerShell and Visual Studio Code with the Dataverse Web API
 
-This article shows you how to use PowerShell and Visual Studio Code with the Dataverse Web API for advanced capabilities. You'll learn to create reusable functions, handle exceptions, and manage service protection limits.
+This article shows you how to use PowerShell and Visual Studio Code with the Dataverse Web API to build reusable scripts for testing and debugging. You learn to create reusable functions, handle exceptions, manage service protection limits, debug with Fiddler, and download the CSDL $metadata document.
 
 - [Create reusable functions](#create-reusable-functions)
 - [Handle exceptions](#handle-exceptions)
@@ -20,7 +20,7 @@ This article shows you how to use PowerShell and Visual Studio Code with the Dat
 - [Download the Dataverse Web API CSDL $metadata document](#download-the-dataverse-web-api-csdl-metadata-document)
 
 > [!NOTE]
-> The instructions in this article should work for Windows, Linux, and macOS, but these steps are only tested on Windows. If changes are needed, use the **Feedback** section at the bottom of this article.
+> The instructions in this article should work for Windows, Linux, and macOS, but you only test these steps on Windows. If changes are needed, use the **Feedback** section at the bottom of this article.
 
 ## Prerequisites
 
@@ -287,7 +287,7 @@ Put functions that perform common table operations in a file named `TableOperati
    - [Compose HTTP requests and handle errors](compose-http-requests-handle-errors.md)
    - [Query data using the Web API](query/overview.md)
    - [Create a table row using the Web API](create-table-row.md)
-   - [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)
+   - [Retrieve a table row using the Web API](retrieve-table-row.md)
    - [Update and delete table rows using the Web API](update-delete-table-rows.md)
 
 1. Save the `TableOperations.ps1` file.
@@ -625,7 +625,7 @@ The only difference is that you pass the hashtable (`$RetrieveRequest`) to the m
 
 ## Debug by using Fiddler
 
-[Fiddler](https://www.telerik.com/fiddler) is a web debugging proxy you can use to view HTTP traffic on your computer. Viewing this data is useful when debugging scripts. By default, Fiddler doesn't show HTTP requests and responses that you send by using the [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
+Use [Fiddler](https://www.telerik.com/fiddler), a web debugging proxy, to view HTTP traffic on your computer. Viewing this data is useful when debugging scripts. By default, Fiddler doesn't show HTTP requests and responses that you send by using the [Invoke-RestMethod cmdlet](/powershell/module/microsoft.powershell.utility/invoke-restmethod).
 
 To view HTTP traffic in Fiddler, set the `Invoke-RestMethod` [Proxy parameter](/powershell/module/microsoft.powershell.utility/invoke-restmethod#-proxy) to the URL configured as the Fiddler proxy on your local computer. By default, the URL is `http://127.0.0.1:8888`. Your URL might be different.
 

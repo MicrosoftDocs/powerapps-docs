@@ -164,7 +164,7 @@ Prefer: odata.include-annotations="OData.Community.Display.V1.FormattedValue,Mic
 
 |Header|Value|Description|
 |---------|---------|---------|
-| `CallerObjectId` | User Microsoft Entra ID Object ID | Use this header to impersonate another user when the caller has the privileges to do so. Set the value to the Microsoft Entra ID Object ID of the user to impersonate. This data is in the [User (SystemUser) table/entity](../reference/entities/systemuser.md) [AzureActiveDirectoryObjectId](../reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](impersonate-another-user-web-api.md). |
+| `CallerObjectId` | User Microsoft Entra ID Object ID | Use this header to impersonate another user when the caller has the privileges to do so. Set the value to the Microsoft Entra ID Object ID of the user to impersonate. This data is in the [User (SystemUser) table/entity](../reference/entities/systemuser.md) [AzureActiveDirectoryObjectId](../reference/entities/systemuser.md#BKMK_AzureActiveDirectoryObjectId) attribute (column). More information: [Impersonate another user using the Web API](../impersonate-another-user.md#impersonate-another-user-by-using-the-web-api). |
 | `Consistency` | `Strong` | Use this header when you must have the most recent version of a cached item. Cached items include metadata definitions, labels, user permissions, and team permissions. For example, if you apply a change to some metadata definition, label, or permission and you have code that must use the latest definition within 30 seconds of the change, use this header to ensure you get the latest version. Using this header incurs a small performance penalty, so don't use it all the time. |
 | `If-Match` | `Etag` value<br /> or `*` | Use this header to apply optimistic concurrency to ensure that you don't overwrite changes that someone else applied on the server since you retrieved a record. More information: [Apply optimistic concurrency](perform-conditional-operations-using-web-api.md#bkmk_Applyoptimisticconcurrency) and [If-Match](https://tools.ietf.org/html/rfc7232#section-3.1).<br /> You can also use this header with `*` to prevent a `PATCH` operation from creating a record. More information: [Prevent create in upsert](perform-conditional-operations-using-web-api.md#prevent-create-in-upsert). |
 | `If-None-Match` | `null`<br /> or `*` | This header should be used in all requests with a value of `null` as described in [HTTP headers](#http-headers), but it can also be used to prevent a `POST` operation from performing an update. More information: [Prevent update in upsert](perform-conditional-operations-using-web-api.md#prevent-update-in-upsert) and [If-None-Match](https://tools.ietf.org/html/rfc7232#section-3.2). |
@@ -318,13 +318,13 @@ You can set a string value that's available to plug-ins within the `ExecutionCon
 [Perform operations using the Web API](perform-operations-web-api.md)   
 [Query data using the Web API](query/overview.md)   
 [Create a table row using the Web API](create-table-row.md)   
-[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
+[Retrieve a table row using the Web API](retrieve-table-row.md)   
 [Update and delete table rows using the Web API](update-delete-table-rows.md)   
-[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   
+[Associate and disassociate table rows using the Web API](associate-disassociate-table-rows.md)   
 [Use Web API functions](use-web-api-functions.md)   
 [Use Web API actions](use-web-api-actions.md)   
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)   
-[Impersonate another user using the Web API](impersonate-another-user-web-api.md)   
+[Impersonate another user using the Web API](../impersonate-another-user.md#impersonate-another-user-by-using-the-web-api)
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md).
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

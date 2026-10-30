@@ -248,7 +248,7 @@ More information: [Impersonate another user](impersonate-another-user.md)
 
 ## Triggering an event when a team member is added or removed from the group team
 
-Group members are added or removed [just-in-time](#just-in-time-updates) into the Dataverse group team using the [associate and disassociate APIs](webapi/associate-disassociate-entities-using-web-api.md). You can register a [plug-in](plug-ins.md) on the event triggered by these team member additions or removals from the group team.
+Group members are added or removed [just-in-time](#just-in-time-updates) into the Dataverse group team using the [associate and disassociate APIs](webapi/associate-disassociate-table-rows.md). You can register a [plug-in](plug-ins.md) on the event triggered by these team member additions or removals from the group team.
 
 ## Auto-sync and refresh group team members
 

@@ -1,10 +1,10 @@
 ---
-title: link-entity element
-description: Use this element to join tables with the containing entity or link-entity element.
+title: FetchXml link-entity Element to Join Related Tables
+description: Learn how to use the FetchXml link-entity element to join related tables in Dataverse queries, with examples for one-to-many and many-to-many relationships.
 author: MsSQLGirl
 ms.author: jukoesma
 ms.reviewer: jdaly
-ms.date: 02/29/2024
+ms.date: 10/29/2026
 ms.topic: reference
 ms.subservice: dataverse-developer
 search.audienceType: 
@@ -16,7 +16,7 @@ contributors:
  - apahwa-lab
  - DonaldlaGithub
 ---
-# link-entity element
+# FetchXml link-entity element
 
 [!INCLUDE [link-entity-description](includes/link-entity-description.md)]
 
@@ -91,26 +91,26 @@ This query returns data from the [SystemUser](../../reference/entities/systemuse
 |Name|Required?|Description|
 |---------|---------|---------|
 |`name`|Yes|[!INCLUDE [link-entity-name-description](includes/link-entity-name-description.md)]|
-|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)] [While not technically required, this attribute is usually used.](#using-from-and-to-attributes)|
-|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)] [While not technically required, this attribute is usually used.](#using-from-and-to-attributes)|
+|`to`|No|[!INCLUDE [link-entity-to-description](includes/link-entity-to-description.md)] [While not technically required, you usually use this attribute.](#using-from-and-to-attributes)|
+|`from`|No|[!INCLUDE [link-entity-name-from-description](includes/link-entity-from-description.md)] [While not technically required, you usually use this attribute.](#using-from-and-to-attributes)|
 |`alias`|No|[!INCLUDE [link-entity-name-alias-description](includes/link-entity-alias-description.md)]|
 |`link-type`|No|[!INCLUDE [link-entity-name-link-type-description](includes/link-entity-link-type-description.md)]|
 |`intersect`|No|[!INCLUDE [link-entity-name-intersect-description](includes/link-entity-intersect-description.md)]|
 
 ### Using `from` and `to` attributes
 
-It's best to set values for both the  `from` and `to`  attributes. Both of these attributes are usually used to explicitly define the columns to match. However, the `from` and `to`  attributes aren't technically required.
+Set values for both the  `from` and `to`  attributes. Use these attributes to explicitly define the columns to match. However, the `from` and `to`  attributes aren't technically required.
 
 > [!NOTE]
-> - It is important that the columns specified in the `from` and `to`   attributes are the same type. Using different column types is not supported. When the columns are not the same type, the Dataverse infrastructure may be able to force a conversion but this practice can result in a significant performance penalty.
+> - The columns you specify in the `from` and `to` attributes must be the same type. Dataverse doesn't support using different column types. When the columns aren't the same type, the Dataverse infrastructure might be able to force a conversion but this practice can result in a significant performance penalty.
 > 
 > - The meaning of the `from` and `to`  attributes in FetchXml are the opposite of the corresponding [LinkEntity.LinkFromAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkFromAttributeName) and [LinkEntity.LinkToAttributeName](xref:Microsoft.Xrm.Sdk.Query.LinkEntity.LinkToAttributeName) properties used when [composing queries using QueryExpression](../../org-service/queryexpression/overview.md).
 
-If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse selects the appropriate key values using that relationship.
+If you don't use either of these attributes, and a system many-to-many relationship exists between the two tables, Dataverse selects the appropriate key values by using that relationship.
 
-If you specify only one of the `from` or `to` attributes, Dataverse attempts to figure out the correct relationship using the relationship schema definitions between the two tables.
+If you specify only one of the `from` or `to` attributes, Dataverse attempts to figure out the correct relationship by using the relationship schema definitions between the two tables.
 
-Otherwise you'll get the following error:
+Otherwise, you get the following error:
 
 > Code: `0x80041102`  
 > Message: `No system many-to-many relationship exists between <table A> and <table B>.  If attempting to link through a custom many-to-many relationship ensure that you provide the from and to attributes.`
@@ -162,9 +162,9 @@ For example, both of these queries use the [teammembership_association](../../re
 :::row-end:::
 
 
-### link-type options
+### Link-type options to filter related records
 
-Use `link-type` to apply filters on the records returned. The following table describes the valid `link-type` values:
+Use `link-type` to filter the records returned. The following table describes the valid `link-type` values:
 
 |Name|Description|
 |---------|---------|
