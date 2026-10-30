@@ -544,7 +544,7 @@ For more information about base-64-encoded strings, see:
  - [Image to Base64 Converter](https://codebeautify.org/image-to-base64-converter)
 
 More information:
-- [Retrieve a table row using the Web API](webapi/retrieve-entity-using-web-api.md)
+- [Retrieve a table row using the Web API](webapi/retrieve-table-row.md)
 - [Update and delete table rows using the Web API](webapi/update-delete-table-rows.md)
 
 ---

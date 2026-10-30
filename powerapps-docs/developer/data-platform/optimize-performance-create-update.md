@@ -1,9 +1,9 @@
 ---
 title: "Optimize Performance for Bulk Operations: Best Practices"
-description: "Learn best practices and optimization techniques for bulk operations in Dataverse. Improve performance when creating or updating thousands of records in client applications."
+description: "Learn how to optimize performance for bulk operations in Dataverse. Apply best practices to create or update thousands of records faster in client applications."
 author: apurvghai
 ms.topic: article
-ms.date: 03/26/2026
+ms.date: 10/29/2026
 ms.subservice: dataverse-developer
 ms.author: apurvgh
 ms.reviewer: jdaly
@@ -18,9 +18,9 @@ contributors:
 ---
 # Optimize performance for bulk operations
 
-When you need to create or update thousands or millions of records in Dataverse, the choices you make can save hours of time for the bulk operation project to complete. This article describes the factors that affect performance and the options you have to build client applications that optimize performance for bulk operations. Consideration should also be given to other factors, such as the number of records, record size, network latency, and data complexity.
+When you need to create or update thousands or millions of records in Dataverse, the choices you make to optimize performance for bulk operations can save hours of processing time. This article describes the factors that affect performance and the options you have to build client applications that optimize performance for bulk operations. Consideration should also be given to other factors, such as the number of records, record size, network latency, and data complexity.
 
-## Table type
+## Choose a table type for bulk operations
 
 The type of table you choose to store your data has the greatest impact on how much throughput you can expect with bulk operations. Dataverse offers two types of tables: *standard* and *elastic*. 
 
@@ -29,7 +29,7 @@ The type of table you choose to store your data has the greatest impact on how m
 
 If data load times are your primary concern, elastic tables provide the best performance. [Learn about when to use elastic tables](elastic-tables.md#when-to-use-elastic-tables)
 
-## Business logic
+## Business logic and plug-in performance
 
 Dataverse provides the capability to add extra business logic when records are created or updated by using *plug-ins*. [Plug-ins](plug-ins.md) can be registered to run *synchronously* before or within the transaction of a standard table operation. Elastic tables support plug-ins that can execute before an operation starts because there's no transaction. Any error that occurs in the plug-in code during a synchronous step for a standard table, or before the operation in an elastic table, cancels the operation. A plug-in developer can deliberately throw an exception to cancel the operation to ensure data validation logic is applied.
 
@@ -44,7 +44,7 @@ Any plug-in that is registered to run synchronously increases the time for the o
 
 ### Bypass business logic
 
-To speed up the bulk operation project, disable plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, manually disable the plug-in steps and re-enable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
+To speed up the bulk operation project, disable plug-ins registered for the create or update operations to improve performance. If the business logic isn't essential, or if you plan other steps to ensure eventual data consistency, manually disable the plug-in steps and reenable them when the bulk operation project is complete. However, disabling plug-ins disables the logic from being applied from *any* client. Any user or other process adding data to Dataverse during this period won't have any of the business logic applied.
 
 As a developer of a client application performing the bulk operation, you can apply an [optional parameter](optional-parameters.md) to the requests you send to bypass logic. Only a system administrator, or users who are granted a specific privilege, can use this header. [Learn more about how to bypass custom Dataverse logic](bypass-custom-business-logic.md).
 
@@ -93,7 +93,7 @@ To learn more, see:
 
 You can see a significant improvement in throughput by [sending requests in parallel](send-parallel-requests.md), but you need to understand how to send them correctly.
 
-### Not all environments are the same
+### Environment web server resources affect throughput
 
 Not every Dataverse environment has the same number of web server resources allocated to it. Dataverse scales to the need of the environment by adding more web server resources to support it. A production environment supporting thousands of active users requires more web servers than a trial environment. When your environment has a lot of web servers, sending requests in parallel can make a dramatic difference in the total throughput your client application can achieve.
 

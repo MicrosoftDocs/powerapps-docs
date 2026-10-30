@@ -115,7 +115,7 @@ The Config class contains properties that control the behavior of the applicatio
 |---------|---------|---------|
 |`GetAccessToken`|`Func<Task<string>>`|A function provided by the client application to return an access token.|
 |`Url`|`string?`|The base Url of the environment. For example: `https://org.api.crm.dynamics.com`|
-|`CallerObjectId`|`Guid`|The [SystemUser.ActiveDirectoryGuid](../../reference/entities/systemuser.md#BKMK_ActiveDirectoryGuid) value to apply for impersonation. Default is [Guid.Empty](/dotnet/api/system.guid.empty)<br /> More information: [Impersonate another user using the Web API](../impersonate-another-user-web-api.md)|
+|`CallerObjectId`|`Guid`|The [SystemUser.ActiveDirectoryGuid](../../reference/entities/systemuser.md#BKMK_ActiveDirectoryGuid) value to apply for impersonation. Default is [Guid.Empty](/dotnet/api/system.guid.empty)<br /> More information: [Impersonate another user using the Web API](../../impersonate-another-user.md#impersonate-another-user-by-using-the-web-api)|
 |`TimeoutInSeconds`|`ushort`|How long to wait for a timeout. Default is 120 seconds.|
 |`MaxRetries`|`byte`|Maximum number of times to retry when service protection limits occur. Default is 3.|
 |`Version`|`string`|The version of the service to use. Default is `v9.2`|

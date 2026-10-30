@@ -33,7 +33,7 @@ For example, to identify an account row with an alternate key, you can use the a
 > While you can define alternate keys with Power Apps, they can only be used programmatically in code. 
 > To learn more about using alternate keys programmatically, see:   
 > - [Developer Documentation: Use an alternate key to reference a record](../../developer/data-platform/use-alternate-key-reference-record.md)
-> - [Developer Documentation: Retrieve record using an alternate key](../../developer/data-platform/webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)
+> - [Developer Documentation: Retrieve record using an alternate key](../../developer/data-platform/webapi/retrieve-table-row.md)
 
 Some of the benefits of the alternate keys feature include:  
   
@@ -122,7 +122,7 @@ If the system job fails, locate the system job to view any errors. The system jo
 [Define alternate keys using solution explorer](define-alternate-keys-solution-explorer.md)  
 [Developer Documentation: Work with alternate keys](../../developer/data-platform/define-alternate-keys-entity.md)  
 [Developer Documentation: Use an alternate key to reference a record](../../developer/data-platform/use-alternate-key-reference-record.md)  
-[Developer Documentation: Retrieve record using an alternate key](../../developer/data-platform/webapi/retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)  
+[Developer Documentation: Retrieve record using an alternate key](../../developer/data-platform/webapi/retrieve-table-row.md)  
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

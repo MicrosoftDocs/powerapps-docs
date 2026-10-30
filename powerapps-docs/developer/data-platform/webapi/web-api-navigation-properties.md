@@ -164,7 +164,7 @@ For example, every many-to-many relationship has an *intersect table* that suppo
 </EntityType>
 ```
 
-You can't work with entity types that represent intersect tables directly because all the properties are read-only. Perform operations on the respective collection-valued navigation properties for each entity type. More information: [Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)
+You can't work with entity types that represent intersect tables directly because all the properties are read-only. Perform operations on the respective collection-valued navigation properties for each entity type. More information: [Associate and disassociate table rows using the Web API](associate-disassociate-table-rows.md)
 
 For this many-to-many relationship, the `systemuser` entity type has the following collection-valued navigation property:
 

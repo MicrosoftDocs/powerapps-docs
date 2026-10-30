@@ -1,7 +1,7 @@
 ---
-title: Join tables using OData
-description: Learn how to use OData to join tables when you retrieve data from Microsoft Dataverse Web API.
-ms.date: 01/07/2026
+title: Join Tables Using OData $expand in Dataverse Web API
+description: Learn how to join tables using the OData $expand query option to retrieve related table data from the Microsoft Dataverse Web API. Start building queries.
+ms.date: 10/29/2026
 ms.topic: how-to
 author: MsSQLGirl
 ms.author: jukoesma
@@ -14,17 +14,17 @@ contributors:
   - JosinaJoy
   - legunter
 ---
-# Join tables using OData
+# Join tables by using OData
 
-To control what data is returned from related table records, use the `$expand` [query option](overview.md#odata-query-options) with navigation properties.
+Join tables by using OData by applying the `$expand` [query option](overview.md#odata-query-options) to navigation properties. This approach lets you control what data is returned from related table records when you query the Dataverse Web API.
 
 - You can include up to 15 `$expand` options in a query. Each `$expand` option creates a join that can affect performance.
-- Queries which expand collection-valued navigation properties might return cached data for those properties that doesn't reflect recent changes. It's recommended to use `If-None-Match` header with value `null` to override browser caching. [Learn more about using HTTP Headers](../compose-http-requests-handle-errors.md#bkmk_headers) for more details.
+- Queries that expand collection-valued navigation properties might return cached data for those properties that doesn't reflect recent changes. Use the `If-None-Match` header with the value `null` to override browser caching. [Learn more about using HTTP Headers](../compose-http-requests-handle-errors.md#bkmk_headers) for more details.
 
 The following table describes the [query options](overview.md#odata-query-options) you can apply in certain `$expand` options:
 
 
-|Option|Description|More information|
+| Option | Description | More information |
 |---------|---------|---------|
 |`$select`|Select which properties are returned.|[Select columns](select-columns.md)|
 |`$filter`|For collection-valued navigation properties, limit the records returned. |[Filter rows](filter-rows.md)|
@@ -51,7 +51,7 @@ For example, the following query:
 
 ## Limit columns with $select
 
-As with any query, always limit the columns returned using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type:
+As with any query, always limit the columns returned by using `$select` when you use `$expand`. For example, the following request returns the `contact.fullname` and `task.subject` values in the expanded results from the `account` entity type:
 
 **Request:**
 
@@ -98,7 +98,7 @@ Preference-Applied: odata.maxpagesize=1
 }
 ```
 
-## Navigation property type differences
+## Single-valued and collection-valued navigation property differences
 
 > [!IMPORTANT]
 > Remember there are two types of navigation properties. [Learn more about Web API Navigation Properties](../web-api-navigation-properties.md)  
@@ -107,9 +107,9 @@ Preference-Applied: odata.maxpagesize=1
 >   
 > - *Collection-valued* navigation properties correspond to one-to-many or many-to-many relationships.
 
-Expanding a collection-valued navigation property can make the size of the response large in ways it's difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. [Learn more about paging results](page-results.md)
+Expanding a collection-valued navigation property can make the size of the response large in ways that are difficult to anticipate. It's important that you include limits to control how much data is returned. You can limit the number of records by using paging. [Learn more about paging results](page-results.md)
 
-There's a significant difference in how paging is applied to nested $expand options applied to collection valued navigation properties. [Learn more about expanding collection-valued navigation properties](#expand-collection-valued-navigation-properties)
+There's a significant difference in how paging is applied to nested $expand options applied to collection-valued navigation properties. [Learn more about expanding collection-valued navigation properties](#expand-collection-valued-navigation-properties)
 
 ## Expand single-valued navigation properties
 
@@ -171,7 +171,7 @@ OData-Version: 4.0
 }
 ```  
 
-The `createdby` single-valued navigation property returns an instance of the [systemuser EntityType](xref:Microsoft.Dynamics.CRM.systemuser). Both `systemuserid` and `ownerid` properties are returned. This is because `systemuser` inherits from [principal EntityType](xref:Microsoft.Dynamics.CRM.principal) and shares the `ownerid` primary key with [team EntityType](xref:Microsoft.Dynamics.CRM.team) through this inheritance.
+The `createdby` single-valued navigation property returns an instance of the [systemuser EntityType](xref:Microsoft.Dynamics.CRM.systemuser). Both `systemuserid` and `ownerid` properties are returned. This return happens because `systemuser` inherits from [principal EntityType](xref:Microsoft.Dynamics.CRM.principal) and shares the `ownerid` primary key with [team EntityType](xref:Microsoft.Dynamics.CRM.team) through this inheritance.
 
 However, the [User (SystemUser) table](../../reference/entities/systemuser.md) has the primary key of [SystemUserId](../../reference/entities/systemuser.md#BKMK_SystemUserId). Both `systemuserid` and `ownerid` properties have the same value. [Learn more about EntityType inheritance](../web-api-entitytypes.md#entitytype-inheritance)
 
@@ -238,7 +238,7 @@ You can only use the `/$ref` option with single-valued navigation properties. If
 
 You can expand single-valued navigation properties to multiple levels by nesting an `$expand` option in another `$expand` option.
 
-The following query returns `task` records and expands the related `contact`, the `account` related to the `contact`, and the `systemuser` who created the`account` record:
+The following query returns `task` records and expands the related `contact`, the `account` related to the `contact`, and the `systemuser` who created the `account` record:
 
 **Request:**
 
@@ -317,11 +317,11 @@ There are some important differences in the response that depend on whether you 
 
 ### Single $expand on collection-valued navigation properties
 
-If you use only single-level `$expand`, no paging is applied to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, paging is only applied to the EntitySet resource of the query.
+If you use only single-level `$expand`, the service doesn't apply paging to the expanded rows. If you include the `Prefer: odata.maxpagesize` request header, the service applies paging only to the EntitySet resource of the query.
 
-Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. It's a URL that represents the [filtered collection](overview.md#filtered-collections) for the relationship with your query options appended. You can use that URL to send a separate `GET` request and it returns the same rows that were returned in your original request. You can apply paging to that request.
+Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes no paging information. This URL represents the [filtered collection](overview.md#filtered-collections) for the relationship with your query options appended. You can use that URL to send a separate `GET` request, and it returns the same rows that were returned in your original request. You can apply paging to that request.
 
-Because no paging is applied to the expanded records, up to 5,000 related table records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, it could be a lot of data. Returning that much data could affect performance and possibly cause your request to time out. Be cautious about the queries you compose. You can use `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
+Because the service doesn't apply paging to the expanded records, up to 5,000 related table records can be returned for each expanded collection-valued navigation property. Depending on your data and the query, this amount could be large. Returning that much data could affect performance and possibly cause your request to time out. Be cautious about the queries you compose. Use the `$top`, `$filter`, and `$orderby` options to control the total number of records returned.
 
 The following example includes a single expand of the `Account_Tasks` and `contact_customer_accounts` while retrieving account records. The `Prefer: odata.maxpagesize=1` request header ensures that only one account record is returned in the first page.
 
@@ -387,16 +387,16 @@ OData-Version: 4.0
 }
 ```
 
-Compare this response with the following example, which includes a nested `$expand`. Scroll the example response horizontally to see that only the `@odata.nextLink` URL for the account result contains paging information.
+Compare this response with the following example, which includes a nested `$expand`. To see that only the `@odata.nextLink` URL for the account result contains paging information, scroll the example response horizontally.
 
 
 ### Nested $expand on collection-valued navigation properties
 
-If you use a nested `$expand` anywhere in your query, and you include the `Prefer: odata.maxpagesize` request header, paging is applied to each of the expanded collections.
+If you use a nested `$expand` anywhere in your query and include the `Prefer: odata.maxpagesize` request header, Dataverse applies paging to each of the expanded collections.
 
-Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes paging information. You can use that URL to send a separate `GET` request and it will return the next set of records that weren't included in your original request.
+Each expanded collection-valued navigation property returns a `<property>@odata.nextLink` URL that includes paging information. You can use that URL to send a separate `GET` request, and it returns the next set of records that weren't included in your original request.
 
-You can't use `$top` or `$orderby` options to limit the total number of records returned with a nested `$expand`. The following error is returned if you use these options:
+You can't use `$top` or `$orderby` options to limit the total number of records returned with a nested `$expand`. The service returns the following error if you use these options:
 
 ```json
 {
@@ -464,13 +464,13 @@ OData-Version: 4.0
 Compare this response with the previous example, which doesn't use a nested `$expand`. In this response:
 
 - The `Prefer: odata.maxpagesize=1` request header is applied to the `task` records returned with `Account_Tasks`. 
-- Only one task is returned instead of three.
+- The response returns only one task instead of three.
 - The `Account_Tasks@odata.nextLink` URL returns the next two tasks. 
-- Scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and`@odata.nextLink` URLs contain paging information.
+- Scroll the example response horizontally to see that `Account_Tasks@odata.nextLink`, `contact_customer_accounts@odata.nextLink`, and `@odata.nextLink` URLs contain paging information.
 
 ### Nested $expand with N:N relationships
 
-When a collection-valued navigation property represents an N:N relationship, you'll get the following error when you use nested `$expand` statements:
+When a collection-valued navigation property represents an N:N relationship, you get the following error when you use nested `$expand` statements:
 
 ```json
 {
@@ -481,13 +481,13 @@ When a collection-valued navigation property represents an N:N relationship, you
 }
 ```
 
-For example, using the Dynamics Lead table, which has a `contactleads_association` N:N relationship with the [contact table](../../reference/entities/contact.md), the following query returns the error because it includes `;$expand=createdby`.
+For example, by using the Dynamics Lead table, which has a `contactleads_association` N:N relationship with the [contact table](../../reference/entities/contact.md), the following query returns the error because it includes `;$expand=createdby`.
 
 ```http
 GET [Organization URI]/contacts?$select=fullname$expand=contactleads_association($select=fullname;$expand=createdby)
 ```
 
-To avoid this error, you can construct the query [using FetchXml](../../fetchxml/join-tables.md). For example:
+To avoid this error, construct the query [using FetchXml](../../fetchxml/join-tables.md). For example:
 
 ```xml
 <fetch>

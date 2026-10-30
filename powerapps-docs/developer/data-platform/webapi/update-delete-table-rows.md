@@ -64,7 +64,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
-> For information about associating and disassociating entities on update, see [Using single-valued navigation properties](associate-disassociate-entities-using-web-api.md#using-single-valued-navigation-properties).  
+> For information about associating and disassociating entities on update, see [Using single-valued navigation properties](associate-disassociate-table-rows.md).  
   
 <a name="bkmk_updateWithDataReturned"></a>
 
@@ -177,7 +177,7 @@ OData-Version: 4.0
 ```  
   
 > [!NOTE]
->  You can't use this approach with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Disassociate by using a single-valued navigation property](associate-disassociate-entities-using-web-api.md#disassociate-by-using-a-single-valued-navigation-property).  
+>  You can't use this approach with a single-valued navigation property to disassociate two entities. For an alternative approach, see [Disassociate by using a single-valued navigation property](associate-disassociate-table-rows.md).  
   
 <a name="bkmk_upsert"></a>
 
@@ -292,12 +292,12 @@ More information: [Choosing a PartitionId value](../elastic-tables.md#choose-a-p
 [Compose Http requests and handle errors](compose-http-requests-handle-errors.md)<br />
 [Query Data using the Web API](query/overview.md)<br />
 [Create a table row using the Web API](create-table-row.md)<br />
-[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)<br />
-[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)<br />
+[Retrieve a table row using the Web API](retrieve-table-row.md)<br />
+[Associate and disassociate table rows using the Web API](associate-disassociate-table-rows.md)<br />
 [Use Web API functions](use-web-api-functions.md)<br />
 [Use Web API actions](use-web-api-actions.md)<br />
 [Execute batch operations using the Web API](execute-batch-operations-using-web-api.md)<br />
-[Impersonate another user using the Web API](impersonate-another-user-web-api.md)<br />
+[Impersonate another user using the Web API](../impersonate-another-user.md#impersonate-another-user-by-using-the-web-api)<br />
 [Perform conditional operations using the Web API](perform-conditional-operations-using-web-api.md)
 
 [!INCLUDE[footer-include](../../../includes/footer-banner.md)]

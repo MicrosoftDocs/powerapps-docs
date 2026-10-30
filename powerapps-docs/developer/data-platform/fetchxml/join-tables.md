@@ -28,7 +28,7 @@ Use the [link-entity element](reference/link-entity.md) to describe the data fro
 | `name` | [!INCLUDE [link-entity-name-description](reference/includes/link-entity-name-description.md)] |
 | `from` | [!INCLUDE [link-entity-from-description](reference/includes/link-entity-from-description.md)] |
 | `to` | [!INCLUDE [link-entity-to-description](reference/includes/link-entity-to-description.md)] |
-| `link-type` | The type of link to use. The default value is `inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `outer`<br />- `any`<br />- `not any`<br />- `all`<br />- `not all`<br />- `exists`<br />- `in`<br />- `matchfirstrowusingcrossapply`<br />[Learn about link-type options](reference/link-entity.md#link-type-options).|
+| `link-type` | The type of link to use. The default value is `inner`, which restricts results to rows with matching values in both tables.<br />Other valid values are:<br />- `outer`<br />- `any`<br />- `not any`<br />- `all`<br />- `not all`<br />- `exists`<br />- `in`<br />- `matchfirstrowusingcrossapply`<br />[Learn about link-type options to filter related records](reference/link-entity.md#link-type-options-to-filter-related-records).|
 | `alias` | Represents the name of the related table in the results. |
 | `intersect` | Indicates that the `link-entity` is used to join tables and doesn't return any columns.|
 

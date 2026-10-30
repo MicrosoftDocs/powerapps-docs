@@ -94,7 +94,7 @@ Creates a new record in the specified entity set as described in [Create a table
 
 #### `Retrieve(entitySetName, id, query = null, includeAnnotations = true)`
 
-Retrieves a record from the specified entity set by ID, with optional query options as described in [Retrieve a table row using the Web API](retrieve-entity-using-web-api.md).
+Retrieves a record from the specified entity set by ID, with optional query options as described in [Retrieve a table row using the Web API](retrieve-table-row.md).
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set from which to retrieve the entity.
@@ -205,7 +205,7 @@ Sets the value of a specified column for a given record as described in [update 
 
 #### `GetValue(entitySetName, id, columnName)`
 
-Retrieves the value of a specified column for a given record as described in [retrieve a single property value](retrieve-entity-using-web-api.md#retrieve-a-single-property-value)
+Retrieves the value of a specified column for a given record as described in [retrieve a single property value](retrieve-table-row.md)
 
 - **Parameters:**
   - `entitySetName` (string): The name of the entity set.
@@ -216,7 +216,7 @@ Retrieves the value of a specified column for a given record as described in [re
 
 #### `Associate(targetSetName, targetId, navigationProperty, relatedSetName, relatedId)`
 
-Associates records by creating data in the relationship to link them as described in [add a record to a collection](associate-disassociate-entities-using-web-api.md#add-a-record-to-a-collection).
+Associates records by creating data in the relationship to link them as described in [add a record to a collection](associate-disassociate-table-rows.md).
 
 - **Parameters:**
   - `targetSetName` (string): The name of the target entity set.
@@ -229,7 +229,7 @@ Associates records by creating data in the relationship to link them as describe
 
 #### `Disassociate(targetSetName, targetId, navigationProperty, relatedId)`
 
-Disassociates a record from another record by deleting data in the relationship to link them as described in [remove a record from a collection](associate-disassociate-entities-using-web-api.md#remove-a-record-from-a-collection).
+Disassociates a record from another record by deleting data in the relationship to link them as described in [remove a record from a collection](associate-disassociate-table-rows.md).
 
 - **Parameters:**
   - `targetSetName` (string): The name of the target entity set.

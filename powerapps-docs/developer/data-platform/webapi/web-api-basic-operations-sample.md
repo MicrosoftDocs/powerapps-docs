@@ -35,7 +35,7 @@ This sample is divided into the following sections. Each section contains Datave
 |[Section 1: Basic create and update operations](#bkmk_section1)|[Basic create](create-table-row.md#bkmk_basicCreate)<br /> [Basic update](update-delete-table-rows.md#bkmk_update)|  
 |[Section 2: Create with association](#bkmk_section2)|[Associate table rows on create](create-table-row.md#associate-table-rows-on-create)|  
 |[Section 3: Create related table rows (deep insert)](#bkmk_section3)|[Create related table rows in one operation](create-table-row.md#bkmk_CreateRelated)|  
-|[Section 4: Associate and disassociate existing table rows](#bkmk_section4)|[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)|  
+|[Section 4: Associate and disassociate existing table rows](#bkmk_section4)|[Associate and disassociate table rows using the Web API](associate-disassociate-table-rows.md)|  
 |[Section 5: Delete table rows (sample cleanup)](#bkmk_section5)|[Basic delete](update-delete-table-rows.md#bkmk_delete)|  
   
 > [!NOTE]
@@ -791,9 +791,9 @@ This section shows how to associate and disassociate existing table rows. To for
 
 [Use the Dataverse Web API](overview.md)   
 [Create a table row using the Web API](create-table-row.md)   
-[Retrieve a table row using the Web API](retrieve-entity-using-web-api.md)   
+[Retrieve a table row using the Web API](retrieve-table-row.md)   
 [Update and delete table rows using the Web API](update-delete-table-rows.md)   
-[Associate and disassociate table rows using the Web API](associate-disassociate-entities-using-web-api.md)   
+[Associate and disassociate table rows using the Web API](associate-disassociate-table-rows.md)   
 [Web API Basic Operations Sample (C#)](samples/webapiservice-basic-operations.md)   
 [Web API Basic Operations Sample (PowerShell)](samples/basic-operations-powershell.md)   
 [Web API Basic Operations Sample (client-side JavaScript)](samples/basic-operations-client-side-javascript.md)

@@ -33,7 +33,7 @@ Each of the examples uses a `svc` variable that represents an instance of a clas
 >
 > Dataverse stores primary key data in telemetry to help maintain the service. If you specify customized primary key values, don't use sensitive information in those values.
 > 
-> With elastic tables, you can create records with duplicate primary key values and different `partitionid` values. However, this pattern is not compatible with model-driven or canvas Power Apps. [Learn about setting the primary key value with elastic tables](../use-elastic-tables.md#setting-the-primary-key-value)
+> With elastic tables, you can create records with duplicate primary key values and different `partitionid` values. However, this pattern is not compatible with model-driven or canvas Power Apps. [Learn about setting the primary key value with elastic tables](../use-elastic-tables.md#set-the-primary-key-value)
 
 
 #### [Late-bound](#tab/late)

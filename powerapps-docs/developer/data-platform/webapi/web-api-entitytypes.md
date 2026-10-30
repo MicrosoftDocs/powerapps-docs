@@ -108,7 +108,7 @@ The following example shows the annotation when the `account` entity has been co
 </Annotation>
 ```
 
-More information: [Retrieve record using an alternate key](retrieve-entity-using-web-api.md#retrieve-record-using-an-alternate-key)
+More information: [Retrieve record using an alternate key](retrieve-table-row.md)
 
 ## Next steps
 

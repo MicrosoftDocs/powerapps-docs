@@ -322,7 +322,7 @@ Accept: application/json
 
 Alternatively, you can use the `partitionid` value using alternate key style.
 
-- [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#using-the-alternate-key)
+- [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#use-the-alternate-key)
 - [Learn about specify a partitionid](use-elastic-tables.md#specify-partitionid)
 
 ## Bypass custom Dataverse logic
