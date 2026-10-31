@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "powerapps-docs/developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-by-using-client-api",
+      "redirect_url": "/power-apps/developer/model-driven-apps/open-main-form-dialog",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/webapi/update-delete-entities-using-web-api.md",
       "redirect_url": "update-delete-table-rows",
       "redirect_document_id": false

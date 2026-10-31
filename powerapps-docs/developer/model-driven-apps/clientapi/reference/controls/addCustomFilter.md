@@ -1,11 +1,12 @@
 ---
-title: "addCustomFilter (Client API reference) in model-driven apps"
-description: Adds filters to the results displayed in the lookup. Each filter is combined with any previously added filter.
+title: "addCustomFilter (Client API Reference) in Model-Driven Apps"
+description: Learn how to use addCustomFilter in model-driven apps to filter lookup results with fetchXml. Each filter combines with previous filters as an AND condition.
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
+ai-usage: ai-assisted
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -14,7 +15,7 @@ contributors:
 ---
 # addCustomFilter (Client API reference)
 
-Adds filters to the results displayed in the lookup. Each filter will be combined with any previously added filters as an `AND` condition.
+The `addCustomFilter` method adds filters to the results displayed in a lookup control in model-driven apps. Each filter is combined with any previously added filters as an `AND` condition.
 
 ## Control types supported
 
@@ -26,45 +27,46 @@ Lookup
 
 ## Parameters
 
-- **filter**: String. The fetchXml filter element to apply. For example:
+| Name | Type | Description |
+| --- | --- | --- |
+| `filter` | String | The FetchXML filter element to apply. |
+| `entityLogicalName` | String | Optional. If you set this parameter, the filter only applies to that table type. Otherwise, it applies to all types of tables returned. |
 
-    ```xml
-    <filter type="and">
-      <condition attribute="address1_city" operator="eq" value="Redmond" />
-    </filter>
-    ```
+For example, use the following XML for the `filter` parameter:
 
-- **entityLogicalName**: (Optional) String. If this is set, the filter only applies to that table type. Otherwise, it applies to all types of tables returned.
-
-[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
+```xml
+<filter type="and">
+  <condition attribute="address1_city" operator="eq" value="Redmond" />
+</filter>
+```
 
 ## Remarks
 
-This method can only be used in a function in an event handler for the [Lookup Control PreSearch Event](../events/presearch.md).
+Use this method in a function in an event handler for the [Lookup Control PreSearch Event](../events/presearch.md).
 
 ## Example
 
-The following code sample is for the Opportunity form **Account** (parentaccountid) lookup. When the **Sdk.setParentAccountIdFilter** function is set in the form **Onload** event handler, the **Sdk.filterCustomAccounts** function is added to the **PreSearch** event for that lookup. Remember to select the option to pass in the execution context when setting the function in the form **Onload** event handler. The result is that only accounts with the **Category** (accountcategorycode) value of **Preferred Customer** (1) will be returned.
+The following code sample is for the [Opportunity](/dynamics365/developer/reference/entities/opportunity) form [**Account**](/dynamics365/developer/reference/entities/opportunity#BKMK_ParentAccountId) (`parentaccountid`) lookup. When you set the `Sdk.setParentAccountIdFilter` function in the form `Onload` event handler, add the `Sdk.filterCustomerAccounts` function to the `PreSearch` event for that lookup. Remember to select the option to pass in the execution context when setting the function in the form `Onload` event handler. The result is that only accounts with the [**Category**](../../../../data-platform/reference/entities/account.md#BKMK_AccountCategoryCode) (`accountcategorycode`) value of **Preferred Customer** (1) are returned.
 
 ```JavaScript
 // A namespace defined for SDK sample code
 // You should define a unique namespace for your libraries
-var Sdk = window.Sdk || {};
+const Sdk = (window.Sdk ??= {});
 
 // set 'Sdk.setParentAccountIdFilter' in the Opportunity form onload event handler
-Sdk.setParentAccountIdFilter = function (executionContext) {
-
-    // get the form context
-    formContext = executionContext.getFormContext();
+Sdk.setParentAccountIdFilter = (executionContext) => {
+  const formContext = executionContext.getFormContext();
     formContext.getControl("parentaccountid").addPreSearch(Sdk.filterCustomerAccounts);
-}
+};
 
-Sdk.filterCustomerAccounts = function () {
-
-    // Only show accounts with the type 'Preferred Customer'
-    var customerAccountFilter = "<filter type='and'><condition attribute='accountcategorycode' operator='eq' value='1'/></filter>";
-    formContext.getControl("parentaccountid").addCustomFilter(customerAccountFilter, "account");
-}
+Sdk.filterCustomerAccounts = (executionContext) => {
+  const control = executionContext.getEventSource();
+  const customerAccountFilter = `
+    <filter type="and">
+      <condition attribute="accountcategorycode" operator="eq" value="1" />
+    </filter>`;
+  control.addCustomFilter(customerAccountFilter, "account");
+};
 ```
 
 ### Related articles

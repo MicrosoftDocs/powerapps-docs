@@ -1,9 +1,9 @@
 ---
-title: "Create your first component using Power Apps Component Framework in Microsoft Dataverse| MicrosoftDocs"
-description: "Learn how to implement code components using Power Apps component framework"
+title: Create Your First Component with Power Apps Component Framework
+description: "Learn how to build your first code component with Power Apps component framework. Create a linear slider control step by step and add it to your apps today."
 author: anuitz
 ms.author: anuitz
-ms.date: 01/09/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: pcf
@@ -11,22 +11,22 @@ contributors:
  - JimDaly
 ---
 
-# Create your first component
+# Create your first component with Power Apps component framework
 
-In this tutorial, you build a linear slider code component that users can use to change numeric values with a visual slider instead of typing the values in the column.
+In this tutorial, you use Power Apps component framework to build a linear slider code component that users can use to change numeric values with a visual slider instead of typing the values in the column.
 
-:::image type="content" source="media/sample-linear-input-control-mda.png" alt-text="Linear input control in a model-driven app.":::
+:::image type="content" source="media/sample-linear-input-control-mda.png" alt-text="Screenshot of the linear input slider control in a model-driven app form.":::
 
 You can find the sample code for the completed linear slider code component at [PowerApps-Samples/component-framework/LinearInputControl/](https://github.com/microsoft/PowerApps-Samples/tree/master/component-framework/LinearInputControl).
 
 To build a linear slider code component, complete the following steps:
 
-- [Create a new component project](#creating-a-new-component-project)
-- [Implement the manifest](#implementing-manifest)
-- [Implement component logic using TypeScript](#implementing-component-logic)
-- [Add style to the code components](#adding-style-to-the-code-component)
+- [Create a new component project](#create-a-new-component-project)
+- [Implement the component manifest](#implement-the-component-manifest)
+- [Implement component logic with TypeScript](#implement-component-logic-with-typescript)
+- [Add CSS style to the code component](#add-css-style-to-the-code-component)
 - [Build your code components](#build-your-code-components)
-- [Package your code components](#packaging-your-code-components)
+- [Package your code components](#package-your-code-components)
 - [Add your code component to an app](#add-your-code-component-to-an-app)
 
 ## Prerequisites
@@ -36,7 +36,7 @@ For this tutorial, install the following components:
 1. [Visual Studio Code (VSCode)](https://code.visualstudio.com/Download) (Ensure the **Add to PATH** option is selected)
 1. [Node.js](https://nodejs.org/en/download/) (LTS version is recommended)
 1. [Microsoft Power Platform CLI](/powerapps/developer/data-platform/powerapps-cli#install-power-apps-cli) (Use either Power Platform Tools for Visual Studio Code or Power Platform CLI for Windows)
-1. .NET Build tools by installing one of the following options. At minimum, select the workload `.NET build tools`:
+1. .NET build tools by installing one of the following options. At minimum, select the workload `.NET build tools`:
    - Visual Studio 2022
       - [Visual Studio 2022 for Windows & Mac](https://visualstudio.microsoft.com/downloads/). 
       - [Build Tools for Visual Studio 2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022).
@@ -49,7 +49,7 @@ For this tutorial, install the following components:
 > [!TIP]
 > Install [git for source control](https://git-scm.com/downloads).
 
-## Creating a new component project
+## Create a new component project
 
 For this tutorial, start in a folder located at `C:\repos`, but you can use any folder you like. Choose a folder where you want to check in your code.
 
@@ -81,7 +81,7 @@ For this tutorial, start in a folder located at `C:\repos`, but you can use any 
    > [!NOTE]
    > If you receive the error `The term 'npm' is not recognized as the name of a cmdlet, function, script file, or operable program.`, make sure you install [node.js](https://nodejs.org/en/download/) (LTS version is recommended) and all other prerequisites.
    
-## Implementing manifest
+## Implement the component manifest
 
 The control manifest is an XML file that contains the metadata of the code component. It also defines the behavior of the code component. In this tutorial, you create this manifest file under the `LinearInputControl` subfolder. When you open the `ControlManifest.Input.xml` file in Visual Studio Code, you see that the manifest file is predefined with some properties. For more information, see [Manifest](manifest-schema-reference/manifest.md).
 
@@ -235,9 +235,9 @@ Edit the [property](manifest-schema-reference/property.md) node as shown in the 
    
 ### Edit resources element
 
-The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. The [code](manifest-schema-reference/code.md) is specified as a child element under the resources element.
+The [resources](manifest-schema-reference/resources.md) node defines the visualization of the code component. It contains all the resources that build the visualization and styling of the code component. You specify the [code](manifest-schema-reference/code.md) as a child element under the resources element.
 
-The generated manifest already includes a definition of the [code element](manifest-schema-reference/code.md) with `path` and `order` attribute values set. Use these values. In the following [Adding style to the code component](#adding-style-to-the-code-component) section, you add CSS styles for the control. To support that step, edit the manifest to add them while you have it open.
+The generated manifest already includes a definition of the [code element](manifest-schema-reference/code.md) with `path` and `order` attribute values set. Use these values. In the following [Adding style to the code component](#add-css-style-to-the-code-component) section, you add CSS styles for the control. To support that step, edit the manifest to add them while you have it open.
 
 Edit the [resources](manifest-schema-reference/resources.md) node to add the following [css element](manifest-schema-reference/css.md):
 
@@ -299,7 +299,7 @@ The completed manifest file should look like this:
 ```
 
 1. Save the changes to the `ControlManifest.Input.xml` file.
-1. Generate `ManifestDesignTypes.d.ts` file by using the following command.
+1. Generate the `ManifestDesignTypes.d.ts` file by using the following command.
    
    ```CLI
    npm run refreshTypes
@@ -335,7 +335,7 @@ The completed manifest file should look like this:
    }
    ```
 
-## Implementing component logic
+## Implement component logic with TypeScript
 
 After implementing the manifest file, implement the component logic by using TypeScript. Implement the component logic inside the `index.ts` file. When you open the `index.ts` file in Visual Studio Code, you see that the four essential functions ([init](reference/control/init.md), [updateView](reference/control/updateview.md), [getOutputs](reference/control/getoutputs.md), and [destroy](reference/control/destroy.md)) are predefined. Now, implement the logic for the code component.
 
@@ -675,9 +675,9 @@ public destroy(): void {
 }
 ```
    
-When you're finished, save the changes to the `index.ts` file.
+When you finish, save the changes to the `index.ts` file.
    
-## Adding style to the code component
+## Add CSS style to the code component
 
 Developers and app makers can define their styling to represent their code components visually by using CSS. CSS allows developers to describe the presentation of code components, including style, colors, layouts, and fonts. The linear input component's [init](reference/control/init.md) method creates an input element and sets the class attribute to `linearslider`. The style for the `linearslider` class is defined in a separate CSS file. You can include additional component resources like CSS files with the code component to support further customizations.
 
@@ -754,7 +754,7 @@ Developers and app makers can define their styling to represent their code compo
     ```
     
 1. Save the `LinearInputControl.css` file.
-1. Note that the `ControlManifest.Input.xml` file already includes the `css` resource file inside the resources element because that step was completed in the [Implementing manifest](#implementing-manifest) section earlier.
+1. Note that the `ControlManifest.Input.xml` file already includes the `css` resource file inside the resources element because that step was completed in the [Implement the component manifest](#implement-the-component-manifest) section earlier.
    
     ```XML
    <resources>
@@ -876,9 +876,9 @@ Starting control harness...
 
 A browser also opens to the PCF Control Sandbox so that you can see the control and test it.
 
-:::image type="content" source="../model-driven-apps/clientapi/media/linear-input-control-pcf-control-sandbox.png" alt-text="Linear input control in PCF Control Sandbox":::
+:::image type="content" source="../model-driven-apps/clientapi/media/linear-input-control-pcf-control-sandbox.png" alt-text="Screenshot of the linear input slider control running in the PCF Control Sandbox.":::
 
-## Packaging your code components
+## Package your code components
 
 Follow these steps to create and import a [solution](../../maker/data-platform/solutions-overview.md) file:
 

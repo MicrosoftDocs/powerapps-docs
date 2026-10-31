@@ -37,7 +37,7 @@ function doSomething(executionContext) {
 
 - Getting the context of a grid (spanning the entire form) is only supported in ribbon commands. For more information, see [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions).
 - Calls to `getControl()` aren't supported when you use `gridContext`.
-- Grid contexts have the same validity as their execution context. Once the event handler for the execution context finishes, these contexts require extra care to use. See [Using context objects asynchronously](clientapi-execution-context.md#using-context-objects-asynchronously).
+- Grid contexts have the same validity as their execution context. Once the event handler for the execution context finishes, these contexts require extra care to use. See [Using context objects asynchronously](clientapi-execution-context.md#use-context-objects-asynchronously).
 
 
 ## Related articles

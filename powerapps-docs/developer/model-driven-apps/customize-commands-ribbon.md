@@ -1,9 +1,9 @@
 ---
 title: "Customize Commands and the Ribbon (Model-Driven Apps)"
-description: "Learn how to customize commands and ribbons in model-driven apps. Understand command bars, ribbon XML data, and how to control available commands for different clients and tables."
+description: "Learn how to customize commands and the ribbon in model-driven apps by using ribbon XML to control which commands appear and what they do."
 author: clromano
 ms.author: clromano
-ms.date: 03/27/2026
+ms.date: 10/29/2026
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -13,11 +13,11 @@ contributors:
   - JimDaly
 ---
 
-# Customize commands and the ribbon
+# Customize commands and the ribbon in model-driven apps
 
 [!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
-Model-driven apps display commands in different ways depending on the table and the client. In most places in the model-driven apps, you see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available by using a command bar that's optimized for touch.  
+Customize commands and the ribbon in model-driven apps to control which commands are available, when they're enabled, and what they do. Model-driven apps display commands in different ways depending on the table and the client. In most places in the model-driven apps, you see a *command bar* instead of a ribbon. Dynamics 365 for Tablets also uses data defined as ribbons to control what commands are available by using a command bar that's optimized for touch.  
   
 The command bar provides better performance. The ribbon still appears in the web application for certain forms and it's still used for list views in Dynamics 365 for Outlook.  Both the command bar and the ribbon use the same underlying XML data to define what commands to display, when the commands are enabled, and what the commands do.  
 
@@ -32,12 +32,12 @@ The articles in this section introduce you to key concepts that you must underst
 
 If you experience an issue with a ribbon command bar button, use this [troubleshooting guide](/troubleshoot/power-platform/power-apps/ribbon-issues-button-hidden?tabs=delete) to find and solve the problem.
 
-## Reference documentation
+## Ribbon XML reference documentation
 
 You can find reference documentation for Ribbon XML elements here: [Ribbon XML reference](/previous-versions/dynamicscrm-2016/developers-guide/gg327947%28v=crm.8%29). This documentation isn't maintained and includes many elements that are no longer relevant. It provides information about the elements defined in the ribbon schema files: [Ribbon core schema](ribbon-core-schema.md), [Ribbon types schema](ribbon-types-schema.md), and [Ribbon WSS schema](ribbon-wss-schema.md). Some remarks within this reference might be helpful.
 
 
-## Community tool
+## Community tool for editing the ribbon
 
 The SDK describes the process of editing the ribbon by editing the customization.xml file directly. You can also use a community tool, [Ribbon Workbench](https://www.develop1.net/public/rwb/ribbonworkbench.aspx), to visually edit ribbons by using the UI. 
 

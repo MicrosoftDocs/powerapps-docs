@@ -1,11 +1,12 @@
 ---
-title: "updateRecord (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the updateRecord method.
+title: "updateRecord (Client API Reference) in Model-Driven Apps"
+description: Learn how to use the updateRecord method in model-driven apps to update table records, with syntax, parameters, return values, and code examples.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 04/29/2025
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
+ai-usage: ai-assisted
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -31,7 +32,7 @@ contributors:
 |`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 
-## Return Value
+## Return value
 
 On success, returns a promise object to the `successCallback` with the following properties:
 
@@ -44,7 +45,14 @@ On success, returns a promise object to the `successCallback` with the following
 
 These examples use some of the same request objects as demonstrated in [Update and delete table rows using the Web API](../../../../data-platform/webapi/update-delete-table-rows.md) to define the data object for updating a table record.
 
-### Basic update
+|Example|Demonstrates|Web API Example|
+|---|---|---|
+|[Basic update](#basic-update-example)|How to update column values on an existing account record.|[Basic update](../../../../data-platform/webapi/update-delete-table-rows.md#basic-update)|
+|[Update associations to the related tables](#update-associations-to-the-related-tables-example)|How to change an account's primary contact using `@odata.bind`.|[Associate with a single-valued navigation property](../../../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property)|
+|[Update associations to the related tables of type Activity](#update-associations-to-the-related-tables-of-type-activity-example)|How to associate a task with an opportunity or set its Regarding lookup to an account.|[Associate with a single-valued navigation property](../../../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#associate-with-a-single-valued-navigation-property)|
+|[Update associations for collection-valued navigation properties](#update-associations-for-collection-valued-navigation-properties-example)|How to associate and disassociate related records using `Xrm.WebApi.online.execute`.|[Add a record to a collection](../../../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#add-a-record-to-a-collection) and [Remove a record from a collection](../../../../data-platform/webapi/associate-disassociate-entities-using-web-api.md#remove-a-record-from-a-collection)|
+
+### Basic update example
 
 Updates an existing account record with record ID = `5531d753-95af-e711-a94e-000d3a11e605`.
 
@@ -72,9 +80,9 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 );
 ```
 
-### Update associations to the related tables
+### Update associations to the related tables example
 
-To update association to the related table records (lookups), set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
+To update association to the related table records (lookups), set the value of single-valued navigation properties by using the `@odata.bind` annotation to point to another record.
 
 Here is code example:
 
@@ -102,7 +110,7 @@ Xrm.WebApi.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605", data)
 **Deprecated method for mobile offline scenario**
 
 > [!NOTE]
->  Instead of using `@odata.bind` annotation example above, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for exisiting customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
+>  Instead of using the `@odata.bind` annotation in the preceding example, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for existing customizations. However, use of the `@odata.bind` annotation is recommended for both online and offline scenarios instead of using this deprecated object.
 
 The following example uses the deprecated method to update an account record to associate another contact record as the primary contact for the account from mobile clients when working in the offline mode:
 
@@ -129,9 +137,9 @@ Xrm.WebApi.offline.updateRecord("account", "5531d753-95af-e711-a94e-000d3a11e605
 );
 ```
 
-### Update associations to the related tables of type Activity
+### Update associations to the related tables of type Activity example
 
-To update association to the related tables of type Activity, set the value of single-valued navigation properties using the `@odata.bind` annotation to another record.
+To update associations to the related tables of type Activity, set the value of single-valued navigation properties by using the `@odata.bind` annotation to point to another record.
 
 **Update related opportunity column on task**
 
@@ -175,9 +183,9 @@ Xrm.WebApi.updateRecord("task", "5531d753-95af-e711-a94e-000d3a11e605", data).th
 );
 ```
 
-### Update associations for collection-valued navigation properties
+### Update associations for collection-valued navigation properties example
 
-The [Xrm.WebApi.online.execute](online/execute.md) API can be used to associate and disassociate collection-valued navigation properties. This is **NOT** supported for mobile offline scenarios.
+Use the [Xrm.WebApi.online.execute](online/execute.md) API to associate and disassociate collection-valued navigation properties. This feature isn't supported for mobile offline scenarios.
 
 ### Related articles
 

@@ -1,9 +1,9 @@
 ---
-title: "formContext.data.process (Client API reference) in model-driven apps"
-description: "Provides events, methods, and objects to interact with the business process flow data on a form."
+title: "formContext.data.process: Business Process Flow Client API"
+description: "Learn how to use formContext.data.process events, methods, and objects to interact with business process flow data on model-driven app forms."
 author: matthidinger
 ms.author: mahiding
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -15,7 +15,7 @@ contributors:
 ---
 # formContext.data.process (Client API reference)
 
-Provides events, methods, and objects to interact with the business process flow data on a form. See [formContext.ui.process (Client API reference)](formContext-ui-process.md) for methods to interact with the business process flow control on the form.
+The formContext.data.process object provides events, methods, and objects to interact with the business process flow data on a form. For methods to interact with the business process flow control on the form, see [formContext.ui.process (Client API reference)](formContext-ui-process.md).
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
@@ -24,7 +24,7 @@ Provides events, methods, and objects to interact with the business process flow
 
 Use the following events and event handler methods to write scripts for business process flows.
 
-|Event | Event handler methods|
+| Event | Event handler methods |
 |--|--|
 |[OnPreProcessStatusChange](events/onpreprocessstatuschange.md)|[addOnPreProcessStatusChange](formContext-data-process/eventhandlers/addOnPreProcessStatusChange.md)<br/>[removeOnPreProcessStatusChange](formContext-data-process/eventhandlers/removeOnPreProcessStatusChange.md)|
 |[OnProcessStatusChange](events/onprocessstatuschange.md)|[addOnProcessStatusChange](formContext-data-process/eventhandlers/addOnProcessStatusChange.md)<br/>[removeOnProcessStatusChange](formContext-data-process/eventhandlers/removeOnProcessStatusChange.md)|
@@ -32,7 +32,7 @@ Use the following events and event handler methods to write scripts for business
 |[OnStageChange](events/OnStageChange.md)|[addOnStageChange](formContext-data-process/eventhandlers/addOnStageChange.md)<br/>[removeOnStageChange](formContext-data-process/eventhandlers/removeOnStageChange.md)|
 |[OnStageSelected](events/OnStageSelected.md)|[addOnStageSelected](formContext-data-process/eventhandlers/addOnStageSelected.md)<br/>[removeOnStageSelected](formContext-data-process/eventhandlers/removeOnStageSelected.md)|
 
-## Active Process methods
+## Active process methods
 
 Use these methods to retrieve information about the active process and set a different process as the active process.
 
@@ -74,7 +74,7 @@ A process instance contains the data for an instance of the business process flo
 |[getStatus](formcontext-data-process/instance/getStatus.md)|[!INCLUDE[formcontext-data-process/instance/includes/getStatus-description.md](formcontext-data-process/instance/includes/getStatus-description.md)]|
 |[setStatus](formcontext-data-process/instance/setStatus.md)|[!INCLUDE[formcontext-data-process/instance/includes/setStatus-description.md](formcontext-data-process/instance/includes/setStatus-description.md)]|
 
-## Active Stage methods
+## Active stage methods
 
 Use these methods to retrieve information about the active stage and set a different stage as the active stage.
 
@@ -87,7 +87,7 @@ Use these methods to retrieve information about the active stage and set a diffe
 
 A stage contains the data for a stage in a business process flow. Use the methods to access properties of the stage.
 
-|Name | Description|
+| Name | Description |
 |--|--|
 |[getCategory](formcontext-data-process/stage/getCategory.md)|[!INCLUDE[formcontext-data-process/stage/includes/getCategory-description.md](formcontext-data-process/stage/includes/getCategory-description.md)]|
 |[getEntityName](formcontext-data-process/stage/getEntityName.md)|[!INCLUDE[formcontext-data-process/stage/includes/getEntityName-description.md](formcontext-data-process/stage/includes/getEntityName-description.md)]|
@@ -101,7 +101,7 @@ A stage contains the data for a stage in a business process flow. Use the method
 
 A step contains the data for a step in a stage in a business process flow. Use the methods to access properties of the step.
 
-|Name | Description|
+| Name | Description |
 |--|--|
 |[getAttribute](formcontext-data-process/step/getAttribute.md)|[!INCLUDE[formcontext-data-process/step/includes/getAttribute-description.md](formcontext-data-process/step/includes/getAttribute-description.md)]|
 |[getName](formcontext-data-process/step/getName.md)|[!INCLUDE[formcontext-data-process/step/includes/getName-description.md](formcontext-data-process/step/includes/getName-description.md)]|
@@ -111,9 +111,9 @@ A step contains the data for a step in a stage in a business process flow. Use t
 
 ## Navigation methods
 
-Use these methods to move to next and previous stages. Both these methods will cause the OnStageChange event to occur.
+Use these methods to move to the next and previous stages. Both methods trigger the `OnStageChange` event.
 
-|Name | Description|
+| Name | Description |
 |--|--|
 |[moveNext](formContext-data-process/navigation/moveNext.md)|[!INCLUDE[formcontext-data-process/navigation/includes/moveNext-description.md](formcontext-data-process/navigation/includes/moveNext-description.md)]|
 |[movePrevious](formContext-data-process/navigation/movePrevious.md)|[!INCLUDE[formcontext-data-process/navigation/includes/movePrevious-description.md](formcontext-data-process/navigation/includes/movePrevious-description.md)]|
@@ -122,11 +122,11 @@ Use these methods to move to next and previous stages. Both these methods will c
 
 Use these methods to find information about the stages in the active path, enabled processes, and selected stage.
 
-|Name | Description|
+| Name | Description |
 |--|--|
-|[getActivePath](formContext-data-process/activepath/getActivePath.md)|[!INCLUDE[formcontext-data-process/activepath/includes/getActivePath-description.md](formcontext-data-process/activepath/includes/getActivePath-description.md)]|
-|[getEnabledProcesses](formContext-data-process/getEnabledProcesses.md)|[!INCLUDE[formcontext-data-process/includes/getEnabledProcesses-description.md](formcontext-data-process/includes/getEnabledProcesses-description.md)]|
-|[getSelectedStage](formContext-data-process/getSelectedStage.md)|[!INCLUDE[formcontext-data-process/includes/getSelectedStage-description.md](formcontext-data-process/includes/getSelectedStage-description.md)]|
+|[getActivePath](formContext-data-process/activepath/getActivePath.md)|[!INCLUDE[formcontext-data-process/activepath/includes/getActivePath-description.md](formContext-data-process/activepath/includes/getActivePath-description.md)]|
+|[getEnabledProcesses](formContext-data-process/getEnabledProcesses.md)|[!INCLUDE[formcontext-data-process/includes/getEnabledProcesses-description.md](formContext-data-process/includes/getEnabledProcesses-description.md)]|
+|[getSelectedStage](formContext-data-process/getSelectedStage.md)|[!INCLUDE[formcontext-data-process/includes/getSelectedStage-description.md](formContext-data-process/includes/getSelectedStage-description.md)]|
 
 ### Related articles
 

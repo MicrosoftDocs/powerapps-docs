@@ -1,9 +1,9 @@
 ---
-title: "Xrm.WebApi.online.execute (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the Xrm.WebApi.online.execute method.
+title: "Xrm.WebApi.online.execute Method (Client API Reference)"
+description: Use Xrm.WebApi.online.execute to run actions, functions, and CRUD operations in model-driven apps. Explore parameters, return values, and code examples.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 04/29/2025
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -27,8 +27,8 @@ contributors:
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`request`|Object|Yes|Object that will be passed to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a `getMetadata` method *via its prototype* that lets you define the metadata for the action, function or CRUD request you want to execute. See [request.getMetadata method](#requestgetmetadata-method)|
-|`successCallback`|Function|No|A function to call when operation is executed successfully. See [Return Value](#return-value)|
+|`request`|Object|Yes|Object that you pass to the Web API endpoint to execute an action, function, or CRUD request. The object exposes a `getMetadata` method *via its prototype* that you use to define the metadata for the action, function, or CRUD request you want to execute. See [request.getMetadata method](#requestgetmetadata-method)|
+|`successCallback`|Function|No|A function to call when the operation succeeds. See [Return Value](#return-value)|
 |`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](../includes/errorcallback-description.md)]|
 
 ### request.getMetadata method
@@ -37,12 +37,12 @@ The `getMetadata` method has the following parameters:
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`boundParameter`|String|No|The name of the bound parameter for the action or function to execute.<br />- Specify `undefined` if you are executing a CRUD request.<br />- Specify `null` if the action or function to execute is not bound to any table.<br />- Specify `entity` in case the action or function to execute is bound to a table.|
-|`operationName`|String|No|Name of the action, function, or one of the following values if you are executing a CRUD request: `Create`, `Retrieve`, `Update`, or `Delete`.|
-|`operationType`|Number|No|Indicates the type of operation you are executing; specify one of the following values:<br/>- `0`: Action<br/>- `1`: Function<br/>- `2`: CRUD|
-|`parameterTypes`|Object|Yes|The metadata for parameter types. The object has the following values:<br />`enumProperties` : (Optional) Object. The metadata for enum types. The object has two string values: `name` and `value`<br />`structuralProperty` : Number. The category of the parameter type. Specify one of the following values:<br />- `0`: Unknown<br />- `1`: PrimitiveType<br />- `2`: ComplexType<br />- `3`: EnumerationType<br />- `4`: Collection<br />- `5`: EntityType<br />`typeName` : String. The fully qualified name of the parameter type.|
+|`boundParameter`|String|No|The name of the bound parameter for the action or function to execute.<br />- Specify `undefined` if you're executing a CRUD request.<br />- Specify `null` if the action or function to execute isn't bound to any table.<br />- Specify `entity` if the action or function to execute is bound to a table.|
+|`operationName`|String|No|Name of the action, function, or one of the following values if you're executing a CRUD request: `Create`, `Retrieve`, `Update`, or `Delete`.|
+|`operationType`|Number|No|Indicates the type of operation you're executing. Specify one of the following values:<br/>- `0`: Action<br/>- `1`: Function<br/>- `2`: CRUD|
+|`parameterTypes`|Object|Yes|The metadata for parameter types. The object has the following values:<br />`enumProperties` : (Optional) Object. The metadata for enum types. The object has two string values: `name` and `value`.<br />`structuralProperty` : Number. The category of the parameter type. Specify one of the following values:<br />- `0`: Unknown<br />- `1`: PrimitiveType<br />- `2`: ComplexType<br />- `3`: EnumerationType<br />- `4`: Collection<br />- `5`: EntityType<br />`typeName` : String. The fully qualified name of the parameter type.|
 
-## Return Value
+## Return value
 
 On success, returns a promise object to the `successCallback` with the following properties:
 
@@ -54,29 +54,31 @@ On success, returns a promise object to the `successCallback` with the following
 |`status`|Number|Numeric value in the response status code. For example: `200`|
 |`statusText`|String|Description of the response status code. For example: `OK`|
 |`type`(Deprecated)|String|Response type. Values are: the empty string (default), `arraybuffer`, `blob`, `document`, `json`, and `text`.|
-|`url`|String|Request URL of the action, function, or CRUD request that was sent to the Web API endpoint.|
+|`url`|String|Request URL of the action, function, or CRUD request that you sent to the Web API endpoint.|
 |`json`|Promise|Parameter to the callback delegate is of type any (JSON object).|
 |`text`|Promise|Parameter to the callback delegate is a String.|
 
 ## Examples
 
-Find these examples below:
+Find these examples in the following sections:
 
-- [Execute an action](#execute-an-action)
-- [Execute a function](#execute-a-function)
-- [Create a record](#create-a-record)
-- [Retrieve a record](#retrieve-a-record)
-- [Update a record](#update-a-record)
-- [Delete a record](#delete-a-record)
-- [Associate a record](#associate-a-record)
-- [Disassociate a record](#disassociate-a-record)
+|Example|Demonstrates|
+|---|---|
+|[Execute an action](#execute-an-action-example)|How to execute the `WinOpportunity` action to mark an opportunity as won.|
+|[Execute a function](#execute-a-function-example)|How to execute the `WhoAmI`, `CalculateRollupField`, `RetrieveDuplicates`, and `InitializeFrom` functions and read their responses.|
+|[Create a record](#create-a-record-example)|How to create an account record using a request object.|
+|[Retrieve a record](#retrieve-a-record-example)|How to retrieve an account record's name by specifying its ID and the columns to return.|
+|[Update a record](#update-a-record-example)|How to update an account record's name using a request object.|
+|[Delete a record](#delete-a-record-example)|How to delete an account record by specifying its table and ID.|
+|[Associate a record](#associate-a-record-example)|How to associate an account with multiple contacts through a collection-valued navigation property.|
+|[Disassociate a record](#disassociate-a-record-example)|How to remove the association between an account and one contact through a collection-valued navigation property.|
 
 > [!TIP]
-> You can use the [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) to generate JavaScript code that uses the `Xrm.WebApi.online.execute` method.
+> Use the [Dataverse REST Builder](https://github.com/GuidoPreite/DRB) to generate JavaScript code that uses the `Xrm.WebApi.online.execute` method.
 
-### Execute an action
+### Execute an action example
 
-The following example demonstrates how to execute the `WinOpportunity` action found in the Dynamics 365 for Sales solution. The request object is created based on the action definition here: [Unbound actions](../../../../../data-platform/webapi/use-web-api-actions.md#unbound-actions)
+The following example demonstrates how to execute the `WinOpportunity` action found in the Dynamics 365 for Sales solution. The request object is created based on the action definition in [Unbound actions](../../../../../data-platform/webapi/use-web-api-actions.md#unbound-actions).
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -136,7 +138,7 @@ Xrm.WebApi.online.execute(winOpportunityRequest).then(function (response) {
 ```
 
 
-### Execute a function
+### Execute a function example
 
 The following example demonstrates how to execute the [WhoAmI function](xref:Microsoft.Dynamics.CRM.WhoAmI):
 
@@ -414,7 +416,7 @@ Xrm.WebApi.online.execute(initializeFromRequest)
 
 ### Perform CRUD operations
 
-#### Create a record
+#### Create a record example
 
 The following example demonstrates how to perform a create operation.
 
@@ -463,7 +465,7 @@ Xrm.WebApi.online.execute(createRequest)
 });
  ```
  
-#### Retrieve a record
+#### Retrieve a record example
 
 The following example demonstrates how to perform a retrieve operation.
 
@@ -516,9 +518,9 @@ Xrm.WebApi.online.execute(retrieveRequest)
 });
 ```
 
-#### Update a record
+#### Update a record example
 
-The following example demonstrates how to perform a update operation.
+The following example demonstrates how to perform an update operation.
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -568,7 +570,7 @@ Xrm.WebApi.online.execute(updateRequest)
 });
 ```
 
-#### Delete a record
+#### Delete a record example
 
 The following example demonstrates how to perform a delete operation.
 
@@ -620,8 +622,8 @@ Xrm.WebApi.online.execute(deleteRequest)
 });
 ```
 
-### Associate a record
-The following code sample demonstrates how to perform an Associate operation on collection-valued navigation properties (One-To-Many and Many-To-Many relationships). For single-valued navigation properties (Many-To-One relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+### Associate a record example
+The following code sample demonstrates how to perform an associate operation on collection-valued navigation properties (one-to-many and many-to-many relationships). For single-valued navigation properties (many-to-one relationships, also known as lookup columns), you can perform an update operation as shown earlier or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 ```JavaScript
 var Sdk = window.Sdk || {};
@@ -686,11 +688,11 @@ Xrm.WebApi.online.execute(manyToManyAssociateRequest)
 });
 ```
 
-### Disassociate a record
-The following code sample demonstrates how to perform a Disassociate operation on collection-valued navigation properties (One-To-Many and Many-To-Many relationships). For single-valued navigation properties (Many-To-One relationships a.k.a Lookup columns), you can perform an Update operation as shown above or use [Xrm.WebApi.updateRecord](../updateRecord.md).
+### Disassociate a record example
+The following code sample demonstrates how to perform a disassociate operation on collection-valued navigation properties (one-to-many and many-to-many relationships). For single-valued navigation properties (many-to-one relationships, also known as lookup columns), you can perform an update operation as shown earlier or use [Xrm.WebApi.updateRecord](../updateRecord.md).
 
 > [!NOTE]
-> Unlike the Associate operation which allows associating the target entity record with multiple related entity records in a single operation, the Disassociate operation is limited to only disassociating one entity record from the target entity record per operation.
+> Unlike the associate operation, which you can use to associate the target entity record with multiple related entity records in a single operation, the disassociate operation can only disassociate one entity record from the target entity record in each operation.
 
 ```JavaScript
 var Sdk = window.Sdk || {};

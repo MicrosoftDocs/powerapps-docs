@@ -1,9 +1,9 @@
 ---
-title: "getFormType (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the getFormType method.
+title: "getFormType (Client API Reference) in Model-Driven Apps"
+description: Learn how to use the getFormType method in model-driven apps to determine the current form type and review its return values.
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -22,11 +22,11 @@ contributors:
 
 `formContext.ui.getFormType();`
 
-## Return Value
+## Return value
 
 **Type**: Number
 
-**Description**: Form type. Returns one of the following values 
+**Description**: Form type. Returns one of the following values. 
 
 |Value |Form type |
 |---|---|

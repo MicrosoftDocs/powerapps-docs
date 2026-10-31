@@ -13,9 +13,12 @@
       href: use-iframe-and-web-resource-controls-on-a-form.md
   - name: Customize views
     href: customize-entity-views.md
-  - name: Open apps, forms, views, and reports with a URL
-    href: open-forms-views-dialogs-reports-url.md
+  - name: Open apps, forms, views, and reports
     items:
+    - name: Open with a URL
+      href: open-forms-views-dialogs-reports-url.md    
+    - name: Open main form in a dialog by using client API
+      href: open-main-form-dialog.md
     - name: Set column values using parameters passed to a form
       href: set-field-values-using-parameters-passed-form.md
     - name: Configure a form to accept custom querystring parameters

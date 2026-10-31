@@ -70,6 +70,8 @@ The entity record object contains the following values.
 | `selectedStageId` | String | (Optional) ID of the selected stage in business process instance. |
 | `tabName` | String | (Optional) Sets the focus on the tab of the form. |
 
+[Learn how to open main form in a dialog by using client API](../../../open-main-form-dialog.md)
+
 ##### Relationship object
 
 The relationship object, used in the [Entity record](#entity-record), contains the following values.
@@ -164,11 +166,19 @@ The `savedEntityReference` array returned for an entity record contains these pr
 - **id**: A string representation of the record GUID.
 - **name**: The primary column value of the record.
 
-## Example
+## Examples
 
 The following examples demonstrate navigating to different page types inline and in a dialog.
 
-### Example 1: Open account list
+|Example|Demonstrates|
+|---|---|
+|[Open account list](#open-account-list-example)|How to open the main account list inline.|
+|[Open an existing account record within a dialog](#open-an-existing-account-record-within-a-dialog-example)|How to open an existing account record in a centered dialog with a specified height and width.|
+|[Open an account form in the create mode within a dialog](#open-an-account-form-in-the-create-mode-within-a-dialog-example)|How to open an account form in create mode in a dialog and access the saved record's ID and name.|
+|[Open an HTML web resource in a dialog](#open-an-html-web-resource-in-a-dialog-example)|How to open an HTML web resource in a dialog with dimensions specified in pixels.|
+|[Open a generative page with input parameters in a dialog](#open-a-generative-page-with-input-parameters-in-a-dialog-example)|How to pass record context and custom parameters to a generative page dialog and read its return value.|
+
+### Open account list example
 
 Opens the main account list inline.
 
@@ -187,7 +197,7 @@ Xrm.Navigation.navigateTo(pageInput).then(
 );
 ```
 
-### Example 2: Open an existing account record within a dialog
+### Open an existing account record within a dialog example
 
 Opens an existing account form inside a dialog.
 
@@ -213,7 +223,9 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 );
 ```
 
-### Example 3: Open an account form in the create mode within a dialog
+[Learn how to open main form in a dialog by using client API](../../../open-main-form-dialog.md)
+
+### Open an account form in the create mode within a dialog example
 
 Opens an account form in create mode within a dialog and returns the created record reference when saved.
 
@@ -240,7 +252,9 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 );
 ```
 
-### Example 4: Open an HTML web resource in a dialog
+[Learn how to open main form in a dialog by using client API](../../../open-main-form-dialog.md)
+
+### Open an HTML web resource in a dialog example
 
 Opens an HTML web resource in a dialog.
 
@@ -265,7 +279,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
 );
 ```
 
-### Example 5: Open a generative page with input parameters in a dialog
+### Open a generative page with input parameters in a dialog example
 
 Opens a generative page as a centered dialog, passing a record ID, entity name, and custom data parameters. The generative page must be [set up to accept these parameters](../../../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
 

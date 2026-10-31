@@ -12,7 +12,7 @@ metadata:
   ms.collection: collection
   author: JimDaly
   ms.author: jdaly
-  ms.date: 09/03/2019 
+  ms.date: 10/29/2026
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -45,6 +45,10 @@ landingContent:
             url: customize-visualizations-dashboards.md
           - text: Customize commands and ribbons
             url: customize-commands-ribbon.md  
+          - text: Create, manage, and publish apps using code
+            url: create-manage-model-driven-apps-using-code.md
+          - text: Edit the customizations file
+            url: when-edit-customization-file.md
           
   # Card
   - title: Apply business logic
@@ -55,10 +59,32 @@ landingContent:
             url: client-scripting.md
           - text: Understand the Client API object model
             url: clientapi/understand-clientapi-object-model.md
+      - linkListType: how-to-guide
+        links:
+          - text: Navigate to and from a custom page
+            url: clientapi/navigate-to-custom-page-examples.md
+          - text: Create app side panes
+            url: clientapi/create-app-side-panes.md
+          - text: Send in-app notifications
+            url: clientapi/send-in-app-notifications.md
+          - text: Bring intelligence into your app using Agent Xrm APIs
+            url: clientapi/bring-intelligence-using-agent-apis.md
       - linkListType: tutorial
         links:
           - text: Write your first client script
             url: clientapi/walkthrough-write-your-first-client-script.md
+
+  # Card
+  - title: Generative pages
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Navigate to and from a generative page
+            url: clientapi/navigate-to-generative-page-examples.md
+      - linkListType: reference
+        links:
+          - text: Generative pages dataApi reference
+            url: generative-page/data-api/index.md
 
   # Card
   - title: Work with Web resources
@@ -67,16 +93,30 @@ landingContent:
         links:
           - text: Web resources
             url: web-resources.md 
-          - text: Debug JavaScript web resources
-            url: ./debug-javascript-webresources.md
           - text: Web resource dependencies
             url: web-resource-dependencies.md
-      - linkListType: sample
+      - linkListType: how-to-guide
         links:
           - text: Pass multiple values to a web resource
             url: sample-pass-multiple-values-web-resource-through-data-parameter.md
           - text: Import files as web resources
             url: sample-import-files-web-resources.md
+
+  # Card
+  - title: Development guidance and tools
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Best practices and guidance
+            url: best-practices/index.md
+          - text: Developer tools
+            url: developer-tools.md
+          - text: Testing tools for client-side development
+            url: testing-tools-client.md
+      - linkListType: how-to-guide
+        links:
+          - text: Debug JavaScript web resources
+            url: ./debug-javascript-webresources.md
 
 # Card
   - title: Build custom code components

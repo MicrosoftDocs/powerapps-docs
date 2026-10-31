@@ -1,9 +1,9 @@
 ---
-title: "Form OnSave event (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the form OnSave event.
+title: "Form OnSave Event in Model-Driven Apps (Client API Reference)"
+description: "Learn when the form OnSave event fires in model-driven apps, how to cancel saves, and how to use async OnSave handlers. Explore examples and settings."
 author: MitiJ
 ms.author: mijosh
-ms.date: 08/20/2024
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -15,10 +15,10 @@ contributors:
 ---
 # Form OnSave event (Client API reference) in model-driven apps
 
-The `OnSave` event occurs when:
+The form `OnSave` event in model-driven apps lets you run logic, validate data, or cancel a save before a record is saved. The `OnSave` event occurs when:
 
-- The user selects the **Save** or **Refresh** button in the command bar, even when there's no changed data to be saved.
-- Code executes the [formContext.data.entity.save](../formContext-data-entity/save.md) method, even when there's no changed data to be saved.
+- The user selects the **Save** or **Refresh** button in the command bar, even when there's no changed data to save.
+- Code executes the [formContext.data.entity.save](../formContext-data-entity/save.md) method, even when there's no changed data to save.
 - The user navigates away from the form and there's unsaved data in the form.
 - The AutoSave option is enabled, 30 seconds after data has changed and there's unsaved data in the form.
 - Code executes the [formContext.data.save](../formContext-data/save.md) method and there's unsaved data in the form.
@@ -28,7 +28,7 @@ The `OnSave` event occurs when:
 
 To determine which button was clicked to perform the save, use the [getSaveMode](../save-event-arguments/getSaveMode.md) method.
 
-You can cancel the save action by using the preventDefault method within the event arguments object. The preventDefault method is accessible by using the getEventArgs method that is part of the execution context. Execution context is automatically passed to the form event handler.
+You can cancel the save action by using the [preventDefault](../save-event-arguments/preventDefault.md) method within the event arguments object. The `preventDefault` method is accessible by using the [getEventArgs](../executioncontext/getEventArgs.md) method that is part of the execution context. Execution context is automatically passed to the form event handler.
 
 ## Asynchronous event handler support
 
@@ -42,14 +42,14 @@ You can also cancel the save operation irrespective of the error in the handler 
 
 The `OnSave` event waits for one promise returned per handler. If multiple promises are required, it's recommended to wrap all the promises in the `Promise.all()` method and return the single resulting promise. For multiple handlers that all return a promise, we recommend you to create one handler that calls all the events and return a single promise that wraps all required promises.  This practice is to minimize wait times caused by the timeout.
 
-### Example scenario on when to use async OnSave handlers
+### Example: When to use async OnSave handlers
 
-Consider creating a Work Order Service Task, you need to validate that the Customer Asset selected has the same account listed in the Work Order. Fetching the account on the Work Order and Customer Asset are both asynchronous processes and need to be completed before the validation can occur.
+Consider creating a Work Order Service Task where you need to validate that the Customer Asset selected has the same account listed in the Work Order. Fetching the account on the Work Order and Customer Asset are both asynchronous processes and you need to complete both before you can validate.
 
-In this scenario, since there are multiple async processes and both calls return a single promise by wrapping both in the `Promise.all()` method.
+In this scenario, since there are multiple async processes and both calls return a single promise, wrap both in the `Promise.all()` method.
 
 > [!NOTE] 
-> The `preventDefault` method can only be used synchronously.
+> You can only use the `preventDefault` method synchronously.
 
 For example:
 
@@ -67,26 +67,26 @@ For example:
  }
 ```
 
-### Enable Async OnSave using app setting 
+### Enable async OnSave handlers by using an app setting
 
-To use async onSave handlers, you need to enable it through an app setting:
+To use async onSave handlers, turn on the feature through an app setting:
 
 1. Go to https://make.powerapps.com.
-1. Make sure select the correct environment.
+1. Ensure you select the correct environment.
 1. Select **Apps** from the left navigation pane.
-1. Select the app and then select **...** (ellipses). Select **Edit**.
+1. Select the app, select **...** (ellipses), and then select **Edit**.
 1. Select **Settings** from the command bar.
 1. When the dialog opens, select **Features**.
 1. Turn on **Async onSave handler**.
 1. Select **Save**.
 
-    ![Async OnSave app setting](../../../media/async_onSave_app_settings.png "Async OnSave app setting")
+   :::image type="content" source="../../../media/async-onsave-handler-app-settings.png" alt-text="Screenshot of the Async onSave handler feature setting turned on in the app Settings dialog.":::
 
-### Async OnSave timeouts
+### Disable async OnSave handler timeouts
 
-When you use an async `OnSave` handler, the form waits for the promise returned by the handler to be fulfilled. To ensure that the form save completes in a timely manner, the handler will throw a timeout exception after 10 seconds to let you know to tune the async `OnSave` handler for better performance.
+When you use an async `OnSave` handler, the form waits for the promise returned by the handler to be fulfilled. To ensure that the form save completes in a timely manner, the handler throws a timeout exception after 10 seconds to let you know to tune the async `OnSave` handler for better performance.
 
-There are scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To make sure the async operation waits for the promise to resolve, use the [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md) method.
+There are scenarios where pausing the `OnSave` handler for longer than 10 seconds is needed. An example is opening a dialog and waiting for the user's input before continuing to save. To ensure the async operation waits for the promise to resolve, use the [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md) method.
 
 > [!NOTE]
 > You must call `disableAsyncTimeout` before any await statements or async calls.
@@ -101,9 +101,9 @@ async function myHandler(context) {
  }
 ```
 
-When [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md) is called, the timeout for that handler isn't applied. It continues to wait for that handler's promise to be fulfilled.
+When you call [disableAsyncTimeout](../save-event-arguments/disableasynctimeout.md), the timeout for that handler isn't applied. It continues to wait for that handler's promise to be fulfilled.
 
-This pattern should be used with caution as it might affect the performance of the form save.
+This pattern can affect the performance of the form save.
 
 
 ### Related articles

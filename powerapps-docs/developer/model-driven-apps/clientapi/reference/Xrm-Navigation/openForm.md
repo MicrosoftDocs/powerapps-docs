@@ -1,9 +1,9 @@
 ---
-title: "openForm (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the openForm method.
+title: "openForm (Client API Reference) in Model-Driven Apps"
+description: "Learn how to use the openForm method in the model-driven apps Client API to open table and quick create forms, with parameters and examples."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 12/01/2022
+ms.date: 10/29/2026
 ms.reviewer: jdaly
 ms.topic: reference
 search.audienceType: 
@@ -17,7 +17,7 @@ contributors:
 [!INCLUDE[./includes/openForm-description.md](./includes/openForm-description.md)]
 
 > [!NOTE]
-> To open a main form as a dialog, use the [navigateTo](navigateTo.md) method instead. More information: [Open main form in a dialog using client API](../../../customize-entity-forms.md#open-main-form-in-a-dialog-by-using-client-api)
+> To open a main form as a dialog, use the [navigateTo](navigateTo.md) method instead. For more information, see [Open main form in a dialog using client API](../../../open-main-form-dialog.md).
 
 ## Syntax
 
@@ -27,9 +27,9 @@ contributors:
 
 |Name|Type|Required|Description|
 |---|---|---|---|
-|`entityFormOptions`|Object|Yes|Form options for opening the form. See [entityFormOptions object](#entityformoptions-object)|
+|`entityFormOptions`|[entityFormOptions](#entityformoptions-object)|Yes|Form options for opening the form. |
 |`formParameters`|Object|No|A dictionary object that passes extra parameters to the form. Invalid parameters cause an error.<br /><br />For information about passing parameters to a form, see [Set column values using parameters passed to a form](../../../set-field-values-using-parameters-passed-form.md) and [Configure a form to accept custom querystring parameters](../../../configure-form-accept-custom-querystring-parameters.md).|
-|`successCallback`|Function|No|A function to execute when the record is saved in the quick create form. This function accepts an object as a parameter. The object has a `savedEntityReference` array with the following properties to identify the records displayed or created:<br /> - `entityType`: The logical name of the table.<br /> - `id`: A string representation of a GUID value for the record.<br /> - `name`: The primary column value of the record displayed or created.<br /><br />**NOTE**: <br /> - The `successCallback` function isn't executed when you open a form for an existing or new record.<br /> - The `successCallback` function is executed only when you save a record in a quick create form that was opened using the openForm method.|
+|`successCallback`|Function|No|A function to execute when the record is saved in the quick create form. This function accepts an object as a parameter. The object has a `savedEntityReference` array with the following properties to identify the records displayed or created:<br /> - `entityType`: The logical name of the table.<br /> - `id`: A string representation of a GUID value for the record.<br /> - `name`: The primary column value of the record displayed or created.<br /><br />**NOTE**: <br /> - The `successCallback` function isn't executed when you open a form for an existing or new record.<br /> - The `successCallback` function is executed only when you save a record in a quick create form that you opened by using the openForm method.|
 |`errorCallback`|Function|No|A function to execute when the operation fails.|
 
 
@@ -49,7 +49,7 @@ The object contains the following values:
 |`height`|Number|No|Height of the form window to be displayed in pixels. Requires passing `openInNewWindow` parameter as true.|
 |`width`|Number|No|Width of the form window to be displayed in pixels. Requires passing `openInNewWindow` parameter as true.|
 |`navbar`|String|No|Controls whether the navigation bar is displayed and whether application navigation is available using the areas and subareas defined in the sitemap. Valid values are: `on`, `off`, or `entity`. Requires passing openInNewWindow parameter as true.<br />- `on`: The navigation bar is displayed. This is the default behavior if the navbar parameter isn't used.<br />- `off`: The navigation bar isn't displayed. People can navigate using other user interface elements or the back and forward buttons.<br />- `entity`: On a form, only the navigation options for related tables are available. After navigating to a related table, a back button is displayed in the navigation bar to allow returning to the original record.|
-|`relationship`|Object|No|Define a relationship object to display the related records on the form. See [relationship object](#relationship-object)|
+|`relationship`|[relationship](#relationship-object)|No|Define a relationship object to display the related records on the form. |
 |`selectedStageId`|String|No|ID of the selected stage in business process instance.|
 |`useQuickCreateForm`|Bool|No| Indicates whether to open a quick create form. The table must have the **Allow Quick Create** option enabled for the quick create form to be displayed and you must also add the table and the quick create form to your app. If you don't specify the value of `useQuickCreateForm`, the default is set to `false`.|
 
@@ -67,14 +67,21 @@ The object has the following values.
 
 ## Remarks
 
-You must use this method to open table or quick create forms instead of the deprecated  [Xrm.Utility.openEntityForm](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openEntityForm) and  [Xrm.Utility.openQuickCreate](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openQuickCreate) methods.
+You must use this method to open table or quick create forms instead of the deprecated [Xrm.Utility.openEntityForm](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openentityform) and [Xrm.Utility.openQuickCreate](/previous-versions/dynamicscrm-2016/developers-guide/jj602956(v=crm.8)#openquickcreate) methods.
 
 Use [setActiveProcess](../formcontext-data-process/activeprocess/setactiveprocess.md) to display a particular business process and [setActiveProcessInstance](../formcontext-data-process/setactiveprocessinstance.md) to display a particular business process instance on the form.
  
 
 ## Examples
 
-### Example 1: Open a form for existing record
+|Sample|Description|
+|---|---|
+|[Open a form for existing record](#open-a-form-for-existing-record-example)|Open a contact form for an existing record by specifying its ID.|
+|[Open a form for new record](#open-a-form-for-new-record-example)|Open a new contact form with default values, including a user lookup.|
+|[Open a form for new record (complex lookup)](#open-a-form-for-new-record-complex-lookup-example)|Open a new email form with default values and a regarding lookup that specifies the table type.|
+|[Open a quick create form](#open-a-quick-create-form-example)|Open a quick create contact form with default values.|
+
+### Open a form for existing record example
 
 The following sample code opens a contact form to display an existing contact record:
 
@@ -93,9 +100,9 @@ Xrm.Navigation.openForm(entityFormOptions).then(
     });
 ```
 
-### Example 2: Open a form for new record
+### Open a form for new record example
 
-The following sample code opens a contact form with some pre-populated values to create a new record:
+The following sample code opens a contact form with some prepopulated values to create a new record:
 
 ```JavaScript
 var entityFormOptions = {};
@@ -126,9 +133,9 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
     });
 ```
 
-### Example 3: Open a form for new record (complex lookup)
+### Open a form for new record (complex lookup) example
 
-The following sample code opens an activity form with some pre-populated values (including a complex lookup) to create a new record:
+The following sample code opens an activity form with some prepopulated values (including a complex lookup) to create a new record:
 
 ```JavaScript
 var entityFormOptions = {};
@@ -155,9 +162,9 @@ Xrm.Navigation.openForm(entityFormOptions, formParameters).then(
     });
 ```
 
-### Example 4: Open a quick create form
+### Open a quick create form example
 
-The following sample code opens a quick create contact form with some pre-populated values:
+The following sample code opens a quick create contact form with some prepopulated values:
 
 ```JavaScript
 var entityFormOptions = {};
