@@ -1,9 +1,9 @@
 ---
-title: "Pass data from a page as a parameter to Ribbon actions (model-driven apps)"
-description: "Learn how to pass data from model-driven app pages as parameters to ribbon actions using the CrmParameter element."
+title: "Pass Page Data to Ribbon Actions in Model-Driven Apps"
+description: "Learn how to pass form, grid, and context data from model-driven app pages to ribbon actions by using the CrmParameter element."
 author: clromano
 ms.author: clromano
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: mda-developer
@@ -53,7 +53,7 @@ You can also specify **CommandProperties** as `<CrmParameter>` value in your rib
 > [!NOTE]
 > Getting *form context* and *grid context* for JavaScript functions for ribbon actions is different from how you get these values in form scripting. For information about form scripting and how to get these contexts, see [Client API form context](clientapi/clientapi-form-context.md) and [Client API grid context](clientapi/clientapi-grid-context.md).
 
-## Form values
+## Get and set form values in ribbon actions
 
 By using a form ribbon, you can use the `data.entity`.[attributes](clientapi/reference/attributes.md) collection and the `ui`.[controls](clientapi/reference/controls.md) collection to get and set values for known columns. 
 
@@ -61,21 +61,20 @@ For example, the following sample code shows how to get the account name column 
 
 ```JavaScript
 function mySampleFunction(primaryControl) {
-    var formContext = primaryControl;    
-    var accountName = formContext.getControl("name").getAttribute().getValue();    
+  const formContext = primaryControl;
+  const accountName = formContext.getControl("name").getAttribute().getValue();
 
     // Set the WebSiteURL column if account name contains "Contoso"
-    if (accountName.toLowerCase().search("contoso") != -1) {
+  if (accountName?.toLowerCase().includes("contoso")) {
         formContext.getAttribute("websiteurl").setValue("https://www.contoso.com");
-    }
-    else {
+  } else {
         Xrm.Navigation.openAlertDialog({ text: "Account name does not contain 'Contoso'." });
     }
 }
 ```
 
   
-## Grid values
+## Pass grid values to ribbon actions
 
 Most of the values for the `<CrmParameter>` element relate to working with data displayed in a grid or hierarchy chart. By using the `Value` parameter enumeration options, you can easily isolate items by:  
   
@@ -101,7 +100,7 @@ Most of the values for the `<CrmParameter>` element relate to working with data 
   
  
   
-## Other context information
+## Pass other context information by using CrmParameter
 
  In addition to data values, you can retrieve client context information by using [\<CrmParameter\>](/previous-versions/dynamicscrm-2016/developers-guide/gg309332(v=crm.8)).  You can use the following options as the value for the `CrmParameter` element: `OrgName`, `OrgLcid`, and `UserLcid`.
  

@@ -1,9 +1,9 @@
 ---
-title: "Controls collection (Client API reference)"
-description: "Learn about how to access controls associated with columns."
+title: "Controls Collection (Client API Reference)"
+description: "Learn how to use the Controls collection in the Client API to access every control associated with a column on a model-driven app form. Explore usage tips now."
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -16,15 +16,32 @@ contributors:
 # Controls collection (Client API reference)
 
 
-Use the Controls collection to access controls associated with columns. 
+Use the `controls` collection to access controls associated with columns. 
 
-Because each column may be represented more than one time on the page, the controls collection provides access to all controls representing that column. If the column is represented by only one control in the page, the length of this collection will be 1. When you use the control getName method, the name of the first control will be the same as the name of the column. The second instance of a control for that column will be **\<columnName>1**. The pattern **\<columnName>+N** will continue for each additional control added to the form for a specific column.
+When you perform actions on controls that are tied to a column, consider that the control might appear on the page more than once. Generally, you should perform the same actions for each control for the column. You can loop through the column controls collection and perform the actions on each control.
 
-When a form displays a business process flow control in the header, additional controls will be added for each column that is displayed in the business process flow. These controls have a unique name like the following: **header\_process\_\<column name>**.
+For example, to add a notification to each control bound to the `name` column, use the following code:
 
-When performing actions on controls that are tied to a column, you should always consider that the control may be included on the page more than once and you should generally perform the same actions for each control for the column. You can do this by looping through the column controls collection and perform the actions on each control.
+```JavaScript
+const notification = {
+    messages: ['Sample Notification on Name Controls'],
+    notificationLevel: 'RECOMMENDATION',
+    uniqueId: 'my_unique_id'
+ };
+ 
+formContext.getAttribute("name").controls.forEach(control =>
+    control.addNotification(notification)
+ );
+```
 
-### Related articles
+Because each column can appear more than once on the page, the controls collection provides access to all controls that represent that column. If the column is represented by only one control on the page, the length of this collection is 1. 
+
+When you use the control [getName](../controls/getName.md) method, the name of the first control matches the name of the column. The second instance of a control for that column is `<columnName>1`. The pattern `<columnName>+N` continues for each additional control added to the form for a specific column.
+
+When a form displays a business process flow control in the header, it adds controls for each column that appears in the business process flow. These controls have a unique name like the following: `header_process_<column name>`.
+
+
+## Related articles
 
 [Columns (Client API reference)](../attributes.md)
 

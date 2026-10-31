@@ -1,9 +1,9 @@
 ---
-title: "formContext.data.save (Client API reference) in model-driven apps"
-description: Saves the record asynchronously with the option to set callback functions to be executed after the save operation is completed.
+title: "formContext.data.save (Client API Reference) in Model-Driven Apps"
+description: Learn how to use formContext.data.save to save a record asynchronously in model-driven apps and set callback functions to run after the save completes.
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -17,24 +17,30 @@ contributors:
 
 [!INCLUDE[./includes/save-description.md](./includes/save-description.md)]
 
-You can also set an object to control how appointment, recurring appointment, or service activity records are processed.
+By using `formContext.data.save`, you can set an object to control how [appointment](../../../../data-platform/reference/entities/appointment.md), [recurring appointment](../../../../data-platform/reference/entities/recurringappointmentmaster.md), or [service activity](/dynamics365/developer/reference/entities/serviceappointment) records are processed.
+
+> [!NOTE]
+> When working with forms and you call the `formContext.data.save` method, ensure that you also call the [preventDefault](../save-event-arguments/preventDefault.md) method to prevent triggering any default save operation when a user saves the form.
 
 ## Syntax
 
 `formContext.data.save(saveOptions).then(successCallback, errorCallback);`
 
-[!INCLUDE[cc-terminology](../../../../data-platform/includes/cc-terminology.md)]
-
 ## Parameters
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|`saveOptions`|Object|No|An object for specifying options for saving the record. The object has following parameters:<br/><br/>- **`saveMode`**: (Optional) Number. Specify a value indicating how the save event was initiated. For a list of supported values, see the return value of the [getSaveMode](../save-event-arguments/getsavemode.md) method. Note that setting the **`saveMode`** does not actually take the corresponding action; it is just to provide information to the **`OnSave`** event handlers about the reason for the save operation.<br/><br/>- **`useSchedulingEngine`**: (Optional) Boolean. Indicate whether to use the `Book` or `Reschedule` messages rather than the `Create` or `Update` messages. This option is only applicable when used with appointment, recurring appointment, or service activity records.<br/><br/> **NOTE**: `useSchedulingEngine` property is not supported in Unified Interface.|
+|`saveOptions`|[saveOptions](#saveoptions-parameter)|No|An object for specifying options for saving the record.|
 |`successCallback`|Function|No|A function to call when the operation succeeds.|
-|`errorCallback`|Function|No|A function to call when the operation fails. An object with the following properties will be passed:<br/><br/>- **`errorCode`**: Number. The error code.<br/><br/>- **`message`**: String. A localized error message.|
+|`errorCallback`|Function|No|A function to call when the operation fails. The function receives an object with the following properties:<br/><br/>- **`errorCode`**: Number. The error code.<br/><br/>- **`message`**: String. A localized error message.|
 
-> [!NOTE]
-> When working with forms, and you call the `formContext.data.save` method, make sure that you also call the [preventDefault](../save-event-arguments/preventDefault.md) to ensure that any default save operation is not triggered when a user saves the form.
+
+### saveOptions parameter
+
+| Name | Type | Description |
+| --- | --- | --- |
+| `saveMode` | Number | (Optional) Specify a value that indicates how the save event was initiated. For a list of supported values, see the return value of the [getSaveMode](../save-event-arguments/getsavemode.md) method.<br /><br />Setting the `saveMode` doesn't actually take the corresponding action; it just provides information to the `OnSave` event handlers about the reason for the save operation. |
+| `useSchedulingEngine` | Boolean | (Optional) Indicate whether to use the `Book` or `Reschedule` messages rather than the `Create` or `Update` messages.<br /><br />This option only applies when used with [appointment](../../../../data-platform/reference/entities/appointment.md), [recurring appointment](../../../../data-platform/reference/entities/recurringappointmentmaster.md), or [service activity](/dynamics365/developer/reference/entities/serviceappointment) records records.<br /><br />This property isn't supported in Unified Interface. |
 
 
 ### Related articles

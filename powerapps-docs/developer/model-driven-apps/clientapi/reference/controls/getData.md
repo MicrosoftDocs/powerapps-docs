@@ -3,7 +3,7 @@ title: "control.getData (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the control.getData method.
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -14,11 +14,11 @@ contributors:
 ---
 # control.getData (Client API reference)
 
-Returns the value of the data query string parameter passed to a Silverlight web resource. 
+This method is not supported. 
 
 ## Control types supported
 
-Web resource
+[!INCLUDE [cc_silverlight-deprecated](../../../../../includes/silverlight-deprecated.md)]
 
 ## Syntax
  

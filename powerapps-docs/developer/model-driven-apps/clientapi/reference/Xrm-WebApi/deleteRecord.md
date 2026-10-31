@@ -1,9 +1,9 @@
 ---
-title: "deleteRecord (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the deleteRecord method.
+title: "deleteRecord (Client API Reference) in Model-Driven Apps"
+description: Learn how to use the deleteRecord method in the Client API to delete a table record in model-driven apps. Review syntax, parameters, return values, and an example.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 04/29/2025
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -29,7 +29,7 @@ contributors:
 |`successCallback`|Function|No|A function to call when a record is deleted. See [Return Value](#return-value)|
 |`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
-## Return Value
+## Return value
 
 On success, returns a promise object to the `successCallback` with the following properties:
 
@@ -39,11 +39,11 @@ On success, returns a promise object to the `successCallback` with the following
 |`id`|String|GUID of the record.|
 |`name`|String|Name of the  record.|
 
-## Examples
+## Example
 
-These examples use some of the same request objects as demonstrated in [Update and delete tables using the Web API](../../../../data-platform/webapi/update-delete-table-rows.md) to define the data object for updating an entity record.
+This example uses the same request objects as the ones in [Update and delete tables using the Web API](../../../../data-platform/webapi/update-delete-table-rows.md) to define the data object for updating an entity record.
 
-Deletes an account with record ID = 5531d753-95af-e711-a94e-000d3a11e605.
+Deletes an account with record ID `5531d753-95af-e711-a94e-000d3a11e605`.
 
 ```JavaScript
 Xrm.WebApi.deleteRecord("account", "5531d753-95af-e711-a94e-000d3a11e605").then(

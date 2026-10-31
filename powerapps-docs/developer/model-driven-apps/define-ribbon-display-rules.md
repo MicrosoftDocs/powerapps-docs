@@ -3,7 +3,7 @@ title: "Define Ribbon Display Rules (Model-Driven Apps)"
 description: "Learn how ribbon display rules control when elements appear in model-driven apps, and use available rule types to configure command visibility."
 author: clromano
 ms.author: clromano
-ms.date: 02/02/2024
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -102,7 +102,7 @@ The `EntityRule` includes an optional context parameter to specify whether the t
 
 [!INCLUDE[ribbon_element_FormEntityContextRule](../../includes/ribbon-element-formentitycontextrule.md)]
 
-## `<FormStateRule`  
+## `<FormStateRule>`  
 
 Use the form state rule to determine the current type of form that is displaying a record. `State` options are as follows:  
 

@@ -1,10 +1,10 @@
 ---
-title: Navigate to and from a generative page using client API
-description: "Learn how to navigate to and from generative pages in model-driven apps. Explore inline, dialog, and side pane examples, pass input parameters, and return values from dialogs."
+title: Navigate to and From a Generative Page Using Client API
+description: "Learn how to navigate to and from generative pages in model-driven apps using client API. Open pages inline, in dialogs, or side panes, and pass parameters."
 author: jasongre
 ms.author: jasongre
 ms.reviewer: jdaly
-ms.date: 10/09/2026
+ms.date: 10/29/2026
 ms.topic: how-to
 ms.subservice: mda-developer
 applies_to:
@@ -15,7 +15,7 @@ ms.collection:
   - bap-ai-copilot
 ---
 
-# Navigate to and from a generative page using client API
+# Navigate to and from a generative page by using client API
 
 This article provides examples of navigating to generative pages in model-driven apps by using client APIs. Learn how to open generative pages inline, in a dialog, or in an app side pane; pass input parameters such as a record ID or custom data; and return values from a dialog to the calling script.
 
@@ -56,7 +56,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ## Open a generative page inline with record context
 
-Passes a `recordId` and `entityName` to the generative page so the page can load and display a specific record. The target generative page must be [set up to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
+Passes a `recordId` and `entityName` to the generative page so the page can load and display a specific record. [Set up the target generative page to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
 
 ```javascript
 var pageInput = {
@@ -82,7 +82,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ## Open a generative page inline with custom data
 
-Passes a `data` object containing custom key-value pairs to the generative page. The target generative page must be [set up to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
+Passes a `data` object containing custom key-value pairs to the generative page. [Set up the target generative page to accept these parameters](../../../maker/model-driven-apps/generative-pages.md#set-up-a-page-to-accept-input-parameters).
 
 ```javascript
 var pageInput = {
@@ -139,7 +139,7 @@ Xrm.Navigation.navigateTo(pageInput, navigationOptions)
 
 ## Open a generative page as a side dialog
 
-Opens a generative page as a side dialog using `position: 2`.
+Opens a generative page as a side dialog by using `position: 2`.
 
 ```javascript
 var pageInput = {

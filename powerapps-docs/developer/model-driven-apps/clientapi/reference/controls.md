@@ -1,11 +1,12 @@
 ---
-title: "Controls in model-driven apps for Dynamics 365"
-description: A control represents an HTML element present on the form.
+title: "Controls in Model-Driven Apps for Dynamics 365"
+description: Learn about controls in model-driven apps and the Client API methods available for each control type to change control presentation and behavior.
 author: MitiJ
 ms.author: mijosh
-ms.date: 01/06/2023
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
+ai-usage: ai-assisted
 search.audienceType: 
   - developer
 contributors:
@@ -13,9 +14,9 @@ contributors:
 ---
 # Controls (Client API reference)
 
-A control represents an HTML element present on the form. Some controls are bound to a specific column, whereas others might represent unbound controls such as an IFRAME, web resource, or a subgrid added to the form.
+In model-driven apps, a control represents an HTML element on the form. Some controls are bound to a specific column, while others represent unbound controls such as an IFRAME, web resource, or subgrid added to the form.
 
-The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding column. You access controls using one of the following collections: 
+The **control** object provides methods to change the presentation or behavior of a control and identify the corresponding column. Access controls by using one of the following collections: 
 
 - **formContext.ui.controls**
 - **formContext.ui Section.controls**
@@ -23,507 +24,205 @@ The **control** object provides methods to change the presentation or behavior o
 
 The **formContext**.[getControl](controls/getControl.md) method is a shortcut method to access **formContext.ui.controls.get**. 
 
-Controls are categorized by type. You can determine the type of a control by using the [getControlType](controls/getControlType.md) method. Certain control methods are only available for specific types of controls.
+> [!NOTE]
+> When you perform actions on controls that are tied to a column, consider that the control might appear on the page more than once. Generally, you should perform the same actions for each control for the column. You can loop through the column [controls collection](attributes/controls-collection.md) and perform the actions on each control.
 
-This article provides information about the methods available per control type. 
+Controls are categorized by type. Use the [getControlType](controls/getControlType.md) method to determine the type of a control. Certain control methods are available only for specific types of controls.
+
+This article provides information about the methods available for each control type. 
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
 ## Standard control type
 
-These are the methods available for a Standard control.
+These methods are available for a Standard control.
 
-:::row:::
-   :::column:::
-      [addNotification](controls/addNotification.md)
-   :::column-end:::
-   :::column:::
-      [clearNotification](controls/clearNotification.md)
-   :::column-end:::
-   :::column:::
-      [getAttribute](controls/getAttribute.md)
-   :::column-end:::
-   :::column:::
-      [getControlType](controls/getControlType.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getDisabled](controls/getDisabled.md)
-   :::column-end:::
-   :::column:::
-      [getLabel](controls/getLabel.md)
-   :::column-end:::
-   :::column:::
-      [getName](controls/getName.md)
-   :::column-end:::
-   :::column:::
-      [getOutputs](controls/getoutputs.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getParent](controls/getParent.md)
-   :::column-end:::
-   :::column:::
-      [getVisible](controls/getVisible.md)
-   :::column-end:::
-   :::column:::
-      [setDisabled](controls/setDisabled.md)
-   :::column-end:::
-   :::column:::
-      [setFocus](controls/setFocus.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [setLabel](controls/setLabel.md)
-   :::column-end:::
-   :::column:::
-      [setNotification](controls/setNotification.md)
-   :::column-end:::
-   :::column:::
-      [setVisible](controls/setVisible.md)
-   :::column-end:::
-   :::column:::
-      &nbsp;
-   :::column-end:::
-:::row-end:::
+|Method|Description|
+|---|---|
+|[addNotification](controls/addNotification.md)|Displays an error or recommendation notification with optional actions.|
+|[clearNotification](controls/clearNotification.md)|Removes a notification from the control.|
+|[getAttribute](controls/getAttribute.md)|Returns the column that the control is bound to.|
+|[getControlType](controls/getControlType.md)|Returns the type of the control.|
+|[getDisabled](controls/getDisabled.md)|Returns whether the control is disabled.|
+|[getLabel](controls/getLabel.md)|Returns the control's label.|
+|[getName](controls/getName.md)|Returns the control's name.|
+|[getOutputs](controls/getoutputs.md)|Returns a dictionary of the control's output properties.|
+|[getParent](controls/getParent.md)|Returns the section that contains the control.|
+|[getVisible](controls/getVisible.md)|Returns whether the control is visible.|
+|[setDisabled](controls/setDisabled.md)|Enables or disables the control.|
+|[setFocus](controls/setFocus.md)|Moves focus to the control.|
+|[setLabel](controls/setLabel.md)|Changes the control's label.|
+|[setNotification](controls/setNotification.md)|Displays an error message to indicate that data isn't valid.|
+|[setVisible](controls/setVisible.md)|Shows or hides the control.|
 
 
-The following methods for the Standard control are [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) in this release: `addOnKeyPress`, `fireOnKeyPress`, and `removeOnKeyPress`.
+The following methods for the Standard control are [deprecated](/power-platform/important-changes-coming#some-client-apis-are-deprecated): [addOnKeyPress](/previous-versions/dynamicscrm-2016/developers-guide/gg334266(v=crm.8)#addonkeypress), [fireOnKeyPress](/previous-versions/dynamicscrm-2016/developers-guide/gg334266(v=crm.8)#fireonkeypress), and [removeOnKeyPress](/previous-versions/dynamicscrm-2016/developers-guide/gg334266(v=crm.8)#removeonkeypress).
 
 ## IFRAME control type
 
 These methods are available for an IFRAME control.
 
-:::row:::
-   :::column:::
-      [getContentWindow](controls/getContentWindow.md)
-   :::column-end:::
-   :::column:::
-      [getControlType](controls/getControlType.md)
-   :::column-end:::
-   :::column:::
-      [getDisabled](controls/getDisabled.md)
-   :::column-end:::
-   :::column:::
-      [getInitialUrl](controls/getInitialUrl.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getLabel](controls/getLabel.md)
-   :::column-end:::
-   :::column:::
-      [getName](controls/getName.md)
-   :::column-end:::
-   :::column:::
-      [getObject](controls/getObject.md)
-   :::column-end:::
-   :::column:::
-      [getParent](controls/getParent.md)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column:::
-      [getSrc](controls/getSrc.md)
-   :::column-end:::
-   :::column:::
-      [getVisible](controls/getVisible.md)
-   :::column-end:::
-   :::column:::
-      [setDisabled](controls/setDisabled.md)
-   :::column-end:::
-   :::column:::
-      [setFocus](controls/setFocus.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [setLabel](controls/setLabel.md)
-   :::column-end:::
-   :::column:::
-      [setSrc](controls/setSrc.md)
-   :::column-end:::
-   :::column:::
-      [setVisible](controls/setVisible.md)
-   :::column-end:::
-   :::column:::
-      &nbsp;
-   :::column-end:::
-:::row-end:::
+|Method|Description|
+|---|---|
+|[getContentWindow](controls/getContentWindow.md)|Returns the content window of the IFRAME or web resource.|
+|[getControlType](controls/getControlType.md)|Returns the type of the control.|
+|[getDisabled](controls/getDisabled.md)|Returns whether the control is disabled.|
+|[getInitialUrl](controls/getInitialUrl.md)|Returns the default URL configured for the IFRAME.|
+|[getLabel](controls/getLabel.md)|Returns the control's label.|
+|[getName](controls/getName.md)|Returns the control's name.|
+|[getObject](controls/getObject.md)|Returns the form object that represents the IFRAME or web resource.|
+|[getParent](controls/getParent.md)|Returns the section that contains the control.|
+|[getSrc](controls/getSrc.md)|Returns the URL currently displayed in the IFRAME or web resource.|
+|[getVisible](controls/getVisible.md)|Returns whether the control is visible.|
+|[setDisabled](controls/setDisabled.md)|Enables or disables the control.|
+|[setFocus](controls/setFocus.md)|Moves focus to the control.|
+|[setLabel](controls/setLabel.md)|Changes the control's label.|
+|[setSrc](controls/setSrc.md)|Sets the URL to display in the IFRAME or web resource.|
+|[setVisible](controls/setVisible.md)|Shows or hides the control.|
 
-## Kbsearch (Knowledge base search) control type
+## Kbsearch (knowledge base search) control type
 
-These methods are available for knowledge base search control.
+These methods are available for the knowledge base search control.
 
-:::row:::
-   :::column:::
-      [addOnPostSearch](controls/addOnPostSearch.md)
-   :::column-end:::
-   :::column:::
-      [addOnResultOpened](controls/addOnResultOpened.md)
-   :::column-end:::
-   :::column:::
-      [addOnSelection](controls/addOnSelection.md)
-   :::column-end:::
-   :::column:::
-      [getControlType](controls/getControlType.md)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column:::
-      [getDisabled](controls/getDisabled.md)
-   :::column-end:::
-   :::column:::
-      [getLabel](controls/getLabel.md)
-   :::column-end:::
-   :::column:::
-      [getName](controls/getName.md)
-   :::column-end:::
-   :::column:::
-      [getParent](controls/getParent.md)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column:::
-      [getSearchQuery](controls/getSearchQuery.md)
-   :::column-end:::
-   :::column:::
-      [getSelectedResults](controls/getSelectedResults.md)
-   :::column-end:::
-   :::column:::
-      [getTotalResultCount](controls/getTotalResultCount.md)
-   :::column-end:::
-   :::column:::
-      [getVisible](controls/getVisible.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [openSearchResult](controls/openSearchResult.md)
-   :::column-end:::
-   :::column:::
-      [removeOnPostSearch](controls/removeOnPostSearch.md)
-   :::column-end:::
-   :::column:::
-      [removeOnResultOpened](controls/removeOnResultOpened.md)
-   :::column-end:::
-   :::column:::
-      [removeOnSelection](controls/removeOnSelection.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [setFocus](controls/setFocus.md)
-   :::column-end:::
-   :::column:::
-      [setLabel](controls/setLabel.md)
-   :::column-end:::
-   :::column:::
-      [setSearchQuery](controls/setSearchQuery.md)
-   :::column-end:::
-   :::column:::
-      [setVisible](controls/setVisible.md)
-   :::column-end:::
-:::row-end:::
+|Method|Description|
+|---|---|
+|[addOnPostSearch](controls/addOnPostSearch.md)|Adds an event handler that runs after a search completes.|
+|[addOnResultOpened](controls/addOnResultOpened.md)|Adds an event handler that runs when a search result opens.|
+|[addOnSelection](controls/addOnSelection.md)|Adds an event handler that runs when a search result is selected.|
+|[getControlType](controls/getControlType.md)|Returns the type of the control.|
+|[getDisabled](controls/getDisabled.md)|Returns whether the control is disabled.|
+|[getLabel](controls/getLabel.md)|Returns the control's label.|
+|[getName](controls/getName.md)|Returns the control's name.|
+|[getParent](controls/getParent.md)|Returns the section that contains the control.|
+|[getSearchQuery](controls/getSearchQuery.md)|Returns the text used as the search criteria.|
+|[getSelectedResults](controls/getSelectedResults.md)|Returns the currently selected search result.|
+|[getTotalResultCount](controls/getTotalResultCount.md)|Returns the number of search results.|
+|[getVisible](controls/getVisible.md)|Returns whether the control is visible.|
+|[openSearchResult](controls/openSearchResult.md)|Opens a specified search result.|
+|[removeOnPostSearch](controls/removeOnPostSearch.md)|Removes an event handler for search completion.|
+|[removeOnResultOpened](controls/removeOnResultOpened.md)|Removes an event handler for opening a search result.|
+|[removeOnSelection](controls/removeOnSelection.md)|Removes an event handler for selecting a search result.|
+|[setFocus](controls/setFocus.md)|Moves focus to the control.|
+|[setLabel](controls/setLabel.md)|Changes the control's label.|
+|[setSearchQuery](controls/setSearchQuery.md)|Sets the text used as the search criteria.|
+|[setVisible](controls/setVisible.md)|Shows or hides the control.|
 
 
 
 >[!NOTE]
->When the knowledge base search control is added to the social pane, the name of the control will be `searchwidgetcontrol_notescontrol`. This name can't be changed. 
+>When you add the knowledge base search control to the social pane, the control name is `searchwidgetcontrol_notescontrol`. You can't change this name. 
 
 ## Lookup control type
 
 These methods are available for a lookup control.
 
-:::row:::
-   :::column:::
-      [addCustomFilter](controls/addCustomFilter.md)
-   :::column-end:::
-   :::column:::
-      [addCustomView](controls/addCustomView.md)
-   :::column-end:::
-   :::column:::
-      [addNotification](controls/addNotification.md)
-   :::column-end:::
-   :::column:::
-      [addOnLookupTagClick](controls/addOnLookupTagClick.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [addPreSearch](controls/addPreSearch.md)
-   :::column-end:::
-   :::column:::
-      [clearNotification](controls/clearNotification.md)
-   :::column-end:::
-   :::column:::
-      [getAttribute](controls/getAttribute.md)
-   :::column-end:::
-   :::column:::
-      [getControlType](controls/getControlType.md)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column:::
-      [getDefaultView](controls/getDefaultView.md)
-   :::column-end:::
-   :::column:::
-      [getDisabled](controls/getDisabled.md)
-   :::column-end:::
-   :::column:::
-      [getEntityTypes](controls/getEntityTypes.md)
-   :::column-end:::
-   :::column:::
-      [getLabel](controls/getLabel.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getName](controls/getName.md)
-   :::column-end:::
-   :::column:::
-      [getParent](controls/getParent.md)
-   :::column-end:::
-   :::column:::
-      [getVisible](controls/getVisible.md)
-   :::column-end:::
-   :::column:::
-      [removeOnLookupTagClick](controls/removeOnLookupTagClick.md)
-   :::column-end:::   
-:::row-end:::
-:::row:::
-   :::column:::
-      [removePreSearch](controls/removePreSearch.md)
-   :::column-end:::
-   :::column:::
-      [setDefaultView](controls/setDefaultView.md)
-   :::column-end:::
-   :::column:::
-      [setDisabled](controls/setDisabled.md)
-   :::column-end:::
-   :::column:::
-      [setEntityTypes](controls/setEntityTypes.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [setFocus](controls/setFocus.md)
-   :::column-end:::
-   :::column:::
-      [setLabel](controls/setLabel.md)
-   :::column-end:::
-   :::column:::
-      [setNotification](controls/setNotification.md)
-   :::column-end:::
-   :::column:::
-      [setVisible](controls/setVisible.md)
-   :::column-end:::
-:::row-end:::
-
-
+|Method|Description|
+|---|---|
+|[addCustomFilter](controls/addCustomFilter.md)|Adds a filter to the lookup results, combined with existing filters by using AND.|
+|[addCustomView](controls/addCustomView.md)|Adds a view to the lookup dialog.|
+|[addNotification](controls/addNotification.md)|Displays an error or recommendation notification with optional actions.|
+|[addOnLookupTagClick](controls/addOnLookupTagClick.md)|Adds an event handler that runs when a lookup tag is clicked.|
+|[addPreSearch](controls/addPreSearch.md)|Adds an event handler that runs before a lookup search.|
+|[clearNotification](controls/clearNotification.md)|Removes a notification from the control.|
+|[getAttribute](controls/getAttribute.md)|Returns the column that the control is bound to.|
+|[getControlType](controls/getControlType.md)|Returns the type of the control.|
+|[getDefaultView](controls/getDefaultView.md)|Returns the ID of the default lookup view.|
+|[getDisabled](controls/getDisabled.md)|Returns whether the control is disabled.|
+|[getEntityTypes](controls/getEntityTypes.md)|Returns the table types allowed in the lookup.|
+|[getLabel](controls/getLabel.md)|Returns the control's label.|
+|[getName](controls/getName.md)|Returns the control's name.|
+|[getParent](controls/getParent.md)|Returns the section that contains the control.|
+|[getVisible](controls/getVisible.md)|Returns whether the control is visible.|
+|[removeOnLookupTagClick](controls/removeOnLookupTagClick.md)|Removes an event handler for lookup tag clicks.|
+|[removePreSearch](controls/removePreSearch.md)|Removes an event handler that runs before a lookup search.|
+|[setDefaultView](controls/setDefaultView.md)|Sets the default view in the lookup dialog.|
+|[setDisabled](controls/setDisabled.md)|Enables or disables the control.|
+|[setEntityTypes](controls/setEntityTypes.md)|Sets the table types allowed in the lookup.|
+|[setFocus](controls/setFocus.md)|Moves focus to the control.|
+|[setLabel](controls/setLabel.md)|Changes the control's label.|
+|[setNotification](controls/setNotification.md)|Displays an error message to indicate that data isn't valid.|
+|[setVisible](controls/setVisible.md)|Shows or hides the control.|
 
 
 ## Choices and choice control types
 
-Both choices and choice controls have the same set of methods available.
+Choices and choice controls have the same set of methods available.
 
-:::row:::
-   :::column:::
-      [addNotification](controls/addNotification.md)
-   :::column-end:::
-   :::column:::
-      [addOption](controls/addOption.md)
-   :::column-end:::
-   :::column:::
-      [clearNotification](controls/clearNotification.md)
-   :::column-end:::
-   :::column:::
-      [clearOptions](controls/clearOptions.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getAttribute](controls/getAttribute.md)
-   :::column-end:::
-   :::column:::
-      [getControlType](controls/getControlType.md)
-   :::column-end:::
-   :::column:::
-      [getDisabled](controls/getDisabled.md)
-   :::column-end:::
-   :::column:::
-      [getLabel](controls/getLabel.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getName](controls/getName.md)
-   :::column-end:::
-   :::column:::
-      [getOptions](controls/getOptions.md)
-   :::column-end:::
-   :::column:::
-      [getParent](controls/getParent.md)
-   :::column-end:::
-   :::column:::
-      [getVisible](controls/getVisible.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [removeOption](controls/removeoption.md)
-   :::column-end:::
-   :::column:::
-      [setDisabled](controls/setDisabled.md)
-   :::column-end:::
-   :::column:::
-      [setFocus](controls/setFocus.md)
-   :::column-end:::
-   :::column:::
-      [setLabel](controls/setLabel.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [setNotification](controls/setNotification.md)
-   :::column-end:::
-   :::column:::
-      [setVisible](controls/setVisible.md)
-   :::column-end:::
-   :::column:::
-      &nbsp;
-   :::column-end:::
-   :::column:::
-      &nbsp;
-   :::column-end:::
-:::row-end:::
+|Method|Description|
+|---|---|
+|[addNotification](controls/addNotification.md)|Displays an error or recommendation notification with optional actions.|
+|[addOption](controls/addOption.md)|Adds an option to the control.|
+|[clearNotification](controls/clearNotification.md)|Removes a notification from the control.|
+|[clearOptions](controls/clearOptions.md)|Removes all options from the control.|
+|[getAttribute](controls/getAttribute.md)|Returns the column that the control is bound to.|
+|[getControlType](controls/getControlType.md)|Returns the type of the control.|
+|[getDisabled](controls/getDisabled.md)|Returns whether the control is disabled.|
+|[getLabel](controls/getLabel.md)|Returns the control's label.|
+|[getName](controls/getName.md)|Returns the control's name.|
+|[getOptions](controls/getOptions.md)|Returns the available options, including the blank option and excluding removed options.|
+|[getParent](controls/getParent.md)|Returns the section that contains the control.|
+|[getVisible](controls/getVisible.md)|Returns whether the control is visible.|
+|[removeOption](controls/removeoption.md)|Removes an option from the control.|
+|[setDisabled](controls/setDisabled.md)|Enables or disables the control.|
+|[setFocus](controls/setFocus.md)|Moves focus to the control.|
+|[setLabel](controls/setLabel.md)|Changes the control's label.|
+|[setNotification](controls/setNotification.md)|Displays an error message to indicate that data isn't valid.|
+|[setVisible](controls/setVisible.md)|Shows or hides the control.|
 
 
-## Quickform control type
+## Quick form control type
 
 See [formContext.ui.quickForms](formcontext-ui-quickforms.md) for information about methods supported for this control type.
 
 ## Subgrid control type
 
-See [Grids and subgrids](grids.md) for information methods supported for this control type.
+See [Grids and subgrids](grids.md) for information about methods supported for this control type.
 
-## Timelinewall control type
+## Timeline wall control type
 
-The timeline control presents the Posts, Activities, and Notes in a unified view. These methods are available for this control type.
+The timeline control presents the posts, activities, and notes in a unified view. These methods are available for this control type.
 
-:::row:::
-   :::column:::
-      [getControlType](controls/getControlType.md)
-   :::column-end:::
-   :::column:::
-      [getDisabled](controls/getDisabled.md)
-   :::column-end:::
-   :::column:::
-      [getLabel](controls/getLabel.md)
-   :::column-end:::
-   :::column:::
-      [getName](controls/getName.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getParent](controls/getParent.md)
-   :::column-end:::
-   :::column:::
-      [getVisible](controls/getVisible.md)
-   :::column-end:::
-   :::column:::
-      [refresh](controls/refresh.md)
-   :::column-end:::
-   :::column:::
-      [setDisabled](controls/setDisabled.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [setFocus](controls/setFocus.md)
-   :::column-end:::
-   :::column:::
-      [setLabel](controls/setLabel.md)
-   :::column-end:::
-   :::column:::
-      [setVisible](controls/setVisible.md)
-   :::column-end:::
-   :::column:::
-      &nbsp;
-   :::column-end:::
-:::row-end:::
+|Method|Description|
+|---|---|
+|[getControlType](controls/getControlType.md)|Returns the type of the control.|
+|[getDisabled](controls/getDisabled.md)|Returns whether the control is disabled.|
+|[getLabel](controls/getLabel.md)|Returns the control's label.|
+|[getName](controls/getName.md)|Returns the control's name.|
+|[getParent](controls/getParent.md)|Returns the section that contains the control.|
+|[getVisible](controls/getVisible.md)|Returns whether the control is visible.|
+|[refresh](controls/refresh.md)|Refreshes the data displayed in the timeline.|
+|[setDisabled](controls/setDisabled.md)|Enables or disables the control.|
+|[setFocus](controls/setFocus.md)|Moves focus to the control.|
+|[setLabel](controls/setLabel.md)|Changes the control's label.|
+|[setVisible](controls/setVisible.md)|Shows or hides the control.|
 
 ## Timer control type
 
 These methods are available for the timer control.
 
-:::row:::
-   :::column:::
-      [getControlType](controls/getControlType.md)
-   :::column-end:::
-   :::column:::
-      [getDisabled](controls/getDisabled.md)
-   :::column-end:::
-   :::column:::
-      [getLabel](controls/getLabel.md)
-   :::column-end:::
-   :::column:::
-      [getName](controls/getName.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [getParent](controls/getParent.md)
-   :::column-end:::
-   :::column:::
-      [getState](controls/getState.md)
-   :::column-end:::
-   :::column:::
-      [getVisible](controls/getVisible.md)
-   :::column-end:::
-   :::column:::
-      [refresh](controls/refresh.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-      [setDisabled](controls/setDisabled.md)
-   :::column-end:::
-   :::column:::
-      [setFocus](controls/setFocus.md)
-   :::column-end:::
-   :::column:::
-      [setLabel](controls/setLabel.md)
-   :::column-end:::
-   :::column:::
-      [setVisible](controls/setVisible.md)
-   :::column-end:::
-:::row-end:::
+|Method|Description|
+|---|---|
+|[getControlType](controls/getControlType.md)|Returns the type of the control.|
+|[getDisabled](controls/getDisabled.md)|Returns whether the control is disabled.|
+|[getLabel](controls/getLabel.md)|Returns the control's label.|
+|[getName](controls/getName.md)|Returns the control's name.|
+|[getParent](controls/getParent.md)|Returns the section that contains the control.|
+|[getState](controls/getState.md)|Returns the current state of the timer.|
+|[getVisible](controls/getVisible.md)|Returns whether the control is visible.|
+|[refresh](controls/refresh.md)|Refreshes the data displayed in the timer.|
+|[setDisabled](controls/setDisabled.md)|Enables or disables the control.|
+|[setFocus](controls/setFocus.md)|Moves focus to the control.|
+|[setLabel](controls/setLabel.md)|Changes the control's label.|
+|[setVisible](controls/setVisible.md)|Shows or hides the control.|
 
 
 ## Web resource control type
 
-A web resource control has the same set of methods available as the iframe control. See [iframe control type](#iframe-control-type)
-
-The Silverlight web resource has these extra methods: 
-
-- [getData](controls/getData.md)
-- [setData](controls/setData.md)
-
-> [!TIP]
-> If you want to modify all the controls bound to a column on a form, use the controls collection inside the column type. For example, to add notification to each control bound to the `name` column, you can do the following:
- >  ```JavaScript
- >   const notification = { messages: ['Sample Notification on Name Controls'], notificationLevel: 'RECOMMENDATION', uniqueId: 'my_unique_id'};
- >  formContext.getAttribute("name").controls.forEach(control => control.addNotification(notification));
- > ```
+A web resource control has the same set of methods available as the iframe control. See [iframe control type](#iframe-control-type).
 
 ## Form component control type
 
-A form component control type has the same set of methods available as the [formContext](../clientapi-form-context.md) on a main form. See [Form component behavior > Client API](../../../../maker/model-driven-apps/form-component-control.md#client-api)
+A form component control type has the same set of methods available as the [formContext](../clientapi-form-context.md) on a main form. See [Form component behavior > Client API](../../../../maker/model-driven-apps/form-component-control.md#client-api).
 
 ### Related articles
 

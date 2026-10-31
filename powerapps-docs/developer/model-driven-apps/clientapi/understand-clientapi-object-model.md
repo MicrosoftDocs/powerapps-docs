@@ -1,9 +1,9 @@
 ---
-title: "Understand the Client API object model in model-driven apps"
-description: "The Client API object model for model-driven apps provides you objects and methods that you can use to apply custom business logic in model-driven apps using JavaScript."
+title: "Understand the Client API Object Model in Model-Driven Apps"
+description: "Learn how the Client API object model for model-driven apps lets you apply custom business logic with JavaScript. Explore root objects and get started."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: concept-article
 applies_to: 
@@ -15,7 +15,7 @@ contributors:
   - JimDaly
   - caburk
 ---
-# Understand the Client API object model
+# Understand the Client API object model in model-driven apps
 
 The Client API object model for model-driven apps provides objects and methods that you can use to apply custom business logic in model-driven apps by using JavaScript, such as:
 
@@ -26,11 +26,11 @@ The Client API object model for model-driven apps provides objects and methods t
 - Manipulate form navigation items.
 - Interact with the business process flow control.
 
-It's important that you understand the model-driven apps Client API object model to effectively write and use your JavaScript code.
+To effectively write and use your JavaScript code, you need to understand the model-driven apps Client API object model.
 
 ## Root objects in the Client API object model
 
-At the root of the Client API object model are the following contexts and the Xrm object:
+The following contexts and the Xrm object are at the root of the Client API object model:
 
 |Object|Description|
 |--|--|

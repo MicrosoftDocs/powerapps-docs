@@ -1,9 +1,9 @@
 ---
-title: "Client API Xrm object for model-driven apps "
-description: "Describes the client API Xrm object"
+title: "Client API Xrm Object for Model-Driven Apps"
+description: "Learn how to use the client API Xrm object in model-driven apps to access namespaces like Xrm.Navigation and Xrm.WebApi and retrieve global context."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 07/29/2025
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: article
 applies_to:
@@ -16,15 +16,15 @@ contributors:
   - caburk
 ---
 
-# Client API Xrm object
+# Client API Xrm object for model-driven apps
 
-The **Xrm** object is globally available to use in your code without having to use the execution context in Client API.
+You can use the client API **Xrm** object in your code without the execution context. Use its namespaces to navigate forms, manage records with the Web API, use device capabilities, and retrieve global context in model-driven apps.
 
 ## Xrm object model
 
 The following illustration displays the Xrm object model:
 
-:::image type="content" source="media/client-api-xrm-model.png" alt-text="Xrm Object Model":::
+:::image type="content" source="media/client-api-xrm-model.png" alt-text="Screenshot of the client API Xrm object model showing its namespaces.":::
 
 Here's the information about each of the namespaces in the Xrm object:
 
@@ -41,12 +41,12 @@ Here's the information about each of the namespaces in the Xrm object:
 
 ## Client API global context
 
-Use the **Xrm.Utility**.[getGlobalContext](reference/xrm-utility/getGlobalContext.md) method in forms to retrieve information specific to an organization, a user, or the client where script is run without going through the form execution context. Using the `getGlobalContext` method is a change from previous versions where you had to use the form context to retrieve global context by using **Xrm.Page.context**.
+Use the **Xrm.Utility**.[getGlobalContext](reference/xrm-utility/getGlobalContext.md) method in forms to retrieve information specific to an organization, a user, or the client where script runs without going through the form execution context. Using the `getGlobalContext` method is a change from previous versions where you had to use the form context to retrieve global context by using **Xrm.Page.context**.
 
 > [!NOTE] 
 > **Xrm.Page.context** is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) in the current release, and you should now use the new **Xrm.Utility.**[getGlobalContext](reference/xrm-utility/getGlobalContext.md) method to get global context in your code targeting version 9.0 or later.
 
-To access the global context information in a standalone HTML Web resource, you should include a reference to **ClientGlobalContext.js.aspx** in the web resource, and then use the **GetGlobalContext** function. More information: [GetGlobalContext function and ClientGlobalContext.js.aspx](reference/GetGlobalContext-ClientGlobalContext.js.aspx.md)
+To access the global context information in a standalone HTML web resource, include a reference to **ClientGlobalContext.js.aspx** in the web resource, and then use the **GetGlobalContext** function. For more information, see [GetGlobalContext function and ClientGlobalContext.js.aspx](reference/GetGlobalContext-ClientGlobalContext.js.aspx.md).
 
 ### Related articles
 

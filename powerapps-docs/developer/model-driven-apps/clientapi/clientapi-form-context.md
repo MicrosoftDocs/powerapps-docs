@@ -1,9 +1,9 @@
 ---
 title: "Client API Form Context in Model-Driven Apps"
-description: "Learn how the Client API form context provides a reference to forms and form items in model-driven apps. Use formContext instead of deprecated Xrm.Page for better development practices."
+description: "Learn how the Client API form context references forms and form items in model-driven apps. Replace deprecated Xrm.Page with formContext in your scripts."
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/27/2026
+ms.date: 10/29/2026
 ms.reviewer: jdaly
 ms.topic: article
 ms.subservice: mda-developer
@@ -16,51 +16,25 @@ contributors:
 ---
 # Client API form context
 
-The Client API form context (**formContext**) provides a reference to the form or to an item on the form, such as a quick view control or a row in an editable grid, against which the current code is executed.
-
-Earlier, you used the global **Xrm.Page** object to represent a form or an item on the form. In the latest version, the **Xrm.Page** object is [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated). Instead, use the [getFormContext](reference/executioncontext/getFormContext.md) method of the passed-in execution context object to return a reference to the appropriate form or an item on the form. 
-
-> [!IMPORTANT]
-> *Deprecated* means that Microsoft intends to remove a feature or capability from a future major release of model-driven apps. The feature or capability continues to work and is fully supported until it's officially removed. Microsoft makes a public announcement at least six months before removal, in the documentation, on the official blog, and in many other places.<br/><br/>To maintain backward compatibility with existing scripts, use of the **Xrm.Page** object as a static access to the primary form context is *still* supported and won't be removed as soon as some other client API methods listed in the [Client API deprecation](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) section. Use the new **formContext** object instead of the **Xrm.Page** object in your code targeting version 9.0 or later where possible. Also, by using the **formContext** object, you can create common event handlers that can operate either on a form or in an editable grid depending on where it's called. For more information, see [getFormContext (Client API reference)](reference/executioncontext/getFormContext.md).<br><br>Getting the **formContext** object for JavaScript functions for ribbon actions is different from how you get it in form scripting. For more information, see [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions).
+The Client API form context (**formContext**) provides a reference to the form or to an item on the form, such as a quick view control or a row in an editable grid, against which the current code runs. By using the **formContext** object, you can create common event handlers that can operate either on a form or in an editable grid depending on where it's called. For more information, see [getFormContext (Client API reference)](reference/executioncontext/getFormContext.md).
 
 > [!NOTE]
-> Form contexts are only valid during the event where they're passed. [The same restrictions apply as with execution contexts](clientapi-execution-context.md#using-context-objects-asynchronously).
+> Some important points to remember when working with form context:
+> 
+> - Getting the **formContext** object for JavaScript functions for ribbon actions is different from how you get it in form scripting. For more information, see [Form and grid context in ribbon actions](../pass-data-page-parameter-ribbon-actions.md#form-and-grid-context-in-ribbon-actions).
+>
+> - Form contexts are only valid during the event where they're passed. [The same restrictions apply as with execution contexts](clientapi-execution-context.md#use-context-objects-asynchronously).
+>
+> - Select the **Pass execution context as first parameter** option in the **Handler Properties** dialog while defining your event handlers to use the **formContext** object. For more information, see [Client API execution context](clientapi-execution-context.md).
+>
+> - **formContext** replaced the deprecated **Xrm.Page** object in 2017. [Learn to use the formContext object instead of the Xrm.Page object](#use-the-formcontext-object-instead-of-the-xrmpage-object)
 
-## Use the formContext object instead of the Xrm.Page object 
-
-It's easy to convert existing code that uses **Xrm.Page** to use the new **formContext** object. For example, consider the following script that uses the **Xrm.Page** object:
-
-```JavaScript
-function displayName()
-{
-   var firstName = Xrm.Page.getAttribute("firstname").getValue();
-   var lastName = Xrm.Page.getAttribute("lastname").getValue();
-   console.log(firstName + " " + lastName);
-}
-```
-
-Here's the updated script that uses the passed-in execution context to retrieve the **formContext** object instead of using the static **Xrm.Page** object:
-
-```JavaScript
-function displayName(executionContext)
-{
-   var formContext = executionContext.getFormContext(); // get formContext
-
-   // use formContext instead of Xrm.Page   
-   var firstName = formContext.getAttribute("firstname").getValue(); 
-   var lastName = formContext.getAttribute("lastname").getValue();
-   console.log(firstName + " " + lastName);
-}
-```
-
->[!IMPORTANT]
->Select the **Pass execution context as first parameter** option in the **Handler Properties** dialog while defining your event handlers to use the **formContext** object. For more information, see [Client API execution context](clientapi-execution-context.md).
 
 ## formContext object model
 
 Use the **data** and **ui** objects under the **formContext** object to programmatically manipulate data and user interface elements in model-driven apps.
 
-![formContext object model.](../media/ClientAPI-formContextModel.png)
+:::image type="content" source="../media/ClientAPI-formContextModel.png" alt-text="Screenshot of the formContext object model showing the data and ui objects and their collections.":::
 
 [!INCLUDE[cc-terminology](../../data-platform/includes/cc-terminology.md)]
 
@@ -106,6 +80,40 @@ information about the methods available for collections in general, see [Collect
 |**formContext.ui.**[quickForms](reference/formContext-ui-quickForms.md) | Provides methods to access all the quick view controls and its constituent controls on the forms.|
 |**formContext.ui.**[tabs](reference/formContext-ui-tabs.md) | You can organize each form by using one or more tabs. This collection provides access to each of these tabs.|
 |**formContext.ui Tab.**[sections](reference/formContext-ui-tab-sections.md) | You can organize each form tab by using one or more sections. The tab **sections** collection provides access to each of these sections. You need to define the tab that contains the desired section or iterate through each tab to find the relevant section.|
+
+
+## Use the formContext object instead of the Xrm.Page object 
+
+In the past, people used the global **Xrm.Page** object to represent a form or an item on the form. The **Xrm.Page** object was [deprecated](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) in 2017. Instead, use the [getFormContext](reference/executioncontext/getFormContext.md) method of the passed-in execution context object to return a reference to the appropriate form or an item on the form. 
+
+> [!IMPORTANT]
+> *Deprecated* means that Microsoft intends to remove a feature or capability from a future major release of model-driven apps. The feature or capability continues to work and is fully supported until it's officially removed. Microsoft makes a public announcement at least six months before removal, in the documentation, on the official blog, and in many other places.<br/><br/>To maintain backward compatibility with existing scripts, use of the **Xrm.Page** object as a static access to the primary form context is *still* supported and won't be removed as soon as some other client API methods listed in the [Client API deprecation](/dynamics365/get-started/whats-new/customer-engagement/important-changes-coming#some-client-apis-are-deprecated) section. Use the new **formContext** object instead of the **Xrm.Page** object in your code targeting version 9.0 or later where possible. 
+
+It's easy to convert existing code that uses **Xrm.Page** to use the new **formContext** object. For example, consider the following script that uses the **Xrm.Page** object:
+
+```JavaScript
+function displayName()
+{
+   var firstName = Xrm.Page.getAttribute("firstname").getValue();
+   var lastName = Xrm.Page.getAttribute("lastname").getValue();
+   console.log(firstName + " " + lastName);
+}
+```
+
+Here's the updated script that uses the passed-in execution context to retrieve the **formContext** object instead of using the static **Xrm.Page** object:
+
+```JavaScript
+function displayName(executionContext)
+{
+   var formContext = executionContext.getFormContext(); // get formContext
+
+   // use formContext instead of Xrm.Page   
+   var firstName = formContext.getAttribute("firstname").getValue(); 
+   var lastName = formContext.getAttribute("lastname").getValue();
+   console.log(firstName + " " + lastName);
+}
+```
+
 
 
   

@@ -1,0 +1,2 @@
+> [!NOTE]
+> Silverlight web resources are no longer supported. For more information, see [Silverlight (XAP) web resources are deprecated](/power-platform/important-changes-coming#silverlight-xap-web-resource-is-deprecated-).

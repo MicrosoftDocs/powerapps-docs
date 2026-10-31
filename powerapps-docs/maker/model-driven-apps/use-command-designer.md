@@ -120,7 +120,7 @@ JavaScript is supported with both classic and modern commands. However, it's sim
  
 1. Enter the **Function name**. For example, select the `Main_system_library.js` library then call this function: `XrmCore.Commands.Open.opennewrecord`.
 
-1. Add parameters to pass to your function. For more information about the available parameters, go to [Grid values](../../developer/model-driven-apps/pass-data-page-parameter-ribbon-actions.md#grid-values).
+1. Add parameters to pass to your function. For more information about the available parameters, go to [Pass grid values to ribbon actions](../../developer/model-driven-apps/pass-data-page-parameter-ribbon-actions.md#pass-grid-values-to-ribbon-actions).
 
     > [!div class="mx-imgBorder"]
     > ![Add Parameters](media/commanddesigner-add-javascript-parameters.png "Add Parameters")

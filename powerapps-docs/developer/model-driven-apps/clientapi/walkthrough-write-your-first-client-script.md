@@ -1,9 +1,9 @@
 ---
-title: "Write your first client script in model-driven apps"
+title: "Write Your First Client Script in Model-Driven Apps"
 description: "Learn to write JavaScript client scripts in model-driven apps. Follow step-by-step instructions to create, upload, and test your first custom script."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 applies_to: "Dynamics 365 (online)"
@@ -14,9 +14,9 @@ contributors:
   - JimDaly
   - caburk
 ---
-# Write your first client script
+# Write your first client script in model-driven apps
 
-Ready to write your first client script to see things in action? Let's get started. We'll keep it simple.
+Learn how to write your first JavaScript client script in model-driven apps. This walkthrough shows how to create a script, upload it as a web resource, attach it to form and column events, and test it so you can add custom business logic to your forms.
 
 ## Objective
 
@@ -48,13 +48,13 @@ An existing solution might already be available for you to use. The model-driven
 
    Select **New Publisher** to open the **New Publisher** dialog. In this walkthrough, use a publisher with this definition:
 
-   :::image type="content" source="media/create-example-publisher.png" alt-text="Form to create a new publisher with information for Example Publisher":::
+   :::image type="content" source="media/create-example-publisher.png" alt-text="Screenshot of the New Publisher form with information for Example Publisher.":::
 
    Notice the **Prefix** value. This value should identify your company. In this case, use `example`.
 
    This solution is the one you use in this walkthrough.
 
-   :::image type="content" source="media/first-client-script-solution.png" alt-text="Solution form for the First Client Script Solution":::
+   :::image type="content" source="media/first-client-script-solution.png" alt-text="Screenshot of the solution form for the First Client Script Solution.":::
 
 1. Locate or add a model-driven app to your solution.
 
@@ -67,7 +67,7 @@ An existing solution might already be available for you to use. The model-driven
    
    1. In your solution, select **Add existing** > **App** > **Model-driven app**.
 
-   :::image type="content" source="media/add-existing-model-driven-app.png" alt-text="Add existing model-driven app":::
+   :::image type="content" source="media/add-existing-model-driven-app.png" alt-text="Screenshot of the menu to add an existing model-driven app to a solution.":::
 
    1. Select an existing app and select **Add**.
 
@@ -215,12 +215,12 @@ Now that your code is ready, upload it into your solution.
 
 1. In your solution, select **New** > **More** > **Web resource**.
 
-   :::image type="content" source="media/add-new-web-resource-to-solution.png" alt-text="Add a new web resource to your solution":::
+   :::image type="content" source="media/add-new-web-resource-to-solution.png" alt-text="Screenshot of the menu to add a new web resource to your solution.":::
 
 1. In the **New web resource** dialog, select **Choose file** and select the `form-script.js` file you saved earlier.
-1. Enter the **Display name**, **Name**, and optionally a **Description**. Make sure the **Type** is **JavaScript (JS)**.
+1. Enter the **Display name**, **Name**, and optionally a **Description**. Ensure the **Type** is **JavaScript (JS)**.
 
-   :::image type="content" source="media/create-example-form-script-web-resource.png" alt-text="New web resource dialog to create example form script":::
+   :::image type="content" source="media/create-example-form-script-web-resource.png" alt-text="Screenshot of the New web resource dialog to create the example form script.":::
 
    > [!NOTE]
    > - The **Name** has a prefix that matches the solution publisher customization prefix. There are other ways to create web resources, but creating a web resource this way ensures that the web resource is part of your solution.
@@ -228,52 +228,52 @@ Now that your code is ready, upload it into your solution.
 
 ## Step 4: Associate your web resource to a form
 
-1. In your solution, select **Objects** > **Apps** > **Your App** and click **Edit**.
+1. In your solution, select **Objects** > **Apps** > **Your App** and select **Edit**.
 
-   :::image type="content" source="media/edit-account-example-app.png" alt-text="Edit the app in the solution":::
+   :::image type="content" source="media/edit-account-example-app.png" alt-text="Screenshot of the option to edit the model-driven app in the solution.":::
 
-1. Expand **Account** and select the **Account form**. Click the ellipses (**...**) to the right of the **Information** form and select **Edit**.
+1. Expand **Account** and select the **Account form**. Select the ellipses (**...**) to the right of the **Information** form and select **Edit**.
 
-   :::image type="content" source="media/edit-account-information-form.png" alt-text="Edit the account information form":::
+   :::image type="content" source="media/edit-account-information-form.png" alt-text="Screenshot of the option to edit the account Information form in the app.":::
 
-1. In the left navigation, select **Form Libraries** and click **Add library**.
+1. In the left navigation, select **Form Libraries** and select **Add library**.
 
-   :::image type="content" source="media/add-library-to-form.png" alt-text="Add library to form":::
+   :::image type="content" source="media/add-library-to-form.png" alt-text="Screenshot of the Form Libraries pane with the Add library option.":::
 
 1. In the **Add JavaScript Library** dialog, search for the JavaScript web resource you created by name: `Example Script`.
 
-   :::image type="content" source="media/add-javascript-library-dialog.png" alt-text="Add JavaScript Library dialog":::
+   :::image type="content" source="media/add-javascript-library-dialog.png" alt-text="Screenshot of the Add JavaScript Library dialog used to select the web resource.":::
 
-1. Select the **Example Script** web resource and click **Add**.
+1. Select the **Example Script** web resource and select **Add**.
 
 ## Step 5: Configure form and field events
 
 1. Select the **Events** tab.
 
-   :::image type="content" source="../media/form-event-handlers.png" alt-text="Form event handlers":::
+   :::image type="content" source="../media/form-event-handlers.png" alt-text="Screenshot of the form event handlers on the Events tab.":::
 
 ### Configure form On Load event
 
-1. Select **On Load** event handler and click **+ Event Handler**.
+1. Select **On Load** event handler and select **+ Event Handler**.
 
-   :::image type="content" source="media/configure-form-onload-handler.png" alt-text="Configure form On Load handler":::
+   :::image type="content" source="media/configure-form-onload-handler.png" alt-text="Screenshot of configuring the form On Load event handler.":::
 
-   Make sure that the following settings are correct:
+   Ensure that the following settings are correct:
 
       - The **Event Type** is **On Load**.
       - The **example_example-form-script** library is selected.
 
-   1. Type the name of the function in the **Function** field. In this case, enter `Example.formOnLoad`.
+   1. Enter the name of the function in the **Function** field. In this case, enter `Example.formOnLoad`.
    1. Select **Pass execution context as first parameter**.
-   1. Click **Done**.
+   1. Select **Done**.
 
 ### Configure form On Save event
 
 1. Select the **On Save** event handler, and then select **+ Event Handler**.
 
-   :::image type="content" source="media/configure-form-onsave-handler.png" alt-text="Configure form On Save handler":::
+   :::image type="content" source="media/configure-form-onsave-handler.png" alt-text="Screenshot of configuring the form On Save event handler.":::
 
-   Make sure that the following settings are correct:
+   Ensure that the following settings are correct:
 
       - The **Event Type** is **On Save**.
       - The **example_example-form-script** library is selected.
@@ -287,28 +287,28 @@ Now that your code is ready, upload it into your solution.
 
 1. Select the **Account Name** field and the **Events** tab.
 
-   :::image type="content" source="media/select-account-name-events.png" alt-text="Select Account Name field events":::
+   :::image type="content" source="media/select-account-name-events.png" alt-text="Screenshot of the Events tab for the selected Account Name field.":::
 
-1. Select the **On Change** event handler and click **+ Event Handler**.
+1. Select the **On Change** event handler and select **+ Event Handler**.
 
-   :::image type="content" source="media/configure-field-onchange-handler.png" alt-text="Configure field OnChange handler":::
+   :::image type="content" source="media/configure-field-onchange-handler.png" alt-text="Screenshot of configuring the On Change event handler for the Account Name field.":::
 
-   Make sure that the following settings are correct:
+   Ensure that the following settings are correct:
 
       - The **Event Type** is **On Change**.
       - The **example_example-form-script** library is selected.
 
-    1. Type the name of the function in the **Function** field. In this case, `Example.attributeOnChange`.
+    1. Enter the name of the function in the **Function** field. In this case, `Example.attributeOnChange`.
     1. Select **Pass execution context as first parameter**.
     1. Select **Done**.
 
 ### Save and publish your changes
 
-**Save** the form and click **Publish**.
+**Save** the form and select **Publish**.
 
 ## Step 6: Test your code
 
-Refresh your browser to make sure your changes take effect in your model-driven apps instance.
+Refresh your browser to ensure your changes take effect in your model-driven apps instance.
 
 To test your code:
 
@@ -316,14 +316,14 @@ To test your code:
 1. In the left navigation, select **Apps**.
 1. Open the model-driven app you just edited, or select it and select **Play**.
 
-   :::image type="content" source="media/open-app-to-test.png" alt-text="Open the app to test":::
+   :::image type="content" source="media/open-app-to-test.png" alt-text="Screenshot of opening the model-driven app to test the client script.":::
 
 ### Test form On Load function
 
 1. Select any account record in the list to open it.
 1. Verify that the notification appears.
 
-   :::image type="content" source="media/form-onload-notification.png" alt-text="Notification on form load":::
+   :::image type="content" source="media/form-onload-notification.png" alt-text="Screenshot of the form notification displayed when the account form loads.":::
 
 1. Verify the notification disappears in 5 seconds.
 
@@ -332,14 +332,14 @@ To test your code:
 1. Edit the Account Name to include "Contoso" in the name and move to the next column by pressing TAB.
 1. Verify the expected values set to the **Main Phone**, **Website**, and **Description** columns.
 
-   :::image type="content" source="media/field-onchange-test.png" alt-text="Values set on field change":::
+   :::image type="content" source="media/field-onchange-test.png" alt-text="Screenshot of column values set by the client script when the account name changes.":::
 
 ### Test form On Save function
 
 1. Select **Save**.
 1. Verify that the alert dialog displays the message you configured in your code. 
 
-   :::image type="content" source="media/form-onsave-test.png" alt-text="Alert Dialog when form saved":::
+   :::image type="content" source="media/form-onsave-test.png" alt-text="Screenshot of the alert dialog displayed when the account form is saved.":::
 
 1. Select **OK** to close the alert.
 

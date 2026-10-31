@@ -1,11 +1,12 @@
 ---
-title: "createRecord (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the createRecord method.
+title: "createRecord (Client API Reference) in Model-Driven Apps"
+description: Learn how to use the createRecord Client API method to create table records in model-driven apps, including syntax, parameters, return values, and examples.
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 04/29/2025
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
+ai-usage: ai-assisted
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
@@ -31,7 +32,7 @@ contributors:
 |`errorCallback`|Function|No|[!INCLUDE [errorcallback-description](includes/errorcallback-description.md)]|
 
 
-## Return Value
+## Return value
 
 On success, returns a promise object to the `successCallback` with the following properties:
 
@@ -42,9 +43,15 @@ On success, returns a promise object to the `successCallback` with the following
 
 ## Examples
 
-These examples use the same request objects as demonstrated in [Create a table row using the Web API](../../../../data-platform/webapi/create-table-row.md) to define the data object for creating a table record.
+These examples use the same request objects as the following article: [Create a table row using the Web API](../../../../data-platform/webapi/create-table-row.md). The article shows how to define the data object for creating a table record.
 
-### Basic create
+|Example|Demonstrates|Web API Example|
+|---|---|---|
+|[Basic create](#basic-create-example)|How to create an account record with column values.|[Basic create](../../../../data-platform/webapi/create-table-row.md#basic-create)|
+|[Create related table records along with the primary record](#create-related-table-records-along-with-the-primary-record-example)|How to create an account and related contact, opportunity, and task records in one operation.|[Create related table rows in one operation](../../../../data-platform/webapi/create-table-row.md#create-related-table-rows-in-one-operation)|
+|[Associate tables when creating new records](#associate-tables-when-creating-new-records-example)|How to associate a new account with an existing contact using `@odata.bind`.|[Associate table rows on create](../../../../data-platform/webapi/create-table-row.md#associate-table-rows-on-create)|
+
+### Basic create example
 
 Creates a sample account record.
 
@@ -75,14 +82,14 @@ Xrm.WebApi.createRecord("account", data).then(
 ```
 
 > [!NOTE]
-> Creating records with a primary image is not supported for offline mode. Primary images can only be set with create in online mode. Other image columns cannot be set with create. [Learn more about Primary images](../../../../data-platform/image-column-data.md#primary-images)
+> Creating records with a primary image isn't supported for offline mode. You can set primary images only by using create in online mode. You can't set other image columns by using create. [Learn more about Primary images](../../../../data-platform/image-column-data.md#primary-images)
 
-### Create related table records along with the primary record
+### Create related table records along with the primary record example
 
- You can create tables related to each other by defining them as navigation properties values. This pattern is known as *deep insert*. In this example, we create a sample account record along with the primary contact record and an associated opportunity record.
+ You can create tables related to each other by defining them as navigation property values. This pattern is known as *deep insert*. In this example, you create a sample account record along with the primary contact record and an associated opportunity record.
 
 > [!NOTE]
-> Creating related table records in a single create operation is not supported for offline mode.
+> Creating related table records in a single create operation isn't supported for offline mode.
 
 ```JavaScript
 // define data to create primary and related table records
@@ -119,16 +126,16 @@ Xrm.WebApi.createRecord("account", data).then(
 );
 ```
 
-### Associate tables on creating new records
+### Associate tables when creating new records example
 
-To associate new table records to existing table records, set the value of single-valued navigation properties using the `@odata.bind` annotation.
+To associate new table records to existing table records, set the value of single-valued navigation properties by using the `@odata.bind` annotation.
 
 > [!NOTE]
-> The names of single-valued navigation properties are not always the same as the `LogicalName` for the lookup attribute. You should make sure you are using the `Name` attribute value of the `NavigationProperty` element in the Web API $metadata service document. More information: [Web API Navigation Properties](../../../../data-platform/webapi/web-api-navigation-properties.md)
+> The names of single-valued navigation properties aren't always the same as the `LogicalName` for the lookup attribute. Ensure you're using the `Name` attribute value of the `NavigationProperty` element in the Web API $metadata service document. For more information, see [Web API Navigation Properties](../../../../data-platform/webapi/web-api-navigation-properties.md).
 
-Here's code example:
+Here's a code example:
 
-The following example creates an account record, and associates it to an existing contact record to set the latter as the primary contact for the new account record:
+The following example creates an account record and associates it to an existing contact record to set the latter as the primary contact for the new account record:
 
 ```JavaScript
 var data =
@@ -153,9 +160,9 @@ Xrm.WebApi.createRecord("account", data).then(
 **Deprecated method for mobile offline scenario**
 
 > [!NOTE]
-> Instead of using `@odata.bind` annotation example shown previously, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for existing customizations. However, it is recommended to use `@odata.bind` annotation for both online and offline scenario instead of using this deprecated object.
+> Instead of using the `@odata.bind` annotation example shown previously, the deprecated **lookup** object with case-sensitive properties (`logicalname` and `id`) is still supported for existing customizations. However, use the `@odata.bind` annotation for both online and offline scenarios instead of using this deprecated object.
 
-The following example uses the deprecated method to create an account record, and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
+The following example uses the deprecated method to create an account record and associate it to an existing contact record to set the latter as the primary contact for the new account record from mobile clients when working in the offline mode:
 
 ```JavaScript
 var data =

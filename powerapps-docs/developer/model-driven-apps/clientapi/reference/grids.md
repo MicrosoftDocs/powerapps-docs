@@ -1,9 +1,9 @@
 ---
-title: "Grids and subgrids in model-driven apps for Dynamics 365"
-description: "Grids present data in a tabular format in model-driven apps. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*."
-author: clromano
-ms.author: clromano
-ms.date: 03/24/2022
+title: "Grids and Subgrids in Model-Driven Apps (Client API)"
+description: "Learn how to use Client API events and objects to work with read-only and editable grids and subgrids in model-driven apps. Explore the grid object model."
+author: Hillaryyaory-microsoft
+ms.author: hillaryyaory
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -15,40 +15,40 @@ contributors:
 ---
 # Grids and subgrids in model-driven apps (Client API reference)
 
-Grids present data in a tabular format in model-driven apps. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*.
+Grids and subgrids present data in a tabular format in model-driven apps. Use the Client API events and objects in this article to work with read-only and editable grids. Grids can span the entire form or can be one of the items on a form; the latter are called *subgrids*.
 
 ## Types of grids
 
 There are two types of grids in model-driven apps:
 
 - **Read-only grids**: Display data in a tabular format. To edit the data displayed in a read-only grid, you have to select the record in the grid to open the form, edit the data, and then save.
--  **Editable grids**: In addition to displaying data in a tabular format, provides rich inline editing capabilities on web and mobile clients including the ability to group, sort, and filter data within the same grid so that you do not have to switch records or views. The editable grid is a custom control, and is supported in the main grid and subgrids on a form in the web client and in dashboards and on form grids on the mobile clients. Although the editable grid control provides editing capability, it honors the read-only grid metadata and field-level security settings.
+-  **Editable grids**: In addition to displaying data in a tabular format, provides rich inline editing capabilities on web and mobile clients including the ability to group, sort, and filter data within the same grid so that you don't have to switch records or views. The editable grid is a custom control, and is supported in the main grid and subgrids on a form in the web client and in dashboards and on form grids on the mobile clients. Although the editable grid control provides editing capability, it honors the read-only grid metadata and field-level security settings.
 
 <a name="bkmk_gridcontext"></a>
 
-## Getting the grid context
+## Get the grid context
 
-Grid context is the grid or subgrid instance on a form against which you want to run your code. For more information about getting the grid context to execute your JavaScript code, see [Client API grid context](../clientapi-grid-context.md)
+Grid context is the grid or subgrid instance on a form against which you want to run your code. For more information about getting the grid context to execute your JavaScript code, see [Client API grid context](../clientapi-grid-context.md).
 
 [!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
 
-## Events
+## Grid events
 
 |Name|Description|Applicable for|
 |--|--|--|
-|[Subgrid OnLoad Event](events/subgrid-onload.md)|Occurs every time the subgrid refreshes. This includes when users sort values in subgrid by clicking the column headings.|Read-only grid|
+|[Subgrid OnLoad Event](events/subgrid-onload.md)|Occurs every time the subgrid refreshes. This event includes when users sort values in subgrid by clicking the column headings.|Read-only grid|
 |[Grid OnChange](events/grid-onchange.md)|Occurs when a value is changed in a cell in the editable grid and the cell loses focus|Editable grid|
 |[Grid OnRecordSelect](events/grid-onrecordselect.md)|Occurs when a single row (record) is selected in the editable grid|Editable grid|
-|[Grid OnSave](events/grid-onsave.md)|Occurs before sending the updated information to the server, and when any of the following occurs: there is a change in the record selection, the user explicitly triggers a save operation using the editable grid's save button, or the user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.|Editable grid|
+|[Grid OnSave](events/grid-onsave.md)|Occurs before sending the updated information to the server, and when any of the following occurs: there is a change in the record selection, the user explicitly triggers a save operation by using the editable grid's save button, or the user applies a sort, filter, group, pagination, or navigation operation from the editable grid while there are pending changes.|Editable grid|
 
 >[!NOTE]
->You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events using the **Events** tab of the model-driven apps page that is used to enable editable grids for a table or a read-only grid.
+>You can register for the **OnChange**, **OnRecordSelect**, and **OnSave** events by using the **Events** tab of the model-driven apps page that you use to enable editable grids for a table or a read-only grid.
 
-## Objects
+## Grid objects
 
 Use the following objects to interact with grids. These objects form a hierarchy as shown in the following diagram:
 
-:::image type="content" source="../../media/ClientAPI-grid-object-Model.png" alt-text="The hierarchy of objects available in grids":::
+:::image type="content" source="../../media/clientapi-grid-object-model.png" alt-text="Screenshot of the hierarchy of Client API objects available in grids and subgrids.":::
 
 |Name|Description|Available for|
 |--|--|--|
@@ -67,7 +67,7 @@ Use the following objects to interact with grids. These objects form a hierarchy
 [Client API grid context](../clientapi-grid-context.md)   
 [Use editable grids](../../use-editable-grids.md)   
 [Client API Reference for model-driven apps](../reference.md)   
-[Model-driven apps Developer Overview](../../overview.md)
+[Model-driven apps developer guide](../../overview.md)
 
 
 

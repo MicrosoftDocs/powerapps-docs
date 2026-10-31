@@ -1,9 +1,9 @@
 ---
-title: "Xrm.Navigation (Client API reference) in model-driven apps"
-description: "Xrm.Navigation provides navigation-related methods. "
+title: "Xrm.Navigation (Client API Reference) in Model-Driven Apps"
+description: "Learn how to use Xrm.Navigation Client API methods in model-driven apps to open forms, dialogs, files, URLs, and web resources. Explore the method reference."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -17,7 +17,7 @@ contributors:
 
 
 
-Provides navigation-related methods. 
+Use Xrm.Navigation methods in model-driven apps to navigate to pages, open forms, files, URLs, and web resources, and display alert, confirm, and error dialogs.
 
 |Method |Description |
 |---|---|
@@ -30,7 +30,7 @@ Provides navigation-related methods.
 |[openUrl](xrm-navigation/openUrl.md)|[!INCLUDE[xrm-navigation/includes/openUrl-description.md](xrm-navigation/includes/openUrl-description.md)]|
 |[openWebResource](xrm-navigation/openWebResource.md)|[!INCLUDE[xrm-navigation/includes/openWebResource-description.md](xrm-navigation/includes/openWebResource-description.md)]|
 
-### Related articles
+## Related articles
 
 [Client API Xrm object](../clientapi-xrm.md)
 

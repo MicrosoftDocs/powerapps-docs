@@ -1,12 +1,13 @@
 ---
-title: "Creating side panes by using a client API in model-driven apps" 
+title: "Create Side Panes by Using a Client API in Model-Driven Apps" 
 description: "Learn how to create and manage side panes in model-driven apps using client APIs. Discover how to display views, records, and web resources with examples."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 10/09/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.subservice: mda-developer
 ms.topic: concept-article
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
   - developer
@@ -15,7 +16,7 @@ contributors:
   - caburk
 ---
 
-# Creating side panes by using a client API
+# Create side panes in model-driven apps by using a client API
 
 Developers can create and manage app side panes within a model-driven app by using the [Xrm.App.sidePanes](reference/xrm-app-sidepanes.md) API, which represents the collection of side panes. Calling the [createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) method adds a new pane that allows navigation to any model-driven app form or custom page. Pages displayed in the side pane must fit within the minimum width of 300 pixels and resize to larger widths based on the pane width.
 
@@ -29,9 +30,18 @@ App side panes are only supported in web browsers and are prevented within nativ
 
 [!INCLUDE [online-only-api-note](includes/online-only-api-note.md)]
 
-## Examples
+This table introduces the samples in this article:
 
-### Display a generative page in a side pane
+|Example|Demonstrates|
+|---|---|
+|[Display a generative page in a side pane](#display-a-generative-page-in-a-side-pane)|How to create a side pane and navigate to a generative page by its ID.|
+|[Show a default view in the side pane](#show-a-default-view-in-the-side-pane)|How to display default table views in nonclosable side panes.|
+|[Show a table row](#show-a-table-row)|How to display a record in a closable side pane with a hidden header and a specified width.|
+|[Show a web resource](#show-a-web-resource)|How to display an HTML web resource in a nonclosable side pane.|
+|[Manage side panes](#manage-side-panes)|How to collapse, expand, resize, and close panes, and set a badge.|
+|[Use with Xrm.App.panels.loadPanel](#use-with-xrmapppanelsloadpanel)|How to use side panes alongside `loadPanel` and avoid compatibility limitations by switching to `createPane`.|
+
+## Display a generative page in a side pane
 
 Use the pane's `navigate` method with `pageType: "generative"` and the generative page ID:
 
@@ -51,9 +61,9 @@ await pane.navigate({
 
 For information about passing record context and custom parameters, see [Navigate to and from a generative page](navigate-to-generative-page-examples.md).
 
-### Showing a default view in the side pane
+## Show a default view in the side pane
 
-The examples in this section show how to display the default view of a table in the app side pane. A reservation list and product list are opened as nonclosable panes.
+The following examples show how to display the default view of a table in the app side pane. A reservation list and product list open as nonclosable panes.
 
 ```javascript
 Xrm.App.sidePanes.createPane({
@@ -70,7 +80,7 @@ Xrm.App.sidePanes.createPane({
 ```
 
 > [!div class="mx-imgBorder"] 
-> ![Screenshot showing a Reservations table with a list of active reservations, including name, equipment, and the start date of the reservation.](../media/app-side-panes-example-1.png "Example 1")
+> :::image type="content" source="../media/app-side-panes-example-1.png" alt-text="Screenshot of a Reservations table with a list of active reservations, including name, equipment, and the start date of the reservation.":::
 
 ```javascript
 Xrm.App.sidePanes.createPane({
@@ -87,9 +97,9 @@ Xrm.App.sidePanes.createPane({
 ```
 
 > [!div class="mx-imgBorder"] 
-> ![Screenshot showing a Products table with a list of products that can be reserved.](../media/app-side-panes-example-2.png "Example 2")
+> :::image type="content" source="../media/app-side-panes-example-2.png" alt-text="Screenshot of a Products table with a list of products that can be reserved.":::
 
-### Show a table row
+## Show a table row
 
 This example shows how to display a row in the side pane. The reservation row opens in a side pane where the default header is hidden and the width is set to 600 pixels.
 
@@ -110,9 +120,9 @@ Xrm.App.sidePanes.createPane({
 ```
 
 > [!div class="mx-imgBorder"] 
-> ![Screenshot showing an Active Reservations list opened to an individual record.](../media/app-side-panes-opening-record.png "Open record")
+> :::image type="content" source="../media/app-side-panes-opening-record.png" alt-text="Screenshot of an Active Reservations list opened to an individual record.":::
 
-### Show a web resource
+## Show a web resource
 
 This example shows how to display a web resource in the side pane. A custom HTML page opens in a side pane where the default header is visible and the close button is hidden.
 
@@ -132,7 +142,7 @@ Xrm.App.sidePanes.createPane({
 ```
 
 
-### Managing side panes
+## Manage side panes
 
 In addition to creating side panes and showing rows or views within the side pane, you can also: 
 
@@ -158,9 +168,9 @@ In addition to creating side panes and showing rows or views within the side pan
 
   `Xrm.App.sidePanes.getSelectedPane().badge = 1;`
 
-### Use with Xrm.App.panels.loadPanel
+## Use with Xrm.App.panels.loadPanel
 
-The [Xrm.Panels.loadPanel](reference/Xrm-Panel/loadPanel.md) API is being replaced by [Xrm.App.sidePanes.createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) because the former only supports a single pane while the latter supports multiple panes. To enable transitioning from `loadPanel` to `createPane`, the two APIs can work together with some limitations. If you use only `loadPanel` within a model-driven app, the experience remains the same. However, if you use both `loadPanel` and `createPane`, the first limitation is that a placeholder icon appears for the `loadPanel`. The second limitation is that when the user switches from the `loadPanel` to the `createPane`, the app unloads the `loadPanel` content to save memory and reloads it on switch back without the state. This tab switch behavior is the same behavior used within the multi-session app mode to manage the memory used by the app. Most page types restore correctly. However, when an external site or web resource is opened, the state isn't restored.
+[Microsoft is replacing the Xrm.Panels.loadPanel](reference/Xrm-Panel/loadPanel.md) API with [Xrm.App.sidePanes.createPane](reference/Xrm-App/Xrm-App-sidePanes/createPane.md) because the former only supports a single pane while the latter supports multiple panes. To enable transitioning from `loadPanel` to `createPane`, the two APIs can work together with some limitations. If you use only `loadPanel` within a model-driven app, the experience remains the same. However, if you use both `loadPanel` and `createPane`, the first limitation is that a placeholder icon appears for the `loadPanel`. The second limitation is that when the user switches from the `loadPanel` to the `createPane`, the app unloads the `loadPanel` content to save memory and reloads it on switch back without the state. This tab switch behavior is the same behavior used within the multi-session app mode to manage the memory used by the app. Most page types restore correctly. However, when an external site or web resource is opened, the state isn't restored.
 
 By switching to use `createPane`, you can avoid both limitations by providing an icon and by enabling `alwaysRender`. The `alwaysRender` keeps the pane content when the user switches but does take more memory so use it sparingly.
 

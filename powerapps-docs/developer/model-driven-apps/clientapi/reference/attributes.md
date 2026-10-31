@@ -1,160 +1,100 @@
 ---
-title: "Columns in model-driven apps"
-description: "Learn about working with columns in model-driven apps using client API."
+title: "Columns in Model-Driven Apps Client API Reference"
+description: "Learn how to access and manage columns in model-driven apps with the Client API, including methods available for each column type. Explore the reference now."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/12/2022
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
+ai-usage: ai-assisted
 applies_to: "Dynamics 365 (online)"
 search.audienceType: 
   - developer
 contributors:
   - JimDaly
 ---
-# Columns (Client API reference)
+# Columns in model-driven apps (Client API reference)
 
 Columns contain data in the model-driven apps form or grids. Use the `formContext.data.entity.attributes` collection or the `formContext.getAttribute` shortcut method to access a collection of columns. For more information about collections, see [Collections (Client API reference)](collections.md). 
 
-To access a column within the collection, you pass either the name (string) or the index value (number) of the column as an argument to the method. For example: `formContext.getAttribute(arg)`. If no argument is specified, it will return a collection of all attributes on the form.
+To access a column within the collection, pass either the name (string) or the index value (number) of the column as an argument to the method. For example: `formContext.getAttribute(arg)`. If you don't specify an argument, the method returns a collection of all attributes on the form.
 
-Columns are categorized by type. You can determine the type of the column by using the [getAttributeType](attributes/getAttributeType.md) method. Certain column methods are only available for specific types of columns.
+Columns are categorized by type. Use the [getAttributeType](attributes/getAttributeType.md) method to determine the type of the column. Certain column methods are only available for specific types of columns.
 
-[!INCLUDE[cc-terminology](../../../data-platform/includes/cc-terminology.md)]
-
-This topic provides information about the methods available per column type. 
+This article provides information about the methods available for each column type. 
 
 ## All column types
 
-:::row:::
-   :::column:::
-   [controls](attributes/controls-collection.md)
-   :::column-end:::
-   :::column:::
-   [addOnChange](attributes/addOnChange.md)
-   :::column-end:::
-   :::column:::
-   [fireOnChange](attributes/fireOnChange.md)
-   :::column-end:::
-   :::column:::
-   [getAttributeType](attributes/getAttributeType.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-   [getFormat](attributes/getFormat.md)
-   :::column-end:::
-   :::column:::
-   [getIsDirty](attributes/getIsDirty.md)
-   :::column-end:::
-   :::column:::
-   [getName](attributes/getName.md)
-   :::column-end:::
-   :::column:::
-   [getParent](attributes/getParent.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-   [getRequiredLevel](attributes/getRequiredLevel.md)
-   :::column-end:::
-   :::column:::
-   [getSubmitMode](attributes/getSubmitMode.md)
-   :::column-end:::
-   :::column:::
-   [getUserPrivilege](attributes/getUserPrivilege.md)
-   :::column-end:::
-   :::column:::
-   [getValue](attributes/getValue.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-   [isValid](attributes/isValid.md)
-   :::column-end:::
-   :::column:::
-   [removeOnChange](attributes/removeOnChange.md)
-   :::column-end:::
-   :::column:::
-   [setRequiredLevel](attributes/setRequiredLevel.md)
-   :::column-end:::
-   :::column:::
-   [setSubmitMode](attributes/setSubmitMode.md)
-   :::column-end:::
-:::row-end:::
-:::row:::
-   :::column:::
-   [setValue](attributes/setValue.md)
-   :::column-end:::
-   :::column:::
-   [setIsValid](attributes/setIsValid.md)
-   :::column-end:::
-   :::column:::
-   &nbsp;
-   :::column-end:::
-   :::column:::
-   &nbsp;
-   :::column-end:::
-:::row-end:::
+The [controls](attributes/controls-collection.md) property provides a collection of [controls](controls.md) associated with the column.
+
+The following methods are available for all column types:
+
+| Method | Description |
+|---|---|
+| [addOnChange](attributes/addOnChange.md) | Adds a function to run when the column's `OnChange` event occurs. |
+| [fireOnChange](attributes/fireOnChange.md) | Triggers the column's `OnChange` event. |
+| [getAttributeType](attributes/getAttributeType.md) | Returns the column's type. |
+| [getFormat](attributes/getFormat.md) | Returns the column's format. |
+| [getIsDirty](attributes/getIsDirty.md) | Returns whether the column has unsaved changes. |
+| [getName](attributes/getName.md) | Returns the column's logical name. |
+| [getParent](attributes/getParent.md) | Returns the parent `formContext.data.entity` object. |
+| [getRequiredLevel](attributes/getRequiredLevel.md) | Returns whether a column value is required or recommended. |
+| [getSubmitMode](attributes/getSubmitMode.md) | Returns when the column's data is submitted on save. |
+| [getUserPrivilege](attributes/getUserPrivilege.md) | Returns the user's privileges to create, read, or update the column's value. |
+| [getValue](attributes/getValue.md) | Returns the column's data value. |
+| [isValid](attributes/isValid.md) | Returns whether the column's value is valid. |
+| [removeOnChange](attributes/removeOnChange.md) | Removes a function from the column's `OnChange` event handlers. |
+| [setIsValid](attributes/setIsValid.md) | Sets the column's validity and an error message. |
+| [setRequiredLevel](attributes/setRequiredLevel.md) | Sets whether a column value is required or recommended before saving. |
+| [setSubmitMode](attributes/setSubmitMode.md) | Sets whether the column's data is submitted on save. |
+| [setValue](attributes/setValue.md) | Sets the column's data value. |
 
 ## Boolean column type
 
-In addition to the methods available for all column types as explained earlier, the following method is available only for the **boolean** column:
+In addition to the methods available for all column types, the **boolean** column type provides the following method:
 
-- [getInitialValue](attributes/getInitialValue.md)
+| Method | Description |
+|---|---|
+| [getInitialValue](attributes/getInitialValue.md) | Returns the column's value when the form opened. |
 
 ## Lookup column type
 
-In addition to the methods available for all column types as explained earlier, the following method is available only for the **lookup** column:
+In addition to the methods available for all column types, the **lookup** column type provides the following method:
 
-- [getIsPartyList](attributes/getIsPartyList.md)
+| Method | Description |
+|---|---|
+| [getIsPartyList](attributes/getIsPartyList.md) | Returns whether the lookup allows multiple records as a party list lookup. |
 
 ## Choices and choice column types
 
-In addition to the methods available for all column types as explained earlier, the following methods are available only for the **choices** and **choice** columns:
+In addition to the methods available for all column types, the **choices** and **choice** column types provide the following methods:
 
-:::row:::
-   :::column:::
-   [getInitialValue](attributes/getInitialValue.md)
-   :::column-end:::
-   :::column:::
-   [getOption](attributes/getOption.md)
-   :::column-end:::
-   :::column:::
-   [getOptions](attributes/getOptions.md)
-   :::column-end:::
-   :::column:::
-   [getSelectedOption](attributes/getSelectedOption.md)
-   :::column-end:::
-   :::column:::
-   [getText](attributes/getText.md)
-   :::column-end:::
-:::row-end:::
+| Method | Description |
+|---|---|
+| [getInitialValue](attributes/getInitialValue.md) | Returns the column's value when the form opened. |
+| [getOption](attributes/getOption.md) | Returns the option matching a specified label or value. |
+| [getOptions](attributes/getOptions.md) | Returns the column's valid options. |
+| [getSelectedOption](attributes/getSelectedOption.md) | Returns the selected option or options. |
+| [getText](attributes/getText.md) | Returns the text of the selected option or options. |
 
 ## Number column type (decimal, double, integer, money)
 
 The following methods are available only for the **decimal**,  **double**, and **integer** columns:
 
-:::row:::
-   :::column:::
-   [getMax](attributes/getMax.md)
-   :::column-end:::
-   :::column:::
-   [getMin](attributes/getMin.md)
-   :::column-end:::
-   :::column:::
-   [getPrecision](attributes/getPrecision.md)
-   :::column-end:::
-   :::column:::
-   [setPrecision](attributes/setPrecision.md)
-   :::column-end:::
-:::row-end:::
+| Method | Description |
+|---|---|
+| [getMax](attributes/getMax.md) | Returns the column's maximum allowed value. |
+| [getMin](attributes/getMin.md) | Returns the column's minimum allowed value. |
+| [getPrecision](attributes/getPrecision.md) | Returns the number of digits allowed after the decimal point. |
+| [setPrecision](attributes/setPrecision.md) | Sets the number of digits allowed after the decimal point. |
 
 ## String column type
 
 In addition to the methods available for all column types as explained earlier, the following method is available only for the **string** column:
 
-- [getMaxLength](attributes/getMaxLength.md)
+| Method | Description |
+|---|---|
+| [getMaxLength](attributes/getMaxLength.md) | Returns the column's maximum string length. |
 
 
 ### Related articles
