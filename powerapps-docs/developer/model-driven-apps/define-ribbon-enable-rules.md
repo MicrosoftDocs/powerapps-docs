@@ -1,11 +1,12 @@
 ---
-title: "Define ribbon enable rules for model-driven apps"
+title: "Define Ribbon Enable Rules for Model-Driven Apps"
 description: "Learn how to define enable rules that control when ribbon elements are enabled in model-driven apps. Configure ribbon behavior with specific rule types."
 author: clromano
 ms.author: clromano
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: how-to
+ai-usage: ai-assisted
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -14,11 +15,11 @@ contributors:
   - caburk
 ---
 
-# Define ribbon enable rules
+# Define ribbon enable rules for model-driven apps
 
 [!INCLUDE [cc-modern-commanding](../data-platform/includes/cc-modern-commanding.md)]
 
-When you configure ribbon elements, you can define specific rules to control when the ribbon elements are enabled. Use the `<EnableRule>` element as follows:  
+When you configure ribbon elements in model-driven apps, you can define ribbon enable rules to control when the ribbon elements are enabled. Use the `<EnableRule>` element as follows:  
 
 - Use the `/RuleDefinitions/EnableRules/EnableRule` element to define rules that control when the ribbon element is enabled.  
 - Use the `/CommandDefinitions/CommandDefinition/EnableRules/EnableRule` element to associate specific enable rules to a command definition.  
@@ -35,9 +36,27 @@ Enable rules are intended to be reused. By defining them with rule definitions, 
 
  The `/RuleDefinitions/EnableRules/EnableRule` element supports the following types of rules:  
 
-[!INCLUDE[cc-terminology](../data-platform/includes/cc-terminology.md)]
+|Rule|Element|Description|
+|---|---|---|
+|[Command client type rule](#command-client-type-rule)|`<CommandClientTypeRule>`|Checks how the command bar or ribbon is presented.|
+|[CRM client type rule](#crm-client-type-rule)|`<CrmClientTypeRule>`|Checks whether the client is Web or Outlook.|
+|[CRM offline access state rule](#crm-offline-access-state-rule)|`<CrmOfflineAccessStateRule>`|Checks whether the Outlook offline access client is offline.|
+|[CRM Outlook client type rule](#crm-outlook-client-type-rule)|`<CrmOutlookClientTypeRule>`|Checks the type of Outlook client.|
+|[Custom rule](#custom-rule)|`<CustomRule>`|Calls a JavaScript function to evaluate custom logic.|
+|[Entity rule](#entity-rule)|`<EntityRule>`|Checks the current table and its display context.|
+|[Form state rule](#form-state-rule)|`<FormStateRule>`|Checks the current form state, such as Create or ReadOnly.|
+|[Or rule](#or-rule)|`<OrRule>`|Combines alternative rule conditions using OR logic.|
+|[Outlook item tracking rule](#outlook-item-tracking-rule)|`<OutlookItemTrackingRule>`|Checks whether the record is tracked in Power Apps.|
+|[Outlook version rule](#outlook-version-rule)|`<OutlookVersionRule>`|Checks for a specific Outlook version.|
+|[Page rule](#page-rule)|`<PageRule>`|Checks whether the current page URL matches an address.|
+|[Record privilege rule](#record-privilege-rule)|`<RecordPrivilegeRule>`|Checks the current user's privileges on a specific record.|
+|[Selection count rule](#selection-count-rule)|`<SelectionCountRule>`|Checks whether the number of selected grid records meets specified limits.|
+|[Show on grid and quick action rule](#show-on-grid-and-quick-action-rule)|`<EnableRule Id="Mscrm.ShowOnGridAndQuickAction" />`|Shows the command on the homepage grid and as a quick action.|
+|[Show on grid rule](#show-on-grid-rule)|`<EnableRule Id="Mscrm.ShowOnGrid" />`|Shows the command only on the homepage grid.|
+|[Show on quick action rule](#show-on-quick-action-rule)|`<EnableRule Id="Mscrm.ShowOnQuickAction" />`|Shows the command only as a quick action.|
+|[Value rule](#value-rule)|`<ValueRule>`|Checks a column's value against a specified value.|
 
-### Command Client Type Rule
+### Command client type rule
 
  Uses the `<CommandClientTypeRule>` element. [!INCLUDE[ribbon_element_CommandClientTypeRule](../../includes/ribbon-element-commandclienttyperule.md)]  
 
@@ -50,25 +69,25 @@ Enable rules are intended to be reused. By defining them with rule definitions, 
 | `Refresh` |   The command bar is presented using the updated user interface.                                                      |
 | `Legacy`  | The ribbon is presented in forms for tables that weren't updated or in a list view in [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. |
 
-### Crm Client Type Rule
+### CRM client type rule
 
 Uses the  `<CrmClientTypeRule>` element to define rules depending on the type of client used. Type options are as follows:  
 
 - `Web`  
 - `Outlook`  
 
-### Crm Offline Access State Rule
+### CRM offline access state rule
 
  Uses the `<CrmOfflineAccessStateRule>` element. Use this criteria to enable a ribbon element based on whether [!INCLUDE[pn_crm_outlook_offline_access](../../includes/pn-crm-outlook-offline-access.md)] is currently offline.  
 
-### Crm Outlook Client Type Rule
+### CRM Outlook client type rule
 
  Uses the `<CrmOutlookClientTypeRule>` element. Use this rule if you want to only display a button for a specific type of [!INCLUDE[pn_crm_for_outlook_full](../../includes/pn-crm-for-outlook-full.md)]. Type options are as follows:  
 
 - `CrmForOutlook`  
 - `CrmForOutlookOfflineAccess`  
 
-### Custom Rule
+### Custom rule
 
  Uses the `<CustomRule>` element. Use this kind of rule to call a function in a [JavaScript web resource](./script-jscript-web-resources.md) that returns a Promise (Unified Interface) or boolean (Unified Interface and web client).
 
@@ -124,13 +143,13 @@ function EnableRule() {
 ```
 
 
-### Entity Rule
+### Entity rule
 
  Uses the `<EntityRule>` element. `EntityRule` evaluates the current table. This evaluation is useful when you define custom actions that apply to the table template instead of specific tables. For example, you might want to add a ribbon element to all tables except for several specific tables. It's easier to define the custom action for the table template that applies to all tables and then use an `EntityRule` to filter out those that should be excluded.  
 
  The `EntityRule` element also includes an optional context parameter to specify whether the table is being displayed in the form or a list (HomePageGrid). The optional `AppliesTo` parameter can be set to `PrimaryEntity` or `SelectedEntity` to distinguish whether the table is being displayed in a subgrid.  
 
-### Form State Rule
+### Form state rule
 
 Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the current type of form that is displaying a record. State options are as follows:  
 
@@ -140,15 +159,15 @@ Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the cu
 - `Disabled`  
 - `BulkEdit`  
 
-### Or Rule
+### Or rule
 
  Uses the `<OrRule>` element. The `OrRule` lets you override the default AND comparison for multiple enable rule types. Use the `OrRule` element to define several possible valid combinations to check.
 
-### Outlook Item Tracking Rule
+### Outlook item tracking rule
 
  Uses the `<OutlookItemTrackingRule>` element. Use the `TrackedInCrm` parameter for this element to determine whether the record is being tracked in Power Apps.  
 
-### Outlook Version Rule
+### Outlook version rule
 
  Uses the `<OutlookVersionRule>` element. Use this rule to enable a ribbon element for a specific version of [!INCLUDE[pn_MS_Outlook_Full](../../includes/pn-ms-outlook-full.md)] as follows:  
 
@@ -156,43 +175,19 @@ Uses the `<FormStateRule>` element. Use the `FormState` rule to determine the cu
 - `2007`  
 - `2010`  
 
-### Page Rule
+### Page rule
 
  Uses the `<PageRule>` element. This type of rule checks the URL of the page being displayed. It returns true if the `Address` matches.  
 
-### Record Privilege Rule
+### Record privilege rule
 
  Uses the `<RecordPrivilegeRule>` element. Use this rule to determine whether the current user has privileges on a specific record. These privileges differ from a table privilege because they can include privileges gained by another user sharing the record with the current user.  
 
-### Selection Count Rule
+### Selection count rule
 
  Uses the `<SelectionCountRule>` element. Use this kind of rule with a ribbon displayed for a list to enable a button when specific maximum and minimum numbers of records in the grid are selected. For example, if your button merges records, you should make sure at least two records are selected before enabling the ribbon control.  
 
-### Value Rule
-
-Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
-
- > [!NOTE]
- >  On a form, a `ValueRule` requires the specified column to be part of the form for it to work. On a grid or subgrid, the column must be one of the grid columns.
-
-### Show On Quick Action Rule
-
-Uses the `<EnableRule>` element. Use this rule to make the command appear only as quick action.
-
-```xml
-<CommandDefinition Id="new.contact.Command.Call">
-  <EnableRules>
-    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
-    <EnableRule Id="Mscrm.ShowOnQuickAction" />
-  </EnableRules>
-  <DisplayRules />
-  <Actions>
-    <JavaScriptFunction FunctionName=" simplealert" />
-  </Actions>
-</CommandDefinition>
-```
-
-### Show On Grid and Quick Action rule
+### Show on grid and quick action rule
 
 Uses the `<EnableRule>` element. Use this rule to make the command appear on the homepage grid and quick action.
 
@@ -209,7 +204,7 @@ Uses the `<EnableRule>` element. Use this rule to make the command appear on the
 </CommandDefinition>
 ```
 
-### Show On Grid Rule
+### Show on grid rule
 
 Uses the `<EnableRule>` element. Use this rule to make the quick action command appear on the homepage grid only. In other words, you can use this command to hide an existing quick action.
 
@@ -225,6 +220,30 @@ Uses the `<EnableRule>` element. Use this rule to make the quick action command 
   </Actions>
 </CommandDefinition>
 ```
+
+### Show on quick action rule
+
+Uses the `<EnableRule>` element. Use this rule to make the command appear only as quick action.
+
+```xml
+<CommandDefinition Id="new.contact.Command.Call">
+  <EnableRules>
+    <EnableRule Id="Mscrm.SelectionCountExactlyOne" />
+    <EnableRule Id="Mscrm.ShowOnQuickAction" />
+  </EnableRules>
+  <DisplayRules />
+  <Actions>
+    <JavaScriptFunction FunctionName=" simplealert" />
+  </Actions>
+</CommandDefinition>
+```
+
+### Value rule
+
+Uses the `<ValueRule>` element. Use this rule to check the value of a specific column in the record being displayed in the form. You must specify the `Field` and the `Value` to check.
+
+ > [!NOTE]
+ >  On a form, a `ValueRule` requires the specified column to be part of the form for it to work. On a grid or subgrid, the column must be one of the grid columns.
 
 ### See also  
 

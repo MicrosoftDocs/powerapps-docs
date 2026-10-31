@@ -209,7 +209,7 @@ There are still a number of tables, referred to here as classic tables, that ret
 
 ## Main form dialogs
 
-With the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. More information: [Open main form in a dialog using client API](../../developer/model-driven-apps/customize-entity-forms.md#open-main-form-in-a-dialog-by-using-client-api)
+By using the client API, you can use main form dialogs so users can open a related row table on a parent or base form without navigating away from the form. For more information, see [Open main form in a dialog using client API](../../developer/model-driven-apps/open-main-form-dialog.md).
 
 ## Next steps
 

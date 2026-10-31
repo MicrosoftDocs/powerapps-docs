@@ -3,10 +3,11 @@ title: "Customize Forms (Model-Driven Apps)"
 description: "Learn how to customize forms in model-driven apps programmatically. Use the form designer and SystemForm table to create, view, and edit table records efficiently."
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 ms.subservice: mda-developer
+ai-usage: ai-assisted
 search.audienceType: 
   - developer
 contributors:
@@ -40,7 +41,7 @@ The [`SystemForm`](../data-platform/reference/entities/systemform.md) table stor
 
 <a name="BKMK_FormProperties"></a>   
 
-## Form properties  
+## SystemForm table form properties  
 
  The following table describes key `SystemForm` table columns and the corresponding data included in the XML elements exported with the solution.  
 
@@ -60,7 +61,7 @@ The [`SystemForm`](../data-platform/reference/entities/systemform.md) table stor
 |`IsDefault`|N/A|Information that specifies whether the form or the dashboard is the system default.|
 |`Name`|`<LocalizedNames>`|`Name` is a string and `<LocalizedNames>` contains any localized labels for the name of the form.<br /><br /> You can retrieve the localized labels by using the <xref:Microsoft.Crm.Sdk.Messages.RetrieveLocLabelsRequest>.|
 |`ObjectTypeCode`| The form is a descendant of the `Entity` element. |The `ObjectTypeCode` value is the table logical name.|
-|`Type`|`<forms>` element `type` parameter|Valid values for forms are:<br /><br /> - 2: `main`<br />-5: `mobile`<br />-6: `quick`<br />-7: `quickCreate`|
+|`Type`|`<forms>` element `type` parameter|Valid values for forms are:<br /><br /> -2: `main`<br />-5: `mobile`<br />-6: `quick`<br />-7: `quickCreate`|
 
 <a name="BKMK_CreateAndEditForms"></a>   
 
@@ -72,107 +73,12 @@ The [`SystemForm`](../data-platform/reference/entities/systemform.md) table stor
 
  You can edit form definitions by exporting a managed solution, editing the form definitions, and then reimporting the solution. When you manually edit forms, use an XML editor that supports schema validation. For more information, see [Edit the customizations XML file with schema validation](edit-customizations-xml-file-schema-validation.md).  
 
-## Open main form in a dialog by using client API
-
-To open the main form in a dialog by using client API, call the [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md) method. The [Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md) API method opens the dialog with several options, including the size and position.
-
-
-> [!NOTE]
-> The [Xrm.Navigation.openForm](./clientapi/reference/xrm-navigation/openform.md) method doesn't support opening a main form as a dialog.
-
-## Example: Open a new record
-
-In this example, the dialog opens a new account form for creating a new record. The dialog pops up in the center by using up to 50% of the available window as a modal on top of the form it was invoked or called from.
-
-```JavaScript
-var pageInput = {
-    pageType: "entityrecord",
-    entityName: "account",
-    formType: 2,
-};
-var navigationOptions = {
-    target: 2,
-    width: {value: 50, unit:"%"},
-    position: 1
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions);
-```
-
-:::image type="content" source="media/open-new-record-mfd.png" alt-text="Open a new record.":::
-
-## Example: Open an existing record
-
-In this example, the dialog opens an existing account record by using the account ID value over the contact form. Replace the ID with any record ID value to open the record in the dialog.
-
-```JavaScript
-var pageInput = {
-    pageType: "entityrecord",
-    entityName: "account",
-    formType: 2,
-    entityId: "00aa00aa-bb11-cc22-dd33-44ee44ee44ee" //replace with actual ID
-};
-var navigationOptions = {
-    target: 2,
-    width: {value: 80, unit:"%"},
-    position: 1
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions);
-```
-:::image type="content" source="media/open-existing-record-mfd.png" alt-text="Open an existing record.":::
-
-## Example: Open a new record on the side pane
-
-In this example, the dialog opens a new record in the right corner of the window. You can achieve this behavior by using the pixel options.
-
-```JavaScript
-var pageInput = {
-    pageType: "entityrecord",
-    entityName: "account",
-    formType: 2,
-};
-var navigationOptions = {
-    target: 2,
-    width: {value: 500, unit:"px"},
-    position: 2
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions);
-```
-
-:::image type="content" source="media/open-record-side-pane-mfd.png" alt-text="Open an existing record on side pane.":::
-
-## Example: Open main form in a dialog with callback method
-
-This example shows how to invoke a main form dialog with a callback method after saving a record and closing the dialog.
-
-```Javascript
-var pageInput = {
-    pageType: "entityrecord",
-    entityName: "account",
-    formType: 2
-};
-var navigationOptions = {
-    target: 2,
-    width: {value: 80, unit:"%"},
-    position: 2  
-};
-Xrm.Navigation.navigateTo(pageInput, navigationOptions).then(
-    function success(result) {
-            console.log("Record created with ID: " + result.savedEntityReference[0].id + 
-            " Name: " + result.savedEntityReference[0].name)
-            // Handle dialog closed
-    },
-    function error() {
-            // Handle errors
-    }
-);
-```
-
-### See also  
+## Related content
 
 [Create and design forms](../../maker/model-driven-apps/create-design-forms.md)   
 [SystemForm table](../data-platform/reference/entities/systemform.md)  
 [Form XML schema](form-xml-schema.md)<br/>
-[Xrm.Navigation.navigateTo](./clientapi/reference/xrm-navigation/navigateto.md)
+[Open main form in a dialog by using client API](open-main-form-dialog.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

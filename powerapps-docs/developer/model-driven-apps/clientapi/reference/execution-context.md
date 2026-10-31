@@ -3,7 +3,7 @@ title: "Client API Execution Context Methods Reference"
 description: "Master Client API execution context methods including getDepth, getEventArgs, getEventSource, and getFormContext for effective event handling in Dynamics 365."
 author: sriharibs-msft
 ms.author: srihas
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: article
 applies_to: 
@@ -15,7 +15,7 @@ contributors:
 ---
 # Client API execution context methods reference
 
-The execution context defines the event context in which your code runs. For more information, see [Client API execution context](../clientapi-execution-context.md).
+Use the Client API execution context methods to get information about the event context in which your code runs, manage event handlers, and access the form context in Dynamics 365. For more information, see [Client API execution context](../clientapi-execution-context.md).
 
 The execution context object provides the following methods.
 
@@ -28,7 +28,7 @@ The execution context object provides the following methods.
 |[getSharedVariable](executioncontext/getSharedVariable.md)|Retrieves a variable set by using the [setSharedVariable](executioncontext/setSharedVariable.md) method.|
 |[setSharedVariable](executioncontext/setSharedVariable.md)|Sets the value of a variable to be used by a handler after the current handler completes.|
 
-### Related articles
+## Related articles
 
 [Client API execution context](../clientapi-execution-context.md)   
 [Save event arguments](save-event-arguments.md)   

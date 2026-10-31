@@ -1,11 +1,11 @@
 ---
-title: Model-driven apps developer guide
+title: "Model-Driven Apps Developer Guide: Extend with Custom Code"
 description: "Learn how developers extend model-driven apps with custom code, components, and integrations. Get started with development best practices and tutorials."
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
 ms.topic: overview
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.subservice: mda-developer
 search.audienceType: 
   - developer
@@ -20,12 +20,12 @@ Model-driven apps are primarily a no-code or low-code component-focused approach
 >
 > This section refers only to extensions that developers can make to improve the experience for users of model-driven apps. 
 
-If you're new to Dataverse applications, the topics in this section provide a high-level overview of the important concepts to help developers get started working with model-driven apps. 
+If you're new to model-driven apps, the topics in this section provide a high-level overview of the important concepts to help developers get started working with model-driven apps. 
 
 > [!div class="nextstepaction"]
 > [Get started](supported-customizations.md)
 
-### Related articles
+## Related articles
 
 [Understand model-driven apps components](../../maker/model-driven-apps/model-driven-app-components.md)<br/>
 [Create your first model-driven app](../../maker/model-driven-apps/build-first-model-driven-app.md)

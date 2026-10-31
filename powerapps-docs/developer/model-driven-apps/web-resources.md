@@ -1,9 +1,9 @@
 ---
-title: "Web Resources in Model-Driven Apps"
-description: "Learn about web resources in model-driven apps. Web resources are virtual files stored in Microsoft Dataverse that you can retrieve using unique URLs for form customizations and app development."
+title: "Extend Model-Driven Apps with Web Resources"
+description: "Learn how to use web resources in model-driven apps to extend forms, site maps, and ribbons with HTML, JavaScript, CSS, and images stored in Dataverse."
 author: anushikhas96
 ms.author: anushisharma
-ms.date: 03/27/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: overview
 ms.subservice: mda-developer
@@ -15,11 +15,11 @@ contributors:
 ---
 # Web resources in model-driven apps
 
-Web resources are *virtual files* that you store in the Microsoft Dataverse database and retrieve by using a unique URL address.  
+Web resources are *virtual files* that you store in the Microsoft Dataverse database and retrieve by using a unique URL address. Use web resources in model-driven apps to extend forms, site maps, and ribbon commands with HTML, JavaScript, CSS, images, and other supported files.  
 
 > [!NOTE]
 > Web resources and Power Apps component framework don't support IFRAMEing content that's behind an authentication boundary. 
-> Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this isn't supported in 
+> Some embedded IFRAMEs might work in a browser client if the user directly logs into the external service, but this behavior isn't supported in 
 > mobile or tablet applications. The specific scenario of embedding a form within an IFRAME, embedded in another form, 
 > isn't supported. Use [form as a component](../../maker/model-driven-apps/form-component-control.md) for such scenarios.
 > 
@@ -202,11 +202,11 @@ web client app with the control configured to use the appropriate number of rows
 
 ## Community tools
 
-**WebResources Manager** is a tool that the XrmToolbox community developed for Dataverse. 
-See the [Developer tools](developer-tools.md) article for community developed tools.
+The XrmToolbox community developed **WebResources Manager** for Dataverse. 
+See the [Developer tools](developer-tools.md) article for more community-developed tools.
 
 > [!NOTE]
-> The community tools aren't a product of Dataverse and Microsoft doesn't provide support for the community tools. 
+> The community tools aren't a product of Dataverse, and Microsoft doesn't provide support for them. 
 > If you have questions about the tool, contact the publisher. For more information, see [XrmToolBox](https://www.xrmtoolbox.com). 
   
 ### See also  
@@ -221,7 +221,7 @@ See the [Developer tools](developer-tools.md) article for community developed to
  [Web resource table reference](../data-platform/reference/entities/webresource.md)   
  [Sample: Passing multiple values to a web resource through the data parameter](sample-pass-multiple-values-web-resource-through-data-parameter.md)   
  [Sample: Importing files as web resources](sample-import-files-web-resources.md)   
- [Develop and debug JavaScript web resources by using browser DevTools and Power Platform CLI](debug-javascript-webresources.md)
+ [Debug JavaScript web resources by using Local Overrides](debug-javascript-webresources.md)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

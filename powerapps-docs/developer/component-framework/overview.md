@@ -1,10 +1,10 @@
 ---
-title: "Power Apps component framework overview in Microsoft Dataverse | Microsoft Docs"
-description: "Use the Power Apps component framework to create code components to provide an enhanced experiences for people to view and work with data in forms, views, and dashboards."
+title: "Power Apps Component Framework Overview for Code Components"
+description: "Use the Power Apps component framework to build reusable code components that enhance how users work with data in forms, views, and dashboards. Get started today."
 keywords: "Component Framework, code components, Power Apps controls"
 ms.author: anuitz
 author: anuitz
-ms.date: 01/09/2026
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: overview
 ms.subservice: pcf
@@ -26,7 +26,7 @@ Power Apps component framework enables professional developers and app makers to
 >
 > - Power Apps component framework isn't supported for on-premises environments.
 
-## How is it different from web resources?
+## How code components differ from web resources
 
 Unlike HTML web resources, code components render as part of the same context and load at the same time as any other components. This approach provides a seamless experience for the user. 
 
@@ -35,7 +35,7 @@ Create code components that you can use across the full breadth of Power Apps ca
 Developers can bundle all the HTML, CSS, and TypeScript files into a single [solution](../../maker/data-platform/solutions-overview.md) package file to move across environments. They can also make it available via [Marketplace](https://marketplace.microsoft.com/marketplace/apps?page=1&product=dynamics-365). 
 
 
-## Advantages 
+## Advantages of the Power Apps component framework
 
 - Access to a rich set of framework APIs that expose capabilities like component lifecycle management, contextual data, and metadata
 - Seamless server access via Web API; utility and data formatting methods; device features like camera, location, and microphone; and easy-to-invoke user experience elements like dialogs, lookups, and full-page rendering
@@ -45,7 +45,7 @@ Developers can bundle all the HTML, CSS, and TypeScript files into a single [sol
 - Ability to bundle all files into a single solution file
 - Ability to handle being destroyed and reloaded for performance reasons while preserving state
 
-## Licensing
+## Power Apps component framework licensing
 
 Power Apps component framework licensing requirements align with existing connectors and components. They're based on the type of data and connections you use in your app. For more information, see [Power Apps pricing](https://powerapps.microsoft.com/pricing/). To align with the licensing requirements, classify code components into two types:
 
@@ -61,7 +61,7 @@ Power Apps component framework licensing requirements align with existing connec
 > [!NOTE]
 > If you're currently using code components in model-driven apps connected to Microsoft Dataverse, end users need **Power Apps** licenses.
 
-## Related topics
+## Related articles
 
 [What are code components?](custom-controls-overview.md)<br/>
 [Code components for canvas apps](component-framework-for-canvas-apps.md)<br/>

@@ -1,9 +1,9 @@
 ---
-title: "data.refresh (Client API reference) in model-driven apps"
-description: Includes description and supported parameters for the data.refresh method.
+title: "data.refresh (Client API Reference) in Model-Driven Apps"
+description: Learn how to use the data.refresh method to refresh form data in model-driven apps, with an option to save first. See syntax, parameters, and callbacks.
 author: MitiJ
 ms.author: mijosh
-ms.date: 05/05/2025
+ms.date: 10/30/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -23,7 +23,7 @@ contributors:
 
 `formContext.data.refresh(save).then(successCallback, errorCallback);`
 
-## Parameter
+## Parameters
 
 |Name|Type|Required|Description|
 |--|--|--|--|

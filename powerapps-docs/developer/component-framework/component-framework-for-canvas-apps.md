@@ -29,7 +29,7 @@ When you open a canvas app that contains code components in Power Apps Studio, a
 
 ## Prerequisites
 
-- A Power Apps license is required. For more information, see [Power Apps component framework licensing](overview.md#licensing).
+- A Power Apps license is required. For more information, see [Power Apps component framework licensing](overview.md#power-apps-component-framework-licensing).
 - System administrator privileges are required to enable the Power Apps component framework feature in the environment.
 
 ## Enable the Power Apps component framework feature

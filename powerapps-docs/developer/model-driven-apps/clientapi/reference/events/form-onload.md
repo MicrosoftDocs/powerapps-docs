@@ -22,7 +22,7 @@ This event occurs whenever the form is loaded, specifically:
 Use the formContext.ui.[addOnLoad](../formContext-ui/addOnLoad.md) and formContext.ui.[removeOnLoad](../formContext-ui/removeOnLoad.md) methods to manage event handlers for this event. 
 
 > [!NOTE] 
-> Controls in a form may not be ready when a form's `OnLoad` event occurs. Use the `OnLoad` event of the control to wait for it to be ready. More information: [Add or remove event handler function to event using UI](../../events-forms-grids.md#add-or-remove-event-handler-function-to-event-using-ui)
+> Controls in a form may not be ready when a form's `OnLoad` event occurs. Use the `OnLoad` event of the control to wait for it to be ready. More information: [Add or remove event handler functions in forms by using the UI](../../events-forms-grids.md#add-or-remove-event-handler-functions-in-forms-by-using-the-ui)
 
 ## Asynchronous OnLoad event handler support
 
