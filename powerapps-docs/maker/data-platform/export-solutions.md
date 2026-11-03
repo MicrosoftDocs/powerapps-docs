@@ -1,8 +1,8 @@
 ---
-title: "Export solutions | MicrosoftDocs"
+title: "Export solutions"
 description: "Learn how to export a solution in Power Apps"
 ms.custom: ""
-ms.date: 05/26/2020
+ms.date: 11/02/2026
 ms.reviewer: ""
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -15,6 +15,7 @@ author: "Mattp123"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
+contributors: AnaAlmeida92
 search.audienceType: 
   - maker
 ---
@@ -43,6 +44,9 @@ You can manually export solutions using the steps in this article. We recommend 
     > ![Export solution.](media/solution-export.png "Export solution")
 
 The export can take several minutes to complete. Once finished, the export .zip file is available in the download folder specified by your web browser.
+
+> [!NOTE]
+> An exported solution can contain tables you didn't explicitly add. When a component in your solution depends on a table, directly or through relationships, views, apps, or flows, Dataverse can include that table in the package as a metadata-only component so the solution can be imported without missing-dependency errors. This inclusion happens regardless of whether you add required components in the export dialog. To see what causes a table to be included, select the table in the solution, and then select **Advanced** > **Show dependencies**. For more information, see [Dependency tracking for solution components](/power-platform/alm/dependency-tracking-solution-components).
 
 ## Export using the classic experience
 
