@@ -1,7 +1,7 @@
 ---
 title: Choose finance and operations data in Azure Synapse Link for Dataverse
 description: Learn how to choose Dynamics 365 finance and operations apps data in Microsoft Azure Synapse Link for Dataverse and work with Azure Synapse Link and Power BI.
-ms.date: 08/03/2026
+ms.date: 11/03/2026
 ms.reviewer: matp 
 ms.topic: "how-to"
 applies_to: 
@@ -201,6 +201,23 @@ To create an Azure Synapse Link profile with incremental data:
 > Data rows that contain deleted records from Finance and Operations tables contain the `uniqueidentifier` (ID) field. They don't contain the body of the record. Your downstream data pipeline might need to look up the corresponding fields using the ID field.
 > 
 > The finance and operations table limitations are also applicable to incremental data from tables. More information:[Known limitations with finance and operations entities](#known-limitations-with-finance-and-operations-entities)
+
+### Duplicate records in incremental data changes for finance and operations apps tables
+
+Azure Synapse Link uses row versions to identify incremental changes in finance and operations apps tables. The watermark represents the stable synchronization checkpoint. Keeping this watermark behind active transactions ensures that records changed by those transactions aren't skipped when the transactions eventually commit.
+
+Long-running transactions can hold the minimum active row version (MARV), preventing the watermark from advancing. Committed records beyond MARV continue to sync without waiting for the long-running transaction to finish, but the watermark remains unchanged. Only committed records are exported.
+
+Each periodic incremental synchronization resumes from the watermark. For example, if the watermark remains at version 100 because an active transaction holds MARV at version 101, committed records at versions 102–150 can still be exported. Until MARV advances, those committed records can be processed across successive sync cycles. The extra processing can cause sustained latency if MARV remains unchanged for an extended period. This behavior is by design and doesn't mean that synchronization has stopped.
+
+If Delta Lake conversion isn't enabled, repeated records can appear as duplicates in CSV files across multiple timestamped folders. Your downstream data pipeline must handle repeated records with the same ID and version number. If Delta Lake conversion is enabled, repeated records are reconciled during Delta Lake conversion.
+
+To reduce this impact, review batch jobs, integrations, and other processes that keep transactions open in finance and operations apps:
+
+- Where operationally appropriate, pause or reschedule the responsible workload and allow existing transactions to complete. Pausing future executions doesn't release an already open transaction. Coordinate any cancellation with your finance and operations apps administrator.
+- If the transaction originates from customer-owned code, the customer should fix the code to avoid keeping transactions open for extended periods.
+
+When the transaction holding MARV commits or rolls back, MARV and the watermark can advance, reducing repeated processing and allowing synchronization to catch up. Your downstream data pipeline must still handle duplicate records already exported.
 
 ## Working with data and metadata  
 
