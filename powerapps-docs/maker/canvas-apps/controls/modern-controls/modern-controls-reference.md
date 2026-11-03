@@ -38,6 +38,8 @@ Before implementing modern controls in your app, review the overview of modern c
 
 **[Card (preview)](modern-control-card.md)** - Cards help makers create clean, responsive object summaries such as contact tiles, document previews, or product listings in either horizontal or vertical orientation.
 
+**[Card gallery](modern-control-card-gallery.md)** - Display records in a responsive layout of cards.
+
 **[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
 **[Combobox](modern-control-combobox.md)** - A control that users can use to make selections from provided choices and supports search and multiple selections.
