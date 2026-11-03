@@ -32,6 +32,8 @@ Before implementing modern controls in your app, review the overview of modern c
 
 **[Avatar](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
 
+**[Avatar group](modern-control-avatar-group.md)** - Display a group of people with avatars and overflow handling.
+
 **[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
