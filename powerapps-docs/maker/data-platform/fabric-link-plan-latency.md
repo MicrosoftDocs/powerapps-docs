@@ -7,7 +7,7 @@ ms.reviewer: matp
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: concept-article
-ms.date: 08/17/2026
+ms.date: 11/03/2026
 ms.custom: template-concept
 ---
 # Plan your latency for link to Fabric
@@ -29,7 +29,7 @@ The main factors that affect the speed you observe:
 | Data churn | Higher change volume per interval increases the rows processed per delta cycle. |
 | Table size and row width | Wide tables (many columns) and very large tables process more slowly per row. |
 | Number of tables | More tables in a single link share throughput across the environment. |
-| Long-running source transactions | Uncommitted or long-running transactions in the source hold back the visible watermark, producing occasional lag spikes unrelated to load. |
+| Long-running source transactions | Uncommitted or long-running transactions in the source can hold the minimum active row version (MARV), preventing the watermark (the stable synchronization checkpoint) from advancing and producing occasional lag spikes unrelated to load. For finance and operations apps tables, committed records beyond MARV continue to sync without waiting for the long-running transaction to finish, but the watermark remains unchanged. Repeatedly processing those committed records across subsequent sync cycles, until MARV advances, adds workload and can increase latency. |
 | Change Data Feed (CDF) | Enabling CDF on the Delta tables adds change-tracking work to every write and increases sync latency. The environments measured here don't have CDF enabled. |
 
 ## How to use this article
@@ -62,6 +62,16 @@ Freshness isn't constant. The median change is fast. The P95 tail and occasional
 These effects are transient and clear on their own. They move the tail (P95, P99, and maximum), not the median.
 
 **Change Data Feed (CDF).** The environments measured here don't have Change Data Feed enabled on their Delta tables. Enabling CDF adds change-tracking work to every write, which increases sync latency. If you enable CDF, expect freshness somewhat higher than the numbers shown here.
+
+**Long-running transactions in ERP apps.**
+Link to Fabric uses row versions to identify incremental changes in ERP tables. The watermark represents the stable synchronization checkpoint. Keeping this watermark behind active transactions ensures that their records aren't skipped when those transactions eventually commit.
+
+Each periodic incremental synchronization resumes from the watermark. For example, if the watermark remains at version 100 because an active transaction holds MARV at version 101, committed records at versions 102–150 can still be synchronized. Until MARV advances, subsequent sync cycles resume from the unchanged watermark and can process those committed records again. Delta conversion reconciles these changes, but the additional processing can cause sustained latency if MARV remains unchanged for an extended period. This behavior is by design and doesn't mean that synchronization has stopped.
+
+To reduce this impact, review batch jobs, integrations, and other processes that keep transactions open in ERP apps:
+
+- Where operationally appropriate, pause or reschedule the responsible workload and allow existing transactions to complete. Pausing future executions doesn't release an already open transaction. Coordinate any cancellation with your ERP app administrator.
+- If the long running transaction originates from customer-owned code, the customer should fix the code to avoid keeping transactions open for extended periods.
 
 ## Financial services (CRM apps)
 
