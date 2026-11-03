@@ -130,7 +130,7 @@ sections:
          
          If Delta lake conversion isn't enabled, repeated records can appear as duplicates in CSV files across multiple time stamped folders. Your downstream data pipeline must handle repeated records with the same `Id` and `versionnumber`.
          
-         More information: [Duplicate records in incremental data changes for finance and operations tables](azure-synapse-link-select-FnO-data.md#duplicate-records-in-incremental-data-changes-for-finance-and-operations-tables).
+         More information: [Duplicate records in incremental data changes for finance and operations tables](azure-synapse-link-select-FnO-data.md#duplicate-records-in-incremental-data-changes-for-finance-and-operations-apps-tables).
    - question: Why does synchronization fail for a table that contains a column with the same name as a reserved system column?
      answer: |
         Azure Synapse Link adds a set of reserved system columns to every table it writes to the data lake. `versionnumber` is one of these columns and is used to track row versions. More information: [Working with data and metadata](/power-apps/maker/data-platform/azure-synapse-link-select-fno-data#working-with-data-and-metadata)
