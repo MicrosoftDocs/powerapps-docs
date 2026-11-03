@@ -58,6 +58,8 @@ Before implementing modern controls in your app, review the overview of modern c
 
 **[Link](modern-control-link.md)** – Open hyperlinks in new tab.
 
+**[Metrics card](modern-control-metrics-card.md)** - Display a metric with supporting context.
+
 **[Number input](modern-control-number-input.md)** - A number input control the user can modify.
 
 **[Persona (preview)](modern-control-persona.md)** – A control that displays one person's avatar, identity details, and optional presence.
