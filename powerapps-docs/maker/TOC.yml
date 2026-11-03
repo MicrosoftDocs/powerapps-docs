@@ -563,6 +563,8 @@
           href: ./canvas-apps/controls/modern-controls/modern-control-info-button.md
         - name: Link
           href: ./canvas-apps/controls/modern-controls/modern-control-link.md
+        - name: Metrics card
+          href: ./canvas-apps/controls/modern-controls/modern-control-metrics-card.md
         - name: Number input
           href: ./canvas-apps/controls/modern-controls/modern-control-number-input.md
         - name: Persona (preview)
