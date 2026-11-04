@@ -1,13 +1,14 @@
 ---
-title: "Add, configure, move, or delete sections on a form using the form designer | MicrosoftDocs"
+title: "Add, configure, move, or delete sections on a form using the form designer"
 description: "Work with sections on a model-driven app form in Power Apps"
 ms.custom: ""
-ms.date: 05/03/2022
+ms.date: 11/03/2026
 ms.reviewer: "matp"
 ms.topic: "how-to"
 author: "Aneesmsft"
 ms.subservice: mda-maker
 ms.author: "matp"
+contributors: tahoon-ms
 tags: 
   - "Power Apps maker portal impact"
 search.audienceType: 
@@ -75,7 +76,7 @@ These are the properties available to configure a section when you create or edi
 |**Display options** | **Hide** | When selected, the section is hidden by default and can be shown using code. |
 |**Display options** | **Lock** | Lock this section to keep it from being removed. |
 |**Formatting** |  **Columns** |  Specify up to four columns for the section. |
-|**Formatting** |  **Component label position** |  Determines the position for the component label. Select **Left** to display the label to the left of the value or **Top** to place the label above the value. |
+|**Formatting** |  **Component label position** |  Preferred position for the component label. Select **Left** to display the label to the left of the value or **Top** to place the label above the value. If there isn't enough space, the label is displayed on top of the value, even if the setting is **Left**. |
 
 > [!NOTE]
 > We recommend limiting the length of section label text to about 50 characters. Section label text doesn't wrap and can truncate on devices with small screens.

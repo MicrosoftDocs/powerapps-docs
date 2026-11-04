@@ -32,11 +32,15 @@ Before implementing modern controls in your app, review the overview of modern c
 
 **[Avatar](modern-control-avatar.md)** – A control that shows a graphic representation of a user, team, or entity.
 
+**[Avatar group](modern-control-avatar-group.md)** - Display a group of people with avatars and overflow handling.
+
 **[Badge](modern-controls-badge.md)** – A badge is a visual decoration for UI elements.
 
 **[Button](modern-control-button.md)** – Interact with the app by clicking or tapping.
 
 **[Card (preview)](modern-control-card.md)** - Cards help makers create clean, responsive object summaries such as contact tiles, document previews, or product listings in either horizontal or vertical orientation.
+
+**[Card gallery](modern-control-card-gallery.md)** - Display records in a responsive layout of cards.
 
 **[Checkbox](modern-control-checkbox.md)** - Select or clear an option to specify **true** or **false**.
 
