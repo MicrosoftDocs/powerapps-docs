@@ -1,5 +1,5 @@
 ---
-title: Metrics Card modern control in canvas apps - Power Apps
+title: Metrics Card modern control in canvas apps (preview) - Power Apps
 description: Learn about the properties and examples of the Metrics Card modern control in Power Apps.
 author: yogeshgupta698
 ms.topic: reference
@@ -13,9 +13,11 @@ search.audienceType:
   - maker
 ---
 
-# Metrics Card modern control in canvas apps
+# Metrics Card modern control in canvas apps (preview)
 
 Display a key metric with a title, description, and optional comparison.
+
+[!INCLUDE [preview-note](~/../shared-content/shared/preview-includes/preview-note.md)]
 
 ## Description
 
