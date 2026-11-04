@@ -1,7 +1,7 @@
 ---
 title: "Business skills overview" 
-description: Learn how business skills in Business Applications in Work IQ provide reusable business-process instructions to agents through Work IQ MCP and Dataverse MCP.
-ms.date: 09/25/2026
+description: Learn how business skills provide reusable business-process instructions to Copilot and agents through Business Applications in Work IQ or direct Dataverse MCP connections.
+ms.date: 11/03/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -21,7 +21,7 @@ Business skills are natural-language instructions that capture how your organiza
 
 [!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
-Agents can discover and use the business skills they have access to as needed at runtime to complete tasks according to your organization's processes. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
+Through [Business Applications in Work IQ](business-applications-work-iq.md), Copilot and connected agents can discover and use active business skills they have access to, completing tasks according to your organization's processes. Agents connected directly to the Dataverse MCP server can also discover and use business skills. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
 
 To enable business skills in a Dataverse environment, a Power Platform administrator turns on **Work IQ**. For more information, see [Manage participation in Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/manage-participation#environment-features-for-work-iq).
 
@@ -32,7 +32,7 @@ Key capabilities include:
 
 - Reusability—Define a process once and use it across multiple agents and surfaces 
 - Consistency—Agents follow the same process definition, reducing variation in outcomes 
-- Maintainability—Update a skill in one place to change behavior across all agents that use it 
+- Maintainability—Update and activate a skill in one place to change behavior across all agents that use it.
 - Governance—Control who can create, modify, and use business skills through ownership, sharing, and Dataverse security roles.
 - Solution-aware—A solution aware object that appears in Solution explorer and can be moved across environments 
 
@@ -50,7 +50,7 @@ Agents query metadata to find applicable skills, then retrieve full instructions
 
 ## Security and governance 
 
-Store business skills in Dataverse. They follow Dataverse security patterns whether agents access them through Work IQ MCP or directly through Dataverse MCP. Each skill has an owner who controls access. Owners can provide general access to everyone in the environment, share with selected Dataverse security roles, or provide direct access to specific users or groups.
+Business skills are stored in Dataverse and follow Dataverse security patterns. The same permissions apply whether you use a skill in Copilot, a Work IQ-connected agent, or an agent connected directly to the Dataverse MCP server. Each skill has an owner who controls access. Owners can provide general access to everyone in the environment, share with selected Dataverse security roles, or provide direct access to specific users or groups.
 
 Users who access a skill through a Dataverse security role must have both the selected role and the **Skill Sharing Role** security role. Security role access and direct access can provide view or edit permissions.
 
