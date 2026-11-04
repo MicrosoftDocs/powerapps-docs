@@ -539,12 +539,16 @@
           href: ./canvas-apps/controls/modern-controls/upgrade-fluent-ui-controls-to-modern.md
         - name: Attachments (preview)
           href: ./canvas-apps/controls/modern-controls/modern-control-attachments.md
+        - name: Avatar group (preview)
+          href: ./canvas-apps/controls/modern-controls/modern-control-avatar-group.md
         - name: Badge
           href: ./canvas-apps/controls/modern-controls/modern-controls-badge.md
         - name: Button
           href: ./canvas-apps/controls/modern-controls/modern-control-button.md
         - name: Card
           href: ./canvas-apps/controls/modern-controls/modern-control-card.md
+        - name: Card gallery
+          href: ./canvas-apps/controls/modern-controls/modern-control-card-gallery.md
         - name: Checkbox
           href: ./canvas-apps/controls/modern-controls/modern-control-checkbox.md
         - name: Combobox
