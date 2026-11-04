@@ -1,5 +1,5 @@
 ---
-title: Card Gallery modern control in canvas apps - Power Apps
+title: Card Gallery modern control in canvas apps (preview) - Power Apps
 description: Learn about the properties, data mappings, and examples of the Card Gallery modern control in Power Apps.
 author: yogeshgupta698
 ms.topic: reference
@@ -13,9 +13,11 @@ search.audienceType:
   - maker
 ---
 
-# Card Gallery modern control in canvas apps
+# Card Gallery modern control in canvas apps (preview)
 
 Display records as responsive cards with optional grouping and selection.
+
+[!INCLUDE [preview-note](~/../shared-content/shared/preview-includes/preview-note.md)]
 
 ## Description
 

@@ -4,7 +4,8 @@ description: Learn about the details, properties, and examples of the Combo box 
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 04/15/2026
+ms.date: 11/02/2026
+ai-usage: ai-assisted
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: joshuapa
@@ -29,7 +30,7 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 
 **ItemDisplayText** – A formula that determines what text to display for each item in the dropdown list. Use `ThisItem` to reference the current item. Example: `ThisItem.DisplayName` or `ThisItem.Value1`.
 
-**DefaultSelectedItems** – The initial items selected in the control before the user makes a change. Must be a table of records from the **Items** data source.
+**DefaultSelectedItems** – The initial items selected in the control before the user makes a change. Supply a table of records compatible with the **Items** schema. Records outside the current **Items** table are retained only when **AllowExternalSelectedItems** is `true`.
 
 **InputTextPlaceholder** – Hint text that appears in the input field when no items are selected. Default is **"Find items"**.
 
@@ -38,6 +39,8 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 ## Behavior
 
 **SelectMultiple** – Whether users can select multiple items. When `true`, users can select multiple items and each selected item can be toggled on or off by clicking it again. When `false`, only one item can be selected at a time. Default is **true**.
+
+**AllowExternalSelectedItems** – Whether defaults and previously selected records can remain selected when they aren't in the current **Items** table. When `true`, those records also remain available in the dropdown alongside the current items. When `false`, selection is restricted to records in **Items**. New `ModernCombobox` instances default to `true`; controls upgraded from the earlier `ComboboxCanvas` control are assigned `false` to preserve their earlier behavior. Set this property explicitly when your app depends on either behavior. See [Keep selections outside the current items](#keep-selections-outside-the-current-items).
 
 **IsSearchable** – Whether the search box is enabled. When `true`, users can type to filter the list. When `false`, the control acts as a simple dropdown without search. Default is **true**.
 
@@ -53,18 +56,16 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 
 ## Data
 
-**SelectedItems** – (Output) A table of records representing the items currently selected by the user. Use this property to reference the user's selections in formulas.
+**SelectedItems** – (Output) A table of records that represents the items the user currently selects. Use this property to reference the user's selections in formulas.
 
 **Selected** – (Output) When **SelectMultiple** is `false`, returns the single selected item as a record. When **SelectMultiple** is `true`, returns the first selected item.
 
-**SearchText** – (Output) The current text typed by the user in the search box. Use this to create custom filtering logic or to track search behavior.
-
+**SearchText** – (Output) The current text the user types in the search box. Use this property to create custom filtering logic or to track search behavior.
 
 > [!NOTE]
-> Output properties such as **SelectedItems** in a Combo box control return a table of the currently selected records and can’t be set directly. Instead, other controls and formulas use this property to access the current selection. For example, reference `ComboBoxName.SelectedItems` in a label, gallery, or formula to work with the selected records.
+> Output properties such as **SelectedItems** in a Combo box control return a table of the currently selected records and can't be set directly. Instead, other controls and formulas use this property to access the current selection. For example, reference `ComboBoxName.SelectedItems` in a label, gallery, or formula to work with the selected records.
 
-
-**MultiValueDelimiter** – The separator character used when displaying multiple selected items in the input field. Default is **", "** (comma and space).
+**MultiValueDelimiter** – The separator character used when displaying multiple selected items in the input field. The default is **", "** (comma and space).
 
 ## Validation
 
@@ -105,7 +106,7 @@ Key properties for this control are **Items**, **DefaultSelectedItems**, and **S
 | `Appearance.FilledLighter` | Filled background style |
 | `Appearance.Outline` | Outlined border with transparent background |
 
-**BasePaletteColor** – The base color used by the theme to generate the control's color palette. Changes this property to apply a different theme color to the control.
+**BasePaletteColor** – The base color the theme uses to generate the control's color palette. Change this property to apply a different theme color to the control.
 
 **Font** – The name of the font family in which text appears.
 
@@ -150,7 +151,7 @@ The following YAML example shows combo box controls with single and multiselect 
 
 ```yaml
 - DepartmentComboBox:
-    Control: ModernCombobox@1.0.0
+    Control: ModernCombobox@1.1.2
     Properties:
       Items: =["Engineering", "Sales", "Marketing", "Support"]
       ItemDisplayText: =ThisItem.Value
@@ -164,9 +165,9 @@ The following YAML example shows combo box controls with single and multiselect 
       Height: =32
 
 - TeamMemberComboBox:
-    Control: ModernCombobox@1.0.0
+    Control: ModernCombobox@1.1.2
     Properties:
-      Items: =["Alice Smith", "Bob Johnson", "Carol Williams", "David Brown"]
+      Items: =["Darius Franklin", "Elizabeth Moore", "Hannah Jarvis", "Henry Ross"]
       ItemDisplayText: =ThisItem.Value
       InputTextPlaceholder: ="Select team members..."
       SelectMultiple: =true
@@ -183,6 +184,32 @@ The following YAML example shows combo box controls with single and multiselect 
 **AccessibleLabel** – A label for screen readers to announce what the control is for. Describe the purpose of the combo box, not the current selection.
 
 **TabIndex** – The tab order of the control relative to other controls. Controls with lower **TabIndex** values receive focus before controls with higher values.
+
+## Keep selections outside the current items
+
+Use **AllowExternalSelectedItems** when **Items** changes as users search or filter. A selected record might no longer match the current search even though the user still needs it selected. With this property set to `true`, the control combines current items with selected records that aren't in that result set.
+
+This property doesn't create records in the data source or let users enter arbitrary text as a new item. Supply records through **DefaultSelectedItems**, or let users select records from earlier results. Keep their column names and types compatible with **Items**, and use **ItemDisplayText** to display the same field for both current and retained records.
+
+The following example selects a department that isn't in **Items**:
+
+```yaml
+- RetainedDepartmentComboBox:
+    Control: ModernCombobox@1.1.2
+    Properties:
+      Items: |-
+        =Table({Id: 2, Name: "Sales"}, {Id: 3, Name: "Support"})
+      DefaultSelectedItems: |-
+        =Table({Id: 1, Name: "Engineering"})
+      ItemDisplayText: =ThisItem.Name
+      AllowExternalSelectedItems: =true
+      SelectMultiple: =true
+      AccessibleLabel: ="Departments"
+      Width: =320
+      Height: =32
+```
+
+In an environment that supports this control version, preview the app and confirm that **Engineering** is selected and appears alongside **Sales** and **Support**. Read `RetainedDepartmentComboBox.SelectedItems` to access the selected records. Then set **AllowExternalSelectedItems** to `false` and call `Reset(RetainedDepartmentComboBox)`. **Engineering** is no longer a valid default because it isn't in **Items**.
 
 ## Recent updates
 
@@ -213,9 +240,9 @@ The following properties now require typed enum syntax instead of plain string v
 ### Behavioral changes
 
 - **SelectMultiple defaults to true**: The **SelectMultiple** property now defaults to `true`. If your app requires single selection, explicitly set `SelectMultiple = false`.
-- **Toggle selection behavior**: Clicking a selected item now unselects it, making it easier to remove selections without clearing the entire list.
-- **Immediate OnChange firing**: The **OnChange** event now fires immediately on every selection or deselection, enabling real-time filtering and dependent dropdowns. Note: **DelayOutput** controls when **SearchText** updates — it does not affect **OnChange** timing.
-- **Search text clears on selection**: When an item is selected, the search text automatically clears.
+- **Toggle selection behavior**: Selecting a selected item now deselects it, making it easier to remove selections without clearing the entire list.
+- **Immediate OnChange firing**: The **OnChange** event now fires immediately on every selection or deselection, enabling real-time filtering and dependent dropdowns. Note: **DelayOutput** controls when **SearchText** updates — it doesn't affect **OnChange** timing.
+- **Search text clears on selection**: When you select an item, the search text automatically clears.
 - **Reset() includes SearchText**: The `Reset()` function now clears both the selection and the search text.
 
 ### Removed and replaced properties
