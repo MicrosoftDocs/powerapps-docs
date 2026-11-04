@@ -1,5 +1,5 @@
 ---
-title: Use Business Applications in Work IQ (preview)
+title: Use Business Applications in Work IQ
 description: Learn how to use Work IQ to find and work with data in Power Apps model-driven apps.
 author: shwetamurkute
 ms.component: pa-user
@@ -16,17 +16,19 @@ ms.collection:
   - bap-ai-copilot
 ---
 
-# Use Business Applications in Work IQ (preview)
+# Use Business Applications in Work IQ
 
 [This article is prerelease documentation and is subject to change.]
 
 Power Apps model-driven apps are available as Business Applications in Work IQ. You can use natural-language prompts to find and work with business data without opening the model-driven app. Work IQ applies Copilot reasoning to the data and app components that you already have permission to access.
 
-You can work with Business Applications by using an agent, or through a chat experience powered by Work IQ Model Context Protocol (MCP). Start a conversation, select an environment and app when prompted, and then describe the information or action you need. Work IQ uses the app's views, forms, and tables to complete the request.
+Access to Business Applications through Work IQ Model Context Protocol (MCP) and Microsoft Copilot Studio is generally available. Access through Cowork is available in public preview.
+
+You can work with Business Applications by using an agent in Copilot Studio, or through a chat experience powered by Work IQ Model Context Protocol (MCP) or Cowork. Start a conversation, select an environment and app when prompted, and then describe the information or action you need. Work IQ uses the app's views, forms, and tables to complete the request.
 
 > [!IMPORTANT]
 >
-> - This feature is in preview.
+> - Access to Business Applications through Cowork is in public preview. The following applies only to the Cowork experience:
 > - Preview features aren't meant for production use and might have restricted functionality. These features are subject to [supplemental terms of use](https://go.microsoft.com/fwlink/?linkid=2189520). They're available before an official release so that customers can get early access and provide feedback.
 
 > [!NOTE]
