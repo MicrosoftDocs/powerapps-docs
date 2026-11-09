@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Microsoft Fabric Link for Dataverse.
   author: anibakore-msft
   ms.search.keywords: 
-  ms.date: 09/29/2026
+  ms.date: 11/06/2026
   ms.author: banirud
   ms.reviewer: matp
   contributors: gshrivastava24
@@ -171,10 +171,14 @@ sections:
         When the initial sync is complete, the system continuously refreshes updates in Dataverse in the lakehouse. Incremental updates typically take up to one hour to appear, though actual timing depends on table size, number of updates and transactions happening in the environment, number of tables, row count, and system load periods.
    - question: Why am I seeing differences in `SinkModifiedOn` and `ModifiedOn` columns?
      answer: |
-        This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the Dataverse data lake from where Fabric shortcuts point to. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.
+        This is expected behavior. `ModifiedOn` is the date and time a record was last changed in Dataverse, while `SinkModifiedOn` is the date and time the record was written to the Dataverse data lake that Fabric shortcuts point to. `SinkModifiedOn` is typically later than `ModifiedOn`, and the difference depends on factors such as batch size, system load, and the number of records being processed.
 
         > [!IMPORTANT]
-        > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
+        > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available from the first sync itself.
+        >
+        > Similar behavior can occur for Dataverse tables in one-to-many relationships configured with cascading behavior. Certain cascading operations can update the row version of a related record without updating its `ModifiedOn` value. Link to Fabric detects the new row version and synchronizes the record again, so `SinkModifiedOn` reflects the latest synchronization time while `ModifiedOn` retains its earlier value.
+        >
+        > As a result, the difference between `SinkModifiedOn` and `ModifiedOn` doesn't always represent the time taken for data to become available. Use caution when building latency reports based on the difference between these columns, because it can give a misleading impression of data availability.
 - name: Storage and capacity
   questions:
     - question: Why do I see tables ending in `-Analytics` when my environment isn't linked to Microsoft Fabric?

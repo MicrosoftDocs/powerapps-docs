@@ -4,7 +4,7 @@ metadata:
   description: Get answers to frequently asked questions about Power Apps Azure Synapse Link for Dataverse.
   author: sabinn-msft
   ms.search.keywords: 
-  ms.date: 11/03/2026
+  ms.date: 11/06/2026
   ms.author: sabinn
   ms.reviewer: matp
   contributors: 
@@ -152,6 +152,8 @@ sections:
          
          > [!IMPORTANT]
          > In the case of long-running transactions in finance and operations apps, a record might be synchronized multiple times to ensure no data loss. In this scenario, `SinkModifiedOn` reflects the last synchronization time, not the first. For example, if a record is synced 10 times within an hour, `SinkModifiedOn` shows the time of the 10th sync even though the data was available in the lake from the first sync itself. Use caution when building latency reports based on the difference between `SinkModifiedOn` and `ModifiedOn`, as it can give a misleading impression of actual data availability.
+
+         `SinkModifiedOn` and `ModifiedOn` behave the same way in Azure Synapse Link and link to Fabric, including when cascading operations cause related Dataverse records to sync again. For more information, see [Why am I seeing differences in `SinkModifiedOn` and `ModifiedOn` columns?](fabric-link-faq.yml#why-am-i-seeing-differences-in--sinkmodifiedon--and--modifiedon--columns).
    - question: Which Dataverse tables aren't supported for export?
      answer: |
         Any table that doesn't have change tracking enabled isn't supported in addition to following system tables:
