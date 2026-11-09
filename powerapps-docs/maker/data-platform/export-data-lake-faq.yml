@@ -46,7 +46,7 @@ sections:
         For comprehensive Microsoft Cost Management information, go to: [Plan to manage Azure costs - Microsoft Cost Management | Microsoft Learn](/azure/cost-management-billing/understand/plan-manage-costs)
    - question: Can I link a Synapse workspace to my data lake for CSV exports?
      answer: |
-        The **Link to Data lake** creation flow supports CSV exports to your own Azure Data Lake Storage Gen2 account, but no longer includes Synapse workspace linking. To analyze these exports in Synapse, manually connect your workspace to the data lake. For more information, see [Tutorial: Analyze data in a storage account](/azure/synapse-analytics/get-started-analyze-storage).
+        The **Link to Data lake** creation flow supports CSV exports to your own Azure Data Lake Storage Gen2 account, but no longer includes Synapse workspace linking. To analyze these exports in Synapse, manually connect your workspace to the data lake. For more information, see [Connect your data lake to a Synapse workspace](azure-synapse-link-data-lake.md#connect-your-data-lake-to-a-synapse-workspace).
    - question: What happens when I add a column?
      answer: |
         When you add a new column to a table in the source, it's also added at the end of the file in the destination in the corresponding file partition. While the rows that existed before the addition of the column are't shown in the new column, new or updated rows show the newly added column.
