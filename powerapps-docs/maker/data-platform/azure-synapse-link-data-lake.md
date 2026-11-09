@@ -1,9 +1,10 @@
 ---
 title: "Create an Azure Synapse Link for Dataverse with Azure Data Lake in Power Apps"
 description: "Learn how to export table data to Azure Data Lake Storage Gen2 in Power Apps."
-ms.date: 09/29/2026
+ms.date: 11/06/2026
 ms.reviewer: "Mattp123"
 ms.topic: "how-to"
+ai-usage: ai-assisted
 applies_to: 
   - "powerapps"
 author: swatimadhukargit
@@ -120,14 +121,18 @@ The model.json file, along with its name and version, provides a list of tables 
 A folder that includes snapshot comma-delimited (CSV format) files is displayed for each table exported to the data lake.
    ![Table data in the data lake.](media/entity-data-in-lake.png "Table data in the data lake")
    
-## Link a Synapse workspace to an existing Azure Synapse Link profile with data lake only
+<a name="link-a-synapse-workspace-to-an-existing-azure-synapse-link-profile-with-data-lake-only"></a>
 
-1. In a web browser's address bar, append `?athena.updateLake=true` to the web address that ends with **exporttodatalake**.
+## Connect your data lake to a Synapse workspace
 
-2. Select an existing profile from the Azure Synapse Link area, and then select extended option.
+The **Link to data lake** experience in Power Apps no longer supports linking a Synapse workspace to an existing Azure Synapse Link profile.
 
-3. Select **Link to Azure Synapse Analytics Workspace** and allow a few minutes for everything to be linked.
+To access your exported Dataverse data in Azure Synapse Analytics, use Synapse Studio to connect directly to the Azure Data Lake Storage Gen2 (ADLS Gen2) location that contains the data.
 
+Use either of the following options:
+
+- Create an ADLS Gen2 linked service in Synapse Studio. For instructions, see [Copy and transform data in Azure Data Lake Storage Gen2](/azure/data-factory/connector-azure-data-lake-storage).
+- Connect directly to an ADLS Gen2 container or folder from **Data** > **Linked** in Synapse Studio by using **Connect to Azure Storage (preview)**. For connection instructions and access requirements, see [Browse an ADLS Gen2 folder with ACLs in Azure Synapse Analytics](/azure/synapse-analytics/how-to-access-container-with-access-control-lists).
 
 ### Continuous snapshot updates
 
