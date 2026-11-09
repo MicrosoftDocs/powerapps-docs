@@ -59,6 +59,12 @@ These capabilities aren't supported:
 - Query grouping
 - Adding columns
 
+Natural language search in apps supports only the English language and these regions:
+- India
+- North America
+- Oceania
+- United Kingdom
+
 ## Considerations
 
 - After you run a query, check the generated filter tags to make sure that the filter conditions were correctly interpreted from your natural language query. If any part of your query is missing from the filter tags, the results aren't filtered by that condition.
