@@ -4,7 +4,7 @@ description: Add, download, and remove attachments in canvas apps with the moder
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 10/01/2026
+ms.date: 11/04/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 ms.reviewer: joshuapa
@@ -23,7 +23,7 @@ The modern **Attachments** control lets users add, download, and remove files as
 
 ## Modern and classic attachments
 
-Unlike the [classic Attachments control](../control-attachments.md), the modern control can work outside a form. Its **Attachments** output can be passed directly to **Patch**. Inside a form, use **SubmitForm** to save the record and its attachments.
+Unlike the [classic Attachments control](../control-attachments.md), the modern control can work outside a form. You can pass its **Attachments** output directly to **Patch**. Inside a form, use **SubmitForm** to save the record and its attachments.
 
 The modern control provides:
 
@@ -47,10 +47,35 @@ Use these properties to bind the control and configure file selection.
 | **MaxAttachmentSize** | The maximum size of each new attachment, in MB. The data source can also enforce its own limits. |
 | **AcceptedFileTypes** | A single-column table of accepted file extensions, such as `[".pdf", ".docx"]`. It doesn't invalidate existing saved attachments. |
 | **DisplayMode** | **Edit** allows additions and removals. **View** hides the drop area and upload actions and displays existing files for download. **Disabled** prevents interaction. |
+| **DropZoneVisibility** | Controls when the drop zone appears. The default is `DropZoneVisibility.Auto`. See [Drop zone behavior](#drop-zone-behavior) for the four modes. |
+| **ShowFooter** | Shows the attachment count, unsaved count, and **Attach file** action in the footer. The default is `true`. The action is available only in **Edit** mode and is disabled when the attachment limit is reached. |
 | **AccessibleLabel** | A screen-reader label that describes the purpose of the attachments, such as `"Supporting documents for this request"`. |
 | **BasePaletteColor** | The base color used for the control's palette. |
 
 File-type restrictions guide file selection; they don't replace data-source validation or your organization's file-security policies.
+
+## Drop zone behavior
+
+Set **DropZoneVisibility** to choose how users see the drop zone on the web. These modes apply only when **DisplayMode** is **Edit**. In **View** or **Disabled** mode, the control doesn't show an inline drop zone or an overlay, regardless of this setting.
+
+| Value | Behavior |
+| --- | --- |
+| `DropZoneVisibility.Hidden` | Never shows the drop zone, including during a file drag. Users can still select **Attach file** when **ShowFooter** is `true`. |
+| `DropZoneVisibility.Visible` | Keeps the inline drop zone visible regardless of the available height. |
+| `DropZoneVisibility.Auto` | The default. When **ShowFooter** is `true`, shows the inline drop zone if there's also room for at least three standard-height file rows after accounting for the footer and vertical padding. Otherwise, shows an overlay only while files are dragged over the control. When **ShowFooter** is `false`, keeps the inline drop zone visible regardless of the available height. |
+| `DropZoneVisibility.Hover` | Shows an overlay only while files are dragged over the control. Moving the pointer over the control without dragging files doesn't show it. |
+
+The overlay covers the control inside its padding without changing the file list or footer layout. It disappears when the files leave the control or when a drop or drag end occurs within it. Drop files onto the drop zone to add them.
+
+The visibility setting doesn't bypass **MaxAttachments**, **MaxAttachmentSize**, or **AcceptedFileTypes**. When the attachment limit is reached, the drop zone can't accept more files.
+
+To show the drop zone only during a file drag, set **DropZoneVisibility** to:
+
+```power-fx
+DropZoneVisibility.Hover
+```
+
+Keep **ShowFooter** set to `true` to provide the **Attach file** action when the drop zone is hidden. If you set **ShowFooter** to `false` with **Hidden** or **Hover**, users don't have a visible file-picker action when no file drag is in progress. On mobile, use the device's file picker rather than drag and drop.
 
 ## Events and outputs
 
@@ -60,7 +85,7 @@ Use events to respond to user actions and outputs to save changes or show status
 | --- | --- |
 | **Attachments** | The attachment table to save to the record's attachment column. Pass this output directly to **Patch** for attachment columns. For a Dataverse file column, build a single record with **FileName** and **Value** from the selected file, as shown in [Dataverse file column](#dataverse-file-column). |
 | **AttachmentsCount** | The current attachment count, excluding files marked for removal. |
-| **IsUploading** | Whether files are being added to the control's in-memory state. This isn't confirmation that **Patch** or **SubmitForm** has saved the files. |
+| **IsUploading** | Whether files are being added to the control's in-memory state. This value isn't confirmation that **Patch** or **SubmitForm** has saved the files. |
 | **OnAddFile** | Actions to run for each added file. Adding multiple files triggers this event once per file, not once per batch. |
 | **OnRemoveFile** | Actions to run when a user removes an attachment. |
 | **OnSelect** | Actions to run when a user selects a file. The default action downloads or opens the file; you can customize the action. |
@@ -174,12 +199,14 @@ The following control definition uses the SharePoint connection and `RequestsGal
 
 ```yaml
 - Attachments1:
-    Control: ModernAttachments@1.3.0
+    Control: ModernAttachments@1.4.0
     Properties:
       Items: =RequestsGallery.Selected.Attachments
       MaxAttachments: =5
       MaxAttachmentSize: =10
       AcceptedFileTypes: =[".pdf", ".docx"]
+      DropZoneVisibility: =DropZoneVisibility.Auto
+      ShowFooter: =true
       AccessibleLabel: ="Supporting documents for the selected request"
       DisplayMode: =If(IsBlank(RequestsGallery.Selected), DisplayMode.Disabled, DisplayMode.Edit)
       Width: =Min(Parent.Width, 480)
