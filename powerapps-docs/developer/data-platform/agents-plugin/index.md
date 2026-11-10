@@ -1,8 +1,8 @@
 ---
-title: Microsoft Dataverse plugin for AI coding agents (preview)
-description: Learn how to install and use Microsoft Dataverse plugin for AI coding agents to build, query, and manage Dataverse solutions.
-#customer intent: As a Dataverse developer, I want to install the Dataverse  plugin for my coding agent, so that I can build and manage solutions with natural language prompts.
-ms.date: 07/31/2026
+title: Microsoft Dataverse Plugin for AI Agents (Preview)
+description: Learn how to install and use Microsoft Dataverse plugin for AI agents, including coding agents and Copilot Cowork, to build, query, and manage Dataverse solutions.
+#customer intent: As a Dataverse developer, I want to use the Dataverse plugin with my AI agent, so that I can build and manage solutions with natural language prompts.
+ms.date: 11/09/2026
 ms.reviewer: jdaly
 ms.topic: overview
 author: kewear
@@ -12,17 +12,20 @@ search.audienceType:
   - developer
 contributors:
  - JimDaly
+ - suyask-msft
 ai-usage: ai-assisted
 ---
-# Microsoft Dataverse plugin for AI coding agents (preview)
+# Microsoft Dataverse plugin for AI agents (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Microsoft Dataverse plugin for AI coding agents are an open-source set of instructions that help supported coding agents perform Dataverse development and administration tasks. You describe the outcome you want in natural language, and the agent selects the appropriate skill and tool.
+Microsoft Dataverse plugin for AI agents is an open-source set of instructions that helps supported AI agents perform Dataverse development and administration tasks. You describe the outcome you want in natural language, and the agent selects the appropriate skill and tool.
 
 [!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 The plugin doesn't replace the Dataverse development tools. It gives the agent task-specific guidance for using the [Dataverse CLI](../cli/index.md), [Dataverse MCP server](../../../maker/data-platform/data-platform-mcp.md), [Dataverse SDK for Python](../sdk-python/overview.md), [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction), and [Dataverse Web API](../webapi/overview.md).
+
+The same skills are available in more places over time. In addition to coding agents, the plugin is available in Microsoft Copilot Cowork, where it adds an approval-driven, conversational experience for building Dataverse data models and apps. Dataverse support in agents and tools is expanding quickly, with new skills, MCP server tools, and platforms added regularly.
 
 The source is available in the [microsoft/Dataverse-skills](https://github.com/microsoft/Dataverse-skills) GitHub repository.
 
@@ -45,7 +48,7 @@ This guidance reduces the amount of tool-specific syntax you need to provide in 
 
 ## How the plugin works
 
-The coding agent plugin loads an overview skill for Dataverse context and then selects one or more specialized skills based on your request. A single request can use several skills. For example, a request to create a recruiting data model, add sample data, and package it can use the metadata, data, query, and solution skills.
+The coding agent plugin loads an overview skill for the Dataverse context and then selects one or more specialized skills based on your request. A single request can use several skills. For example, a request to create a recruiting data model, add sample data, and package it can use the metadata, data, query, and solution skills.
 
 The agent selects among these supported tools:
 
@@ -57,20 +60,20 @@ The agent selects among these supported tools:
 | Power Platform CLI | Solution application lifecycle management (ALM), environment operations, and role assignment |
 | Dataverse Web API | Operations that aren't available through a managed tool |
 
-For descriptions of all the included skills, see [Microsoft Dataverse plugin for AI coding agents reference](reference.md).
+For descriptions of all the included skills, see [Microsoft Dataverse plugin for AI agents reference](reference.md).
 
 ## Prerequisites
 
 You need:
 
-- A Dataverse environment available through Power Apps, Dynamics 365, or another applicable Power Platform plan. For a nonproduction development environment, you can use the [Power Apps Developer Plan](/power-platform/developer/plan).
+- A Dataverse environment available through Power Apps, Dynamics 365, or another applicable Power Platform plan. For a nonproduction environment, use a sandbox or managed developer environment.
 - A user account with access to the environment and the privileges required for the operations you request.
-- A supported coding agent with plugin support: GitHub Copilot, Claude Code, Cursor, or Codex.
-- Permission to install or run any required local tools.
+- A supported agent: GitHub Copilot, Claude Code, Cursor, OpenAI Codex and ChatGPT, Gemini CLI, or Google Antigravity. Any other agent that reads local skills can also use them. For Copilot Cowork, see [Use the Microsoft Dataverse plugin in Cowork (preview)](/copilot/cowork/dataverse-plugin).
+- For coding agents, permission to install or run any required local tools.
 
 The [`dv-connect`](reference.md#dv-connect) skill checks the local toolchain and guides installation or configuration when needed. Depending on the requested operations, the toolchain can include Git, Node.js, Python 3, .NET SDK, Azure CLI, Power Platform CLI, the Dataverse CLI, and the Dataverse SDK for Python.
 
-Dataverse MCP access also requires tenant administrator consent and per-environment client allowlisting. The connection flow identifies these requirements and provides the appropriate instructions, but doesn't bypass administrator approval.
+For coding agents, Dataverse MCP access also requires tenant administrator consent and per-environment client allowlisting. The connection flow identifies these requirements and provides the appropriate instructions, but doesn't bypass administrator approval.
 
 ## Install the plugin
 
@@ -105,9 +108,9 @@ Alternatively, in Cursor, go to **Settings** > **Plugins**, search for **Dataver
 In the Codex app:
 
 1. Open **Plugins** > **Add marketplace**.
-1. For **Source**, enter `https://github.com/microsoft/Dataverse-skills.git`.
-1. Leave **Git ref** and **Sparse paths** empty, and then add the marketplace.
-1. Open the **dataverse-skills** marketplace and install the `dataverse` plugin.
+2. For **Source**, enter `https://github.com/microsoft/Dataverse-skills.git`.
+3. Leave **Git ref** and **Sparse paths** empty, and then add the marketplace.
+4. Open the **dataverse-skills** marketplace and install the `dataverse` plugin.
 
 For the Codex CLI, add the marketplace:
 
@@ -116,6 +119,49 @@ codex plugin marketplace add microsoft/Dataverse-skills
 ```
 
 Then open `/plugins` and install `dataverse`.
+
+You can also search for **Microsoft Dataverse** in the OpenAI plugin directory in Codex or ChatGPT, or run this command in the Codex CLI:
+
+```console
+codex plugin add dataverse@openai-curated
+```
+
+### Gemini CLI
+
+Install the extension and configure your Dataverse environment URL:
+
+```console
+gemini extensions install https://github.com/microsoft/Dataverse-skills --skip-settings
+gemini extensions config dataverse DATAVERSE_URL --scope workspace
+```
+
+Enter the Dataverse environment URL when prompted.
+
+### Google Antigravity
+
+Install the plugin from the Dataverse skills repository:
+
+```console
+agy plugin install https://github.com/microsoft/Dataverse-skills/tree/main/.github/plugins/dataverse
+```
+
+### Other agents
+
+For any other agent that reads local skills, install every Dataverse skill with one command:
+
+```console
+npx skills add microsoft/Dataverse-skills -s "*"
+```
+
+## Use the plugin in Copilot Cowork
+
+In Copilot Cowork, the Microsoft Dataverse plugin brings the same skills to a conversational experience. Cowork connects to one Dataverse environment through the Power Platform Dataverse connector, so you don't need to install local tools or allow a separate MCP client. Every change appears as an approval card, and Cowork can build and publish an app on your tables in Microsoft Copilot Managed Runtime (preview).
+
+:::image type="content" source="media/agents-plugin/cowork-plugin-skills.png" alt-text="Screenshot of the Microsoft Dataverse plugin in Cowork, showing the Dataverse MCP server and the available dv skills." lightbox="media/agents-plugin/cowork-plugin-skills.png":::
+
+Cowork works through the operations its connection exposes, which is a narrower set than coding agents that run the Dataverse CLI and SDKs, and it's growing. Where an operation isn't available, the skills tell you how to finish the step yourself rather than working around a control.
+
+More information: [Use the Microsoft Dataverse plugin in Cowork (preview)](/copilot/cowork/dataverse-plugin)
 
 ## Connect to Dataverse
 
@@ -213,7 +259,10 @@ For security issues, follow the instructions in the repository [SECURITY.md](htt
 
 ## Related content
 
-- [Microsoft Dataverse plugin for AI coding agents reference](reference.md)
+- [Microsoft Dataverse plugin for AI agents reference](reference.md)
+- [Use the Microsoft Dataverse plugin in Cowork (preview)](/copilot/cowork/dataverse-plugin)
+- [Microsoft Dataverse node (n8n docs)](https://docs.n8n.io/integrations/builtin/app-nodes/n8n-nodes-base.microsoftdataverse/)
+- [What is Microsoft Copilot Managed Runtime? (preview)](/microsoft-365/copilot-managed-runtime/)
 - [Work with data by using the Dataverse CLI](../cli/index.md)
 - [Dataverse SDK for Python](../sdk-python/overview.md)
 - [Dataverse MCP server](../../../maker/data-platform/data-platform-mcp.md)

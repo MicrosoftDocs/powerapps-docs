@@ -1,8 +1,8 @@
 ---
-title: Microsoft Dataverse plugin for AI coding agents reference (preview)
-description: Review the Microsoft Dataverse plugin that AI coding agents use to connect, build, query, deploy, administer, and secure Dataverse.
+title: Microsoft Dataverse plugin for AI agents reference (preview)
+description: Review the Microsoft Dataverse plugin that AI agents use to connect, build, query, deploy, administer, and secure Dataverse.
 #customer intent: As a developer using an AI coding agent, I want to review the available Dataverse plugin so that I can understand which tasks the agent can complete for me.
-ms.date: 07/31/2026
+ms.date: 11/09/2026
 ms.reviewer: jdaly
 ms.topic: reference
 author: kewear
@@ -14,15 +14,15 @@ contributors:
  - JimDaly
 ai-usage: ai-assisted
 ---
-# Microsoft Dataverse plugin for AI coding agents reference (preview)
+# Microsoft Dataverse plugin for AI agents reference (preview)
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Microsoft Dataverse plugin for AI coding agents provide task-specific instructions that a supported coding agent loads based on your request. You normally describe the outcome rather than naming a skill. The plugin will route the request, to the best skill so the agent can combine multiple skills for a task.
+Microsoft Dataverse plugin for AI agents provides task-specific instructions that a supported AI agent loads based on your request. You normally describe the outcome rather than naming a skill. The plugin routes the request to the best skill so the agent can combine multiple skills for a task.
 
 [!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
-The plugin and skills use the [Dataverse CLI](../cli/index.md), [Dataverse MCP server](../../../maker/data-platform/data-platform-mcp.md), [Dataverse SDK for Python](../sdk-python/overview.md), [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction), and Dataverse Web API. For installation and safety information, see [Microsoft Dataverse plugin for AI coding agents](index.md).
+The plugin and skills use the [Dataverse CLI](../cli/index.md), [Dataverse MCP server](../../../maker/data-platform/data-platform-mcp.md), [Dataverse SDK for Python](../sdk-python/overview.md), [Microsoft Power Platform CLI](/power-platform/developer/cli/introduction), and Dataverse Web API. For installation and safety information, see [Microsoft Dataverse plugin for AI agents](index.md).
 
 The plugin, and related skills, source is in the [Dataverse-skills GitHub repository](https://github.com/microsoft/Dataverse-skills/tree/main/.github/plugins/dataverse/skills).
 
@@ -58,7 +58,7 @@ It can:
 - Discover environments and select authentication profiles.
 - Configure interactive or service-principal authentication.
 - Create local environment configuration and source-control exclusions.
-- Register the Dataverse MCP server for GitHub Copilot, Claude Code, Cursor, or Codex.
+- Register the Dataverse MCP server for GitHub Copilot, Claude Code, Cursor, Codex, Gemini CLI, or Google Antigravity.
 - Verify CLI, SDK, and MCP connectivity.
 
 Example prompts:
@@ -238,7 +238,7 @@ Example prompts:
 
 ## Related content
 
-- [Microsoft Dataverse plugin for AI coding agents](index.md)
+- [Microsoft Dataverse plugin for AI agents](index.md)
 - [Work with data by using the Dataverse CLI](../cli/index.md)
 - [Dataverse SDK for Python](../sdk-python/overview.md)
 - [Dataverse MCP server](../../../maker/data-platform/data-platform-mcp.md)
