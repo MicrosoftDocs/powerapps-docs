@@ -4,7 +4,7 @@ description: Learn how to theming formulas in the template Power Apps for Micros
 author: joel-lindstrom
 ms.topic: how-to
 ms.subservice: teams 
-ms.date: 08/05/2021
+ms.date: 11/09/2026
 ms.author: saperlmu
 ms.reviewer: joshuapa
 contributors:
@@ -22,6 +22,8 @@ In this article, we'll learn how to use global variables to define themes, and h
 
 Watch this video to learn about theming in sample app templates:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=c8ddd966-a7fc-431b-8b2c-375e85b862ba]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

@@ -5,7 +5,7 @@ author: sbahl10
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 07/02/2021
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -32,6 +32,8 @@ In this article, we'll learn how to add a **Priority** tag to an idea in the Man
 
 Watch this video to learn how to add a tag to mark prioritized ideas:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=50df516b-65a5-436b-83be-da737271ed28]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

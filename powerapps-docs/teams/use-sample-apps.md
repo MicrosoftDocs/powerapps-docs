@@ -6,7 +6,7 @@ author: msftsamperl
 ms.topic: article
 ms.collection: get-started
 ai-usage: ai-assisted
-ms.date: 05/20/2026
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -21,6 +21,8 @@ Several sample app templates are available for use in Microsoft Teams that you c
 
 > [!IMPORTANT]
 > Sample app templates available for [download](https://github.com/microsoft/teams-powerapps-app-templates) are provided as-is. For any issues, feedback, support, or changes related to sample app templates, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Available sample app templates
 

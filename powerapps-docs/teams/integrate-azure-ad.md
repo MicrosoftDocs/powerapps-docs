@@ -4,7 +4,7 @@ description: Learn how to integrate your apps with Azure Active Directory to use
 author: joel-lindstrom
 ms.topic: how-to
 ms.subservice: teams 
-ms.date: 08/24/2021
+ms.date: 11/09/2026
 ms.author: saperlmu
 ms.reviewer: joshuapa
 contributors:
@@ -26,6 +26,8 @@ In this article, we'll create a Power Apps app with a button with administrative
 
 Watch this video to learn how to integrate Power Apps app with Azure Active Directory:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=9fabda9a-e9b5-43af-addd-a27d3f381f18]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

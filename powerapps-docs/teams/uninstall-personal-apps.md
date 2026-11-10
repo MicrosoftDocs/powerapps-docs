@@ -5,7 +5,7 @@ author: joshuapartlow
 
 ms.topic: article
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 ---
 
 # Uninstall the Power Apps personal app
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Uninstalling the Power Apps app removes the app as a personal app available to your account. Uninstalling the Power Apps app doesn't uninstall or remove the apps created by using Power Apps from the respective Microsoft Teams channels.
 

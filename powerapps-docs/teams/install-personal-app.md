@@ -5,7 +5,7 @@ author: joshuapartlow
 
 ms.topic: install-set-up-deploy
 ms.collection: get-started
-ms.date: 03/26/2021
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 ---
 
 # Install the Power Apps personal app in Microsoft Teams
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 A *personal app* is a Teams application that has a personal scope. Power Apps is by default available for you to select and add to a tab in the Teams channel of your choice. More information: [Personal apps](/microsoftteams/platform/concepts/design/personal-apps)
 

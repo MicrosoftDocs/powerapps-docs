@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.custom: model
 ms.collection: get-started
 ms.reviewer: joshuapa
-ms.date: 03/31/2026
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: aorth
 search.audienceType: 
@@ -22,9 +22,11 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 > [!IMPORTANT]
 >
-> - This feature is deprioritized and will not be delivered. 
+> - This feature is deprioritized and will not be delivered.
 > - New model-driven apps can no longer be added to Teams.
 > - Model-driven apps that are embedded in Teams will continue to function until May 1, 2026. After that date, these apps will no longer work within the Teams experience. Users can continue to use these apps through a web browser or other supported clients.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

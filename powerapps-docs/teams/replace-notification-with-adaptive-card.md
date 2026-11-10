@@ -5,7 +5,7 @@ author: sbahl10
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 06/29/2021
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -22,6 +22,8 @@ In this article, we'll be changing the notifications that come from the Employee
 
 Watch this video to learn how to replace notifications with adaptive card:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=6a0c37d9-e4d2-4d1f-a836-69d4b4b09aed]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

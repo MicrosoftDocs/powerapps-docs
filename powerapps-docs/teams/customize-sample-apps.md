@@ -5,7 +5,7 @@ author: msftsamperl
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 12/14/2020
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 # Customize sample app templates 
 
 In this article, you'll learn about customizing sample app templates. For example, you may need to change the company logo, update the data inside the sample app templates to fit your business requirement, add or remove controls on the screens to extend the app.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

@@ -4,7 +4,7 @@ description: Learn how to use Teams calls and meetings with your Power Apps in T
 author: joel-lindstrom
 ms.topic: how-to
 ms.subservice: teams 
-ms.date: 08/25/2021
+ms.date: 11/09/2026
 ms.author: saperlmu
 ms.reviewer: joshuapa
 contributors:
@@ -21,6 +21,8 @@ Power Apps in Teams can leverage deep integration with other Teams capabilities 
 
 Watch this video to learn how to integrate Power Apps with calls and meetings:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=022e5ad1-7a6d-49bb-99de-93dd4041bebd]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 
