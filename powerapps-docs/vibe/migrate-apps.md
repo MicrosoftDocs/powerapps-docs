@@ -13,13 +13,13 @@ contributor: joshuapartlow
 
 Power Apps Vibe (https://vibe.powerapps.com) is retiring. You can keep editing your Vibe apps through November 30, 2026. Starting December 1, 2026, you won't be able to edit your apps in Power Apps Vibe, but you can still migrate them to Copilot Studio or Copilot Cowork, or download their source code.
 
-[!IMPORTANT] What changes after November 30, 2026
-
-- Through November 30, 2026: You can edit your apps in Power Apps Vibe, migrate them, and download their source code.
-- Starting December 1, 2026: You can no longer edit apps in Power Apps Vibe. For each app, you can:
-  -    Migrate it, with one-click migration or manual migration, and keep building it in Apps in Copilot Studio or Copilot Cowork.
-  -    Download its source code to keep a copy.
-- Anything that requires editing in Vibe, such as publishing draft tables, must be done by November 30, 2026.
+> [!IMPORTANT]
+> What changes after November 30, 2026
+> - Through November 30, 2026: You can edit your apps in Power Apps Vibe, migrate them, and download their source code.
+> - Starting December 1, 2026: You can no longer edit apps in Power Apps Vibe. For each app, you can:
+>   - Migrate it, with one-click migration or manual migration, and keep building it in Apps in Copilot Studio or Copilot Cowork.
+>   - Download its source code to keep a copy.
+> - Anything that requires editing in Vibe, such as publishing draft tables, must be done by November 30, 2026.
 
 ## Choose how to migrate your app
 
