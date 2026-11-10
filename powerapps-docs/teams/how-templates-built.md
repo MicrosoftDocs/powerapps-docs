@@ -3,7 +3,7 @@ title: How to build apps for Microsoft Teams
 description: Learn the process in which Microsoft built the template apps for Microsoft Teams, and how you can use similar techniques when designing and building your own apps.
 ms.topic: how-to
 ms.subservice: teams 
-ms.date: 08/05/2021
+ms.date: 11/09/2026
 author: joel-lindstrom
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -30,6 +30,8 @@ In this article, we'll review the process that we used to build these apps, and 
 
 Watch this video to learn how the Power Apps templates for Microsoft Teams were made:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=a16dd643-8d23-4c54-a619-a4fe0d38c07d]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Define
 

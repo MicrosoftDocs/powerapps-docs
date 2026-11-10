@@ -5,7 +5,7 @@ author: si-matthews
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 09/22/2020
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: simatthe
 ms.reviewer: joshuapa
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 ---
 
 # Remove an app from your team
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 Removing an app that was added as a tab from a Microsoft Teams channel makes it inaccessible from the Teams tab for all members of the Teams channel.
 

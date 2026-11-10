@@ -23,6 +23,8 @@ builder called Power Apps Studio. You can use Power Apps Studio to design, build
 > [!NOTE]
 > The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
 
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
+
 ## Overview of Power Apps Studio
 
 ![Power Apps Studio.](media/studio-power-apps.png "Power Apps Studio")

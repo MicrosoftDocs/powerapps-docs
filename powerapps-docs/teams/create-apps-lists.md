@@ -4,9 +4,9 @@ description: Learn about how to create an app from a list in Microsoft Teams
 author: Steven-Jia
 ms.topic: how-to
 ms.custom: 
-ms.date: 03/23/2022
+ms.date: 11/09/2026
 ms.subservice: teams
-ms.author: jiawen
+ms.author: joshuapa
 ms.reviewer: joshuapa
 contributors:
   - joshuapartlow
@@ -16,6 +16,8 @@ reviewer: joshuapartlow
 ---
 
 # Create an app from a list in Microsoft Teams
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 You can create an app from within a [list in a Microsoft Teams channel](https://support.microsoft.com/office/create-a-list-in-a-teams-channel-7d2538c0-0177-4dcc-8e4c-44d218fc5a85).
 

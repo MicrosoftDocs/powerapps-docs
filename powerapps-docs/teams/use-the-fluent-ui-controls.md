@@ -5,7 +5,7 @@ author: clromano
 ms.author: clromano
 ms.topic: article
 ms.custom: 
-ms.date: 07/20/2026
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.reviewer: joshuapa
 contributors:
@@ -18,6 +18,8 @@ reviewer: joshuapartlow
 Creating apps that look great in Microsoft Teams will be easier with our new components. Built on the [Fluent UI framework](https://www.microsoft.com/design/fluent/#/), the new components will look great with Teams styles and will automatically adjust to the Teams default theme. The new controls are Button, Check box, Combo box, Date picker, Label, Radio group, Rating, Slider, Text box, and Toggle.
 
 Let's take a look at each Fluent UI control and its most useful properties. For a complete list of controls and properties in Power Apps, go to [Controls and properties in Power Apps](../maker/canvas-apps/reference-properties.md).
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Button
 

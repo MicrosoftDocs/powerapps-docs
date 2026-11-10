@@ -5,7 +5,7 @@ author: msftsamperl
 
 ms.topic: faq
 ms.custom: 
-ms.date: 10/05/2020
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -21,6 +21,8 @@ In this article, learn about the frequently asked questions and the answers abou
 
 > [!IMPORTANT]
 > For any issues, feedback, support, or changes related to sample app templates, go to https://github.com/microsoft/teams-powerapps-app-templates/issues and submit an issue or a pull request.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## When I try to install a sample app template, I get an error that the app is already in the team.
 

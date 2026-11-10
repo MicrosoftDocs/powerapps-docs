@@ -6,7 +6,7 @@ ms.topic: overview
 ms.custom: model
 ms.collection: get-started
 ms.reviewer: joshuapa
-ms.date: 10/08/2026
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: NHelgren
 search.audienceType: 

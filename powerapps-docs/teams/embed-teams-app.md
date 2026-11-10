@@ -7,7 +7,7 @@ ms.custom: canvas
 ms.collection: get-started
 ai-usage: ai-assisted
 ms.reviewer: joshuapa
-ms.date: 05/20/2026
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: mabolan
 search.audienceType: 
@@ -27,6 +27,8 @@ You can share an app you've created by embedding it directly into Microsoft Team
 
 > [!NOTE]
 > Team custom app policies must be set to allow uploading custom apps. If you are unable to embed your app in Teams, check with your administrator to see if they've setup [custom app settings](/MicrosoftTeams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

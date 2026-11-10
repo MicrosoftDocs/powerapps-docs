@@ -5,7 +5,7 @@ author: joshuapartlow
 
 ms.component: pa-user
 ms.topic: quickstart
-ms.date: 09/15/2020
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: joshuapa
 ms.collection: get-started
@@ -25,6 +25,8 @@ You can customize the Teams experience by adding Power Apps canvas apps to your 
 ![App embedded in Microsoft Teams.](media/open-app-embedded-in-teams/embedded-app.png "App embedded in Microsoft Teams")
 
 If you're not signed up for Power Apps, [sign up for free](https://make.powerapps.com/signup?redirect=marketing&email=) before you begin.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

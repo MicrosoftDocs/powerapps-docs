@@ -4,7 +4,7 @@ description: Learn how to make your Power Apps in Teams work with Planner.
 author: joel-lindstrom
 ms.topic: how-to
 ms.subservice: teams
-ms.date: 08/25/2021
+ms.date: 11/09/2026
 ms.author: saperlmu
 ms.reviewer: joshuapa
 contributors:
@@ -22,6 +22,8 @@ Power Apps in Microsoft Teams enables collaboration between people and groups. E
 
 Watch this video to learn how to integrate Power Apps with Planner:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=37312c36-393d-44fd-ba8a-9b3dbdf8d60e]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 
