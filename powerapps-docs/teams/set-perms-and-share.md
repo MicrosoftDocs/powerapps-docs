@@ -17,6 +17,8 @@ reviewer: joshuapartlow
 
 # Set permission and share apps with colleagues
 
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
+
 After collaboration with your team to build an app, as an owner of the team, you can share the app and its underlying data with other colleagues within your company that don't belong to your development team.
 
 > [!NOTE]

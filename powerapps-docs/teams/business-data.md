@@ -5,7 +5,7 @@ author: joel-lindstrom
 ms.subservice: teams
 ms.topic: how-to
 ms.custom: 
-ms.date: 10/06/2021
+ms.date: 11/09/2026
 ms.author: saperlmu
 ms.reviewer: joshuapa
 contributors:
@@ -27,6 +27,8 @@ This way, Power Apps in Teams can use deep integration with other Teams capabili
 
 Watch this video to learn how to configure having conversations about business data in Teams app:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=aeacd56d-232b-4187-83f0-e15dc4103f43]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

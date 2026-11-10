@@ -1,13 +1,13 @@
 ---
 title: Publish your app using Power Apps app in Teams | Microsoft Docs
 description: Learn how to publish and share your apps using Power Apps app in Teams.
-author: matthewbolanos
+author: joshuapartlow
 
 ms.topic: article
 ms.custom: 
-ms.date: 04/07/2021
+ms.date: 11/09/2026
 ms.subservice: teams
-ms.author: mabolan
+ms.author: joshuapa
 ms.reviewer: joshuapa
 reviewer: joshuapartlow
 ---
@@ -15,6 +15,8 @@ reviewer: joshuapartlow
 # Publish your app in Teams
 
 In this article, learn about how you can publish and add apps to Microsoft Teams team.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Publish and add an app to Teams
 

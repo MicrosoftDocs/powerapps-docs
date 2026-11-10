@@ -3,7 +3,7 @@ title: Localize sample app templates
 description: Learn how to add extra localizations to the sample for Microsoft Teams.
 ms.topic: how-to
 ms.subservice: teams 
-ms.date: 08/05/2021
+ms.date: 11/09/2026
 author: joel-lindstrom
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -24,6 +24,8 @@ This article covers the approach used for localization of the sample app templat
 
 Watch this video to learn how to localize sample app templates:
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=2b55d792-7cde-4948-9072-5d38d33e844f]
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Prerequisites
 

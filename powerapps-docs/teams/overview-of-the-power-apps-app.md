@@ -32,6 +32,8 @@ Three tabs are available: **Home**, **Build**, and **About**. You can start crea
 
 Let's understand each tab in detail.
 
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
+
 ## Home
 
 Your **Power Apps** experience in Teams starts with the **Home** tab. Use the **Home** tab to get started creating new apps with Power Apps. 

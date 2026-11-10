@@ -5,7 +5,7 @@ author: msftsamperl
 
 ms.topic: how-to
 ms.custom: 
-ms.date: 09/25/2020
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.author: saperlmu
 ms.reviewer: joshuapa
@@ -25,6 +25,8 @@ There are two features available with the integration of Power Apps with Teams. 
 
 > [!NOTE]
 > To further integrate with Teams, you can use the [Microsoft Teams connector](/connectors/teams/) with actions such as post a message, create a Teams meeting, list channels, and more.
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Get the Teams theme
 

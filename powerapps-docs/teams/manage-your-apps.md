@@ -6,7 +6,7 @@ ms.author: chmoncay
 ms.topic: how-to
 ms.custom: 
 ai-usage: ai-assisted
-ms.date: 05/20/2026
+ms.date: 11/09/2026
 ms.subservice: teams
 ms.reviewer: joshuapa
 contributors:
@@ -23,6 +23,8 @@ To manage an app, select **Apps** from the solution explorer. Then select the ap
 > The Teams experience changes frequently. If the current Teams UI or screenshots in this article don't match what you see, use the option names and overall flow as your guide.
 
 ![Select apps.](media/manage-apps-1.png "Select apps")
+
+[!INCLUDE [dataverse-for-teams-environments-deprecation](../includes/dataverse-for-teams-environments-deprecation.md)]
 
 ## Edit an app
 
