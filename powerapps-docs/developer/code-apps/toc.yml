@@ -19,6 +19,8 @@ items:
             href: system-limits-configuration.md
       - name: What's new?
         items:
+          - name: Customize request-access text
+            href: system-limits-configuration.md#customize-the-request-access-text
           - name: Publish by using a service principal
             href: how-to/use-service-principal.md
       - name: Connect to data

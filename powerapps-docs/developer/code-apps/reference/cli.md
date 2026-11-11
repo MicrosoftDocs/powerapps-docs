@@ -6,7 +6,8 @@ ms.topic: reference
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 10/02/2026
+ms.date: 11/10/2026
+ai-usage: ai-assisted
 ---
 
 # Power Apps CLI command reference
@@ -28,7 +29,7 @@ These are the command groups:
 | `pa solution` | Find solutions available in a Power Platform environment. |
 | `pa telemetry`| Manage CLI telemetry settings.|
 
-## Global options
+## Power Apps CLI global options
 
 Use `--help` at any level to display help in the terminal:
 
@@ -298,6 +299,8 @@ pa app get-settings [--json]
 
 Run this command from an initialized code app project that contains a `power.config.json` file.
 
+The command reads local app settings, including header visibility and request-access customization. Run [`pa app push`](#pa-app-push) after changing settings to update the deployed app.
+
 ## `pa app init`
 
 Initializes a code app in the current directory.
@@ -319,7 +322,7 @@ pa app init [--display-name <name>] [--environment-id <environment-id>]
 | `--app-url` | The URL of the locally running code app. |
 | `--cloud` | The Power Platform cloud instance. |
 
-These parameters have corresponding [App initialization](environment-variables.md#app-initialization) environmental variables.
+These parameters have corresponding [App initialization](environment-variables.md#app-initialization) environment variables.
 
 Learn more about scenarios where you can use this command: 
 
@@ -352,7 +355,7 @@ Lists solution-aware Power Automate flows in the current environment.
 pa app list-flows [--search <term>]
 ```
 
-Example:
+### Example
 
 ```bash
 pa app list-flows
@@ -391,6 +394,8 @@ pa app push [--solution-id <solution-id>]
 | `--non-interactive`| Publishes the app non-interactively. [Learn to publish apps with a service principal](../how-to/use-service-principal.md). |
 
 Use [`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-data-sources) as the environment variable with the `--solution-id` parameter.
+
+The command validates app settings in `power.config.json`, including header visibility and request-access customization, before publishing.
 
 [Learn how to create a code app by using the Power Apps CLI](../how-to/create-an-app-from-scratch.md).
 
@@ -466,7 +471,7 @@ These parameters have corresponding [Run apps](environment-variables.md#run-apps
 Updates one or more settings for the code app.
 
 ```console
-pa app set-setting --show-header <true|false> [--json]
+pa app set-setting [--show-header <true|false>] [--customize-request-access <true|false>] [--request-access-title <title>] [--request-access-message <message>] [--json]
 ```
 
 ### `pa app set-setting` parameters
@@ -474,9 +479,48 @@ pa app set-setting --show-header <true|false> [--json]
 | Parameter | Description |
 | --- | --- |
 | `--show-header` | Show or hide the app header. Valid values are `true` and `false`. |
+| `--customize-request-access` | Enable or disable custom request-access text. Valid values are `true` and `false`. Disabling preserves the saved title and message. |
+| `--request-access-title` | Set a nonblank title of no more than 100 characters. Requires `--customize-request-access`. |
+| `--request-access-message` | Set a nonblank message of no more than 1,000 characters. Requires `--customize-request-access`. Stored as `messageBody` in the configuration. |
 | `--json` | Return the updated app settings as JSON. |
 
-Run this command from an initialized code app project that contains a `power.config.json` file. The command writes the setting to `appSettings` in `power.config.json`. Run [`pa app push`](#pa-app-push) to publish the setting so that the player applies it at runtime.
+### `pa app set-setting` remarks
+
+Run this command from an initialized code app project that contains a `power.config.json` file. The command writes settings to `appSettings` in `power.config.json`. Run [`pa app push`](#pa-app-push) to publish the settings so that the player applies them at runtime.
+
+Without setting flags in an interactive terminal, the command offers `show-header` and `customize-request-access`. For `show-header`, it asks **Show the app header bar?**: **Yes** shows the header, and **No** hides it. For `customize-request-access`, it asks whether to enable customization, and then prompts for the title and message only when enabled.
+
+To enable customization noninteractively, provide `--customize-request-access true`, `--request-access-title`, and `--request-access-message` together. Content flags can't be used without `--customize-request-access`. When customization is disabled, title and message are optional, but any provided values must still be nonblank and within the character limits.
+
+The command preserves omitted fields and unrelated settings and validates the merged result before saving. Valid flags can replace invalid saved field values. Malformed settings containers or merged settings that are still invalid are rejected.
+
+Custom request-access text doesn't grant access or change app permissions. For configuration properties and default behavior, see [Customize the request-access text](../system-limits-configuration.md#customize-the-request-access-text).
+
+### `pa app set-setting` examples
+
+Choose a setting interactively:
+
+```console
+pa app set-setting
+```
+
+Hide the app header:
+
+```console
+pa app set-setting --show-header false
+```
+
+Enable custom request-access text:
+
+```console
+pa app set-setting --customize-request-access true --request-access-title "Request access" --request-access-message "Contact your administrator to request access."
+```
+
+Disable customization without removing the saved title and message:
+
+```console
+pa app set-setting --customize-request-access false
+```
 
 ## `pa app share`
 
