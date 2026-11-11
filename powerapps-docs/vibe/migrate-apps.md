@@ -126,6 +126,16 @@ When migration finishes, Power Apps Vibe shows a message that your app was migra
 
 For next steps, including how to verify your data, publish and share your app, and edit it later, see [After you migrate](#after-you-migrate).
 
+> [!IMPORTANT]
+> **Known issue:** If your migrated app is in an environment other than your personal developer environment, you might not be able to open it from the app list in Copilot Studio. A fix is rolling out over the next week.
+>
+> Until the fix reaches your region, open your app from the preview version of Copilot Studio:
+>
+> 1. Go to [https://copilotstudio.preview.microsoft.com](https://copilotstudio.preview.microsoft.com), and sign in with your work account.
+> 2. In the left navigation pane, select **Apps (Preview)**.
+> 3. Select your app to open it.
+
+
 ## Option 2: Manual migration
 
 To migrate an app manually, download its source code, and then ask the agent to rebuild the app from it by attaching the code file. With manual migration, you choose where to rebuild your app: Apps in Copilot Studio or Copilot Cowork.
