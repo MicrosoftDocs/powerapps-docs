@@ -262,7 +262,7 @@ Keep these notes in mind to maintain a secure and reliable setup when working be
 
 If none of the steps in this article help, collect the following information before you contact technical support:
 
-- Power Apps CLI version: [`pa --version`](reference/cli.md#global-options)
+- Power Apps CLI version: [`pa --version`](reference/cli.md#power-apps-cli-global-options)
 - Node.js version: `node --version`
 - OS and shell (for example, Windows PowerShell 7 or Windows CMD)
 - Full command executed (sanitized)
