@@ -80,7 +80,7 @@ One-click migration creates a new app in Copilot Studio from your Vibe app. Your
 | Environment | Created in your Personal Developer Environment. |
 | Sharing and app links | Not carried over. Share your new app after you publish it. |
 | Sharing restrictions | Your admin's sharing policies for your app's environment apply. |
-| Your original Vibe app | Not changed or deleted. You can still open it in Power Apps Vibe until November 30, 2026. |
+| Your original Vibe app | Not changed. |
 
 ### Prerequisites for one-click migration
 
