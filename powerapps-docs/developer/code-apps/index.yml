@@ -40,6 +40,8 @@ landingContent:
     linkLists:
       - linkListType: whats-new
         links:
+          - text: Customize request-access text
+            url: system-limits-configuration.md#customize-the-request-access-text
           - text: Publish by using a service principal
             url: how-to/use-service-principal.md
 

@@ -133,7 +133,7 @@ pa auth login
 
 Before you contact technical support to file an issue, provide:
 
-- CLI version from [`pa --version`](reference/cli.md#global-options)
+- CLI version from [`pa --version`](reference/cli.md#power-apps-cli-global-options)
 - Operating system and shell, such as Windows Command Prompt, PowerShell, or WSL
 - The full command used
 - Sanitized debug output
