@@ -80,7 +80,7 @@ One-click migration creates a new app in Copilot Studio from your Vibe app. Your
 | Environment | Created in your Personal Developer Environment. |
 | Sharing and app links | Not carried over. Share your new app after you publish it. |
 | Sharing restrictions | Your admin's sharing policies for your app's environment apply. |
-| Your original Vibe app | Not changed or deleted. You can still open it in Power Apps Vibe until November 30, 2026. |
+| Your original Vibe app | Not changed. |
 
 ### Prerequisites for one-click migration
 
@@ -125,6 +125,15 @@ When migration finishes, Power Apps Vibe shows a message that your app was migra
 1. When your app is ready, [publish and share it](#publish-and-share-in-copilot-studio).
 
 For next steps, including how to verify your data, publish and share your app, and edit it later, see [After you migrate](#after-you-migrate).
+
+> [!IMPORTANT]
+> **Known issue:** If your migrated app is in an environment other than your personal developer environment, you might not be able to open it from the app list in Copilot Studio. A fix is rolling out over the next week starting November 16th.
+>
+> Until the fix reaches your region, open your app from Copilot Studio Preview:
+>
+> 1. Go to [https://copilotstudio.preview.microsoft.com](https://copilotstudio.preview.microsoft.com), and sign in with your work account.
+> 2. In the left navigation pane, select **Apps (Preview)**.
+> 3. Select your app to open it.
 
 ## Option 2: Manual migration
 
