@@ -2,7 +2,7 @@
 title: "Use modern themes in Power Apps"
 description: Learn how to change the colors and font of apps including the app header in model-driven apps with the modern look in Power Apps.
 ms.custom: ""
-ms.date: 07/07/2026
+ms.date: 09/11/2026
 ms.reviewer: "matp"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -27,7 +27,7 @@ Users of model-driven apps with the modern, refreshed look for model-driven apps
 
 ## Modify the app theme
 
-With the modern, refreshed look enabled in the app, makers can create a custom theme that helps align to their organizational branding. With a custom theme you can change the app header, hyperlinks, lookups, primary buttons,  active tab indicators, row selection, and hover effects. The custom theme also lets you change the font that is used in the application. To accomplish this, you encapsulate the desired theme information into an XML resource, use an app setting to point to this web resource, and then verify the new modern theme matches your expectations.  
+When you enable the modern, refreshed look in the app, makers can create a custom theme that helps align to their organizational branding. With a custom theme, you can change the app header, hyperlinks, lookups, primary buttons, active tab indicators, row selection, and hover effects. The custom theme also lets you change the font that is used in the application. To accomplish this goal, you encapsulate the desired theme information into an XML resource, use an app setting to point to this web resource, and then verify the new modern theme matches your expectations.  
 
 > [!NOTE]
 > Most of the UI uses your custom theme. However, some areas don’t use modern theming yet for example, legacy grids, row summaries, focus view, and the sales pipeline.
@@ -83,9 +83,22 @@ This XML specifies a custom theme using the alternate palette generation algorit
 
 ### Modify the app header colors
 
-Makers can customize the styling of the app header to deviate from the app theme. To make these customizations, extend the XML created for the custom modern theme by adding one or more of the following attributes inside an `AppHeaderColors` tag.
+Makers can customize the styling of the app header by using the `AppHeaderColors` tag in the custom theme XML. How the app header responds to a custom theme depends on whether the header and navigation refresh is enabled:
 
-- `Background` – The background color of the app header. This element must be defined for any changes to take effect.
+- **New Look only.** The app header uses the custom theme colors by default. To style the app header differently from the rest of the theme, add an `AppHeaderColors` tag and specify one or more color attributes.
+- **[Header and navigation refresh](../../user/modern-fluent-design.md#wave-2-header-and-navigation-refresh) enabled.** The refreshed app header doesn't use an accent-colored background by default. To give the app header a background based on the custom theme, add an `AppHeaderColors` tag without attributes. To style the app header differently from the rest of the theme, specify one or more color attributes in the tag.
+
+For example, when the header and navigation refresh is enabled, the following XML applies the generated theme colors to the app header:
+
+```xml
+<CustomTheme basePaletteColor="#00FF00">
+  <AppHeaderColors />
+</CustomTheme>
+```
+
+Use the following attributes to customize the app header colors:
+
+- `Background` – The background color of the app header. If you don't specify this attribute, the app header uses a background color generated from the custom theme.
 - `Foreground` – The text color of the app header. If this isn't specified, the system attempts to calculate an appropriate color that has sufficient contrast to the provided background color.
 - `BackgroundHover` – The background color of buttons on the app header when they're hovered over. If no value is specified, the system calculates a color based on the background color.
 - `ForegroundHover` – The text color of buttons on the app header when they're hovered over. If no value is specified, the system attempts to calculate an appropriate color that has sufficient contrast to the `backgroundHover` color.
@@ -94,7 +107,7 @@ Makers can customize the styling of the app header to deviate from the app theme
 - `BackgroundSelected` – The background color of buttons on the app header when they're selected. The defaulting logic is the same as `backgroundHover`.
 - `ForegroundSelected` – The text color of buttons on the app header when they're selected. The defaulting logic is the same as `backgroundHover`.
 
-#### Example XML for a modern theme
+#### Example XML with custom app header colors
 
 As an example, this XML extends the green custom theme with a black app header. For optimal usability, we recommend specifying different color values for each interaction state.
 
@@ -123,7 +136,7 @@ As an example, this XML extends the green custom theme with a black app header. 
 
 ### Create the web resource
 
-1. Using a text or XML editor, save the XML that is used to create the web resource. [Example XML for a modern theme](#example-xml-for-a-modern-theme)
+1. Using a text or XML editor, save the XML that is used to create the web resource. [Example XML for a modern theme](#example-xml-with-custom-app-header-colors)
 1. Sign into [Power Apps](https://make.powerapps.com/).
 1. Select **Solutions** on the left navigation pane, and then create a **New solution**.
 1. Select **New** > **More** > **Web resource**.

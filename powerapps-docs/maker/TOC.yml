@@ -2479,8 +2479,6 @@
         href: ./data-platform/export-data-lake-faq.yml
       - name: Application Lifecycle Management
         items:
-        - name: Transport a configuration across environments
-          href: ./data-platform/azure-synapse-link-solution.md
         - name: Environment Lifecycle Events
           href: ./data-platform/azure-synapse-link-olc.md
       - name: Analyze with Azure Synapse Analytics

@@ -836,6 +836,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "powerapps-docs/maker/data-platform/azure-synapse-link-solution.md",
+      "redirect_url": "/power-apps/maker/data-platform/export-to-data-lake",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "powerapps-docs/developer/data-platform/webapi/samples/cdswebapiservice.md",
       "redirect_url": "webapiservice",
       "redirect_document_id": false
