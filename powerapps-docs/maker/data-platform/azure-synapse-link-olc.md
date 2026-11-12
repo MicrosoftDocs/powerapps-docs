@@ -2,7 +2,7 @@
 title: "Manage your Azure Synapse Link with Environment Events | MicrosoftDocs"
 description: "Learn how to manage your Azure Synapse Link for Dataverse profiles with Environment events."
 ms.custom: ""
-ms.date: 11/01/2021
+ms.date: 11/12/2026
 ms.reviewer: "Mattp123"
 ms.suite: ""
 ms.tgt_pltfrm: ""
@@ -13,6 +13,7 @@ author: "sabinn-msft"
 ms.assetid: 
 ms.subservice: dataverse-maker
 ms.author: "matp"
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 contributors: "sama-zaki"
@@ -31,21 +32,21 @@ Azure Synapse Link for Dataverse provides a continuous pipeline of data from Dat
 
 |Environment operation |Synapse link          |Data                  |User action           |
 |----------------------|----------------------|----------------------|----------------------|
-|Backup and restore |Stops syncing |Maintained |Use solutions to transport the link across environments |
-|Copy |Source continues syncing |Source is maintained |Use solutions to transport the link across environments |
+|Backup and restore |Stops syncing |Maintained |- |
+|Copy |Source continues syncing |Source is maintained |- |
 |Delete |Stops syncing |Maintained |None |
 |Edit the properties |Error |Maintained |Unlink and relink |
-|Move |Source stops syncing |Source is maintained |Use solutions to transport the link across environments |
+|Move |Source stops syncing |Source is maintained |- |
 |Recover |Continue syncing |Maintained |None |
 |Reset |Removed |Maintained |Delete data before recreating the link |
 
 ## Backup and restore an environment
 
-Azure Synapse Link for Dataverse profiles are not part of an [environment backup or the subsequent restore](/power-platform/admin/backup-restore-environments). Once an environment is restored, use solutions to [export and import the configuration](./azure-synapse-link-solution.md) to preserve the configuration of the Azure Synapse Link across environments.
+Azure Synapse Link for Dataverse profiles aren't part of an [environment backup or the subsequent restore](/power-platform/admin/backup-restore-environments).
 
 ## Copy an environment
 
-Azure Synapse Link for Dataverse profiles are not copied as part of the [copy an environment](/power-platform/admin/copy-environment) process. To preserve the configuration of the Azure Synapse Link across environments, use solutions to [export and import the configuration](./azure-synapse-link-solution.md).
+Azure Synapse Link for Dataverse profiles are not copied as part of the [copy an environment](/power-platform/admin/copy-environment) process.
 
 ## Delete an environment
 
@@ -57,7 +58,7 @@ Azure Synapse Link for Dataverse profiles will fail if the environment name or U
 
 ## Move an environment
 
-If an [environment is migrated from one tenant to another](/power-platform/admin/move-environment-tenant), all Azure Synapse Link profiles are deleted and the data sync is stopped. All data written at the time of deletion is still available in your Azure Synapse Analytics workspace and/or Azure Data Lake. To preserve the configuration of the Azure Synapse Link across environments, use solutions to [export and import the configuration](./azure-synapse-link-solution.md).
+If an [environment is migrated from one tenant to another](/power-platform/admin/move-environment-tenant), all Azure Synapse Link profiles are deleted and the data sync is stopped. All data written at the time of deletion is still available in your Azure Synapse Analytics workspace and/or Azure Data Lake.
 
 ## Recover an environment
 
