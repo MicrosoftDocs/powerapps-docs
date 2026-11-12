@@ -4,7 +4,7 @@ description: Step-by-step instructions for setup, connect, and use Microsoft Dat
 author: ShefaaliP
 ms.component: cds
 ms.topic: how-to
-ms.date: 11/04/2026
+ms.date: 11/12/2026
 ms.subservice: dataverse-maker
 ms.author: spatankar
 ms.reviewer: matp
@@ -65,8 +65,9 @@ Once connected to the Dataverse MCP Server, you can choose from the following to
 > [!IMPORTANT]
 > The Dataverse MCP server tool surface is changed. The following tools were removed and their functionality replaced by the tools in the preceding table: `describe_table`, `list_tables`, and `fetch` (replaced by `describe`); and the previous `search` tool that searched Dataverse data (renamed to `search_data`). The current `search` tool searches metadata. If you maintain allow or deny lists in your MCP client by tool name, review your configuration so that the new tool names reflect your intended permissions. More information: [Connect to Dataverse with model context protocol FAQ](data-platform-mcp-faq.md)
 
+The `search_data` tool uses usage-based Copilot Credit billing rather than a fixed charge per tool call. Consumption is attributed to the calling service and calculated according to its applicable usage-based rate card. For more information, see [Usage-Based Billing and Cost Management for Copilot Credits](/copilot/plan/usage-based-billing-overview-copilot-credits).
 
-The `search_data` tool is billed at the same Copilot Credit rate as Tenant graph grounding. All other tools, including the metadata `search` tool, follow the Text and generative AI tools (basic) per 10 response Copilot credit rate. For information about Copilot billing, go to [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
+All other tools, including the metadata `search` tool, follow the text and generative AI tools (basic) Copilot Credit rate per 10 responses. For those rates, see [Billing rates and management](/microsoft-copilot-studio/requirements-messages-management).
 
 ## Next steps
 
