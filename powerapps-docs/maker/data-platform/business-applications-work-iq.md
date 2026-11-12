@@ -89,7 +89,7 @@ Build on existing business understanding and skills, and reuse it across the age
 | Agent building tool | Description |
 |---|---|
 | Agent Builder in Copilot | Provide the agents you build with business context across your line-of-business systems. <br>Learn more: [Add Dynamics 365 and Power Apps data as a knowledge source](/microsoft-365/copilot/extensibility/agent-builder-add-knowledge#dynamics-365-and-power-apps-data) |
-| Copilot Studio | Add business context from Work IQ to Copilot Studio agents built with the GitHub Copilot harness. <br>Learn more: [Work IQ in Copilot Studio](/microsoft-copilot-studio/agents-experience/add-work-iq) |
+| Copilot Studio | Add business context from Work IQ to Copilot Studio agents built with the Microsoft Copilot harness. <br>Learn more: [Work IQ in Copilot Studio](/microsoft-copilot-studio/agents-experience/add-work-iq) |
 | GitHub Copilot | Install the Work IQ plugin for GitHub Copilot to query and reason over your business data. <br>Learn more: [Connect GitHub Copilot CLI to the Work IQ MCP server](/microsoft-365/copilot/extensibility/work-iq/mcp/quickstart/github-copilot-cli) |
 | Other coding agents | Connect to Work IQ CLI through either CLI mode or MCP server mode. <br>Learn more: [Microsoft Work IQ CLI](/microsoft-365/copilot/extensibility/work-iq/cli) |
 
