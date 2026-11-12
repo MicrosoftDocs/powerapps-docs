@@ -11,15 +11,13 @@ contributor: joshuapartlow
 
 # Migrate apps from Power Apps Vibe
 
-Power Apps Vibe (https://vibe.powerapps.com) is retiring. You can keep editing your Vibe apps through November 30, 2026. Starting December 1, 2026, you won't be able to edit your apps in Power Apps Vibe, but you can still migrate them to Copilot Studio or Copilot Cowork, or download their source code.
-
 > [!IMPORTANT]
-> What changes after November 30, 2026
-> - Through November 30, 2026: You can edit your apps in Power Apps Vibe, migrate them, and download their source code.
-> - Starting December 1, 2026: You can no longer edit apps in Power Apps Vibe. For each app, you can:
->   - Migrate it, with one-click migration or manual migration, and keep building it in Apps in Copilot Studio or Copilot Cowork.
->   - Download its source code to keep a copy.
-> - Anything that requires editing in Vibe, such as publishing draft tables, must be done by November 30, 2026.
+> Power Apps Vibe is retiring. Migrate your apps to Copilot Studio or Copilot Cowork to continue editing.
+>
+> - **Through November 30, 2026:** Edit, migrate, or download your Vibe apps.
+> - **December 1–31, 2026:** Migrate or download your apps. Editing in Vibe is no longer available.
+> - **After December 31, 2026:** You can no longer access your Vibe apps.
+
 
 ## Choose how to migrate your app
 
@@ -60,6 +58,9 @@ If your organization doesn't allow you to create a personal developer environmen
 
 ## Option 1: One-click migration
 
+> [!NOTE]
+> One-click migration is currently available only in [Power Apps Vibe (preview)](https://vibe.preview.powerapps.com). To migrate your app using the one-click migration, sign in at vibe.preview.powerapps.com.
+
 By using one-click migration, you can move an app that you built in Power Apps Vibe to Copilot Studio, directly from Vibe. After migration, you can chat with an agent in Copilot Studio to update, publish, and share your app. 
 
 ### How one-click migration works
@@ -93,7 +94,7 @@ Before you migrate your app, ensure that:
 
 ### Migrate your app with one click
 
-1. Sign in to [Power Apps Vibe](https://vibe.powerapps.com).
+1. Sign in to [Power Apps Vibe preview](https://vibe.preview.powerapps.com).
 1. Open your app, and then select **Edit**. A migration dialog appears.
 1. In the migration dialog, review the details, and then select **Yes, migrate**.
 
