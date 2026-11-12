@@ -2,10 +2,11 @@
 title: Enable the modern, refreshed look for model-driven apps on mobile (preview)
 description: Learn how to enable the modern, refreshed look and dynamic font scaling for model-driven apps in Power Apps mobile.
 author: yogeshgupta698
+ai-usage: ai-generated
 ms.service: powerapps
 ms.topic: how-to
 ms.custom: mobile
-ms.date: 08/10/2026
+ms.date: 11/12/2026
 ms.subservice: mobile
 ms.author: yogupt
 ms.reviewer: smurkute
@@ -88,13 +89,28 @@ Dynamic font scaling is optional and isn't a prerequisite for the mobile new loo
 1. Turn on **Enable mobile dynamic font**.
 1. Select **Save**, and then publish the app.
 
-Test the app with the supported text-size and display-scaling options on both iOS and Android. Pay particular attention to grids, quick-create forms, dialogs, commands, and custom components at larger accessibility sizes.
+### Supported text sizes
+
+> [!IMPORTANT]
+> In this preview, dynamic font scaling supports text sizes up to **135% of the default text size** (1.35 times the default) on both Android and iOS. Larger text sizes aren't supported. They can cause content to overlap or appear truncated and make controls difficult to use. This limit is a Power Apps mobile support limit, not an operating-system maximum or an automatic cap on the size the app renders.
+
+Both operating systems offer text sizes beyond this supported range, including accessibility settings. On iOS, **Larger Accessibility Sizes** provides additional sizes beyond the standard text-size slider. Android's available sizes depend on the device and operating-system version. For device settings, see [Change the font size on your iPhone, iPad, and iPod touch](https://support.apple.com/en-us/102453) and [Android font scaling](https://developer.android.com/about/versions/14/features#non-linear-font-scaling).
+
+Dynamic font scaling changes text size; it isn't a browser zoom or device display-zoom setting. Test the app at the default text size and at larger sizes within the supported range on both iOS and Android. Pay particular attention to grids, quick-create forms, dialogs, commands, and custom components. Don't assume that the device's largest available text size is supported by this preview.
 
 ## Review grid configuration
 
-The modern, refreshed look uses the Power Apps grid on supported view pages. If the app has manually configured editable grids or dashboard grids, review those configurations and use the Power Apps grid where you want the modern grid experience. Enabling **Mobile modern experience** doesn't replace every grid configuration in the app.
+To use dynamic font scaling in mobile grids, configure the **Power Apps grid control**. Migrate legacy read-only and editable grids where font scaling is required. Turning on **Mobile modern experience** or **Enable mobile dynamic font** doesn't automatically replace all grid configurations in the app.
 
-Test sorting, filtering, selecting, editing, and opening rows in Power Apps mobile. For configuration details and supported capabilities, see [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md).
+1. Review the table views, form subgrids, and dashboard grids used by the app on phones and tablets.
+1. For table views that use a legacy grid, add and configure the Power Apps grid control for the table. Table-level configuration applies to the table's views, review form subgrids and dashboard grids separately.
+1. For each form subgrid that needs font scaling, add and configure the Power Apps grid control on the form. Verify that the mobile clients you support use the configured control.
+1. Review **Reflow behavior**. **Reflow** switches between a table and a list based on the available width; **List only** always displays a list. Test the selected layout and the configured **Number of columns for list view** at larger supported text sizes.
+1. Save and publish the affected table and form customizations, and publish the app after changing its settings.
+
+For table and subgrid setup steps, see [Power Apps grid control](../maker/model-driven-apps/the-power-apps-grid-control.md). Grid migration can change behavior as well as appearance. For example, sorting, **Select all**, and **Clear all** aren't available in the card list view. Review [Limitations with card form lists](../maker/model-driven-apps/the-power-apps-grid-control.md#limitations-with-card-form-lists) before changing an existing grid.
+
+Test selecting, editing, and opening rows, available sorting and filtering actions, and the space used by empty and populated subgrids in Power Apps mobile. Enabling font scaling doesn't remove the grid control's existing limitations.
 
 ## Verify the mobile experience
 
@@ -102,7 +118,7 @@ Test sorting, filtering, selecting, editing, and opening rows in Power Apps mobi
 1. Refresh the app list, and then open the model-driven app.
 1. Verify the refreshed styling on the app's primary forms, views, dashboards, dialogs, and controls.
 1. Test navigation, commands, grids, quick-create forms, and custom components.
-1. If you enabled dynamic font scaling, change the device text size and verify that supported text scales without overlapping or hiding controls.
+1. If you enabled dynamic font scaling, change the device text size within the [supported range](#supported-text-sizes) and verify that supported text scales without overlapping or hiding controls.
 1. If the app is available offline, also test its primary scenarios while the device is offline.
 
 The settings change the presentation of the app. They don't change its Dataverse data, forms, views, or security model.
@@ -110,6 +126,8 @@ The settings change the presentation of the app. They don't change its Dataverse
 ## Known limitations
 
 - This mobile experience is a preview feature.
+- Dynamic font scaling has a [supported text-size limit](#supported-text-sizes) on both Android and iOS, even when the device offers larger accessibility sizes.
+- Grids require [separate configuration](#review-grid-configuration) to use the Power Apps grid control for font scaling. The app settings don't migrate legacy grids.
 - Dark mode and switching themes aren't supported.
 - Classic theme customizations aren't honored by the modern, refreshed look.
 - Only SVG custom icons are supported. Other image formats might display a default icon.
