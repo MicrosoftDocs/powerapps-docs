@@ -24,13 +24,13 @@ contributors:
 Model-driven apps are modernized in waves. Each wave updates styling, layout, and behavior to align with the latest [Microsoft Fluent design system](https://react.fluentui.dev/?path=/docs/concepts-introduction--page) — making apps easier to use so people can accomplish their goals more quickly. The Fluent design system provides consistency, quality, and Microsoft-wide platform coherence. It also provides a solid foundation for extensibility and future capabilities like dark mode.
 
 > [!IMPORTANT]
-> With the **2026 Wave 1** release, all users must use the **New Look** (wave 1 of the modernization arc). Makers can't switch a model-driven app back to the classic look. This requirement doesn't include the **header and navigation refresh (wave 2)**.
+> By the **April 2026 semiannual release**, all users must use the **New Look** (wave 1 of the modernization arc). Makers can't switch a model-driven app back to the classic look. This requirement doesn't include the **header and navigation refresh (wave 2)**.
 
 ## Modernization waves at a glance
 
 | Wave | What it includes | Availability |
 |------|------------------|--------------|
-| **Wave 1 — The New Look** | Updated styling in forms, views, dashboards, dialogs, and controls; the floating command bar; the Power Apps grid; new field control styling | Generally available. Mandatory as of 2026 Wave 1. |
+| **Wave 1 - The New Look** | Updated styling in forms, views, dashboards, dialogs, and controls; the floating command bar; the Power Apps grid; new field control styling | Generally available. Mandatory by the April 2026 semiannual release. |
 | **Wave 2 - Header and navigation refresh** | Modern app header, streamlined sitemap, more working space on forms with a sticky condensed header, tightened spacing, updated command bar behavior | Generally available. Opt-in today. |
 
 Future waves continue to build on this foundation.
@@ -70,9 +70,9 @@ The following example shows a form page with the modern, refreshed look.
 
 ### Field controls
 
-Field controls such as text input, action input, lookup, and check box controls are built and designed by using Fluent components. Future updates will modernize more field controls by using Fluent design.
+Fluent components build and design field controls such as text input, action input, lookup, and check box controls. Future updates will modernize more field controls by using Fluent design.
 
-Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. Some redundant icons were removed for a cleaner layout. Input and error message styling is also refreshed based on Fluent design.
+Field sections, which are containers for the fields on a form, have a more streamlined design. Icons are now on the right side of field labels. The update removes some redundant icons for a cleaner layout. Input and error message styling is also refreshed based on Fluent design.
 
 The following example shows a set of fields with the modern, refreshed look.
 
@@ -96,22 +96,25 @@ If you customize the chart colors, the new look overrides your custom colors. To
 
 ## Wave 2: Header and navigation refresh
 
-The header and navigation refresh (wave 2) builds on the New Look (wave 1) with a redesigned app header, streamlined sitemap, and reworked form layout that gives users more space to focus on their work.
+The header and navigation refresh (wave 2) is the next step in modernizing model-driven apps. It builds on the New Look (wave 1) with a redesigned app header, streamlined sitemap, and reworked form layout that gives users more space to focus on their work. The header and navigation refresh is generally available and opt-in today.
 
-The following image shows the app header and sitemap with the header and navigation refresh enabled.
+> [!NOTE]
+> General availability begins with build 2609.1. Availability might vary by region as the build rolls out.
+
+Here's how the app header and sitemap look with the header and navigation refresh enabled:
 
 :::image type="content" source="media/new-header-nav-look-highlight.png" alt-text="Screenshot that shows new look with header and navigation refresh." lightbox="media/new-header-nav-look-highlight.png":::
 
 ### What's new in the header and navigation refresh
 
-- **Full-width command bar**: The command bar returns to a full-width container at the top of both view and form pages, giving users enough room to surface the most important commands without pushing them into the overflow menu. This behavior replaces the "compact commands" behavior that appeared in earlier previews of this feature.
-- **New command ordering**: System commands like **Show As** and **Show Chart** now appear in the third position, after **New** and **Delete**.
+- **Modern app header and streamlined sitemap**: Updated styling aligned to the Fluent design system with a simplified sitemap that reduces navigation complexity.
 - **More working space on forms**: The command bar is now the only element fixed at the top of the page. The summary area and form header scroll off with the rest of the form, giving users more room to work. When the form header scrolls out of view, a **condensed sticky header** attaches below the command bar so the record is always identifiable.
-- **More responsive form header**: The form header adapts to different window sizes and content densities.
+- **More responsive form header**: The form header adapts more gracefully across window sizes and content densities.
 - **Tighter spacing and margins**: Targeted adjustments across the app improve consistency, readability, and overall page density.
+- **New command ordering**: Injected system commands like **Show As** and **Show Chart** now appear in the third position, after **New** and **Delete**.
 
 > [!NOTE]
-> If you used the preview version of this feature, **compact commands** are no longer available. The command bar is now full-width across both views and forms.
+> On form and view pages, the command bar spans the full width of the page. On forms, the command bar is no longer embedded in the form header as it was during preview. The record set navigator also returned to the command bar.
 
 ### Enable the header and navigation refresh for an existing app
 
@@ -121,10 +124,6 @@ The header and navigation refresh automatically applies to all apps generated by
 2. Select **Features**, and then enable **Header and navigation refresh**.
 
 :::image type="content" source="media/header-refresh-maker.png" alt-text="Screenshot that shows how to enable header and navigation refresh in app designer." lightbox="media/header-refresh-maker.png":::
-
-### Building on the header and navigation refresh (wave 2)
-
-The header and navigation refresh introduces appearance settings that help users customize their experience. For example, users can control the [display density (preview)](appearance-settings.md#display-density) to make the app more compact or more spacious for their workflow. Additional appearance capabilities are planned and documented in [Appearance settings for model-driven apps (preview)](appearance-settings.md).
 
 ## Known limitations
 
@@ -168,7 +167,7 @@ You can change the color of the app header to match your organization while usin
 
 #### Can I turn on the header and navigation refresh without turning on the New Look?
 
-No. The header and navigation refresh (wave 2) builds on the New Look (Wave 1), so you must enable the New Look to see the header and navigation refresh experience.
+No. The header and navigation refresh (wave 2) builds on the New Look (wave 1), so you must enable the New Look to see the header and navigation refresh experience.
 
 #### How do I enable the header and navigation refresh for existing apps?
 
@@ -184,12 +183,12 @@ The side pane switcher becomes available only when there are two or more side pa
 
 #### Why does the sitemap of an app generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer) look different from existing apps' sitemap?
 
-Apps generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer) have a streamlined sitemap. Home, Recent, Pinned, and sitemap groups are turned off by default for a simplified flat list of navigation options in the sitemap.
+Apps generated by the [Plan designer](/power-apps/maker/plan-designer/plan-designer) have a streamlined sitemap. The designer turns off **Home**, **Recent**, **Pinned**, and sitemap groups by default for a simplified flat list of navigation options in the sitemap.
 
 ## Revert to the classic look
 
 > [!NOTE]
-> Starting with the **2026 Wave 1** release, the **New Look** is mandatory for all users. Makers can no longer switch a model-driven app to the classic look.
+> Starting with the **April 2026 semiannual release**, the **New Look** is mandatory for all users. Makers can no longer switch a model-driven app to the classic look.
 
 Admins can turn off the New Look for all users by updating the **New look for model driven apps** app setting.
 
