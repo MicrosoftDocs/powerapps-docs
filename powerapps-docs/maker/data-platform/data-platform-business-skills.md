@@ -8,6 +8,10 @@ author: prithvi-khosla
 ms.subservice: dataverse-maker
 ms.author: pkhosla
 ms.service: powerapps
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-seo-date:10/08/2026
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 ms.collection: 
@@ -162,6 +166,19 @@ To permanently remove a business skill:
 > [!CAUTION]
 > Deleting a skill is permanent and can't be undone. Any agents that reference the deleted skill can no longer use it.
 
+## Choose Work IQ MCP or Dataverse MCP
+
+Both MCP servers can provide access to business skills, but they serve different integration patterns.
+
+| Consideration | Work IQ MCP | Dataverse MCP |
+|---|---|---|
+| Context | Combines supported Microsoft 365 and business applications context. | Connects directly to one Dataverse environment. |
+| Environment routing | Can discover business applications paths across environments available to the user. Name the intended environment when the user has access to several. | The MCP connection is configured for a specific Dataverse environment. |
+| Administration | An AI administrator controls availability for the entire Work IQ MCP server. Power Platform participation and security controls still apply. | An administrator enables, configures, and authorizes Dataverse MCP for the environment. |
+| Best fit | Agents that need work context and business application context through one server. | Agents that need direct Dataverse tools, skill management, or an explicit environment boundary. |
+
+Use only the connections and tools required for the scenario. A narrower connection can make the data boundary easier to explain, test, and govern.
+
 ## Use business skills
 
 Business Applications in Work IQ brings your organization's business data and process context into Copilot and agents. After you create and activate business skills in your environment, Copilot Chat, Copilot Cowork, and connected agents can discover and use the skills you have access to and follow your organization's processes.
@@ -178,6 +195,30 @@ For a Work IQ MCP connection example, see [Connect GitHub Copilot CLI to the Wor
 
 > [!TIP]
 > If Copilot or your agent doesn't automatically retrieve skill instructions, ask it explicitly to use business skills. When building an agent, you can include an instruction such as "First look for relevant business skills in the specified environment, retrieve their instructions, and follow the process they describe."
+
+## Test and troubleshoot skill use
+
+Test each skill with a repeatable scenario before you share it broadly.
+
+1. Name the target environment explicitly.
+1. Ask the agent to list the skills it can access in that environment.
+1. Ask the agent to describe the intended skill before it performs an action.
+1. Run a representative request and record the expected data, tools, and result.
+1. Repeat the request to identify ambiguous instructions or inconsistent outcomes.
+1. Test failure paths, including missing data, missing permissions, and unavailable tools.
+1. Refine the name, description, instructions, examples, and success criteria.
+
+If the agent doesn't find or use a skill, check:
+
+- The agent is connected to Work IQ MCP or the intended Dataverse MCP environment.
+- The skill is active.
+- The user or agent identity has access to the skill and the required Dataverse data.
+- Users accessing the skill through a security role also have **Skill Sharing Role**.
+- The skill description clearly states when the agent should use it.
+- The prompt or agent instructions identify the correct environment.
+- The agent has every tool required to complete the skill's instructions.
+
+The **Business skills** page doesn't currently show per-skill runtime usage or feedback. Use controlled test cases and any logs or traces provided by the agent experience to collect evidence. When you report a problem, include the environment, skill, prompt, expected result, actual result, and whether the agent retrieved the skill.
 
 ## Add business skills to a solution
 

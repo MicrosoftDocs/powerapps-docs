@@ -4,12 +4,15 @@ description: Learn how to use Work IQ to find and work with data in Power Apps m
 author: shwetamurkute
 ms.component: pa-user
 ms.topic: how-to
-ms.date: 09/25/2026
+ms.date: 11/13/2026
 ms.subservice: end-user
 ms.author: smurkute
 ms.reviewer: smurkute
 ms.service: powerapps
 ai-usage: ai-assisted
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-seo-date:10/08/2026
 search.audienceType:
   - enduser
 ms.collection:
@@ -31,7 +34,7 @@ You can work with Business Applications by using an agent, or through a chat exp
 
 > [!NOTE]
 >
-> Copilot Credits apply to this feature. For information about billing, see the [Power Platform licensing guide](https://go.microsoft.com/fwlink/?linkid=2085130).
+> Usage and billing depend on the experience that you use to access Business Applications. For details, see [Understand costs for Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/understand-costs).
 
 ## Prerequisites
 
@@ -42,15 +45,28 @@ You can work with Business Applications by using an agent, or through a chat exp
 
 Work IQ respects your existing Power Platform security permissions. You can only select environments and applications, view data, and perform actions that your permissions allow.
 
-## Work with a Business Applications
+## Work with Business Applications
 
 1. Start a conversation in an experience that supports Business Applications in Work IQ.
-2. Select a Power Platform environment from the environments available to you.
-3. Select the model-driven app that contains the business data you want to use.
-4. Enter a prompt that describes the records you want to find or the action you want to perform.
-5. Review the response. For an operation that changes data, review the proposed values, make any needed changes, and explicitly confirm the operation before it's submitted.
+1. Select a Power Platform environment from the environments available to you.
+1. Select the model-driven app that contains the business data you want to use.
+1. Enter a prompt that describes the records you want to find or the action you want to perform.
+1. Review the response. For an operation that changes data, review the proposed values, make any needed changes, and explicitly confirm the operation before it's submitted.
 
 For example, ask Work IQ to list records from an app view, show the details of a record, create a record with the values in your prompt, or update an existing record. You can continue the conversation to refine a request or analyze the returned business data.
+
+When you have access to several environments or apps, state the environment and app names in your prompt. This explicit scope helps distinguish apps that contain tables with similar names.
+
+## Troubleshoot a missing environment or app
+
+If an expected environment or app isn't available:
+
+1. Confirm that you can open the environment and model-driven app directly in Power Apps.
+1. Ask your administrator whether Work IQ is enabled for the environment.
+1. Ask the app maker whether **Enable Microsoft 365 Copilot in model-driven apps** is set to **On** or **Default** and the app is published.
+1. Start a new conversation and name the environment and app explicitly.
+
+If the app appears but data is missing, confirm your Dataverse security roles and record access. Work IQ doesn't grant additional access to business data.
 
 ## Supported app components and capabilities
 
