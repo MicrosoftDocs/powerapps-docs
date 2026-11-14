@@ -64,35 +64,6 @@ To save and publish the app, select **Save and Publish**.
 
 To see how the app runs in a full browser window, on the command bar, select **Play**.
 
-## Create an app description with Copilot
-
-If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can use AI to help create a description for your app.
-
-> [!IMPORTANT]
->
-> - To use this capability your app must be in a [managed environment](/power-platform/admin/managed-environment-overview).
-> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability is in process of rolling out, and might not be available in your region yet.
-> - This capability might be subject to usage limits or capacity throttling.
-> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, go to [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
-
-When you save and publish your app, on the **Publish** dialog box select **Create descriptions using AI** to replace your current description or, if your app doesn't have a description, Copilot generates one for you.
-
-You can also generate an app description in app designer by going to, **Settings** > **General** tab. Under **Description** select, **Create descriptions using AI**.
-
-For information that describes the AI impact of Power Apps generate app descriptions with Copilot feature, go to [FAQ for generate app descriptions with Copilot](../common/ai-app-descriptions-faq.md).
-
-### Enable or disable AI-generated app descriptions
-
-The app AI-generated descriptions are managed by a setting in the Power Platform admin center.
-
-1. Go to **Environments** in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
-1. Select an environment, and then select **Edit managed environments**.
-1. Under the section titled **Enable AI-generated app descriptions**, select or clear **AI-generated app descriptions**
-1. Select **Save**.
-
-Clear the browser cache and close any active Power Apps (make.powerapps.com) browser windows. The feature is now be enabled or disabled.
-
 ## Next steps
 
 - [Add areas, groups, and subareas for app navigation](app-navigation.md)

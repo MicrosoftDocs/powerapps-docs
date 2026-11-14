@@ -1,13 +1,17 @@
 ---
 title: Business Applications in Work IQ
 description: Learn how to use Business Applications in Work IQ to bring business data understanding to AI agents and Copilot.
-ms.date: 09/25/2026
+ms.date: 10/08/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
 ms.subservice: dataverse-maker
 ms.author: pkhosla
 ms.service: powerapps
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-seo-date:10/08/2026
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 ms.collection: 
@@ -17,32 +21,39 @@ ms.collection:
 
 [!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
 
-Work IQ provides a workplace intelligence layer of how work gets done; who works with whom; and what content is critical to success. Now, Work IQ extends beyond work patterns to understand how the organization runs, bringing the data, processes, and operational context from your business applications directly into Copilot and agents. This is Business Applications in Work IQ.
+Work IQ is the context and intelligence layer for Microsoft 365 Copilot and agents. Business Applications in Work IQ adds data, processes, and operational context from Dynamics 365 and Power Apps. Users and agents can then work with business data while existing Dataverse permissions and application controls continue to apply.
 
 [!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 > [!IMPORTANT]
 > Work IQ is the intelligence layer for Microsoft data and *Dataverse intelligence* is now part of Business Applications in Work IQ. Power Platform administrators can enable this intelligence layer in the Power Platform admin center. We recommend that you start using Work IQ instead of Dataverse intelligence because Dataverse intelligence as a separate service will no longer be available soon.
 
-The benefits of Business Applications in Work IQ are:  
+Business Applications in Work IQ helps you:
 
-- Enables scale across the enterprise. Organizations have many apps, agents, and processes––not just one. Business Applications in Work IQ addresses that broader problem by enabling business process context to become available everywhere Work IQ exists (Microsoft Copilot Copilot Cowork, Copilot Studio, coding agents)—for everyone: users, makers, and pro developers. 
-
-- Understands how your business operates. Business Applications in Work IQ brings semantic understanding of your business processes via auto-generated semantic models and configurable business skills. 
-
-- Continually improves over time. Business Applications in Work IQ improves its effectiveness over time by understanding how you work, saving preferences in memory, and tuning responses over time.
-
-- Work IQ is extensible by using MCP, CLI, or the Work IQ plugin for Coding Agents.
+- Make business context available through supported Copilot and agent experiences.
+- Reuse business-process instructions through business skills.
+- Improve data understanding through Dataverse semantic models.
+- Connect agents and development tools through Work IQ MCP, Dataverse MCP, APIs, and coding-agent tools.
+- Apply existing environment, application, identity, and Dataverse security controls.
 
 :::image type="content" source="media/business-applications-in-work-iq/work-iq-and-data.png" alt-text="Productivity and business data in Work IQ" lightbox="media/business-applications-in-work-iq/work-iq-and-data.png":::
 
-## How business applications extend Work IQ
+## Choose how to use business context
 
-Business Applications in Work IQ extends Work IQ from productivity data into business applications. Work IQ already provides the information-worker-facing MCP and CLI surfaces that power experiences like Cowork, Scout, and related tools. Business Applications in Work IQ lights up there by bringing application-specific business semantics, environment routing, and execution into the same overall experience, while each application scope keeps its own data model, runtime behavior, permissions, and governance.
+Choose the connection based on the experience you're building and the data boundary you need.
 
-At a technical level, the model is simple: Work IQ exposes search, fetch, and execution-style tools, and Business Applications in Work IQ plugs in by expanding the set of paths and URLs those tools can operate over. That means Work IQ can discover, read, and act on application data alongside existing Microsoft Graph-backed information, instead of forcing users to switch to a separate surface. Dataverse environments are the first major scopes, with the same pattern extending to Power Apps, SharePoint-backed application data, and selected non-Microsoft systems.
+| Option | Use it when | Scope and configuration |
+|---|---|---|
+| Microsoft 365 Copilot and Copilot Cowork | People need business context in a Microsoft 365 work experience. | Administrators configure the Microsoft 365 audience. Power Platform administrators and makers configure participating environments and apps. |
+| Work IQ MCP | An agent or coding client needs Microsoft 365 and supported business applications context through one MCP server. | Administrators control availability for the entire Work IQ MCP server. Environment, app, and data permissions still determine accessible business context. |
+| Dataverse MCP | An agent needs direct, environment-specific Dataverse tools or business skills without the broader Work IQ context layer. | Configure and authorize the Dataverse MCP server for each environment that the client uses. |
+| Dataverse Ask API | Application code needs a response grounded in a selected Dataverse semantic model. | The request targets a Dataverse environment and semantic model. |
+| Dataverse plugin for coding agents | A coding agent needs Dataverse development guidance and tools while building a solution. | Install and configure the plugin in the coding environment. This option is for solution development, not end-user business-data grounding. |
 
-The Work IQ model for integrating application data is consistent across the ecosystem: Microsoft application data and Power Apps-based experiences are already part of the model, and additional applications can participate by exposing the paths, URLs, semantics, and operations that Work IQ tools can use. The same pattern is being extended to non-Microsoft applications through MCP and similar integration approaches, so more systems can plug into the same Work IQ experience without changing the user-facing surface.
+These options can coexist with other enterprise data sources. You don't need to move every data source into Dataverse. Connect each source through an appropriate tool or service, and use the agent or application as the orchestration layer when the scenario spans multiple systems.
+
+> [!NOTE]
+> Work IQ MCP doesn't currently provide a retrieval-only parameter that bypasses response generation. If your architecture needs deterministic retrieval, use the source API or another targeted integration where available.
 
 ## Business applications and existing apps
 
@@ -78,8 +89,7 @@ Information workers can query and reason over business data in natural language 
 
 | Copilot experience | Description |
 |---|---|
-| Copilot Chat | Users can query, synthesize, and analyze line-of-business data in natural language conversation with Copilot and installed agents, once enabled by an administrator. <br>Learn more: [Set Up Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/quickstart?toc=/power-platform/business-applications-work-iq/toc.json&bc=/power-platform/breadcrumb/TOC.json) |
-| Copilot Cowork | Users can collaborate with Cowork in real-time within their workflow, leveraging Business Applications in Work IQ to access and reason over business data. <br>Learn more: [Use the Business Applications in Work IQ plugin in Cowork](/microsoft-365/copilot/cowork/cowork-work-iq) |
+| Copilot Chat | Users can query, synthesize, and analyze line-of-business data in natural language conversation with Copilot and installed agents, once enabled by an administrator. <br>Learn more: [Set up Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/quickstart?toc=/power-platform/business-applications-work-iq/toc.json&bc=/power-platform/breadcrumb/TOC.json) |
 | MCP tools  | Business applications MCP tools provide a standardized tool surface that enables AI clients such as Cowork, Copilot Studio, and coding agents to consistently discover, reason over, and execute work across business applications. <br> Learn more: [Work IQ MCP Tool reference](/microsoft-365/copilot/extensibility/work-iq/mcp/tool-reference) |
 
 ## Build agents that integrate with Business Applications in Work IQ
@@ -101,7 +111,7 @@ For information and terms for Work IQ licensing, see [Licensing requirements](/m
 
 ## Prerequisites
 
-Power Platform admins must enable Business Applications in Work IQ, including turning on Business Applications in Work IQ, setting up the Business Applications Cowork plugin, and allowing users coding agent access –– all requirements for using the feature in MCP Server. For more information, see [Set up Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/quickstart)
+Power Platform administrators must enable Work IQ in the environments that provide business context. AI administrators manage Microsoft 365 Copilot and Work IQ MCP availability, and makers manage model-driven app participation. For more information, see [Set up Business Applications in Work IQ](/power-platform/admin/business-applications-work-iq/quickstart).
 
 ## Next steps
 

@@ -8,6 +8,10 @@ author: prithvi-khosla
 ms.subservice: dataverse-maker
 ms.author: pkhosla
 ms.service: powerapps
+ms.custom:
+  - ai-gen-docs-bap
+  - ai-seo-date:10/08/2026
+ai-usage: ai-assisted
 search.audienceType: 
   - maker
 ms.collection: 
@@ -30,11 +34,11 @@ To enable business skills in a Dataverse environment, a Power Platform administr
 
 Key capabilities include: 
 
-- Reusability—Define a process once and use it across multiple agents and surfaces 
-- Consistency—Agents follow the same process definition, reducing variation in outcomes 
-- Maintainability—Update and activate a skill in one place to change behavior across all agents that use it.
+- Reusability—Define a process once and use it across multiple agents and surfaces.
+- Consistency—Give agents the same process definition to reduce variation in outcomes.
+- Maintainability—Update a skill in one place to change the instructions available to agents.
 - Governance—Control who can create, modify, and use business skills through ownership, sharing, and Dataverse security roles.
-- Solution-aware—A solution aware object that appears in Solution explorer and can be moved across environments 
+- Solution awareness—Add skills to solutions and move them across environments.
 
 ## Skill structure 
 
@@ -46,7 +50,18 @@ Business skills use a layered structure for efficient discovery and retrieval.
 |Instructions     | Full skill body   |  Contains the complete process definition     |
 |Resources     | Attached reference files   | Provides supporting documents, templates, policies, and other materials agents can use when following the skill     |
 
-Agents query metadata to find applicable skills, then retrieve full instructions and resources only when needed.
+Agents query frontmatter to find applicable skills, then retrieve full instructions and resources only when needed.
+
+## How agents discover a skill
+
+A skill's name, description, frontmatter, environment, state, and sharing settings all affect whether an agent can find and use it.
+
+1. The agent searches the connected environment for skills that the current identity can access.
+1. The agent compares skill frontmatter, especially the name and description, with the user's request.
+1. The agent retrieves the complete instructions and resources for a relevant skill.
+1. The agent uses its connected tools to carry out the process.
+
+Write a description that states both what the skill does and when to use it. Agent selection is probabilistic, so test representative requests before you share a skill broadly.
 
 ## Security and governance 
 
@@ -56,9 +71,9 @@ Users who access a skill through a Dataverse security role must have both the se
 
 |Security role  |Privileges  |
 |---------|---------|
-|Basic User     |  Can create skills (owned by them) <br/> Can use skills they have access to.       |
-|Environment Maker     |   Can create and share skills (owned by them)<br/> Can manage solution deployment       |
-|System Administrator or System Customizer     |  Can create and share skills<br/> Can manage solution deployment       |
+| Basic User | Can create skills that they own.<br>Can use skills they have access to. |
+| Environment Maker | Can create and share skills that they own.<br>Can manage solution deployment. |
+| System Administrator or System Customizer | Can create and share skills.<br>Can manage solution deployment. |
 
 ## Next steps
 
