@@ -2659,8 +2659,6 @@
     href: ./common/faq-apps-in-agents.md
   - name: FAQ about building apps through conversation
     href: ./common/faqs-build-apps-conversation.md
-  - name: FAQ about generating app descriptions with Copilot
-    href: ./common/ai-app-descriptions-faq.md
   - name: FAQ about editing your app with Copilot
     href: ./common/faqs-copilot-panel.md
   - name: FAQ about using Copilot in model-driven apps

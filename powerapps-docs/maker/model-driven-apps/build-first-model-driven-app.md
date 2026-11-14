@@ -69,34 +69,6 @@ To save without publishing, on the app designer command bar, select **Save**.
 
 To save and publish, on the app designer command bar, select **Publish**.
 
-## Create an app description with Copilot
-
-If your app is in a [managed environment](/power-platform/admin/managed-environment-overview), you can use AI to help you create a description for your app.
-
-> [!IMPORTANT]
->
-> - To use this capability your app must be in a [managed  environment](/power-platform/admin/managed-environment-overview).
-> - This capability is powered by [ Azure OpenAI Service](/azure/cognitive-services/openai/overview).
-> - This capability might be subject to usage limits or capacity throttling.
-> - To understand capabilities and limitations of AI-powered and Copilot features in Power Apps, go to [Responsible AI FAQs for Power Apps](../common/responsible-ai-overview.md)
-
-When you save and publish your app, on the **Publish** dialog box select, **Create descriptions using AI** to replace your current description or, if your app doesn't have a description, Copilot generates one for you.
-
-You can also generate an app description by going to, **Settings** > **General**. Under **Description** select, **Create descriptions using AI**.
-
-For information that describes the AI impact of Power Apps generate app descriptions with Copilot feature, go to [FAQ for generate app descriptions with Copilot](../common/ai-app-descriptions-faq.md).
-
-### Enable or disable AI-generated app descriptions
-
-App AI-generated descriptions are managed by a setting in the Power Platform admin center.
-
-   1. Open https://admin.powerplatform.microsoft.com/environments
-   1. Select an environment, and then select **Edit managed environments**.
-   1. Under the section titled **Enable AI-generated app descriptions**, select or clear **AI-generated app descriptions**
-   1. Select **Save**.
-
-Clear the browser cache and close any active Power Apps (make.powerapps.com) browser windows. The feature is now be enabled or disabled.
-
 ## Run your app on a desktop computer
 
 1. To run your app, sign in to [Power Apps](https://make.powerapps.com/), and  on the left navigation pane, select **Apps**.
