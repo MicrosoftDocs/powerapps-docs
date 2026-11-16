@@ -1,6 +1,6 @@
 ---
-title: "Manage your Azure Synapse Link with Environment Events | MicrosoftDocs"
-description: "Learn how to manage your Azure Synapse Link for Dataverse profiles with Environment events."
+title: "Manage your Azure Synapse Link with Environment Events"
+description: "Learn how to manage your linked data with Azure Synapse Link for Microsoft Dataverse profiles with environment events."
 ms.custom: ""
 ms.date: 11/12/2026
 ms.reviewer: "Mattp123"
@@ -16,7 +16,7 @@ ms.author: "matp"
 ai-usage: ai-assisted
 search.audienceType: 
   - maker
-contributors: "sama-zaki"
+contributors: anibakore-msft
 ---
 
 # Manage your Azure Synapse Link during environment lifecycle events
@@ -71,5 +71,7 @@ If an [environment is reset](/power-platform/admin/reset-environment), all Azure
 ### See also
 
 [Azure Synapse Link for Dataverse](./export-to-data-lake.md)
+
+[Environment lifecycle for link to Fabric and long-term retention](fabric-link-retention-environment-lifecycle.md)
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

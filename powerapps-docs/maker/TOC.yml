@@ -2111,6 +2111,8 @@
         href: ./data-platform/data-retention-manage.md
       - name: View long term retained data
         href: ./data-platform/data-retention-view.md
+      - name: Environment lifecycle impacts on Fabric links and retention
+        href: ./data-platform/fabric-link-retention-environment-lifecycle.md
       - name: FAQ about data retention
         href: ./data-platform/data-retention-faq.yml
     - name: Create and edit virtual tables
@@ -2447,8 +2449,12 @@
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
       - name: Create a link to Fabric
         href: ./data-platform/fabric-link-to-data-platform.md
+      - name: Monitoring dashboard (preview)
+        href: ./data-platform/fabric-link-monitoring-dashboard.md
       - name: Plan your latency for link to Fabric
         href: ./data-platform/fabric-link-plan-latency.md
+      - name: Environment lifecycle impacts on Fabric links and retention
+        href: ./data-platform/fabric-link-retention-environment-lifecycle.md
       - name: Work with Fabric data and Power BI
         href: ./data-platform/fabric-work-data-and-power-bi.md
       - name: Build apps using Fabric data

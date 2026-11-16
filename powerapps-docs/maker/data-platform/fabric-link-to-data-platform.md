@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 10/23/2026
+ms.date: 11/11/2026
 ms.custom: template-how-to
 ai-usage: ai-assisted
 ---
@@ -22,13 +22,14 @@ You can use an existing Dataverse environment or create a new developer environm
 
 - You must have the System Administrator security role in the Power Platform environment to enable **Link to Fabric** or **Synapse Link**. This role is also required to add application users in your environment who need access to work with this feature by using the Power Platform admin center.
 - You must be an administrator of the Power BI workspace. 
+- You must have **Capacity Contributor** permissions or capacity administrator access to the Fabric capacity assigned to the workspace, even if you're using an existing workspace that's already assigned to that capacity. Being a workspace administrator alone isn't sufficient. Ask a capacity administrator to grant access through **Contributor permissions** in the capacity settings. For more information, see [Manage your Fabric capacity](/fabric/admin/capacity-settings#details).
 - If you want the system to create a Power BI workspace, you need to have Power BI Capacity Administrator access to a capacity.
 - A Power BI premium license or Fabric capacity is required. If you don't have a Power BI premium license or Fabric capacity, you can buy a capacity or sign up for a free Fabric trial capacity. For more information, see [Fabric (preview) trial](/fabric/get-started/fabric-trial).
 - Your administrator needs to grant you access to create Fabric lakehouses and artifacts. You can find these settings in the Fabric admin portal. Go to **Tenant Settings** > **Microsoft Fabric** > **Users can create Fabric items**, **Tenant settings** > **Workspace settings** > **Create workspaces** as well as **Tenant settings** > **oneLake settings** > **Users can access data stored in OneLake with apps external to Fabric**.
 - If you plan to use workspace identity authentication, you must be a workspace admin to create and manage a workspace identity. The workspace you're creating the identity for can't be a My Workspace. More information: [Workspace identity in Fabric](/fabric/security/workspace-identity)
 - If you plan to use workspace identity authentication, the workspace identity must be onboarded as an application user in the Dataverse environment and granted the appropriate role (commonly System Administrator) so it can access Dataverse data on behalf of Fabric.
 - You must have permissions in Fabric to manage connections via **Settings** > **Manage connections and gateways**.
-- To confirm whether you have access to the required premium capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Make sure that **Trial** or **Premium capacity** is selected.
+- To confirm whether the workspace is assigned to the required capacity, go to [Power BI](https://app.powerbi.com), open the workspace, and select **Workspace settings** > **Premium**. Ensure that **Trial** or **Premium capacity** is selected.
    :::image type="content" source="media/fabric/fabric-trial-capacity.png" alt-text="You need either Trial or Premium capacity for your Power BI workspace." lightbox="media/fabric/fabric-trial-capacity.png":::
 
 > [!NOTE]
@@ -365,5 +366,7 @@ To enable an existing link, follow these steps:
 > - Currently, Azure Synapse Link profiles secured with managed identities, formerly Managed Service Identity (MSI), can't be linked to Microsoft Fabric.  
 
 ## Next steps
+
+[Environment lifecycle for link to Fabric and long-term retention](fabric-link-retention-environment-lifecycle.md)
 
 [Work with Dataverse data and generate Power BI reports](fabric-work-data-and-power-bi.md)
