@@ -10,7 +10,7 @@ contributors:
 - neerajatmsft
 - rijoshi
 ms.topic: overview
-ms.date: 04/10/2026
+ms.date: 11/02/2026
 ms.custom: template-overview
 ---
 # Dataverse long term data retention overview
@@ -145,5 +145,7 @@ For more information about solutions and solution components, go to [Solutions o
 ## Next steps
 
 [Set a data retention policy for a table](data-retention-set.md)
+
+[Environment lifecycle for link to Fabric and long-term retention](fabric-link-retention-environment-lifecycle.md)
 
 [Share your ideas](https://experience.dynamics.com/ideas/categories/list/?category=55f731de-11f3-ed11-8848-00224827ed7b&forum=eef9aef6-0ff3-ed11-8848-00224827e88b)
