@@ -2449,6 +2449,8 @@
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
       - name: Create a link to Fabric
         href: ./data-platform/fabric-link-to-data-platform.md
+      - name: Monitoring dashboard (preview)
+        href: ./data-platform/fabric-link-monitoring-dashboard.md
       - name: Plan your latency for link to Fabric
         href: ./data-platform/fabric-link-plan-latency.md
       - name: Environment lifecycle impacts on Fabric links and retention
