@@ -68,6 +68,9 @@ You can use this parameter with these messages:
 - `MakeAvailableToOrganizationTemplate`
 - `Update` (PATCH)
 
+> [!IMPORTANT]
+> `SolutionUniqueName` must name an unmanaged solution. When it names a managed solution, a `Create` request doesn't return an error: the component is created, but it isn't added to that solution, only to the Default solution. The [AddSolutionComponent message](/power-apps/developer/data-platform/webapi/reference/addsolutioncomponent) returns an error (`0x8004f024`) in the same case.
+
 The following examples create a web resource solution component and add it to the solution with the unique name of `ExampleSolution`.
 ### [SDK for .NET](#tab/sdk)
 
