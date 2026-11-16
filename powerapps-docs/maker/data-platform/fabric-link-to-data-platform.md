@@ -366,4 +366,6 @@ To enable an existing link, follow these steps:
 
 ## Next steps
 
+[Environment lifecycle for link to Fabric and long-term retention](fabric-link-retention-environment-lifecycle.md)
+
 [Work with Dataverse data and generate Power BI reports](fabric-work-data-and-power-bi.md)
