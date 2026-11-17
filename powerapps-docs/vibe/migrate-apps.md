@@ -4,22 +4,20 @@ description: Learn how to migrate an app you built in Power Apps Vibe, either wi
 author: szlo
 ms.author: szlo
 ms.reviewer: joshuapa
-ms.date: 11/04/2026
+ms.date: 11/11/2026
 ms.topic: how-to
 contributor: joshuapartlow
 ---
 
 # Migrate apps from Power Apps Vibe
 
-Power Apps Vibe (https://vibe.powerapps.com) is retiring. You can keep editing your Vibe apps through November 30, 2026. Starting December 1, 2026, you won't be able to edit your apps in Power Apps Vibe, but you can still migrate them to Copilot Studio or Copilot Cowork, or download their source code.
-
 > [!IMPORTANT]
-> What changes after November 30, 2026
-> - Through November 30, 2026: You can edit your apps in Power Apps Vibe, migrate them, and download their source code.
-> - Starting December 1, 2026: You can no longer edit apps in Power Apps Vibe. For each app, you can:
->   - Migrate it, with one-click migration or manual migration, and keep building it in Apps in Copilot Studio or Copilot Cowork.
->   - Download its source code to keep a copy.
-> - Anything that requires editing in Vibe, such as publishing draft tables, must be done by November 30, 2026.
+> Power Apps Vibe is retiring. Migrate your apps to Copilot Studio or Copilot Cowork to continue editing.
+>
+> - **Through November 30, 2026:** Edit, migrate, or download your Vibe apps.
+> - **December 1–31, 2026:** Migrate or download your apps. Editing in Vibe is no longer available.
+> - **After December 31, 2026:** You can no longer access your Vibe apps.
+
 
 ## Choose how to migrate your app
 
@@ -60,6 +58,9 @@ If your organization doesn't allow you to create a personal developer environmen
 
 ## Option 1: One-click migration
 
+> [!NOTE]
+> One-click migration is currently available only in [Power Apps Vibe (preview)](https://vibe.preview.powerapps.com). To migrate your app using the one-click migration, sign in at vibe.preview.powerapps.com.
+
 By using one-click migration, you can move an app that you built in Power Apps Vibe to Copilot Studio, directly from Vibe. After migration, you can chat with an agent in Copilot Studio to update, publish, and share your app. 
 
 ### How one-click migration works
@@ -80,7 +81,7 @@ One-click migration creates a new app in Copilot Studio from your Vibe app. Your
 | Environment | Created in your Personal Developer Environment. |
 | Sharing and app links | Not carried over. Share your new app after you publish it. |
 | Sharing restrictions | Your admin's sharing policies for your app's environment apply. |
-| Your original Vibe app | Not changed or deleted. You can still open it in Power Apps Vibe until November 30, 2026. |
+| Your original Vibe app | Not changed. |
 
 ### Prerequisites for one-click migration
 
@@ -93,7 +94,7 @@ Before you migrate your app, ensure that:
 
 ### Migrate your app with one click
 
-1. Sign in to [Power Apps Vibe](https://vibe.powerapps.com).
+1. Sign in to [Power Apps Vibe preview](https://vibe.preview.powerapps.com).
 1. Open your app, and then select **Edit**. A migration dialog appears.
 1. In the migration dialog, review the details, and then select **Yes, migrate**.
 
@@ -125,6 +126,15 @@ When migration finishes, Power Apps Vibe shows a message that your app was migra
 1. When your app is ready, [publish and share it](#publish-and-share-in-copilot-studio).
 
 For next steps, including how to verify your data, publish and share your app, and edit it later, see [After you migrate](#after-you-migrate).
+
+> [!IMPORTANT]
+> **Known issue:** If your migrated app is in an environment other than your personal developer environment, you might not be able to open it from the app list in Copilot Studio. A fix is rolling out over the next week starting November 16th.
+>
+> Until the fix reaches your region, open your app from Copilot Studio Preview:
+>
+> 1. Go to [https://copilotstudio.preview.microsoft.com](https://copilotstudio.preview.microsoft.com), and sign in with your work account.
+> 2. In the left navigation pane, select **Apps (Preview)**.
+> 3. Select your app to open it.
 
 ## Option 2: Manual migration
 
