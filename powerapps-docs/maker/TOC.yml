@@ -63,7 +63,7 @@
       items:
       - name: AI in apps overview
         href: ../user/ai-in-apps.md
-      - name: Use Business Applications in Work IQ (preview)
+      - name: Use Business Applications in Work IQ
         href: ../user/use-business-apps-work-iq.md
       - name: Use Microsoft Copilot
         href: ../user/use-microsoft-365-copilot-model-driven-apps.md
@@ -2541,7 +2541,7 @@
       href: ./data-platform/data-platform-mcp-preview-tools.md
     - name: Connect to Dataverse with MCP FAQ
       href: ./data-platform/data-platform-mcp-faq.md
-  - name: Business Applications in Work IQ (preview)
+  - name: Business Applications in Work IQ
     items:
     - name: Business Applications in Work IQ overview
       href: ./data-platform/business-applications-work-iq.md
@@ -2559,7 +2559,7 @@
         href: ./data-platform/semantic-model-overview.md
       - name: Manage and use
         items:
-        - name: Fine-tune semantic model signals
+        - name: Create and configure semantic models
           href: ./data-platform/fine-tune-semantic-model-signals.md
         - name: Manage semantic model glossary entries
           href: ./data-platform/manage-semantic-model-glossary.md

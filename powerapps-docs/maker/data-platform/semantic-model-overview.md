@@ -1,23 +1,22 @@
 ---
-title: Overview of Dataverse semantic model (preview)
+title: Overview of Dataverse semantic model
 description: Learn what the Dataverse semantic model is, how its building blocks work together, and which Copilot and agent experiences it powers — for Power Apps makers and Dataverse administrators.
 ms.topic: overview
-ms.date: 06/17/2026
+ms.date: 11/17/2026
 author: JasonHQX
 ms.author: jasonhuang
 ms.reviewer: matp
 reviewer: Mattp123
+ai-usage: ai-generated
 ---
 
-# Overview of Dataverse semantic model (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Overview of Dataverse semantic model
 
 The Dataverse semantic model gives AI agents and Copilot experiences a shared, business-aware understanding of your Dataverse data. Rather than reasoning from raw column and table names alone, agents that consume the semantic model understand what your data *means*.
 
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
+The platform automatically provisions semantic models for supported Copilot experiences over Dataverse data. Makers and administrators can then fine-tune each model's table sources and signals, and add domain-specific glossary terms for business language that automatic extraction can't infer.
 
-The platform automatically provisions the semantic model when you enable Copilot experiences over Dataverse data, so you don't need to set up anything manually to start. Makers and administrators can then fine-tune which signals feed into the model and add domain-specific glossary terms to cover business-specific language that automatic extraction can't infer.
+You can also create a custom model for a specific purpose. Custom models are currently usable through direct API and action calls; creation doesn't automatically associate a model with an app or agent. See [Create a custom semantic model (preview)](fine-tune-semantic-model-signals.md#create-a-custom-semantic-model-preview).
 
 ## Building blocks of the semantic model
 
@@ -25,11 +24,11 @@ The semantic model combines three building blocks to give agents a complete pict
 
 ### Data scope with semantic indexing
 
-The data scope defines the set of Dataverse tables covered by the semantic model. Semantic indexing is applied over those tables, forming the foundation for agent reasoning within a particular scenario. Only tables included in the data scope contribute to an agent's understanding of your data.
+The data scope defines the set of Dataverse tables covered by the semantic model. Semantic indexing is applied over those tables, forming the foundation for agent reasoning within a particular scenario. In the new experience, use **Configure** to add or remove table sources, then choose which signals each included table contributes.
 
 ### System-inferred signals
 
-The semantic model automatically extracts signals from metadata that already exists in your Dataverse environment - table relationships, views, forms, column description summaries, and optionally sample data rows. No additional data entry is required. The model reads what you already configured and uses it to build semantic understanding.
+The semantic model automatically extracts signals from metadata that already exists in your Dataverse environment: table and column descriptions, table relationships, views, forms, and optionally sample data rows. The model uses this context to build semantic understanding. Available signal controls can differ by environment.
 
 You can fine-tune which signals are included and exclude those that introduce noise or are no longer relevant. For details, see [Fine-tune semantic model signals](fine-tune-semantic-model-signals.md).
 
@@ -39,12 +38,12 @@ The glossary allows makers to add domain-specific terms, acronyms, synonyms, and
 
 ## Why use the semantic model
 
-The semantic model improves agent behavior in four ways:
+The semantic model provides context that helps agents interpret your business data:
 
-- *Improved accuracy* — Agents interpret business intent rather than guessing from schema names alone, delivering more meaningful and relevant results.
-- *Faster responses* — A well-scoped semantic model reduces ambiguity, so agents return answers more quickly and fluently.
+- *Business context* - Table summaries, relationships, and glossary definitions help agents interpret intent beyond schema names.
+- *Focused scope* - A relevant table selection and signal configuration help reduce ambiguity in the model's context.
 - *Reduced setup time* — The model automatically extracts semantic knowledge from your existing Dataverse environment. As your schema evolves, the model updates on a scheduled basis.
-- *Consistent answers across agents* — When multiple agents reference the same semantic model, they share the same understanding of your data and return consistent responses across experiences.
+- *Shared context across agents* - When multiple agents reference the same semantic model, they use the same configured signals and glossary. Responses can still vary with the question and the caller's Dataverse privileges.
 
 ## How the semantic model works
 
@@ -54,14 +53,14 @@ Once [Dataverse intelligence](./data-platform-intelligence.md) is enabled, the s
 |---|---|
 | Table relationships | How records across tables are associated, such as one-to-many and many-to-many relationships. |
 | Views | Public views with join conditions and sub-grid views that define which records and columns are relevant for a scenario. |
-| Forms | The display name of forms that define how records are presented to users. |
-| Description summaries | Descriptions added to tables and columns that explain what they represent. |
+| Forms summaries | Context summarized from forms and form fields. |
+| Table summaries | Context generated from table descriptions, column headers, and column descriptions. |
 | Sample data rows | Representative rows showing what data looks like in each column. |
 
 > [!NOTE]
-> Sample data rows are turned off by default. System views - including Quick Find, Advanced Find, Associated, and Lookup views - and personal views are excluded from signal extraction. For forms, only the display name is captured. Polymorphic relationship type isn't supported to configure.
+> Sample data rows are turned off by default. System views - including Quick Find, Advanced Find, Associated, and Lookup views - and personal views are excluded from signal extraction. Polymorphic relationships aren't available to configure.
 
-The semantic model regenerates automatically every 12 hours to reflect schema changes. You can also trigger a manual regeneration at any time. Initial generation can take up to two hours, and incremental changes typically take up to 30 minutes. For details, see [Regenerate the semantic model](regenerate-semantic-model.md).
+The semantic model regenerates automatically every 12 hours to reflect schema changes. You can also request a manual regeneration. Save configuration changes before requesting regeneration, and wait for the run to complete before checking the generated context. Initial generation can take up to two hours, and incremental changes typically take up to 30 minutes. For details, see [Regenerate the semantic model](regenerate-semantic-model.md).
 
 ## Copilot experiences that use the semantic model
 
@@ -76,7 +75,7 @@ The semantic model is automatically provisioned and consumed by the following Co
 
 The following limitations currently apply:
 
-- No new model creation. You can't currently create a completely new semantic model.
+- New experience availability. Custom model creation and the **Configure** interface are available only in environments where the new semantic model experience is enabled and its version requirements are met. For steps, see [Fine-tune semantic model signals](fine-tune-semantic-model-signals.md). For programmatic model creation, see [Manage Dataverse semantic models](../../developer/data-platform/ask/manage-semantic-models.md).
 - No ALM support. The semantic model currently doesn't support environment copy or move operations. After any environment copy or move, turn Dataverse Intelligence off and back on in the Power Platform Admin Center to force a restart.
 
 For additional questions about the semantic model, see [Dataverse semantic model FAQ](semantic-model-faq.md).
