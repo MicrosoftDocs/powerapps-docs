@@ -1,7 +1,7 @@
 ---
-title: "Get Started with the Dataverse Ask APIs (Preview)"
+title: "Get Started with the Dataverse Ask APIs"
 description: "Learn how to access and use the Dataverse Ask APIs, authenticate and authorize callers, compose requests, handle errors, and retry safely."
-ms.date: 09/25/2026
+ms.date: 11/17/2026
 ms.collection: bap-ai-copilot
 ms.reviewer: jdaly
 ms.topic: how-to
@@ -13,13 +13,9 @@ search.audienceType:
 ai-usage: ai-assisted
 ---
 
-# Get started with the Dataverse Ask APIs (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Get started with the Dataverse Ask APIs
 
 Before calling the Dataverse Ask APIs, configure the environment and an identity, and understand the HTTP and retry requirements described in this article.
-
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 ## Prerequisites
 

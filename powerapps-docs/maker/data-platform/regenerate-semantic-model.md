@@ -1,36 +1,45 @@
 ---
-title: Regenerate semantic model (preview)
-description: Keep your Dataverse semantic model current by understanding automatic regeneration cycles and triggering manual regeneration after schema changes or ALM actions.
+title: Regenerate semantic model
+description: Learn how to save Dataverse semantic model changes, request manual regeneration, and distinguish a regeneration request from a completed update.
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 11/17/2026
 author: JasonHQX
 ms.author: jasonhuang
 ms.reviewer: matp
 reviewer: Mattp123
+ai-usage: ai-generated
 ---
 
-# Regenerate the semantic model (preview)
+# Regenerate the semantic model
 
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
-
-The Microsoft Dataverse semantic model automatically regenerates every 12 hours. If you want changes to take effect immediately - such as updates to signal settings, or Dataverse metadata changes like adding or updating views and column descriptions - trigger a manual regeneration instead of waiting for the next scheduled run.
-
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
+The Microsoft Dataverse semantic model automatically regenerates every 12 hours. To request an earlier run after changing signal settings or Dataverse metadata, trigger a manual regeneration instead of waiting for the scheduled cycle. Regeneration is asynchronous: requesting a run doesn't make the updated model available immediately.
 
 ## Trigger a manual regeneration
 
-From the semantic model overview, select **Regenerate**. The button grays out while the regeneration job is queued and running. 
+Open the model you want to review from the semantic models page in Power Apps. Use the environment and permissions described in [Fine-tune semantic model signals](fine-tune-semantic-model-signals.md#prerequisites).
 
-After regeneration completes, the overview page refreshes and shows the updated timestamp next to the Regenerate button.
+1. Save pending signal, description, or table-source changes by selecting **Save**. **Regenerate** isn't a save command.
+2. Select **Regenerate** in the model's command bar. On a narrow screen, the command can appear in the overflow menu.
+3. Wait while **Regenerating...** is displayed. The command is unavailable while a request or regeneration is in progress.
+4. After the run completes, review **Last regeneration** and check the generated context on the model's configuration page. The timestamp is shown in local time.
+
+A message that regeneration started successfully confirms that the request was accepted, not that generation has completed. If the request fails, review the error message; don't assume the model has been updated.
 
 > [!NOTE]
 >
 > - Regeneration runs across all semantic models in the environment.
-> - Only changes made before selecting Regenerate are captured in that run. Any changes made after are picked up in the next cycle. Use the Last regeneration timestamp to confirm which changes are reflected in the current model.
+> - Save changes before selecting **Regenerate**. Unsaved edits aren't included in the request.
+> - **Last regeneration** identifies the last successful run; it doesn't confirm that changes made after that run are reflected in the model.
+
+## Regenerate after enabling sample rows
+
+When you turn on **Sample table rows**, a dialog can offer **Save & regenerate**. Select it to save the settings before requesting regeneration. If saving fails, regeneration doesn't start.
+
+**Skip for now** closes the dialog without saving or starting regeneration. Select **Save** separately if you want to keep the changed settings, then regenerate when ready. Sample rows aren't available to agents until the model is regenerated.
 
 ## Related articles
 
-- [Overview of Dataverse semantic model (preview)](semantic-model-overview.md)
-- [Fine-tune semantic model signals (preview)](fine-tune-semantic-model-signals.md)
-- [Manage semantic model glossary entries (preview)](manage-semantic-model-glossary.md)
-- [Dataverse semantic model frequently asked questions (preview)](semantic-model-faq.md)
+- [Overview of Dataverse semantic model](semantic-model-overview.md)
+- [Fine-tune semantic model signals](fine-tune-semantic-model-signals.md)
+- [Manage semantic model glossary entries](manage-semantic-model-glossary.md)
+- [Dataverse semantic model frequently asked questions](semantic-model-faq.md)

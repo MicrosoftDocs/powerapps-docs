@@ -1,7 +1,7 @@
 ---
 title: "Business skills overview" 
 description: Learn how business skills provide reusable business-process instructions to Copilot and agents through Business Applications in Work IQ or direct Dataverse MCP connections.
-ms.date: 11/03/2026
+ms.date: 11/17/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -17,13 +17,9 @@ search.audienceType:
 ms.collection: 
     - bap-ai-copilot
 ---
-# Business skills overview (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Business skills overview
 
 Business skills are natural-language instructions that capture how your organization gets work done. They represent your business processes, policies, and domain knowledge in a format that agents can understand and follow. Each skill describes how to complete a specific type of work—the steps involved, the information required, and the business rules that apply.
-
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 Through [Business Applications in Work IQ](business-applications-work-iq.md), Copilot and connected agents can discover and use active business skills they have access to, completing tasks according to your organization's processes. Agents connected directly to the Dataverse MCP server can also discover and use business skills. When multiple agents use the same skill, they follow the same process, ensuring consistent behavior across your organization.
 
