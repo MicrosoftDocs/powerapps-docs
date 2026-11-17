@@ -105,6 +105,11 @@ Build on existing business understanding and skills, and reuse it across the age
 
 Additionally, you can use the [Dataverse plugin for coding agents](/power-apps/developer/data-platform/agents-plugin?toc=/power-platform/business-applications-work-iq/toc.json&bc=/power-platform/breadcrumb/TOC.json) alongside Work IQ to code business needs into consistent actions using Dataverse, or call the [Dataverse Ask API](/power-apps/developer/data-platform/ask?toc=/power-platform/business-applications-work-iq/toc.json&bc=/power-platform/breadcrumb/TOC.json) directly.
 
+## Preview features
+
+[!INCLUDE [preview-note-business-applications-work-iq-with-features](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq-with-features.md)]
+
+
 ## Licensing
 
 For information and terms for Work IQ licensing, see [Licensing requirements](/microsoft-365/copilot/extensibility/work-iq/api-overview#licensing-requirements).
