@@ -1,7 +1,7 @@
 ---
-title: "Manage Dataverse semantic models (Preview)"
+title: "Manage Dataverse semantic models"
 description: "Learn how to manage Dataverse semantic models with APIs that list, create, and delete models. Follow the steps to manage models in your environment."
-ms.date: 09/25/2026
+ms.date: 11/17/2026
 ms.collection: bap-ai-copilot
 ms.reviewer: jdaly
 ms.topic: how-to
@@ -13,13 +13,9 @@ search.audienceType:
 ai-usage: ai-assisted
 ---
 
-# Manage Dataverse semantic models (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Manage Dataverse semantic models
 
 Dataverse semantic models define the Dataverse tables available for answering natural-language questions. This article explains how to list, create, and delete these models by using the Dataverse Ask APIs, helping you manage which tables your application can query.
-
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 Before using these APIs, complete the steps in [Get started with the Dataverse Ask APIs](get-started.md).
 

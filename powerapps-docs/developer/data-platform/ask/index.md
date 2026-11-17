@@ -1,7 +1,7 @@
 ---
-title: "Use Dataverse Ask APIs for Natural-Language Questions (Preview)"
+title: "Use Dataverse Ask APIs for Natural-Language Questions"
 description: "Learn how to create semantic models and ask natural-language questions about Microsoft Dataverse data by using the Dataverse Ask APIs."
-ms.date: 09/25/2026
+ms.date: 11/17/2026
 ms.collection: bap-ai-copilot
 ms.reviewer: jdaly
 ms.topic: overview
@@ -13,13 +13,9 @@ search.audienceType:
 ai-usage: ai-assisted
 ---
 
-# Use the Dataverse Ask APIs (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Use the Dataverse Ask APIs
 
 The Dataverse Ask APIs let your application ask natural-language questions about business data stored in Microsoft Dataverse. You define a *semantic model* that identifies the Dataverse tables relevant to a business scenario, and then submit questions against that model.
-
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 For example, an application can create a semantic model that includes the `account` and `opportunity` tables and then ask:
 

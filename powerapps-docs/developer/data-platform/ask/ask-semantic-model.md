@@ -1,7 +1,7 @@
 ---
-title: "Ask Questions Using a Dataverse Semantic model (Preview)"
+title: "Ask Questions Using a Dataverse Semantic model"
 description: "Learn how to use a Dataverse Semantic model to ask natural-language questions, retrieve structured Dataverse results, and page through responses."
-ms.date: 09/25/2026
+ms.date: 11/17/2026
 ms.collection: bap-ai-copilot
 ms.reviewer: jdaly
 ms.topic: how-to
@@ -14,13 +14,9 @@ ai-usage: ai-assisted
 ---
 
 
-# Ask questions by using a Dataverse Semantic model (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Ask questions by using a Dataverse Semantic model
 
 Use the **Ask** operation with a Dataverse Semantic model to submit natural-language questions. The operation returns structured rows, a natural-language summary, and source links when available.
-
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 Before using this API:
 

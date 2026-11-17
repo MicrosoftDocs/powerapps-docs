@@ -1,7 +1,7 @@
 ---
 title: "Create and use business skills" 
 description: Create and manage business skills in Power Apps, and use them with Copilot and agents.
-ms.date: 11/03/2026
+ms.date: 11/17/2026
 ms.reviewer: matp
 ms.topic: how-to
 author: prithvi-khosla
@@ -17,13 +17,9 @@ search.audienceType:
 ms.collection: 
     - bap-ai-copilot
 ---
-# Create and use business skills (preview)
-
-[!INCLUDE [preview-banner](~/../shared-content/shared/preview-includes/preview-banner.md)]
+# Create and use business skills
 
 This article explains how to create and manage business skills that ground agents in your organization's processes. You learn how to create or upload skills in Power Apps, edit and share them, use them with Copilot and agents, and move them between environments.
-
-[!INCLUDE [preview-note-business-applications-work-iq](~/../shared-content/shared/preview-includes/preview-note-business-applications-work-iq.md)]
 
 ## Prerequisites
 
@@ -35,10 +31,10 @@ This article explains how to create and manage business skills that ground agent
 ## Open the business skills page
 
 1. Go to [Power Apps](https://make.powerapps.com) and select your environment.
-2. In the left navigation pane, select **More**, and then select **Business skills (preview)**.
+2. In the left navigation pane, select **More**, and then select **Business skills**.
 
 > [!TIP]
-> Pin the **Business skills (preview)** page to the left navigation pane for quick access.
+> Pin the **Business skills** page to the left navigation pane for quick access.
 
 The **Business skills** page is the central hub for managing all business process knowledge in your environment. From here, you can create, edit, share, and organize the skills that agents use to follow your organization's processes.
 
