@@ -1,7 +1,7 @@
 ---
 title: "Use optional parameters (Microsoft Dataverse) | Microsoft Docs" 
 description: "Use optional parameters to control operation behaviors" 
-ms.date: 06/20/2025
+ms.date: 11/16/2026
 ms.reviewer: jdaly
 ms.topic: how-to
 author: MsSQLGirl
@@ -14,13 +14,14 @@ contributors:
   - JimDaly
   - LearningEveryday1
   - NHelgren
+  - allandecastro
 ---
 # Use optional parameters
 
-Dataverse provides a set of optional parameters or request header values a developer of a client application can use to modify the behavior of individual requests. This article describes the parameter values and request headers that you can use to get the behaviors you need.
+Dataverse provides a set of optional parameters and request header values that you can use to modify the behavior of individual requests. This article describes the parameter values and request headers that you can use to get the behaviors you need.
 
 > [!NOTE]
-> This article introduces these parameters but doesn't explain them in depth. Follow the links for more information to fully understand the scenarios for using these parameters.
+> This article introduces these parameters but doesn't explain them in depth. To fully understand the scenarios for using these parameters, follow the links for more information.
 
 ## How to use
 
@@ -28,12 +29,12 @@ How you use these optional parameters depends on whether you're using the Datave
 
 ### [SDK for .NET](#tab/sdk)
 
-Usually, you'll add the parameter to the [OrganizationRequest.Parameters Collection](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) of the named request class.
+Usually, you add the parameter to the [OrganizationRequest.Parameters Collection](xref:Microsoft.Xrm.Sdk.OrganizationRequest.Parameters) of the named request class.
 
 > [!NOTE]
-> You can't specify these parameters using the seven shortcut methods exposed with the <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
+> You can't specify these parameters by using the seven shortcut methods exposed by <xref:Microsoft.Xrm.Sdk.IOrganizationService>. You must use the named request class with the [IOrganizationService.Execute method](xref:Microsoft.Xrm.Sdk.IOrganizationService.Execute%2A).
 
-One exception is when setting the `partitionid`. The `partitionid` is set as an attribute of the entity instance. More information: [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
+One exception is when setting the `partitionid`. Set the `partitionid` as an attribute of the entity instance. For more information, see: [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
 
 More information:
 
@@ -44,15 +45,15 @@ More information:
 
 Usually, you add the parameter as a request header with the `MSCRM.` namespace.
 
-Two exceptions are the following that are appended to the URL.
+Two exceptions are the following parameters that you append to the URL.
 
-- The `tag` parameter. See [Add a shared variable to the plugin execution context](#add-a-shared-variable-to-the-plugin-execution-context)
-- The `partitionid` parameter. See [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition)
+- The `tag` parameter. See [Add a shared variable to the plugin execution context](#add-a-shared-variable-to-the-plugin-execution-context).
+- The `partitionid` parameter. See [Perform a data operation with specified partition](#perform-a-data-operation-with-specified-partition).
 
 More information:
 
 - [Compose HTTP requests and handle errors : Other headers](webapi/compose-http-requests-handle-errors.md#other-headers)
-- See the following examples.
+- The following examples.
 
 ---
 
@@ -63,12 +64,29 @@ When you perform data operations on a solution component, you can associate it w
 You can use this parameter with these messages:
 
 - `AddPrivilegesRole`
+- `CopySystemForm`
 - `Create` (POST)
 - `Delete` (DELETE)
 - `MakeAvailableToOrganizationTemplate`
+- `RemovePrivilegeRole`
+- `ReplacePrivilegesRole`
 - `Update` (PATCH)
+- `Upsert`
+
+The operation returns an error when the `SolutionUniqueName` value:
+
+- Includes invalid characters. Only letters, digits, and underscore characters are allowed.
+- Is an empty string or uses a restricted solution name.
+- Doesn't match any solution `UniqueName` value.
+
+
+> [!IMPORTANT]
+> No error is returned when the `SolutionUniqueName` parameter value matches a managed solution. The value is ignored. You can't add a solution component to a managed solution.
+
 
 The following examples create a web resource solution component and add it to the solution with the unique name of `ExampleSolution`.
+
+
 ### [SDK for .NET](#tab/sdk)
 
 ```csharp
@@ -140,14 +158,14 @@ More information:
 
 ## Suppress duplicate detection
 
-If you want to have Dataverse throw an error when a new record you create or a record you update matches the duplicate detection rules for another record, you must create or update the row using the `SuppressDuplicateDetection` parameter with a value of false.
+If you want Dataverse to return an error when a new record you create or a record you update matches the duplicate detection rules for another record, you must create or update the row by using the `SuppressDuplicateDetection` parameter with a value of `false`.
 
-The following examples return an error when the following are true:
+The following examples return an error when the following conditions are true:
 
-- Duplicate Detection is enabled for the environment when a row is created or updated.
-- The `account` table has duplicate detection enabled
-- A Duplicate Detection Rule is published that checks whether the account `name` value is an exact match for an existing row
-- There's an existing account with the name` Sample Account`.
+- Duplicate detection is enabled for the environment when you create or update a row.
+- The `account` table has duplicate detection enabled.
+- A duplicate detection rule is published that checks whether the account `name` value is an exact match for an existing row.
+- There's an existing account with the name `Sample Account`.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -223,9 +241,9 @@ More information:
 Use the `tag` parameter to include a shared variable value that is accessible within a plug-in. This extra information allows a plug-in to apply logic that depends on the client application.
 
 > [!NOTE]
-> This parameter is intended for client applications to be able to set any value they wish. No Microsoft feature should require that you set a specific value in your client application code to enable different behaviors.
+> This parameter is intended for client applications to set any value they wish. No Microsoft feature should require that you set a specific value in your client application code to enable different behaviors.
 
-To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables)
+To access the value in a plug-in, use the [IExecutionContext.SharedVariables collection](xref:Microsoft.Xrm.Sdk.IExecutionContext.SharedVariables).
 
 ```csharp
 if (context.SharedVariables.ContainsKey("tag")){
@@ -269,7 +287,7 @@ Accept: application/json
 }
 ```
 
-The response shouldn't be affected by sending the tag unless the plug-in contains logic to change it.
+The response isn't affected by sending the tag unless the plug-in contains logic to change it.
 
 ---
 
@@ -277,7 +295,7 @@ More information: [Shared variables](understand-the-data-context.md#shared-varia
 
 ## Perform a data operation with specified partition
 
-When using elastic tables with a partitioning strategy, you can pass a unique string value with the `partitionid` parameter to access nonrelational table data within a storage partition.
+When you use elastic tables with a partitioning strategy, pass a unique string value with the `partitionid` parameter to access nonrelational table data within a storage partition.
 
 The following examples use the `partitionid` value of `deviceId` when retrieving a `contoso_sensordata` record.
 
@@ -320,21 +338,21 @@ Accept: application/json
 
 ---
 
-Alternatively, you can use the `partitionid` value using alternate key style.
+Alternatively, use the `partitionid` value with the alternate key style.
 
-- [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#use-the-alternate-key)
-- [Learn about specify a partitionid](use-elastic-tables.md#specify-partitionid)
+- [Learn about using the alternate keys with elastic tables](use-elastic-tables.md#use-the-alternate-key).
+- [Learn about specifying a partitionid](use-elastic-tables.md#specify-partitionid).
 
 ## Bypass custom Dataverse logic
 
-Synchronous logic must be applied during the transaction and can significantly impact performance of individual operations. With bulk operations, the extra time for these individual operations can increase the time required. Use the `BypassBusinessLogicExecution` parameter when you want to improve performance while performing bulk data operations.
+Synchronous logic applies during the transaction and can significantly impact the performance of individual operations. With bulk operations, the extra time for these individual operations can increase the time required. Use the `BypassBusinessLogicExecution` parameter when you want to improve performance while performing bulk data operations.
 
 > [!IMPORTANT]
 > The calling user must have the `prvBypassCustomBusinessLogic` privilege.
 
 #### [SDK for .NET](#tab/sdk)
 
-The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when creating a new account record using the SDK for .NET [CreateRequest class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest).
+The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when creating a new account record by using the SDK for .NET [CreateRequest class](/dotnet/api/microsoft.xrm.sdk.messages.createrequest).
 
 ```csharp
 static void DemonstrateBypassBusinessLogicExecution(IOrganizationService service)
@@ -353,7 +371,7 @@ static void DemonstrateBypassBusinessLogicExecution(IOrganizationService service
 
 #### [Web API](#tab/webapi)
 
-The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when [creating a new account record using the Dataverse Web API](webapi/create-table-row.md). This request uses the `MSCRM.BypassBusinessLogicExecution` request header.
+The following example sets the `BypassBusinessLogicExecution` [optional parameter](optional-parameters.md) for both synchronous and asynchronous custom logic when [creating a new account record by using the Dataverse Web API](webapi/create-table-row.md). This request uses the `MSCRM.BypassBusinessLogicExecution` request header.
 
 ```http
 POST [Organization URI]/api/data/v9.2/accounts HTTP/1.1
@@ -374,14 +392,14 @@ MSCRM.BypassBusinessLogicExecution: CustomSync,CustomAsync
 
 [Learn more about ways to bypass custom Dataverse logic](bypass-custom-business-logic.md)
 
-## Bypass Power Automate Flows
+## Bypass Power Automate flows
 
-When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is large, it might cause performance issues for the system. If performance issues occur, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
+When bulk data operations occur that trigger flows, Dataverse creates system jobs to execute the flows. When the number of system jobs is large, it might cause performance problems for the system. If performance problems occur, you can choose to bypass triggering the flows by using the `SuppressCallbackRegistrationExpanderJob` optional parameter.
 
 The [CallbackRegistration table](reference/entities/callbackregistration.md) manages flow triggers, and there's an internal operation called *expander* that calls the registered flow triggers.
 
 > [!NOTE]
-> When this option is used, the flow owners won't receive a notification that their flow logic was bypassed.
+> When you use this option, the flow owners don't receive a notification that their flow logic was bypassed.
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -424,7 +442,7 @@ More information: [Bypass Power Automate Flows](bypass-power-automate-flows.md)
 
 ## Return unmasked data
 
-When you have a column configured to use the [masking rules](/power-platform/admin/create-manage-masking-rules) preview feature you can use the `UnMaskedData` optional parameter to request that the unmasked value is returned.  
+When you configure a column to use the [masking rules](/power-platform/admin/create-manage-masking-rules) preview feature, use the `UnMaskedData` optional parameter to request the unmasked value.  
 
 ### [SDK for .NET](#tab/sdk)
 
@@ -443,7 +461,7 @@ var response = (RetrieveMultipleResponse)service.Execute(request);
 Use the `UnMaskedData=true` query option to indicate that unmasked values should be returned.
 
 > [!IMPORTANT]
-> The `UnMaskedData` option is case sensitive. If you use the incorrect parameter value you will get this error:
+> The `UnMaskedData` option is case sensitive. If you use the incorrect parameter value, you get this error:
 > `{"error":{"code":"0x80060888","message":"The query parameter [REDACTED] is not supported"}}`
 
 **Request:**

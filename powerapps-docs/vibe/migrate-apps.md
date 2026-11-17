@@ -4,7 +4,7 @@ description: Learn how to migrate an app you built in Power Apps Vibe, either wi
 author: szlo
 ms.author: szlo
 ms.reviewer: joshuapa
-ms.date: 11/04/2026
+ms.date: 11/11/2026
 ms.topic: how-to
 contributor: joshuapartlow
 ---
