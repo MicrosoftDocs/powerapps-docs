@@ -44,7 +44,6 @@ Each Copilot feature can have different requirements. Check the documentation fo
 
 ## Availability
 
-- This capability might not be available in your region yet. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - This capability might be subject to usage limits or capacity throttling.
 - Understand the capabilities and limitations of AI-powered and Copilot features in Power Apps. Learn more in [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md).
 
@@ -77,6 +76,6 @@ Copilot preview features are on by default, but your admin can turn them off for
 ### Related information
 
 - [Copilot features in Power Apps](../../copilot-landing-page.yml)
+- [Product availability for Power Platform](/dynamics365/get-started/product-availability#power-platform)
+- [Microsoft Copilot Roadmap](https://aka.ms/roadmap)
 - [FAQ about using AI responsibly in Power Apps](../common/transparency-note.md)
-- [Language availability for Power Platform](https://dynamics.microsoft.com/availability-reports/languagereport/)
-- [Geographical availability for Power Platform](https://dynamics.microsoft.com/availability-reports/georeport/)

@@ -107,7 +107,7 @@ Another method for enhancing foundational models is known as *fine-tuning*. A la
 
 Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and meets the same requirements for regulatory compliance. For more information about the regulatory certifications of Microsoft services, go to [Service Trust Portal](https://servicetrust.microsoft.com/). Additionally, Copilot adheres to our commitment to responsible AI, which is put into action through our [Responsible AI Standard](https://www.microsoft.com/ai/responsible-ai). As regulation in AI evolves, Microsoft continues to adapt and respond to new requirements.
 
-[Learn more about Dynamics 365, Power Platform, and Copilot availability, customer data locations, and compliance with global, regional, and industry-specific requirements for managing data](https://dynamics.microsoft.com/availability-reports/).
+[Learn more about Dynamics 365, Power Platform, and Copilot Studio availability by geography and cloud](/dynamics365/get-started/product-availability).
 
 ## Learn more
 
@@ -146,10 +146,6 @@ Microsoft Copilot is part of the Dynamics 365 and Power Platform ecosystem and m
 | Power Pages | All (See [Copilot overview in Power Pages](/power-pages/configure/ai-copilot-overview) for details.) | No | [Turn off Copilot in Power Pages](/power-pages/configure/ai-copilot-overview#turn-off-copilot-in-power-pages) |
 
 Learn more at [FAQ for optional data sharing for Copilot AI features in Dynamics 365 and Power Platform](/power-platform/faqs-copilot-data-sharing).  
-
-### Regional and language availability
-
-[Copilot international availability](https://aka.ms/bapcopilot-intl-report-external)
 
 ### Data movement across geographies
 
