@@ -65,6 +65,7 @@ End users that run code apps need one of the following:
 - Pay-as-you-go enabled
 - An App Pass
 - Auto-claim enabled. This option automatically assigns a premium license to the user if one is available in the tenant.
+- Dynamics licenses that include Power Apps use rights. See [Microsoft Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130).
 
 ## Explore samples and report issues
 
