@@ -27,9 +27,9 @@ To learn more about how to browse information in the weekly release notes, read 
 > [!NOTE]
 > Releases are rolled out over several days. New or updated functionality might not appear immediately.
 
-## Release plan
+## Upcoming features
 
-For information about new features being released over the next few months that you can use for planning, see [Release Planner](https://releaseplans.microsoft.com).
+For information about upcoming features, refer to the [roadmap for Power Apps](https://aka.ms/roadmap).
 
 ## Monthly releases for model-driven apps
 
@@ -46,8 +46,8 @@ For more information about release channel options and monthly channel, go to [R
 
 For information about known limitations, see [Common issues and resolutions](/powerapps/maker/canvas-apps/common-issues-and-resolutions).
 
-### See also 
+### See also
 
-[Power Platform release plans](/dynamics365/release-plans/)
+- [Product availability for Power Platform](/dynamics365/get-started/product-availability#power-platform)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -59,7 +59,7 @@ After watching the video, explore the detailed walkthrough in [Create apps, data
   
   For more information, see [Tenant settings](/power-platform/admin/tenant-settings).
 - This capability isn't available in a default environment.
-- This capability is currently available only in the US, Australia, Asia, and India regions, and only in English. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+- This capability is currently available only in the US, Australia, Asia, and India regions, and only in English.
 
 ### Troubleshooting connectivity issues
 

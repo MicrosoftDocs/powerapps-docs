@@ -68,7 +68,7 @@ The following security roles can see the entry point for plans on the Power Apps
 
 ## Availability
 
-Plans is [generally available](/power-platform/admin/general-availability-deployment) and enabled by default. Check if the feature is available in your region. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/availability-reports/?report=copilotfeaturereport).
+Plans is [generally available](/power-platform/admin/general-availability-deployment) and enabled by default.
 
 
 

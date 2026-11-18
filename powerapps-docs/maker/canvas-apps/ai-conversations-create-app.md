@@ -38,7 +38,7 @@ Copilot is a feature in Power Apps that helps you build apps with AI assistance.
 - Check the prerequisites and region availability in [Copilot in Power Apps overview (preview)](ai-overview.md).
 - Depending on where your environment is hosted, you might need to enable data movement across regions. For more information, see [Copilots and generative AI features that are available when you enable data movement across regions](/power-platform/admin/geographical-availability-copilot#copilots-and-generative-ai-features-that-are-available-when-you-enable-data-movement-across-regions).
 You need access to a Microsoft Dataverse database in your environment to use this feature. For more information, see [Add a Microsoft Dataverse database](/power-platform/admin/create-database).
-- Check if this feature is available in your region. For more information, see [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
+
 - Assign the system customizer security role in the environment.
 
 ## Create an app by using Copilot

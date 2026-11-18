@@ -55,8 +55,6 @@ Ensure you meet the prerequisites and region availability in [Copilot in Power A
 
 The following table lists the languages that Copilot understands.
 
-You can track future language availability in the [Copilot product report](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotproductreport).
-
 | **Name**                           | **Language Code** |
 |------------------------------------|-------------------|
 | English                            | en-US             |
