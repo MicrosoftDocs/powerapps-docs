@@ -30,7 +30,6 @@ You can integrate a custom Copilot created in Microsoft Copilot Studio and enabl
 
 ## Availability
 
-- This capability might not be available in your region yet. Learn more in [Explore Copilot features by geography and languages](https://releaseplans.microsoft.com/en-US/availability-reports/?report=copilotfeaturereport).
 - During the rollout, this capability might be accessible on the [Power Apps mobile app](../../mobile/run-powerapps-on-mobile.md) before it becomes available on web browsers.
 - To use copilots in Power Apps, you must enable data movement across regions for generative AI features. This is crucial if your organization and environment are located in different regions. For more information, see [Enable copilots and generative AI features](/power-platform/admin/geographical-availability-copilot#enable-data-movement-across-regions).
 

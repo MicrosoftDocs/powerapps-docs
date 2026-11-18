@@ -58,7 +58,6 @@ Use column suggestions by Copilot to select the best columns to display in your 
 ### Prerequisites
 
 - Prerequisites for Copilot in Power Apps features: [Copilot in Power Apps overview (preview)](../canvas-apps/ai-overview.md)
-- See if this feature is available in your region: [Product availability report](https://releaseplans.microsoft.com/availability-reports/?report=productgeoreport)
 - Learn how to turn on Copilots in your region: [Turn on copilots and generative AI features](/power-platform/admin/geographical-availability-copilot)
 
 ### How column suggestions work
