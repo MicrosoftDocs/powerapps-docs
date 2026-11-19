@@ -18,7 +18,7 @@ search.audienceType:
 
 Connections enable you to easily associate users, contacts, quotes, sales orders, and many other table rows with each other. The rows in the association can be assigned particular roles that help define the purpose of the relationship.
 
-It's a quick way to create multiple connections and roles for a particular row. For example, a contact may have many relationships with other contacts, accounts, or contracts. In each relationship, a contact may play a different role.
+It is a quick way to create multiple connections and roles for a particular row. For example, a contact may have many relationships with other contacts, accounts, or contracts. In each relationship, a contact may play a different role.
 
 Connection roles are directly associated to a connection. To use a connection role, you must first add a connection to your row.
 

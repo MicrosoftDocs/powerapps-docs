@@ -1,6 +1,6 @@
 ---
-title: "Collaborate with others in model-driven apps| MicrosoftDocs"
-description: Collaborate with others in model-driven apps
+title: "Collaborate with others in model-driven apps"
+description: "Collaborate with others in model-driven apps"
 author: sriharibs-msft
 ms.component: pa-user
 ms.topic: article
@@ -10,42 +10,40 @@ ms.author: srihas
 ms.custom: ""
 ms.reviewer: smurkute
 ms.assetid: 
-search.audienceType: 
+search.audienceType:
   - enduser
 ms.contributors:
-- DanaMartens
+  - DanaMartens
 ---
-# Collaborate with others in model-driven apps 
 
-Collaborate with colleagues and share links in model-driven Power Apps the same way do you as in Microsoft Office.
+# Collaborate with others in model-driven apps
 
-### Multiplayer apps
+Collaborate with colleagues and share links in model-driven Power Apps the same way you do in Microsoft Office.
+
+## Multiplayer apps
+
 When you're working on a record, you can also see other users who are working on the same record.
 
-You can also select a user's picture to see their online status, send them an email, or start a Teams chat. 
+You can also select a user's picture to see their online status, send them an email, or start a Teams chat.
 
 > [!div class="mx-imgBorder"]
 > ![View a user's online status.](media/collob-1.png "View a user's online status")
 
-This feature uses the Azure Fluid Relay service, which must be available in your region. For more information, see [Azure Fluid Relay service availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=fluid-relay). Because this feature uses the [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview) service, users must be able to access fluidrelay.azure.com. 
+This feature uses the Azure Fluid Relay service, which must be available in your region.For more information,see [Azure Fluid Relay service availability](https://azure.microsoft.com/explore/global-infrastructure/products-by-region/?products=fluid-relay).Because this feature uses the [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview) service,users must be able to access fluidrelay.azure.com.
 
-### View a user's status and picture
+## View a user's status and picture
 
-App users, such as the record owner, as well as the users appearing in grids and lookups are displayed with their picture and online status.  This feature is now available on all model-driven apps and cannot be disabled.
+App users, such as the record owner, as well as the users appearing in grids and lookups are displayed with their picture and online status. This feature is now available on all model-driven apps and cannot be disabled.
 
 > [!div class="mx-imgBorder"]
-> ![VView a user's online status.](media/collob-2.png "View a user's online status.")
+> ![View a user's picture and online status.](media/collob-2.png "View a user's picture and online status.")
 
 > [!NOTE]
-> This feature will be extended to user lookups and grid user columns. 
+> This feature will be extended to user lookups and user columns in grids.
 
+## Share records
 
-### Share 
-You can now easily share records with your colleagues using the new **Share** button.  Select **Copy link** or **Email link** in order to send a record link to your colleagues.
+You can now easily share records with your colleagues using the new **Share** button. Select **Copy link** or **Email link** to send a record link to your colleagues.
 
-> [!Note]
+> [!NOTE]
 > If you have the share privilege on a record and you email a record link to a colleague, the colleague will automatically get read access to the record.
-
-
-
-
