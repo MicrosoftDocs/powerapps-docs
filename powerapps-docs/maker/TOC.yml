@@ -2424,6 +2424,8 @@
   - name: Work with dataflows
     href: ./data-platform/self-service-data-prep-with-dataflows.md
     items:
+    - name: Dataflow refresh performance in Dataverse
+      href: data-platform/dataflow-refresh-performance.md   
     - name: Create and use dataflows
       href: ./data-platform/create-and-use-dataflows.md
   - name: Get insights from Dataverse data
