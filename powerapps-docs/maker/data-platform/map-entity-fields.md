@@ -101,6 +101,9 @@ To remove a system generated mapping, delete the relationship or the lookup colu
 
 You can't delete a mapping if the mapping is managed. To remove the mapping, you must do an upgrade to the solution that brought this mapping in the target environment. To do this, delete the unmanaged mapping in your dev environment as an update to the solution. Export the solution as managed to import it into your downstream environments. More information: [Upgrade or update a solution](update-solutions.md)
 
+## Known limitations
+- Mappings are automatically generated for lookup fields and cannot be deleted.  As a result, if multiple lookups to the same parent table have been created, all of the lookups will be auto populated with the same value opening a create form.  As a workaround, you can implement custom form logic to clear any unneeded referential lookup values.
+
 ### See also
 
 [Create and edit 1:N (one-to-many) or N:1 (many-to-one) table relationships using solution explorer](create-edit-1n-relationships-solution-explorer.md)  
