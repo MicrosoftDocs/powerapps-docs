@@ -68,7 +68,7 @@ When **Auto** is selected, Power Platform and Dynamics 365 environments use the 
 
 Model-driven apps release updates every week. Each update is gradually rolled out to regions over several weeks, starting with the **first release** region for early validation and then reaching production regions in groups on successive weekends. To see the list of regions, their rollout order, and the weekend each region group updates, see [General availability deployment](/power-platform/admin/general-availability-deployment).
 
-The monthly release is the first weekly release of each month. The release typically matches `YYMM.1`, where `YY` is the release year and `MM` is the release month. Planned feature availability is published in the [AI at Work Roadmap](https://aka.ms/roadmap). Admins receive advance notification of upcoming monthly and semi-annual channel changes approximately one week before the release reaches the first production regions.
+The monthly release is the first weekly release of each month. The release typically matches `YYMM.1`, where `YY` is the release year and `MM` is the release month. Planned feature availability is published in the [roadmap](https://aka.ms/roadmap). Admins receive advance notification of upcoming monthly and semi-annual channel changes approximately one week before the release reaches the first production regions.
 
 Because each region group updates on the following weekend, the release reaches all regions over roughly five weeks. The exact calendar dates change each month, but the relative sequence stays the same:
 
@@ -88,7 +88,7 @@ Through the semi-annual channel, generally available features are turned on twic
 | April release | Early April | `YY03.3` (for example, `2603.3`) |
 | October release | Early October | `YY09.3` (for example, `2609.3`) |
 
-Like the monthly channel, each semi-annual release follows the gradual weekly rollout across the same [region groups](#monthly-release-schedule), starting with the first release region and reaching each subsequent region group on the following weekend. Planned feature availability is published in the [AI at Work Roadmap](https://aka.ms/roadmap).
+Like the monthly channel, each semi-annual release follows the gradual weekly rollout across the same [region groups](#monthly-release-schedule), starting with the first release region and reaching each subsequent region group on the following weekend. Planned feature availability is published in the [roadmap](https://aka.ms/roadmap).
 
 ## When features become available
 
