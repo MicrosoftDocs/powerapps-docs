@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 11/11/2026
+ms.date: 11/20/2026
 ms.custom: template-how-to
 ai-usage: ai-assisted
 ---
@@ -227,7 +227,7 @@ During preview, SQL endpoint v2 can be used only with a new workspace connection
 
 ## Manage link to Fabric
 
-This section describes how to add or remove tables linked to Fabric, configure the link to use workspace identity, and share the data connection with other users.
+This section describes how to add or remove tables linked to Fabric, update the connection used by an existing link, and share the data connection with other users.
 
 ### Add or remove tables linked to Fabric
 
@@ -287,63 +287,42 @@ After confirmation:
 > - Removing a table doesn't delete the table in Dataverse; it only removes the OneLake shortcut and stops data sync.
 > - If you need to add tables later, repeat the same steps and check the tables you want to include. More information: [Manage link to Fabric](#manage-link-to-fabric).
 
-### Configure Fabric link to use workspace identity
+<a name="configure-fabric-link-to-use-workspace-identity"></a>
+<a name="switch-to-workspace-identity-authentication"></a>
 
-If you linked your Dataverse environment to Fabric earlier using an organizational account, you can switch to workspace identity or service principal. Workspace identity is a Fabric managed service principal bound to a specific workspace; it removes the need to manage secrets and enables secure, keyless authentication for Fabric items that connect to Dataverse.
+### Update the connection used by an existing Fabric link
 
-#### Things to verify before you begin
+Use **Update connection** to select a different existing connection or create a new connection for your Fabric link without changing your existing sync. You don't need to unlink Fabric and create the link again.
 
-Before proceeding, ensure you meet the requirements described in the [Prerequisites](#prerequisites) section, and specifically verify these three essential items:
+A connection might need to change because it was configured incorrectly, a user changes roles or leaves your organization, a service account password changes, or your organization requires a different account or authentication method. You can also use **Update connection** to move from an organizational account or service principal to workspace identity.
 
-- Workspace identity exists: The target Fabric workspace must have a workspace identity configured. Go to **Workspace settings** > **Workspace Identity**. If the identity doesn't exist, create it first. More information: [Workspace identity in Fabric](/fabric/security/workspace-identity)
-- Dataverse application user: The same workspace identity must be onboarded as an application user in the Dataverse environment and granted the appropriate role (commonly System Administrator) so it can access Dataverse data on behalf of Fabric. This might already be in place if you followed the **Workspace Identity** steps in the [Create a link to Fabric](#create-a-link-to-fabric) section previously.
-- Rights to edit connections: You must have permissions in Fabric to manage connections via **Settings** > **Manage connections and gateways**.
+Before you begin, review the [Prerequisites](#prerequisites). To use workspace identity, first configure the identity in your Fabric workspace and add it as an application user in Dataverse with the appropriate security role. For setup instructions and supported authentication options, see [Set up configuration](#step-2-set-up-configuration).
 
-#### What changes?
+1. Sign in to [Power Apps](https://make.powerapps.com) and select the environment that contains your Fabric link.
+2. On the left navigation pane, select **Link data**, and then open your existing link under **Fabric Links**.
+3. On the Fabric link details page, select **Update connection** from the command bar.
+4. Choose a different existing connection or create a new connection. Where available, use **Workspace identity** as the authentication method.
 
-After you update the connection's authentication method to Workspace identity, all Fabric items that use that connection (for example, Lakehouses via OneLake shortcuts, Dataflows Gen2, pipelines, semantic models) authenticate with your workspace identity going forward.
+   :::image type="content" source="media/Fabric/UpdateConnection.png" alt-text="Screenshot of the Update connection to Fabric pane showing connection selection, workspace identity guidance, and the Save Connection button." lightbox="media/Fabric/UpdateConnection.png":::
 
-#### Before you begin
+5. Select **Save Connection** to save the updated configuration. The link uses the selected connection without changing your existing sync.
 
-Identify the connection name. When you used **Link to Microsoft Fabric**, the system created a Dataverse connection that typically includes (or matches) your environment name. You update this specific connection.
+#### Why use workspace identity?
 
-#### Switch to workspace identity authentication
-
-1. **Open Fabric settings**
-   - In Microsoft Fabric, select the gear icon (top right) and choose **Settings** > **Manage connections and gateways**.
-
-   :::image type="content" source="media/fabric/fabric-settings-manage-connections.png" alt-text="Screenshot showing how to access Fabric settings by selecting the gear icon and choosing Settings > Manage connections and gateways." lightbox="media/Fabric/fabric-settings-manage-connections.png":::
-
-1. **Locate the Dataverse connection created by Link to Fabric**
-   - In **Manage connections and gateways**, open the **Connections** tab (if not already selected).
-   - Find the connection associated with your Dataverse environment. The **Link to Fabric** wizard typically creates this connection and names it using your environment's name so it's easy to recognize.
-
-1. **Open the connection's management pane**
-   - Select the ellipsis (⋮) next to the connection and choose **Settings** to open its settings.
-
-   :::image type="content" source="media/fabric/fabric-connection-settings-authentication.png" alt-text="Screenshot showing the connection settings pane with Authentication section and Authentication method dropdown showing Workspace identity, OAuth 2.0, and Service Principal options." lightbox="media/Fabric/fabric-connection-settings-authentication.png":::
-
-1. **Switch the authentication method to Workspace identity**
-   - In the connection's **Settings** pane, go to **Authentication**.
-   - From the **Authentication method** dropdown, select **Workspace identity**.
-   - Select **Save** to apply the change.
-
-> [!NOTE]
-> If your items run through a gateway, review your gateway and cloud connection policies as applicable. Fabric's manage connections and gateways experience governs connection usage, including gateway scenarios for shareable cloud connections.
+Workspace identity is tied to the Fabric workspace rather than an individual user or service account. It removes the need to manage secrets and reduces the risk of your link being affected when an employee changes roles or leaves your organization. You can switch to a connection that uses workspace identity without changing your existing sync.
 
 ### Share the data connection with other users
 
-The system creates a data connection between the Power Platform environment and Fabric workspace using the credentials of the user at the time of link creation. If you use the **Fabric link** option from the Power Apps **Tables** area, the system creates the connection and asks you to save it. If you use the **Synapse Link** option, you must create a data connection yourself before enabling the link. 
+Your Fabric link uses a data connection to access Dataverse. The connection can use an organizational account, a service principal, or workspace identity. You select or create the connection during link setup and can change it later with [Update connection](#update-the-connection-used-by-an-existing-fabric-link).
 
 The system uses this connection to enable Fabric users to connect to Dataverse - the data store behind the Power Platform environment. If you want to enable other users to add or remove tables to Fabric link, you need to share this data connection with other users. 
 
-1. Follow steps 1-2 from [Switch to workspace identity authentication](#switch-to-workspace-identity-authentication) to access **Manage connections and gateways** and locate your Dataverse connection.
-1. Once you select the correct data connection, select **...** > **Manage users**. Then you're shown users who have access to this connection.
-1. Enter the name or email of other users who need access to data. When you select a user, specify either the **Owner** role or **Reader** role. You only need to provide reader role to enable them to consume data. The users you specify receive an e-mail confirming access to data.
+1. In Microsoft Fabric, select the gear icon, and then select **Settings** > **Manage connections and gateways**.
+2. On the **Connections** tab, find the Dataverse connection used by your Fabric link.
+3. Once you select the correct data connection, select **...** > **Manage users**. Then you're shown users who have access to this connection.
+4. Enter the name or email of other users who need access to data. When you select a user, specify either the **Owner** role or **Reader** role. You only need to provide reader role to enable them to consume data. The users you specify receive an e-mail confirming access to data.
 
 You might need to grant access to other users to this workspace so that they can work with data. Depending on the need for data access, you might need to secure the data in this workspace before you share this data with others. You can secure the lakehouse as well as tables within the lakehouse using OneLake security. More information: [OneLake security overview](/fabric/onelake/security/get-started-security)
-
-You can only create user based connections at this time.
 
 ## Link existing Azure Synapse Link for Dataverse links with Fabric
 
