@@ -205,8 +205,8 @@ Use this option to run the prompt for existing records in bulk (backfill). When 
 
 Two environment settings in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) control this option. Select your environment and go to **Settings** > **Features**.  
 
-- **Allow bulk processing of existing records**: This setting is off by default. Turn it on to run the prompt on existing records in bulk in an environment. Ensure sufficient AI credit capacity is available in the environment before enabling it.
-- **Require review before processing imported prompt columns**: This setting is on by default. It controls the job’s behavior on solution import in an environment. When enabled, an imported job pauses for review in **System jobs** and can be manually started after review. Turn this setting off if jobs should start automatically after import.
+- **Allow bulk processing of existing records**: This is the main setting that controls running prompt on existing records in bulk in an environment. It is on by default.  
+- **Require review before processing imported prompt columns**: This controls the job’s behavior on solution import in an environment. When enabled, an imported job pauses for review in **System jobs** and can be manually started after review. This setting is on by default. Turn this setting off if jobs should start automatically after import.
 
 To generate values for existing records in bulk, follow these steps:  
 
