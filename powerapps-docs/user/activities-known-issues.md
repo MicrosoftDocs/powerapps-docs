@@ -36,15 +36,15 @@ Find answers to common questions regarding the email experience features and fun
  
 To find the URL, in the address bar the first part of the URL that starts with **https://** and ends with **.com** is your environment URL. For more information on how to find the environment URL, see [Get the environment UR](/power-platform/guidance/coe/setup-powerbi#get-the-environment-url).
 
-## I've enabled an email form but it doesn't display.
+## I've enabled an email form but it does not display.
 
-If you've enabled an email form but it is doesn't display, you'll need to enable it in the **App Designer** by doing the following: 
+If you've enabled an email form but it is not displayed, you'll need to enable it in the **App Designer** by doing the following: 
 
 1.	Go to **Settings** > **Advanced Settings**.
 
 2.	Select **Settings**.
 
-3.	In **Application** settings, select **Apps*.
+3.	In **Application** settings, select **Apps**.
 
 4.	Select ![More commands icon.](media\timeline-more-commands-icon.png "more commands") **More Options** on **Customer Service Hub**.
 
@@ -54,7 +54,7 @@ If you've enabled an email form but it is doesn't display, you'll need to enable
 
 7.	Under the **Email** form selector, select the drop-down menu to display the **Email** forms you have enabled.
 
-    If the form isn't displayed in the list, it hasn't been enabled.
+    If the form is not displayed in the list, it has not been enabled.
 
 8.	To enable a form, go to **Main Forms** and select the form. 
 
