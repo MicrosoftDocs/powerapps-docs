@@ -6,7 +6,7 @@ author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
 ms.reviewer: joshuapa
-ms.date: 02/23/2026
+ms.date: 11/19/2026
 ms.subservice: canvas-maker
 ms.author: yogupt
 
@@ -25,6 +25,8 @@ Canvas apps now support modern controls and theming based on the [Microsoft Flue
 
 This article explains how to enable modern controls and themes in your canvas apps and provides information about ongoing development.
 
+> [!IMPORTANT]
+> The modern [Table control](modern-control-table.md) is deprecated and is no longer under active development. Use the [Data Grid modern control](modern-control-data-grid.md) for new apps and migrate existing Table controls before **June 1, 2027**. Existing apps continue to work during the migration period. The classic Data Table control is not affected.
 
 ## Enable modern controls and themes for your app
 With your [canvas app open for editing](../../edit-app.md):

@@ -4,7 +4,7 @@ description: Learn about the properties, pagination, and YAML examples of the Da
 author: yogeshgupta698
 ms.topic: reference
 ms.custom: canvas
-ms.date: 11/02/2026
+ms.date: 11/19/2026
 ai-usage: ai-assisted
 ms.subservice: canvas-maker
 ms.author: yogupt
@@ -24,7 +24,7 @@ Display records from a data source in a scrollable, sortable, and searchable gri
 The **Data Grid** modern control displays records in a column-and-row layout built on Fluent UI. It supports optional search filtering, sortable columns, and selectable rows. The control supports **row virtualization**, enabling smooth scrolling through large datasets with more than 2,000 records. You configure columns as subcontrols, and they support multiple types including text, number, phone, email, URL, and button. Use this control when you need a high-performance, data-dense view of tabular data with built-in interaction. Key properties for this control are **Items**, **Searchable**, **Sortable**, and **SelectMultiple**.
 
 > [!NOTE]
-> The **Data Grid** control is the recommended control for displaying tabular data in canvas apps, instead of the [Table control](modern-control-table.md). It provides improved performance and usability for data-dense scenarios.
+> The **Data Grid** control replaces the deprecated modern [Table control](modern-control-table.md). Use Data Grid for new apps and migrate existing Table controls before **June 1, 2027**. The classic Data Table control is not affected.
 
 Row virtualization turns on automatically for large datasets. Rows have a consistent height whether or not virtualization is active.
 
