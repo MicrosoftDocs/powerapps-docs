@@ -109,6 +109,69 @@ To ensure that the trigger fires only when model.json creation is complete, adva
 1. Select **Save** to deploy the additional filter.
    :::image type="content" source="media/ADLSG2-save-filter.png" alt-text="Save added filter":::
 
+### Adding Alerting Functionality for the "Else" Condition in the Existing ADF Pipeline
+
+In the current ADF pipeline, we distinguish between two successful scenarios: one where the data ingestion proceeds as expected and one where it doesn't. Though the pipeline succeeds in both cases, the latter scenario is a concern that requires immediate attention.
+
+To address this, we'll add an alerting step after the "IF" condition. If this condition is not met, the user will be notified via email. Here's how to add this functionality using Azure Logic Apps:
+
+1. **Connect** to the Existing Logic App (or **Create** One if Necessary).
+
+1. **Open** the Logic App designer.
+
+1. Configuring Logic App:
+   - **Create** a Blank Logic App in Logic App Designer
+   ![image](https://github.com/MicrosoftDocs/powerapps-docs/assets/69673173/e8fcf937-bd2f-473b-9411-1c2b4edac0ff)
+   - **Search** "Request" to create an HTTP Request based trigger.
+   ![image](https://github.com/MicrosoftDocs/powerapps-docs/assets/69673173/d6c78784-2c5d-471c-a290-f341d800418c)
+   - Then **select** "When a HTTP request is received"
+   ![image](https://github.com/MicrosoftDocs/powerapps-docs/assets/69673173/57ac6474-f611-4ff3-bde8-ed21b2d4cfd6)
+   - **Copy** the following sample JSON into the textbox and select **Done**.
+    ```json
+    {
+        "ErrorMessage": "<Error>",
+        "ResourceName": "<ResourceName>",
+        "Pipeline": "<name>",
+        "RunID": "<RunID>",
+        "Email": "<email-address>"
+    }
+    ```
+   - **Click** "Add new parameter" and **Select** POST as the "Method".
+   ![image](https://github.com/MicrosoftDocs/powerapps-docs/assets/69673173/31086305-b919-448e-b290-7f9e78e63b30)
+   - **Click** "Next Step".
+   - **Type** in and **select** the name of your preferred email provider. E.g. Outlook
+   - **Click** "Actions"
+   ![image](https://github.com/MicrosoftDocs/powerapps-docs/assets/69673173/dd429a21-ed3b-4fbf-9f4a-f5cc86ca4b3d)
+   - **Select** "Send an email".
+   - Sign in to create a connection to Outlook.
+   - **Create** email using "Dynamic content" (These are received through the Put Request)
+   - **Copy** "HTTP POST URL" and go to your ADF pipeline.
+
+1. Adding and Configuring Web Activity in ADF:
+   - **Add** a "Web Activity" to the canvas and connect it as shown below.
+    ![image](https://github.com/MicrosoftDocs/powerapps-docs/assets/69673173/ea6609dd-49da-4460-a558-10596e83baf0)
+   - **Click** on the Web Activity and navigate to "Settings".
+   - **Set** the URL as the "HTTP POST URL" we copied.
+   - **Set** "Method" as POST.
+   - **Set** "Headers" as shown below.
+    ![image](https://github.com/MicrosoftDocs/powerapps-docs/assets/69673173/bb12e4a2-285f-412f-819e-389573a0d5be)
+   - **Set** "Body" dynamic content as (make sure to change the value pairs to the appropriate values)
+   ```json
+    @{
+        "ErrorMessage": "@{<Error>}",
+        "ResourceName": "@{<ResourceName>}",
+        "Pipeline": "@{<name>}",
+        "RunID": "@{<RunID>}",
+        "Email": "@{<email-address>}"
+    }
+    ```
+   
+1. Save and Test:
+   - Click "Save."
+   - Run a test on the ADF pipeline with the scenario that triggers the "else" condition to verify that the email alert is working correctly.
+
+With this added step in your ADF pipeline, you can ensure prompt notification if the "IF" condition is not met, even when the pipeline technically succeeds. This functionality enhances monitoring and helps maintain the data integrity and timely response needed for your business operations.
+
 ### See also
 
 [Blog: Announcing Azure Synapse Link for Dataverse](https://aka.ms/synapse-dataverse)
