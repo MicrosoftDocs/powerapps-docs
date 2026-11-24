@@ -3,7 +3,7 @@ title: "setFormEntityName (Client API reference) in model-driven apps"
 description: Includes description and supported parameters for the setFormEntityName method.
 author: MitiJ
 ms.author: mijosh
-ms.date: 03/12/2022
+ms.date: 11/23/2026
 ms.reviewer: jdaly
 ms.topic: reference
 applies_to: "Dynamics 365 (online)"
@@ -26,7 +26,7 @@ contributors:
 
 |Name|Type|Required|Description|
 |--|--|--|--|
-|`arg`|String|Yes|Name of the table to be displayed on the form.|
+|`arg`|String|Yes| The custom label to prefix to the form header title.|
 
 ### Related articles
 
