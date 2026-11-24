@@ -9,21 +9,21 @@ ms.topic: how-to
 contributor: joshuapartlow
 ---
 
-# Migrate apps from Power Apps Vibe
+# Migrate apps from App Builder
 
 > [!IMPORTANT]
-> Power Apps Vibe is retiring. Migrate your apps to Copilot Studio or Copilot Cowork to continue editing.
+> The App Builder agent is retiring. Migrate your apps to Copilot Cowork to keep editing them.
 >
-> - **Through November 30, 2026:** Edit, migrate, or download your Vibe apps.
-> - **December 1–31, 2026:** Migrate or download your apps. Editing in Vibe is no longer available.
-> - **After December 31, 2026:** You can no longer access your Vibe apps.
-
+> - **Through November 30, 2026:** Edit, migrate, or download your apps.
+> - **December 1–31, 2026:** Migrate or download your apps. Editing in App Builder is no longer supported.
+> - **January 1–February 26, 2027:** Download your app source code and rebuild your apps in Copilot Cowork by attaching the source code. One-click migration is no longer available.
+> - **After February 26, 2027:** App Builder is no longer available, so you can't open, migrate, or download your apps there. Your published apps keep working, and the people you shared them with can still use them.
 
 ## Choose how to migrate your app
 
 There are two ways to migrate a Vibe app:
 
-1. **[One-click migration](#option-1-one-click-migration)** (recommended): Select **Migrate app** in Power Apps Vibe to move your app from Vibe to Copilot Studio. You don't need to download source code or write a prompt.
+1. **[One-click migration](#option-1-one-click-migration)**: Select **Migrate app** in Power Apps Vibe to move your app from Vibe to Copilot Studio. You don't need to download source code or write a prompt.
 1. **[Manual migration](#option-2-manual-migration)**: Download your app's source code, attach it to a migration prompt, and rebuild the app in **Apps in Copilot Studio** or **Copilot Cowork**.
 
 Use this table to choose a migration path.
