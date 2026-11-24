@@ -8,7 +8,7 @@ contributors: saviegas
 ms.service: powerapps
 ms.subservice: dataverse-maker
 ms.topic: how-to
-ms.date: 11/20/2026
+ms.date: 11/23/2026
 ms.custom: template-how-to
 ai-usage: ai-assisted
 ---
@@ -162,10 +162,10 @@ To confirm a profile is running on low-latency sync, select **Link data** from t
 
 :::image type="content" source="media/fabric/low-latency-sync-page.png" alt-text="Link data page showing the Low-latency mode flag on a Fabric link." lightbox="media/Fabric/low-latency-sync-page.png":::
 
-Existing Fabric link profiles continue to use the previous sync engine. To move an existing profile to low-latency sync after it's available in your station, unlink the profile and relink it.
+Existing Fabric link profiles continue to use the previous sync engine until you migrate them. When **Migrate now** is available for your link, follow [Migrate an existing Fabric link to low-latency sync](fabric-link-migrate-low-latency.md).
 
 > [!NOTE]
-> Unlinking and relinking triggers a full initial sync for all configured tables. Initial sync can copy large volumes of data, so schedule it during off-peak hours or on weekends when traffic in your environment is lower. Before you unlink, remove or update any dependent Fabric items that reference the lakehouse or its SQL analytics endpoint. For more information, see [Why does unlinking from Fabric fail, if there are dependent artifacts?](fabric-link-faq.yml#why-does-unlinking-from-fabric-fail--if-there-are-dependent-artifacts)
+> Don't unlink and relink to start or recover a migration. Unlinking removes the Fabric lakehouse and its shortcuts, and relinking triggers a full initial sync. If the migration action is unavailable or migration fails, use the [migration troubleshooting guidance](fabric-link-migrate-low-latency.md#common-errors-and-resolutions).
 
 > [!IMPORTANT]
 >
