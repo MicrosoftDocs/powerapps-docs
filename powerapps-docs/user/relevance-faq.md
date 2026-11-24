@@ -85,6 +85,10 @@ The search and suggest operations don't have access to data from the Owner colum
 
 Search doesn't support polymorphic lookup attributes. The RegardingObjectId attribute in activity tables like email and task is a polymorphic lookup attribute.
 
+## Why does searching on the RegardingObjectId attribute not work when search is enabled on it?
+
+Search is not supported on polymorphic lookup attributes. RegardingObjectId attribute in activity table like email, task etc. is a polymorphic lookup attribute.
+
 ## How is the Dataverse search API throttled?
 
 When you use the Dataverse search API, throttling limits restrict you to one request per second for each user. Additionally, each organization can make up to 150 requests per minute.
