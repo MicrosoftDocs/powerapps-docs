@@ -2451,6 +2451,8 @@
         href: ./data-platform/azure-synapse-link-view-in-fabric.md
       - name: Create a link to Fabric
         href: ./data-platform/fabric-link-to-data-platform.md
+      - name: Migrate an existing Fabric link to low-latency sync
+        href: ./data-platform/fabric-link-migrate-low-latency.md
       - name: Monitoring dashboard (preview)
         href: ./data-platform/fabric-link-monitoring-dashboard.md
       - name: Plan your latency for link to Fabric
