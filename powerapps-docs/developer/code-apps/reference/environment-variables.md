@@ -1,5 +1,5 @@
 ---
-title: Power Apps CLI environment variables
+title: Power Apps CLI Environment Variables
 description: Reference the environment variables supported by the Power Apps CLI for authentication, automation, app configuration, data sources, and telemetry.
 #customer intent: As a developer, I want to configure Power Apps CLI commands with environment variables so that I can automate code app workflows.
 ms.topic: reference
@@ -8,12 +8,13 @@ ms.subservice: code-apps
 ms.author: ergonza
 ms.reviewer: jdaly
 author: ergonza93
-ms.date: 10/02/2026
+ms.date: 11/24/2026
+ai-usage: ai-assisted
 ---
 
 # Power Apps CLI environment variables
 
-Use environment variables to configure Power Apps CLI authentication and provide command options in scripts and CI/CD pipelines. Environment variables defined by the Power Apps CLI use the `PA_CLI_` prefix.
+Use environment variables to configure Power Apps CLI authentication and provide command options in scripts and CI/CD pipelines. The Power Apps CLI defines environment variables with the `PA_CLI_` prefix.
 
 > [!NOTE]
 > Environment variables are named values that the operating system makes available to applications. Power Apps CLI recognizes the variables described in this reference. To learn how environment variables work and how to manage them, see [about Environment Variables](/powershell/module/microsoft.powershell.core/about/about_environment_variables).
@@ -32,7 +33,7 @@ An option supplied on the command line takes precedence over its corresponding e
 > [!IMPORTANT]
 > Environment variables can expose secrets to other processes, logs, or shell history. Store `PA_CLI_SP_CLIENT_SECRET` in your CI/CD platform's secret store, mask it from logs, and don't commit secrets to source control.
 
-### Set environment variables
+## Set Power Apps CLI environment variables
 
 The following examples set `PA_CLI_ENVIRONMENT_ID` before running a Power Apps CLI command.
 
@@ -52,10 +53,10 @@ pa app list
 
 ---
 
-The environment variable remains available to commands started from the same terminal session. Use your shell's standard command to remove it when it's no longer needed.
+The environment variable stays available to commands you start from the same terminal session. Use your shell's standard command to remove it when it's no longer needed.
 
 
-## Authentication
+## Authentication environment variables
 
 | Environment variable | Description |
 | --- | --- |
@@ -65,7 +66,9 @@ The environment variable remains available to commands started from the same ter
 | `PA_CLI_SP_TENANT_ID` | Specifies the Microsoft Entra directory (tenant) ID for service principal authentication. |
 | `PA_CLI_USE_SP_AUTH` | Set the value to `true` (lowercase) to use service principal authentication. |
 
-The three `PA_CLI_SP_`* credential variables are required when service principal authentication is selected. Although `CI=true` also selects service principal authentication for compatibility, use `PA_CLI_USE_SP_AUTH=true` to make the authentication mode explicit.
+You must provide nonblank values for the three service principal credential variables when you select service principal authentication. Although setting `CI=true` also selects service principal authentication for compatibility, use `PA_CLI_USE_SP_AUTH=true` to make the authentication mode explicit. Both selectors require the literal lowercase value `true`.
+
+Missing, empty, or whitespace-only credentials in this mode cause validation to fail with exit code `4`. The CLI doesn't fall back to a cached user account. Credential variables alone and the `--non-interactive` option don't select service principal authentication. When neither selector is `true`, user authentication is unaffected by inherited partial or blank service principal credentials.
 
 For setup instructions, see [Publish Power Apps code apps with a service principal](../how-to/use-service-principal.md).
 

@@ -3,9 +3,10 @@ title: "How to: Connect Your Code App to Dataverse"
 description: "Connect your code app to Dataverse, add tables as data sources, and use generated services for CRUD operations. Follow this guide to get started."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/14/2026
+ms.date: 11/24/2026
 ms.reviewer: jdaly
 ms.topic: how-to
+ai-usage: ai-assisted
 contributors:
  - JimDaly
 ---
@@ -20,15 +21,18 @@ This guide shows developers how to connect their code app to Microsoft Dataverse
 - An environment with Dataverse enabled
 - A code app initialized for the environment
 
+> [!IMPORTANT]
+> Expanded queries, aggregation, and saved-view methods require Power Apps CLI version 1.4.0 or later and `@microsoft/power-apps` version 1.6.0 or later. If you regenerate Dataverse services with CLI version 1.4.0 or later, update the app's client library to version 1.6.0 or later before building. Earlier client libraries don't provide the types and methods that the regenerated services require. You don't need to regenerate existing services just to keep using their existing APIs.
+
 ## Steps
 
-1. From the root of your code app project, use [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) to add the Dataverse table as a data source:
+From the root of your code app project, use [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) to add the Dataverse table as a data source:
 
-   ```powershell
-   pa app add data-source --connector dataverse --table <table-logical-name>
-   ```
+```powershell
+pa app add data-source --connector dataverse --table <table-logical-name>
+```
 
-   Replace `<table-logical-name>` with the logical name of the Dataverse table you want to connect to.
+Replace `<table-logical-name>` with the logical name of the Dataverse table you want to connect to.
 
 ## Supported scenarios
 
@@ -54,6 +58,8 @@ The [Power Apps client library for code apps](https://www.npmjs.com/package/@mic
   - `Top` queries
 
 - Paging support.
+- Expand related records and aggregate data with OData queries.
+- Retrieve records from saved system views.
 
 > [!TIP]
 > Looking for a complete working example? The [Dataverse demo app](https://github.com/microsoft/PowerAppsCodeApps/tree/main/samples/Dataverse) demonstrates all the patterns covered in this article - CRUD operations, lookup fields, image and file upload and download, and generated services - in a React/TypeScript app you can explore and extend. To run the app yourself, follow the setup instructions in [PowerAppsCodeApps/samples/Dataverse/DEVELOPMENT.md](https://github.com/microsoft/PowerAppsCodeApps/blob/main/samples/Dataverse/DEVELOPMENT.md) to configure it for your environment.
@@ -165,6 +171,8 @@ The `getAll` method accepts an optional parameter that implements the `IGetAllOp
 interface IGetAllOptions {
    maxPageSize?: number;    // Maximum number of records per page
    select?: string[];       // Specific fields to retrieve
+   expand?: string[];       // Related records to include
+   apply?: string;          // OData aggregation expression
    filter?: string;         // OData filter string
    orderBy?: string[];     // Fields to sort by
    top?: number;           // Maximum number of records to retrieve
@@ -180,22 +188,117 @@ Here's an example with multiple options:
 
 ```typescript
 const fetchAccounts = async () => {
-const options: IGetAllOptions = {
+   const options: IGetAllOptions = {
       select: ['name', 'accountnumber', 'address1_city'],
       filter: "address1_country eq 'USA'",
       orderBy: ['name asc'],
       top: 50
-};
+   };
 
-try {
-      const result = await AccountsService.getAll(options);
-      return result.data || [];
-} catch (err) {
-      console.error('Failed to fetch accounts:', err);
-      return [];
-}
+   const result = await AccountsService.getAll(options);
+   if (!result.success) {
+      throw result.error ?? new Error('Failed to fetch accounts.');
+   }
+
+   return result.data;
 };
 ```
+
+Check `result.success` before using `result.data`. An unsuccessful operation can return error information in `result.error` instead of throwing an exception.
+
+### Expand related records
+
+Use `expand` with `get` or `getAll` to include related records. Each array entry must be a nonempty OData expression. Use navigation property names from your Dataverse table metadata, not display names. For more information, see [Join tables using OData](../../data-platform/webapi/query/join-tables.md).
+
+When the response includes properties outside the generated model, pass an explicit result type. For example, retrieve Accounts with the primary contact's full name:
+
+```typescript
+type AccountWithContact = Accounts & {
+   primarycontactid?: { fullname?: string } | null;
+};
+
+const result = await AccountsService.getAll<AccountWithContact>({
+   select: ['accountid', 'name'],
+   expand: ['primarycontactid($select=fullname)']
+});
+
+if (!result.success) {
+   throw result.error ?? new Error('Failed to retrieve accounts and contacts.');
+}
+
+for (const account of result.data) {
+   console.log(account.name, account.primarycontactid?.fullname);
+}
+```
+
+To expand related records for one account, call `AccountsService.get<AccountWithContact>(accountId, { expand: ['primarycontactid($select=fullname)'] })`.
+
+### Aggregate data
+
+Use `apply` with `getAll` to send an OData aggregation expression. Define a result type that matches the aggregate aliases instead of the generated table model. For example, count the Accounts records:
+
+```typescript
+type AccountCount = { total: number };
+
+const result = await AccountsService.getAll<AccountCount>({
+   apply: 'aggregate($count as total)'
+});
+
+if (!result.success) {
+   throw result.error ?? new Error('Failed to count accounts.');
+}
+
+console.log(result.data);
+```
+
+The type argument describes one returned record, not an array. It provides compile-time typing, not runtime validation. Without a type argument, `get` and `getAll` retain the generated model type. These options use OData, not FetchXML. For supported expressions and query limits, see [Aggregate data using OData](../../data-platform/webapi/query/aggregate-data.md).
+
+### Retrieve records from a saved system view
+
+Use the generated `getSavedQuery` method to retrieve records from a Dataverse system view. Pass the view's saved query ID as a nonblank GUID:
+
+```typescript
+import type { IDataverseQueryOptions } from '@microsoft/power-apps/data';
+
+type AccountViewRow = {
+   accountid: string;
+   name?: string;
+};
+
+const savedQueryId = '<saved-query-guid>';
+const options: IDataverseQueryOptions = { maxPageSize: 100 };
+const page = await AccountsService.getSavedQuery<AccountViewRow>(
+   savedQueryId,
+   options
+);
+
+if (!page.success) {
+   throw page.error ?? new Error('Failed to retrieve the system view.');
+}
+
+console.log(page.data);
+
+if (page.nextLink) {
+   const nextPage = await AccountsService.getSavedQuery<AccountViewRow>(
+      savedQueryId,
+      { maxPageSize: 100, nextLink: page.nextLink }
+   );
+
+   if (!nextPage.success) {
+      throw nextPage.error ?? new Error('Failed to retrieve the next view page.');
+   }
+
+   console.log(nextPage.data);
+}
+```
+
+Replace `<saved-query-guid>` with the system view's ID and adjust `AccountViewRow` to match the view's columns. For more information about saved query IDs, see [Retrieve and execute predefined queries](../../data-platform/webapi/retrieve-and-execute-predefined-queries.md).
+
+[`IDataverseQueryOptions`](/javascript/api/@microsoft/power-apps/idataversequeryoptions) supports only `maxPageSize` and `nextLink`. The default page size is 500. The view defines the query; don't pass `select`, `filter`, `expand`, or `apply` to this method.
+
+For each subsequent page, pass the complete returned `nextLink` unchanged with the original saved query ID. The URL must target the same environment and table. Don't reconstruct it from `skipToken`. For ordinary `getAll` calls, continue to use `IGetAllOptions.skipToken`; `nextLink` isn't a `getAll` option or a CLI flag.
+
+Saved-view retrieval is supported only for Dataverse tables and isn't supported by the built-in mock executor. Test it against your Dataverse environment.
 
 ## Update records
 

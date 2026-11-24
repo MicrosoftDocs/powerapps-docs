@@ -3,9 +3,10 @@ title: Troubleshoot Adding a Data Source
 description: Troubleshoot adding a data source with the pa app add data-source command by identifying configuration, authentication, and network errors. Follow these steps.
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/13/2026
+ms.date: 11/24/2026
 ms.reviewer: jdaly
 ms.topic: troubleshooting
+ai-usage: ai-assisted
 contributors:
  - JimDaly
 ---
@@ -17,13 +18,15 @@ Troubleshoot adding a data source when the Power Apps CLI [`pa app add data-sour
 
 ## Symptoms
 
-Failures usually happen because something on your computer or network is blocking the connection or disrupting authentication.
+Failures can happen because of configuration, authentication, network connectivity, or your organization's connector policy.
 
 | Symptom | Example message |
 | --- | --- |
 | Fetch failed | `Fetch Failed` (no additional stack) |
 | Timeout or network errors | `ETIMEDOUT`, `ENOTFOUND`, or `ECONNRESET` |
 | Environment mismatch | Data source not found or unexpected schema |
+| Connector or actions blocked by policy | Exit code `2` when the connector or all actions are blocked |
+| Expected generated method is missing | Notice that actions were skipped because of your organization's connector policy |
 
 ## Prerequisites
 
@@ -40,6 +43,14 @@ Failures usually happen because something on your computer or network is blockin
 ## Steps to troubleshoot data source errors
 
 To diagnose the root cause, follow these steps.
+
+### Check connector policy messages
+
+If the CLI reports that your organization's policy blocks the connector or all its actions, contact your Power Platform administrator. Retrying authentication or changing network settings doesn't resolve a policy block. The command stops before creating a connection or data source files.
+
+If the command succeeds but reports skipped actions, the generated service doesn't include those actions. Use an allowed action or ask your administrator to review the policy.
+
+If the CLI warns that it can't check policy because the tenant couldn't be identified or the policy service is unavailable, the command continues without that check. Don't treat this warning as confirmation that the connector is allowed. Invalid policy responses and canceled authentication fail the command. See [`pa app add data-source` remarks](reference/cli.md#pa-app-add-data-source-remarks).
 
 ### Step 1: Validate configuration
 
@@ -67,7 +78,7 @@ Example `power.config.json` snippet:
 }
 ```
 
-### Step 3: Re-run command
+### Step 3: Rerun the add data source command
 
 Run [`pa app add data-source`](reference/cli.md#pa-app-add-data-source) again. For example:
 
@@ -75,9 +86,9 @@ Run [`pa app add data-source`](reference/cli.md#pa-app-add-data-source) again. F
 pa app add data-source --connector dataverse --table account
 ```
 
-Look for HTTP status codes or error messages in the output.
+Check the output for HTTP status codes or error messages.
 
-### Step 4: Network and security validation
+### Step 4: Validate network and security settings
 
 If the command still fails:
 
@@ -129,7 +140,7 @@ pa auth logout
 pa auth login
 ```
 
-### Escalation data
+### Escalation data for technical support
 
 Before you contact technical support to file an issue, provide:
 
