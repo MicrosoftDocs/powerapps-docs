@@ -46,15 +46,11 @@ The prerequisites depend on where your new app lives. One-click migration moves 
 
 | Requirement | Apps in Copilot Studio (one-click or manual migration) | Copilot Cowork (manual migration only) |
 | --- | --- | --- |
-| Program participation | Your organization participates in the public preview of apps in Copilot Studio. | Your organization participates in the [Frontier program](https://www.microsoft.com/copilot/resources/frontier-program). |
-| Access and licensing | Access to Copilot Studio, with app creation turned on. The **App (Preview)** tile is on by default, but your admin can turn it off. | A Microsoft 365 Copilot license, with Copilot Cowork turned on for your organization. |
+| Access and licensing | Access to Copilot Studio, with app creation turned on. The **App** tile is on by default, but your admin can turn it off. | A Microsoft 365 Copilot license, with Copilot Cowork turned on for your organization. |
 | Billing | Copilot Credits. Usage-based billing applies to using, building, previewing, and testing apps. For more information, see [Overview of usage-based billing](/microsoft-copilot-studio/agents-experience/billing-credit-overview). | Copilot Credits. Building apps consumes Copilot Credits. For more information, see [Usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits). |
 | Environment | Permission to create apps in your personal developer environment (PDE), where apps are built by default. | Permission to create apps in your personal developer environment (PDE), where apps are built by default. |
 
-If your organization doesn't allow you to create a personal developer environment, see [Troubleshooting](#troubleshooting). For more information about apps in Copilot Studio, see [Apps overview (preview)](/microsoft-copilot-studio/apps-experience/apps-overview).
-
-> [!IMPORTANT]
-> Apps in Copilot Studio is in public preview. Preview features aren't meant for production use and might have restricted functionality.
+If your organization doesn't allow you to create a personal developer environment, see [Troubleshooting](#troubleshooting). For more information about apps in Copilot Studio, see [Apps overview](/microsoft-copilot-studio/apps-experience/apps-overview).
 
 ## Option 1: One-click migration
 
@@ -88,7 +84,6 @@ One-click migration creates a new app in Copilot Studio from your Vibe app. Your
 Before you migrate your app, ensure that:
 
 - **You meet the [prerequisites](#prerequisites) for Apps in Copilot Studio.**
-- **Personal developer environment (PDE) enabled.** One-click migration automatically routes your new app to your (PDE). Migration will fail if PDE is disabled by your admin. 
 - **You can edit the app in Power Apps Vibe.** One-click migration is available only to people who can edit the app, which is usually the app's original author.
 - **You have access to the Dataverse tables or SharePoint lists that your app uses.**
 
@@ -110,9 +105,6 @@ When migration finishes, Power Apps Vibe shows a message that your app was migra
 
 1. In the migration message, copy the prompt exactly as it appears.
 1. Select **Microsoft Copilot Studio** link in the dialog, which opens Copilot Studio in a new tab with a prompt input box. 
-
-   You can also sign in to [Copilot Studio](https://copilotstudio.microsoft.com), ensure the **New experience** toggle is on, and then select the **App** tile.
-
 1. Paste the prompt that you copied into the message box, and then select **Submit**. The prompt includes your app's name and the name and ID of its environment, such as:
 
    ```text
@@ -128,12 +120,12 @@ When migration finishes, Power Apps Vibe shows a message that your app was migra
 For next steps, including how to verify your data, publish and share your app, and edit it later, see [After you migrate](#after-you-migrate).
 
 > [!IMPORTANT]
-> **Known issue:** If your migrated app is in an environment other than your personal developer environment, you might not be able to open it from the app list in Copilot Studio. A fix is rolling out over the next week starting November 16th.
+> **Known issue:** If your migrated app is in an environment other than your personal developer environment, you might not be able to open it from the app list in Copilot Studio. A fix is rolling out over the next week starting November 24th.
 >
 > Until the fix reaches your region, open your app from Copilot Studio Preview:
 >
 > 1. Go to [https://copilotstudio.preview.microsoft.com](https://copilotstudio.preview.microsoft.com), and sign in with your work account.
-> 2. In the left navigation pane, select **Apps (Preview)**.
+> 2. In the left navigation pane, select **Apps**.
 > 3. Select your app to open it.
 
 ## Option 2: Manual migration
@@ -166,7 +158,6 @@ In both experiences, you attach your source code to a prompt, and an agent rebui
 | Consideration | Apps in Copilot Studio | Copilot Cowork |
 | --- | --- | --- |
 | Where you build | Copilot Studio | Microsoft Copilot |
-| Availability | Public preview | Frontier program only |
 | Licensing | Access to Copilot Studio | Microsoft 365 Copilot license |
 | Billing | Copilot Credits | Copilot Credits |
 | Share your app | With specific people or groups | With a link, to people in your organization who can use Microsoft Copilot |
@@ -292,7 +283,7 @@ Before you start, ensure you meet the [prerequisites](#prerequisites) for Apps i
 
 1. Sign in to [Copilot Studio](https://copilotstudio.microsoft.com).
 1. On **Home**, ensure the **New experience** toggle is on.
-1. Select the **App** tile. You can also select **Apps (Preview)** > **New app**.
+1. Select the **App** tile. You can also select **Apps** > **New app**.
 1. Paste your migration prompt into the message box.
 1. Select **+**, and then attach your app's .zip file.
 1. Select **Submit**.
@@ -408,7 +399,7 @@ After your app is migrated, update it by chatting with the agent in the same pla
 Use these steps for apps that you migrated with one-click migration and for apps that you rebuilt in Copilot Studio.
 
 1. Sign in to [Copilot Studio](https://copilotstudio.microsoft.com).
-1. In the left navigation pane, select **Apps (Preview)**.
+1. In the left navigation pane, select **Apps**.
 1. Select your app to open it.
 1. Describe the changes that you want in the message box.
 1. Test your changes in the preview.
@@ -450,15 +441,14 @@ In Copilot Cowork, your app lives in a conversation, not in a separate app list.
 | The agent says there's no usable Dataverse connection in your environment. | In [Power Apps](https://make.powerapps.com), select your environment, go to **Connections** > **New connection**, and create a Microsoft Dataverse connection. Then ask the agent to continue. |
 | Copilot Studio doesn't accept your .zip file. | Attach the .zip file instead of individual code files. If the file is larger than 10 MB, remove generated folders such as `node_modules` and `dist`, and then compress the remaining files again. |
 | Parts of your app are missing. | Reply **Continue with the deferred items**, or use the prompts in [Refine your migrated app](#refine-your-migrated-app). |
-| You don't see the **App** tile in Copilot Studio. | On **Home**, turn on the **New experience** toggle. If you still don't see the tile, your admin might have turned off app creation, or your organization might not participate in the public preview. |
-| You can't find your migrated app in Copilot Studio. | In the left navigation pane, select **Apps (Preview)**. For details, see [Edit your app in Copilot Studio](#edit-your-app-in-copilot-studio). |
+| You can't find your migrated app in Copilot Studio. | In the left navigation pane, select **Apps**. For details, see [Edit your app in Copilot Studio](#edit-your-app-in-copilot-studio). |
 | You don't see the App skill in Cowork. | The App skill is available only to Frontier program members. Contact your admin. |
 | You can't find your app in Cowork. | Look in the conversation list for a conversation named **Edit Application Settings**. For details, see [Edit your app in Copilot Cowork](#edit-your-app-in-copilot-cowork). |
 
 ## Related content
 
-- [What is Microsoft Copilot Managed Runtime (preview)](/microsoft-365/managed-apps/index)
-- [Apps overview (preview)](/microsoft-copilot-studio/apps-experience/apps-overview)
+- [What is Microsoft Copilot Managed Runtime](/microsoft-365/managed-apps/index)
+- [Apps overview](/microsoft-copilot-studio/apps-experience/apps-overview)
 - [Get started with Copilot Cowork](/microsoft-365/copilot/cowork/get-started)
 - [Usage-based billing and cost management for Copilot Credits](/microsoft-365/copilot/usage-based-billing-overview-copilot-credits)
 - [Find your environment and organization IDs and organization name](/power-platform/admin/determine-org-id-name)
