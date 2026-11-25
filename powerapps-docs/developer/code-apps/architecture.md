@@ -3,7 +3,7 @@ title: "Power Apps Code Apps Architecture for Development and Runtime"
 description: "Explore Power Apps code apps architecture for development and runtime to understand how connectors, configuration, publishing, and the host work together."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 08/12/2026
+ms.date: 11/24/2026
 ms.reviewer: jdaly
 ms.topic: article
 contributors:
@@ -13,7 +13,7 @@ contributors:
 
 Power Apps code apps architecture explains how the following components work together during development, publishing, and runtime so you can build and deploy code apps successfully:
 
-- The [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps), sometimes called the 'Power Apps SDK'
+- The [Power Apps client library for code apps](https://www.npmjs.com/package/@microsoft/power-apps)
 - Generated models and services for connectors
 - The `power.config.json` configuration file
 - The Power Apps host

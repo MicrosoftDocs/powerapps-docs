@@ -6,7 +6,7 @@ ms.topic: reference
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 11/10/2026
+ms.date: 11/24/2026
 ai-usage: ai-assisted
 ---
 
@@ -113,6 +113,13 @@ To add multiple connector tables in one command, repeat `--table` for each table
 
 If a table-specific metadata, validation, or schema-write operation fails, the command still adds the valid tables. It reports ordered `succeeded` and `failed` results and returns a nonzero exit code if any table fails. Review the results before retrying.
 
+The command checks your organization's [Advanced Connector Policies (ACP)](/power-platform/admin/advanced-connector-policies) and [Data Loss Prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies before selecting or creating a connection or retrieving datasets and tables. If the connector or all its actions are blocked, the command returns exit code `2` without creating a connection or data source files. For connector actions, the command omits blocked actions from the saved schema and generated code. It reports `Skipped N of M actions due to your organization's connector policy.` When filtering occurs, successful `--json` output includes `policyFilteredActionCount` and `totalActionCount`.
+
+For connector-backed tables and stored procedures, the check applies to the connector, not individual actions. Native Dataverse tables don't use this check.
+
+> [!IMPORTANT]
+> If the CLI can't identify the tenant or the policy service is unavailable, it writes a warning to standard error and continues without the add-time policy check. Invalid policy responses and canceled authentication fail the command. This check doesn't replace Power Platform data policies or runtime authorization. Review [data policies](/power-platform/admin/wp-data-loss-prevention) with your administrator.
+
 Some connectors, such as SharePoint and SQL Server, support both tables and actions. For these connectors, specify what to add:
 
 - To add tables or a SQL stored procedure, use `--as table`, or include `--table` or `--procedure`.
@@ -122,7 +129,7 @@ If you don't specify what to add, the command asks **Add a table?** in an intera
 
 In an interactive terminal, the command prompts for required values that you don't provide as command options or environment variables. The prompts depend on the type of data source.
 
-#### For native Dataverse:
+#### Interactive prompts for native Dataverse tables
 
 1. If you don't specify `--connector`, the command asks for the connector ID.
 1. The command asks for the table logical name.
@@ -130,7 +137,7 @@ In an interactive terminal, the command prompts for required values that you don
 
 Native Dataverse doesn't use a connection ID, connection reference, or dataset.
 
-#### For connector-backed data sources:
+#### Interactive prompts for connector-backed data sources
 
 **Choose the connector and data source type**
 
@@ -355,7 +362,7 @@ Lists solution-aware Power Automate flows in the current environment.
 pa app list-flows [--search <term>]
 ```
 
-### Example
+### `pa app list-flows` example
 
 ```bash
 pa app list-flows
@@ -397,6 +404,8 @@ Use [`PA_CLI_SOLUTION_ID`](environment-variables.md#solutions-connectors-and-dat
 
 The command validates app settings in `power.config.json`, including header visibility and request-access customization, before publishing.
 
+The `--non-interactive` option doesn't select service principal authentication. Set `PA_CLI_USE_SP_AUTH=true` or `CI=true`, and provide all three service principal credential variables. Missing or blank credentials in this mode return validation exit code `4`. The CLI doesn't fall back to a cached user account. See [Authentication environment variables](environment-variables.md#authentication-environment-variables).
+
 [Learn how to create a code app by using the Power Apps CLI](../how-to/create-an-app-from-scratch.md).
 
 ## `pa app refresh data-source`
@@ -404,14 +413,43 @@ The command validates app settings in `power.config.json`, including header visi
 Refreshes the generated files for a data source.
 
 ```console
-pa app refresh data-source --name <data-source-name>
+pa app refresh data-source [--name <data-source-name>] [--json]
 ```
 
 ### `pa app refresh data-source` parameters
 
 | Parameter | Description |
 | --- | --- |
-| `--name` | The name of the data source to refresh. |
+| `--name` | The name of the data source to refresh. Omit to refresh all data sources. |
+| `--json` | Return the refresh results as JSON. |
+
+### `pa app refresh data-source` remarks
+
+Omit `--name` to refresh all data sources. The command returns exit code `1` if any data source fails, even when others succeed. Successful refreshes aren't rolled back because another data source fails.
+
+Use `--json` to read a single result object. For example, a partial failure returns:
+
+```json
+{
+  "success": false,
+  "succeeded": ["contacts"],
+  "failed": [
+    {
+      "dataSourceName": "accounts",
+      "error": "Data source could not be refreshed."
+    }
+  ]
+}
+```
+
+When all data sources refresh successfully, `success` is `true` and `failed` is empty. For partial failures, inspect `succeeded` and `failed`, not an `exitCode` or `errorMessage` field.
+
+For flows, refresh preserves the existing data source identity and connection bindings. If a recorded dependency is removed or its connector identity or connection ID changes, refresh fails before writing the update. For intentional changes to these bindings, [remove and add the flow again](../how-to/add-flows.md#update-a-flow). If writing or generating files fails, the command attempts to restore that flow's configuration, schema, and generated files, and reports any incomplete restoration. Refresh isn't an atomic operation across all data sources.
+
+> [!IMPORTANT]
+> Refresh doesn't perform the connector-policy check used by [`pa app add data-source`](#pa-app-add-data-source-remarks). It can regenerate actions omitted when you added the connector.
+
+Refreshing connector models can also change nested enum types. See [Refresh a data source](../how-to/connect-to-data.md#refresh-a-data-source) for guidance on updating imports.
 
 ## `pa app remove data-source`
 
@@ -566,7 +604,7 @@ pa auth login --account user@contoso.com
 | --- | --- |
 | `--account` | The account to prepopulate on the sign-in page. |
 
-[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environment variable for the `--account` parameter.
+[`PA_CLI_ACCOUNT`](environment-variables.md#authentication-environment-variables) is the corresponding environment variable for the `--account` parameter.
 
 - [Learn how to sign in](../how-to/sign-in-manage-accounts.md#sign-in)
 - [Learn how to switch the active account](../how-to/sign-in-manage-accounts.md#switch-the-active-account)
@@ -616,7 +654,7 @@ pa auth switch --account user@contoso.com
 | --- | --- |
 | `--account` | The account to make active. |
 
-[`PA_CLI_ACCOUNT`](environment-variables.md#authentication) is the corresponding environment variable for the `--account` parameter.
+[`PA_CLI_ACCOUNT`](environment-variables.md#authentication-environment-variables) is the corresponding environment variable for the `--account` parameter.
 
 Learn more about when you can use this command:
 

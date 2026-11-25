@@ -1,5 +1,5 @@
 ---
-title: Add Power Automate flows to a code app
+title: Add Power Automate Flows to a Code App
 description: Learn how to discover, add, call, update, and remove Power Automate flows in a Power Apps code app by using the Power Apps CLI.
 #customer intent: As a developer, I want to call Power Automate flows from my Power Apps code app.
 ms.topic: how-to
@@ -8,7 +8,8 @@ ms.subservice: code-apps
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/13/2026
+ms.date: 11/24/2026
+ai-usage: ai-assisted
 ---
 
 # Add Power Automate flows to a code app
@@ -137,7 +138,7 @@ The result contains the following properties:
 
 | Property | Type | Description |
 | --- | --- | --- |
-| `success` | `boolean` | Indicates whether the flow was triggered successfully. |
+| `success` | `boolean` | Indicates whether the flow triggered successfully. |
 | `data` | Varies | Contains the typed response from the flow, if available. |
 | `error` | `Error` | Contains error information when `success` is `false`. |
 
@@ -145,7 +146,19 @@ Open the generated service file to review the exact input and output types for t
 
 ## Update a flow
 
-If the flow definition changes, run [`pa app add flow`](../reference/cli.md#pa-app-add-flow) again with the same flow ID:
+If the flow definition changes, run [`pa app refresh data-source`](../reference/cli.md#pa-app-refresh-data-source) with the flow's data source name:
+
+```bash
+pa app refresh data-source --name ApprovalWorkflow
+```
+
+Refresh preserves the flow's data source ID, name, alias, schema file name, and existing connection bindings. It adds new dependencies without rebinding existing dependencies.
+
+If the updated flow removes a recorded dependency or changes its connector identity or connection ID, refresh rejects the update before writing files. If you intend to change those bindings, [remove the flow](#remove-a-flow), and then [add it again](#step-2-add-the-flow). Review and update app calls after regenerating the service.
+
+If a file write or code generation fails, refresh attempts to restore that flow's configuration, schema, and generated files. It reports any incomplete restoration. Review the results and local changes before retrying; successful refreshes of other data sources aren't rolled back.
+
+You can also update an existing flow by running [`pa app add flow`](../reference/cli.md#pa-app-add-flow) again with the same flow ID:
 
 ```bash
 pa app add flow --flow-id a1b2c3d4-e5f6-7890-abcd-ef1234567890
@@ -192,7 +205,7 @@ pa app push
 | Solution-aware flows required | The flow must belong to a solution before you can add it. |
 | Maker access required | The person adding the flow must have access to the flow and its underlying connections. |
 | Dataverse permissions required | End users need sufficient Dataverse permissions to invoke the flow. Assign the App Opener security role or an equivalent role. |
-| Manual update required | Run [`pa app add flow`](../reference/cli.md#pa-app-add-flow) again after the flow definition changes. |
+| Manual update required | Run [`pa app refresh data-source`](../reference/cli.md#pa-app-refresh-data-source) or run [`pa app add flow`](../reference/cli.md#pa-app-add-flow) again after the flow definition changes. |
 
 ## Related information
 

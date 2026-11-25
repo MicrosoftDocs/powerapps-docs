@@ -1,7 +1,7 @@
 ---
 title: "Impersonate another user (Microsoft Dataverse) | Microsoft Docs"
 description: "Use impersonation to execute business logic on behalf of another Microsoft Dataverse user." 
-ms.date: 10/29/2026
+ms.date: 11/24/2026
 ai-usage: ai-assisted
 ms.reviewer: pehecke
 ms.topic: article
@@ -39,10 +39,6 @@ The *impersonator* needs the **Act on Behalf of Another User** privilege (`prvAc
 The actual set of privileges used to modify data is the intersection of the privileges that the *impersonator* user possesses with that of the *impersonated user*. 
 
 In other words, the *impersonator* is allowed to do something *if and only if* the *impersonator* and the *impersonated user* have the privilege necessary for the action.
-
-### Direct assignment required
-
-You must assign the **Act on Behalf of Another User** privilege (`prvActOnBehalfOfAnotherUser`) or a role containing that privilege directly to users. Users can't inherit this privilege through a Team. This direct assignment is required because of the sensitive nature of the privilege.
 
 ## Impersonation with Server-to-Server authentication
 
