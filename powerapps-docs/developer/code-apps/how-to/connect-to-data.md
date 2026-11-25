@@ -3,9 +3,10 @@ title: "How to: Connect Your Code App to Data"
 description: "Learn how to connect your code app to data with Power Platform connectors, add tabular or nontabular sources, and call generated services."
 ms.author: jordanchodak
 author: jordanchodakWork
-ms.date: 10/02/2026
+ms.date: 11/24/2026
 ms.reviewer: jdaly
 ms.topic: how-to
+ai-usage: ai-assisted
 contributors:
  - JimDaly
  - alaug
@@ -55,6 +56,8 @@ The command shows a table of connections, including the **Connection ID** and co
 After you create or identify existing connections to use, and copy the connection metadata from the previous step, add those connections to the app.
 
 When you add the data sources to the app, the process automatically generates a typed TypeScript model and service file in the repo. For example, the Office 365 Users data source produces `Office365UsersModel` and `Office365UsersService` files.
+
+[`pa app add data-source`](../reference/cli.md#pa-app-add-data-source-remarks) checks your organization's [Advanced Connector Policies (ACP)](/power-platform/admin/advanced-connector-policies) and [Data Loss Prevention (DLP)](/power-platform/admin/wp-data-loss-prevention) policies. A blocked connector can't be added. If only some connector actions are blocked, the CLI skips those actions and generates models and services for the allowed actions. If an expected method is missing, review the skipped-action notice and check the policy with your administrator.
 
 > [!TIP]
 > In an interactive terminal, run [`pa app add data-source`](../reference/cli.md#pa-app-add-data-source) without parameters to answer prompts. For connector-backed tabular data sources, the CLI lists available connections, datasets, and tables. For native Dataverse, enter the table logical name and Dataverse organization URL. [Learn more about using `pa app add data-source`](../reference/cli.md#pa-app-add-data-source-remarks).
@@ -219,6 +222,23 @@ If the schema changes, use [`pa app refresh data-source`](../reference/cli.md#pa
 ```bash
 pa app refresh data-source --name <data-source-name>
 ```
+
+Review the generated changes and update your app before building. The command returns a nonzero exit code if any data source fails, even when others refresh successfully. For automation, use [`--json` to inspect the refresh results](../reference/cli.md#pa-app-refresh-data-source-remarks).
+
+> [!IMPORTANT]
+> Refresh doesn't repeat the add-time connector-policy check and can regenerate previously omitted actions.
+
+Some enums no longer have their own named types in generated connector models. If an enum is inside an inline object, an array, or an `allOf` schema, its allowed values now appear directly on the property.
+
+If your app imports one of these enum types, replace the import with a type based on the model property, or let TypeScript infer the type. For example, suppose a model named `Alert` has an optional `values` array, and each item in the array has a `status` property. This line gets the type of `status`:
+
+```typescript
+type AlertStatus = NonNullable<Alert['values']>[number]['status'];
+```
+
+Import `Alert` from your generated model file, and use the property names from your own model.
+
+You can still import enum types for properties that sit directly on a named model. Dataverse option sets aren't affected.
 
 ### Use connection references to add a data source
 

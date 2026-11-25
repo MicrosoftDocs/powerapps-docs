@@ -1,11 +1,11 @@
 ---
 title: Table control in Power Apps
-description: Learn about the details, properties, and examples of the modern Table control in Power Apps.
+description: Learn about the deprecation of the modern Table control and how to migrate to Data Grid.
 author: yogeshgupta698
 
 ms.topic: reference
 ms.component: canvas
-ms.date: 7/20/2026
+ms.date: 11/19/2026
 ms.subservice: canvas-maker
 ms.author: jasongre
 
@@ -19,14 +19,32 @@ contributors:
 reviewer: joshuapartlow
   
 ---
-# Table modern control in Power Apps (preview)
+# Table modern control in Power Apps (deprecated)
 
 [This article is pre-release document and is subject to change.]
 
 A control that shows a set of data in a tabular or list format.
 
 > [!IMPORTANT]
-> For displaying tabular data, use the [Data Grid modern control](modern-control-data-grid.md) instead of the Table control. The Data Grid control is optimized for performance and data-dense scenarios, and it's the recommended control for tabular data going forward.
+> The modern **Table** control is deprecated and is no longer under active development. Use the [Data Grid modern control](modern-control-data-grid.md) for new apps. Existing apps that use Table continue to work during the migration period. Migrate before **June 1, 2027**. The classic Data Table control is not affected.
+
+## Deprecation
+
+Data Grid replaces Table for modern tabular scenarios.
+
+- Don't add Table to new apps.
+- Replace existing Table controls with Data Grid before the removal date.
+- Existing Table controls continue to run during the migration period.
+- The classic Data Table control isn't affected.
+
+### Migrate to Data Grid
+
+1. Save a restorable version or copy of the app.
+1. Select the Table control in the app.
+1. In the properties pane, select **Update** to replace the Table control with a Data Grid control.
+1. Review the converted Data Grid columns, properties, and formulas. Update any formulas that reference the old Table control or its selected records.
+1. Test sorting, search, selection, responsive layouts, accessibility, data sources, and large datasets.
+1. Publish the migrated app and monitor it.
 
 ## Description
 The **Table** control is a modern responsive control that shows a set of data in a tabular or list format. The tabular format includes column headings for each displayed field and a footer that provides details about the dataset such as the record count. The list format presents the data in a single column and has three fields for each row. As an app maker, you have full control over what fields you add to the control including the order. Although all added fields are visible in the tabular format, only the initial three fields appear in the narrower list format.
@@ -44,7 +62,7 @@ Similar to the **Gallery** and **Data** table controls, the **Table** maintains 
 - Change the color palette for the **Table** via the Base palette color property. 
 
 ### Unsupported capabilities
-Currently, the listed capabilities aren't supported. However, since the **Table** control is still evolving, check back for any updates.
+The following capabilities aren't supported in the deprecated **Table** control. Use Data Grid for new tabular scenarios and review its current capabilities and limitations.
 
 * Linking the **Table** to other data connectors.
 * Customizing the style of the **Table** other than the color palette or modifying individual columns.

@@ -8,12 +8,13 @@ ms.subservice: code-apps
 ms.author: jordanchodak
 ms.reviewer: jdaly
 author: jordanchodakWork
-ms.date: 08/26/2026
+ms.date: 11/24/2026
+ai-usage: ai-assisted
 ---
 
 # Publish Power Apps code apps with a service principal
 
-Use a Microsoft Entra service principal to authenticate the Power Apps CLI without opening a browser or using a cached user account. This authentication method is useful for continuous integration and continuous delivery (CI/CD) pipelines and other automated processes that publish updates to an existing code app.
+Publish Power Apps code apps with a Microsoft Entra service principal to authenticate the Power Apps CLI without opening a browser or using a cached user account. This authentication method is useful for continuous integration and continuous delivery (CI/CD) pipelines and other automated processes that publish updates to an existing code app.
 
 To publish an update, the service principal needs access to the target Power Platform environment and **edit** access to the code app. Environment-level permissions alone don't grant permission to update an existing app. App sharing and service principal authentication are separate features, but sharing the app is a prerequisite for publishing updates as the service principal.
 
@@ -59,19 +60,19 @@ If the app already has **edit** access for the service principal, skip this sect
 
 Don't enable service principal authentication when sharing the app.
 
-Sign in interactively with the app maker account using the [`pa auth login` command](../reference/cli.md#pa-auth-login):
+Sign in interactively with the app maker account by using the [`pa auth login` command](../reference/cli.md#pa-auth-login):
 
 ```console
 pa auth login --account <maker-email>
 ```
 
-Confirm that the app maker account is active using the [`pa auth status` command](../reference/cli.md#pa-auth-status):
+Confirm that the app maker account is active by using the [`pa auth status` command](../reference/cli.md#pa-auth-status):
 
 ```console
 pa auth status
 ```
 
-From the app folder, grant the service principal **edit** access using the [`pa app share` command](../reference/cli.md#pa-app-share):
+From the app folder, grant the service principal **edit** access by using the [`pa app share` command](../reference/cli.md#pa-app-share):
 
 ```console
 pa app share --principal <enterprise-application-object-id> --access edit
@@ -91,7 +92,12 @@ After the app has **edit** access for the service principal, use the service pri
 
 ### Configure service principal authentication
 
-Set the service principal authentication environment variables in the CI/CD job or terminal session that you use to publish the update. These variables cause the CLI to authenticate as the service principal instead of using a cached interactive account.
+Set the service principal authentication environment variables in the CI/CD job or terminal session that you use to publish the update. Set `PA_CLI_USE_SP_AUTH=true` to authenticate as the service principal instead of using a cached interactive account. Alternatively, set `CI=true` to select this mode. Both selectors require the literal lowercase value `true`.
+
+Provide a nonblank value for each credential: `PA_CLI_SP_CLIENT_ID`, `PA_CLI_SP_CLIENT_SECRET`, and `PA_CLI_SP_TENANT_ID`. Missing, empty, or whitespace-only credentials in service principal mode cause validation to fail with exit code `4`. The CLI doesn't fall back to a cached user account.
+
+> [!IMPORTANT]
+> Store the client secret in your CI/CD platform's secret store and mask it from logs. Don't commit it to source control.
 
 
 #### [PowerShell](#tab/ps)
@@ -124,13 +130,15 @@ Build the app by using the command configured for your project. For example:
 npm run build
 ```
 
-Publish the compiled app in noninteractive mode using the [`pa app push` command](../reference/cli.md#pa-app-push)
+Publish the compiled app in noninteractive mode by using the [`pa app push` command](../reference/cli.md#pa-app-push).
 
 ```console
 pa app push --non-interactive
 ```
 
 The CLI uses the service principal credentials from the environment variables and doesn't open a browser or use a cached interactive account.
+
+The `--non-interactive` option and credential variables alone don't select service principal authentication. If neither `PA_CLI_USE_SP_AUTH` nor `CI` is `true`, the CLI uses user authentication, even if it inherits partial or blank service principal credentials from the environment.
 
 When the command finishes, an exit code of `0` indicates that the update was published. A nonzero exit code indicates that the command failed.
 
