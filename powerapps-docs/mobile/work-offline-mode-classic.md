@@ -64,7 +64,7 @@ To work in offline mode, complete the following steps:
 
 2. Turn on the **Work in offline mode** toggle.
 
-> [!WARNING]
+> [!IMPORTANT]
 > Classic offline relies on live access to Microsoft Dataverse while the app is operating in online mode. As a result, app responsiveness and the successful completion of operations depend on the availability and quality of the internet connection. Slow, intermittent, or unexpectedly lost connectivity can interrupt users’ work. For a more consistent and resilient experience, start with offline-first for new apps.
 
 
