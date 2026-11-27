@@ -11,7 +11,7 @@
         "/dotnet",
         "/power-apps/developer/data-platform/webapi/reference"
       ],
-      "open_to_public_contributors": true,
+      "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -36,8 +36,6 @@
     "buckley.guderian@microsoft.com"
   ],
   "branches_to_filter": [],
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/powerapps-docs",
-  "git_repository_branch_open_to_public_contributors": "main",
   "need_preview_pull_request": true,
   "dependent_repositories": [
     {
